@@ -11,10 +11,15 @@ body {
 nav {
     padding: 5px 10px;
 }
+p {
+    max-width: 70ch;
+}
 :root {
     --theme-green: #79c3a9;
     --theme-yellow: #fcd842;
     --theme-red: #a50a0a;
+
+    --wrapper-padding: 15px
 }
 .flex-row-between {
     display: flex;
@@ -28,3 +33,18 @@ nav {
 }
 /* END General */
 /***************/
+
+
+
+/************/
+/* Homepage */
+#homepage-intro {
+    padding: var(--wrapper-padding);
+}
+#homepage-logo-main {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+/* END Homepage */
+/****************/

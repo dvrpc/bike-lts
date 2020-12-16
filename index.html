@@ -21,8 +21,38 @@
             <meta property="og:description" content="">
             <meta property="og:image" content="">
          -->
+         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700">
+         <link rel="stylesheet" href="css/styles.css">
+         <script defer type="module" src="./js/index.js"></script>
     </head>
     <body>
-        <h1>This will be the default homepage/scroll story component</h1>
+        <nav class="flex-row-between">
+            <a href="/Transportation/Bicycle/"><img src="" alt="DVRPC logo" /></a>
+            <div class="flex-row-around">
+                <a href="/analysis/"><img src="" alt="webmap icon" />view map</a>
+                <a href="/" class="nav-link-active"><img src="" alt="storymap icon">view scroll story</a>
+            </div>
+        </nav>
+        
+        <section id="homepage-intro">
+            <img src="" alt="Bike LTS main logo" id="homepage-logo-main" />
+
+            <header>
+                <h1>Welcome to DVRPC's Bike LTS and Connectivity Analysis Webmap!</h1>
+            </header>
+    
+            <p>This regional screening tool was developed to help identify and rank roads where bicycle facility improvements would have the greatest local and regional connectivity benefit to the low-stress bicycle network. Learn about Level of Traffic Stress (LTS) and the connectivity analysis by scrolling through these visualizations.</p>
+            
+            <p>
+                Additional information about LTS, connectivity analysis, and methodology behind the results displayed in the map can be found in the 
+                <a href="/webmaps/BikeStress/documentation.pdf" target="_blank" rel="noopener noreferrer" >documentation</a>. 
+                The layers and corresponding tables displayed in this map are available for download via 
+                <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noopener noreferrer">DVRPC's Open Data Portal</a>. 
+                DVRPC continues to refine the tools and analysis approach - if you have ideas, questions, or comments, please contact Sarah Moran at 
+                <a href="mailto:smoran@dvrpc.org">smoran@dvrpc.org</a>. Road network errors are being collected 
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsOTpDgUOHFdzAzeJmvRHr77P_OhZtWZN0RxdfxHViSDSERA/viewform" target="_blank" rel="noopener noreferrer">here</a>.
+            </p>
+        </section>
     </body>
 </html>
