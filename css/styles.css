@@ -1,0 +1,30 @@
+/***********/
+/* General */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 15px;
+}
+nav {
+    padding: 5px 10px;
+}
+:root {
+    --theme-green: #79c3a9;
+    --theme-yellow: #fcd842;
+    --theme-red: #a50a0a;
+}
+.flex-row-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-row-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+/* END General */
+/***************/
