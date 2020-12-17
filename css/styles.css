@@ -94,7 +94,10 @@ nav {
 #story-logo-main {
     width: 380px;
     
-    /* TEMP for blank square */
+    /* account for stepped shadow */
+    margin-left: 15px;
+    
+    /* @TEMP for blank square */
     height: 372px;
     background: white;
     /* END TEMP */
@@ -115,14 +118,24 @@ nav {
 }
 .story-intro-icon-figure {
     cursor: pointer;
+    border-radius: 6px;
+    padding: 5px 15px;
+    box-shadow: var(--box-shadow);
+}
+.story-intro-icon-figure:hover {
+    text-decoration: underline;
 }
 .story-intro-icon-btns-link {
     margin-left: 15px;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
 }
-#story-intro-analysis-link {
+#analysis-figure {
+    background-color: var(--theme-green);
+}
+#story-map-figure {
+    background-color: #f7f7f7;
     color: var(--theme-green);
-    color: var(--theme-red);
+    font-weight: bold;
 }
 /* END Homepage */
 /****************/
