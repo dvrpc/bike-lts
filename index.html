@@ -28,22 +28,23 @@
     </head>
     
     <body>
-        <div id="story-intro-wrapper">
-            <nav class="flex-row flex-row-between">
-                <a href="/Transportation/Bicycle/" target="_blank" rel="noreferrer noopener">
-                    <img src="./img/logo-dvrpc.png" alt="DVRPC logo" />
+        <nav class="flex-row flex-row-between">
+            <a href="/Transportation/Bicycle/" target="_blank" rel="noreferrer noopener">
+                <img src="./img/logo-dvrpc.png" alt="DVRPC logo" />
+            </a>
+            <div class="flex-row flex-row-around">
+                <a href="/analysis/" target="_blank" rel="noreferrer noopener" id="nav-link-analysis">
+                    <img src="./img/map-icon-nav.png" class="nav-link-icon" alt="webmap icon" />view map
                 </a>
-                <div class="flex-row flex-row-around">
-                    <a href="/analysis/" target="_blank" rel="noreferrer noopener" id="nav-link-analysis">
-                        <img src="./img/map-icon-nav.png" class="nav-link-icon" alt="webmap icon" />view map
-                    </a>
-                    <a href="/" class="nav-link nav-link-active nav-link">
-                        <img src="./img/scroll-icon-nav.png" class="nav-link-icon" alt="storymap icon">view story
-                    </a>
-                </div>
-            </nav>
-
+                <a href="/" class="nav-link nav-link-active nav-link">
+                    <img src="./img/scroll-icon-nav.png" class="nav-link-icon" alt="storymap icon">view story
+                </a>
+            </div>
+        </nav>
+        
+        <div id="story-intro-overflow">
             <section id="story-intro">
+                <div id="diag-el"></div>
                 <div id="story-intro-text" class="flex-row flex-row-between">
                     <img src="./img/logo-main.png" alt="Bike LTS main logo" id="story-logo-main" />
                     

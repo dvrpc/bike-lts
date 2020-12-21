@@ -61,7 +61,7 @@ p {
 /* Nav */
 nav {
     padding: var(--wrapper-padding);
-    background-color: rgba(83, 111, 73, 0.15);
+    background-color: var(--theme-green);
 }
 .nav-link-icon {
     margin-right: 5px;
@@ -76,18 +76,32 @@ nav {
 
 /************/
 /* Homepage */
-#story-intro-wrapper {
-    background: linear-gradient(215deg, #498434 59%, rgba(247,247,247,1) 59%);
-    padding-bottom: 10%;
+#story-intro-overflow {
+    overflow: hidden;
 }
 #story-intro {
     color: #fff;
     width: 90%;
     margin: 0 auto;
+    position: relative;
+}
+#diag-el {
+    overflow-x: hidden;
+    z-index: 0;
+    position: absolute;
+    /* account for 90% width #story-intro */
+    margin-left: -5.5%;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--theme-green);
+    /* add 5.5 to bottom left path b/c of margin-left -5.5 */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 55.5% 100%);
 }
 #story-intro-text {
+    position: relative;
     padding: var(--wrapper-padding);
     align-items: flex-start;
+    z-index: 2;
 }
 #story-logo-main {
     width: 380px;
@@ -104,6 +118,8 @@ nav {
 .story-intro-icon-btns {
     margin-top: 55px;
     padding: var(--wrapper-padding);
+    position: relative;
+    z-index: 2;
 }
 .story-intro-icon-figure {
     cursor: pointer;
