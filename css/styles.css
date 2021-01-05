@@ -21,7 +21,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-p {
+p, em {
     max-width: 70ch;
     margin: 10px 0;
 }
@@ -41,6 +41,9 @@ p {
     --box-shadow-logo: rgb(247, 247, 247) -10px 10px 0px -3px, #fcd842 -10px 10px, rgb(247, 247, 247) -20px 20px 0px -3px, #498434 -20px 20px;
     
     --border-radius: 15px;
+}
+.em-block {
+    display: block;
 }
 .flex-row {
     display: flex;
@@ -157,6 +160,20 @@ nav {
 #scroll-story-main {
     padding: var(--wrapper-padding);
     background-color: #f7f7f7;
+}
+.scene-section {
+    padding: 30px 0;
+    min-height: 90vh;
+}
+.scene-header {
+    padding-bottom: 10px;
+    text-align: center;
+}
+.scene-figure {
+    width: calc(50% - 40px);
+    padding: var(--wrapper-padding);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
 }
 /* END Scroll Story General */
 /****************************/
