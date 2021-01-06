@@ -36,6 +36,7 @@ p, em {
     
     /* standard shadow */
     --box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    --drop-shadow: drop-shadow(1px 2px 3px rgba(0,0,0,0.3));
     
     /* stepped shadow @ DEPRECATED */
     --box-shadow-logo: rgb(247, 247, 247) -10px 10px 0px -3px, #fcd842 -10px 10px, rgb(247, 247, 247) -20px 20px 0px -3px, #498434 -20px 20px;
@@ -170,9 +171,8 @@ nav {
     text-align: center;
 }
 .scene-figure {
-    width: calc(50% - 40px);
-    padding: var(--wrapper-padding);
-    box-shadow: var(--box-shadow);
+    width: 50%;
+    filter: var(--drop-shadow);
     border-radius: var(--border-radius);
 }
 /* END Scroll Story General */
