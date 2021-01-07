@@ -170,9 +170,10 @@ nav {
 .scene-header {
     padding-bottom: 10px;
     text-align: center;
+    color: var(--theme-green);
 }
 .scene-figure {
-    width: 50%;
+    max-width: 50%;
     filter: var(--drop-shadow);
     border-radius: var(--border-radius);
 }
