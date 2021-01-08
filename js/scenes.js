@@ -1,26 +1,32 @@
-// get scenes
+// get scene sections
 const scenes = document.querySelectorAll('.scene-section')
+const l = scenes.length
+const sceneObjs = []
 
-// create scenes (order matters)
-const whatIsLTSScene = new ScrollMagic.Scene({
-    duration: 100,
-    triggerElement: scenes[0],
-    reverse: true
-})
-.on('enter', e => {
-    console.log('entered whatisLTS scene')
-    // toggle animation here to reveal element 
-    // toggle scroll-nav active state btn
-})
-const regionalLTSScene = new ScrollMagic.Scene({
-    duration: 100,
-    triggerElement: scenes[1],
-    reverse: true
-})
-.on('enter', e => {
-    console.log('entered regional LTS scene')
-    // toggle animation here to reveal element 
-})
-.setPin('#scrollstory-map') // pins the map for the the scene's duration
+// create scene objects
+for(let i = 0; i < l; i++) {
+    sceneObjs.push( new ScrollMagic.Scene({
+        duration: 100,
+        triggerElement: scenes[i],
+        reverse: true
+    })
+    .on('enter', e => {
+        toggleAnimation(e)
+        toggleNavLink(e)
+        toggleMapView(e)
+    }))
+}
 
-export { whatIsLTSScene, regionalLTSScene }
+// helper fncs to animate scene in/out, update side-nav link state and update map (when applicable)
+const toggleAnimation = e => {
+
+}
+const toggleNavLink = e => {
+
+}
+// @TODO escape no-map cases
+const toggleMapView = e => {
+
+}
+
+export default sceneObjs
