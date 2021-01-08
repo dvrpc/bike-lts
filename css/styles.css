@@ -57,6 +57,9 @@ p, em {
 .flex-row-around {
     justify-content: space-around;
 }
+.list-unstyled {
+    list-style-type: none;
+}
 /* END General */
 /***************/
 
@@ -163,7 +166,28 @@ nav {
     padding: var(--wrapper-padding);
     background-color: #f7f7f7;
 }
+#scroll-story-nav {
+    background-color: initial;
+    border-radius: var(--border-radius);
+    position: sticky;
+    top: 25%;
+    width: 10px;
+}
+.scroll-story-nav-link {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--theme-red);
+    margin-bottom: 10px;
+}
+#what-is-lts-scene {
+    /* height of story-nav*/
+    margin-top: -300px;
+}
 .scene-section {
+    width: 90%;
+    margin: 0 auto;
     padding: 30px 0;
     min-height: 90vh;
 }
