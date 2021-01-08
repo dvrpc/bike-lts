@@ -196,6 +196,9 @@ nav {
     text-align: center;
     color: var(--theme-green);
 }
+.scene-text {
+    max-width: 60ch;
+}
 .scene-figure {
     max-width: 50%;
     filter: var(--drop-shadow);

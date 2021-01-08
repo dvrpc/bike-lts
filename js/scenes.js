@@ -10,6 +10,7 @@ const whatIsLTSScene = new ScrollMagic.Scene({
 .on('enter', e => {
     console.log('entered whatisLTS scene')
     // toggle animation here to reveal element 
+    // toggle scroll-nav active state btn
 })
 const regionalLTSScene = new ScrollMagic.Scene({
     duration: 100,
