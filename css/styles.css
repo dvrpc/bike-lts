@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body {
     font-size: 15px;
@@ -21,7 +22,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-p {
+p, em {
     max-width: 70ch;
     margin: 10px 0;
 }
@@ -36,11 +37,15 @@ p {
     
     /* standard shadow */
     --box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    --drop-shadow: drop-shadow(1px 2px 3px rgba(0,0,0,0.3));
     
     /* stepped shadow @ DEPRECATED */
     --box-shadow-logo: rgb(247, 247, 247) -10px 10px 0px -3px, #fcd842 -10px 10px, rgb(247, 247, 247) -20px 20px 0px -3px, #498434 -20px 20px;
     
     --border-radius: 15px;
+}
+.em-block {
+    display: block;
 }
 .flex-row {
     display: flex;
@@ -51,6 +56,9 @@ p {
 }
 .flex-row-around {
     justify-content: space-around;
+}
+.list-unstyled {
+    list-style-type: none;
 }
 /* END General */
 /***************/
@@ -157,6 +165,44 @@ nav {
 #scroll-story-main {
     padding: var(--wrapper-padding);
     background-color: #f7f7f7;
+}
+#scroll-story-nav {
+    background-color: initial;
+    border-radius: var(--border-radius);
+    position: sticky;
+    top: 25%;
+    width: 10px;
+}
+.scroll-story-nav-link {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--theme-red);
+    margin-bottom: 10px;
+}
+#what-is-lts-scene {
+    /* height of story-nav*/
+    margin-top: -300px;
+}
+.scene-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    min-height: 90vh;
+}
+.scene-header {
+    padding-bottom: 10px;
+    text-align: center;
+    color: var(--theme-green);
+}
+.scene-text {
+    max-width: 60ch;
+}
+.scene-figure {
+    max-width: 50%;
+    filter: var(--drop-shadow);
+    border-radius: var(--border-radius);
 }
 /* END Scroll Story General */
 /****************************/
