@@ -8,7 +8,7 @@ for(let i = 0; i < l; i++) {
     sceneObjs.push( new ScrollMagic.Scene({
         duration: 100,
         triggerElement: scenes[i],
-        reverse: true
+        reverse: false
     })
     .on('enter', e => {
         toggleAnimation(e, scenes[i])
@@ -20,9 +20,8 @@ for(let i = 0; i < l; i++) {
 // helper fncs to animate scene in/out, update side-nav link state and update map (when applicable)
 // el scene format: <section><article><figure></section>
 const toggleAnimation = (e, el) => {
-    console.log('el on enter ', el.children[0])
-    
-
+    const text = el.children[0]
+    text.classList.add('fadein')
 }
 const toggleNavLink = (e, el) => {
 
