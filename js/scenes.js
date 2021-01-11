@@ -11,17 +11,20 @@ for(let i = 0; i < l; i++) {
         reverse: true
     })
     .on('enter', e => {
-        toggleAnimation(e)
-        toggleNavLink(e)
+        toggleAnimation(e, scenes[i])
+        toggleNavLink(e, scenes[i])
         toggleMapView(e)
     }))
 }
 
 // helper fncs to animate scene in/out, update side-nav link state and update map (when applicable)
-const toggleAnimation = e => {
+// el scene format: <section><article><figure></section>
+const toggleAnimation = (e, el) => {
+    console.log('el on enter ', el.children[0])
+    
 
 }
-const toggleNavLink = e => {
+const toggleNavLink = (e, el) => {
 
 }
 // @TODO escape no-map cases

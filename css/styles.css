@@ -26,6 +26,9 @@ p, em {
     max-width: 70ch;
     margin: 10px 0;
 }
+nav {
+    padding: var(--wrapper-padding);
+}
 :root {
     --theme-green: #498434;
     --theme-yellow: #fcd842;
@@ -67,8 +70,10 @@ p, em {
 
 /********/
 /* Nav */
-nav {
-    padding: var(--wrapper-padding);
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 3;
     background-color: var(--theme-green);
 }
 .nav-link-icon {
