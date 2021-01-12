@@ -218,8 +218,9 @@ nav {
 /**************/
 /* Animations */
 .fadein {
-    animation-duration: 2s;
     animation-name: fadein;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 @keyframes fadein {
     from {

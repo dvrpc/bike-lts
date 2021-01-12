@@ -6,7 +6,7 @@ const sceneObjs = []
 // create scene objects
 for(let i = 0; i < l; i++) {
     sceneObjs.push( new ScrollMagic.Scene({
-        duration: 100,
+        duration: 200,
         triggerElement: scenes[i],
         reverse: false
     })
