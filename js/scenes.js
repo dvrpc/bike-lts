@@ -20,7 +20,7 @@ for(let i = 0; i < l; i++) {
 // helper fncs to animate scene in/out, update side-nav link state and update map (when applicable)
 // el scene format: <section><article><figure></section>
 const toggleAnimation = (e, el) => {
-    const text = el.children[1]
+    const text = el.children[1] ? el.children[1] : el.children[0]
     text.classList.add('fadein')
 }
 const toggleNavLink = (e, el) => {
