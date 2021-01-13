@@ -11,7 +11,7 @@ body {
     line-height: 145%;
 }
 h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 a {
@@ -180,8 +180,8 @@ nav {
 }
 .scroll-story-nav-link {
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: var(--theme-red);
     margin-bottom: 10px;
@@ -203,6 +203,7 @@ nav {
 }
 .scene-text {
     max-width: 60ch;
+    opacity: 0;
 }
 .scene-figure {
     max-width: 50%;
@@ -211,6 +212,26 @@ nav {
 }
 /* END Scroll Story General */
 /****************************/
+
+
+
+/**************/
+/* Animations */
+.fadein {
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+/* END Animations */
+/******************/
 
 
 
