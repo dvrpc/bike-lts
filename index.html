@@ -146,52 +146,56 @@
                 </article>
             </section>
 
-            <section class="scene-section flex-row flex-row-around" id="regional-lts-scene">
-                <!-- <figure class="scene-media">
-                    <img src="./img/scenes/regional-lts.png" alt="regional LTS map" />
-                </figure> -->
+            <!-- @TODO something like this to have the map sticky on scroll while also showing other elements -->
+                <!-- giving the scene-text article a margin-left: 50% after removing figure from them works to create the proper spacing -->
+                <!-- also need to give regional-lts a - margin top equal to map height so they appear on the same plane at first -->
+                <!-- also update map b/c rn it's over the side-nav and makes it unusable -->
+            <!-- @TODO OR keep OG structure and use scrollmagic to sticky the map? -->
+            <div>
                 <div id="map" class="scene-media"></div>
 
-                <article class="scene-text">
-                    <h2 class="scene-header">Regional LTS</h2>
-                    <p>The map shows the DVRPC Region’s road segments colored by their LTS assignment. As indicated by the colors on the map, divided highways and major arterials are often higher stress, while local, residential streets often present the lowest stress. Trails and off-road paths are considered non-stressful in this analysis.</p>
-                    <em class="em-block">This is a regional screening tool built on the most accurate representation of the road network attributes available. Since it is impossible for DVRPC staff to verify the attributes of every road in the region, there is always room for improvement. Road attribute errors resulting in inaccurate LTS values are being collected <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsOTpDgUOHFdzAzeJmvRHr77P_OhZtWZN0RxdfxHViSDSERA/viewform" target="_blank" rel="noreferrer nooopener">here.</a></em>
-                </article>
-            </section>
-
-            <section class="scene-section flex-row flex-row-around" id="using-data-scene">
-                <figure class="scene-media">
-                    <img src="./img/scenes/using-the-data.png" alt="downingtown LTS map extent" />
-                </figure>
-
-                <article class="scene-text">
-                    <h2 class="scene-header">Using the Data</h2>
-                    <p>Zooming in, here is an example of a downtown area in a suburban county in Pennsylvania with LTS assigned to the road network.</p>
-                </article>
-            </section>
-
-            <section class="scene-section flex-row flex-row-around" id="low-stress-1-scene">
-                <figure class="scene-media">
-                    <img src="./img/scenes/low-stress-islands-1.png" alt="low-stress islands (1) downingtown map extent" />
-                </figure>
-                
-                <article class="scene-text">
-                    <h2 class="scene-header">Low-Stress Islands (1)</h2>
-                    <p>If we look at just the LTS 1 and 2 roads, those that are comfortable for most cyclists, you start to see gaps in the network, creating low-stress islands. If an interested but concerned cyclist starts their trip on one of these islands, and they are uncomfortable using the higher LTS roads that connect them, this person is limited to their island. If they want to travel off their island, they are unlikely to ride their bike.</p>
-                </article>
-            </section>
-
-            <section class="scene-section flex-row flex-row-around" id="low-stress-2-scene">
-                <figure class="scene-media">
-                    <img src="./img/scenes/low-stress-islands-2.png" alt="low-stress islands (2) downingtown map extent" />
-                </figure>
-
-                <article class="scene-text">
-                    <h2 class="scene-header">Low-Stress Islands (2)</h2>
-                    <p>What if we made LTS 3 roads more comfortable by making changes to them to lower their stress level to the point that they become LTS 1 or 2 roads? You can see that the islands are larger and much more connected.</p>
-                    <p>We know that in reality, there is no way to make improvements to all the LTS 3 roads in the region at the same time. Thus, the point of our connectivity analysis was to be able to rank the LTS 3 roads and compare them to each other, to see which would enable the most low stress connections; essentially give us the most bang for our buck.</p>
-                </article>
-            </section>
+                <section class="scene-section flex-row flex-row-around" id="regional-lts-scene">
+                    <article class="scene-text">
+                        <h2 class="scene-header">Regional LTS</h2>
+                        <p>The map shows the DVRPC Region’s road segments colored by their LTS assignment. As indicated by the colors on the map, divided highways and major arterials are often higher stress, while local, residential streets often present the lowest stress. Trails and off-road paths are considered non-stressful in this analysis.</p>
+                        <em class="em-block">This is a regional screening tool built on the most accurate representation of the road network attributes available. Since it is impossible for DVRPC staff to verify the attributes of every road in the region, there is always room for improvement. Road attribute errors resulting in inaccurate LTS values are being collected <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsOTpDgUOHFdzAzeJmvRHr77P_OhZtWZN0RxdfxHViSDSERA/viewform" target="_blank" rel="noreferrer nooopener">here.</a></em>
+                    </article>
+                </section>
+    
+                <section class="scene-section flex-row flex-row-around" id="using-data-scene">
+                    <figure class="scene-media">
+                        <img src="./img/scenes/using-the-data.png" alt="downingtown LTS map extent" />
+                    </figure>
+    
+                    <article class="scene-text">
+                        <h2 class="scene-header">Using the Data</h2>
+                        <p>Zooming in, here is an example of a downtown area in a suburban county in Pennsylvania with LTS assigned to the road network.</p>
+                    </article>
+                </section>
+    
+                <section class="scene-section flex-row flex-row-around" id="low-stress-1-scene">
+                    <figure class="scene-media">
+                        <img src="./img/scenes/low-stress-islands-1.png" alt="low-stress islands (1) downingtown map extent" />
+                    </figure>
+                    
+                    <article class="scene-text">
+                        <h2 class="scene-header">Low-Stress Islands (1)</h2>
+                        <p>If we look at just the LTS 1 and 2 roads, those that are comfortable for most cyclists, you start to see gaps in the network, creating low-stress islands. If an interested but concerned cyclist starts their trip on one of these islands, and they are uncomfortable using the higher LTS roads that connect them, this person is limited to their island. If they want to travel off their island, they are unlikely to ride their bike.</p>
+                    </article>
+                </section>
+    
+                <section class="scene-section flex-row flex-row-around" id="low-stress-2-scene">
+                    <figure class="scene-media">
+                        <img src="./img/scenes/low-stress-islands-2.png" alt="low-stress islands (2) downingtown map extent" />
+                    </figure>
+    
+                    <article class="scene-text">
+                        <h2 class="scene-header">Low-Stress Islands (2)</h2>
+                        <p>What if we made LTS 3 roads more comfortable by making changes to them to lower their stress level to the point that they become LTS 1 or 2 roads? You can see that the islands are larger and much more connected.</p>
+                        <p>We know that in reality, there is no way to make improvements to all the LTS 3 roads in the region at the same time. Thus, the point of our connectivity analysis was to be able to rank the LTS 3 roads and compare them to each other, to see which would enable the most low stress connections; essentially give us the most bang for our buck.</p>
+                    </article>
+                </section>
+            </div>
 
             <section class="scene-section flex-row flex-row-around" id="connectivity-1-scene">
                 <figure class="scene-media">

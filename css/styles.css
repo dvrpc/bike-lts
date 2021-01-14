@@ -197,8 +197,8 @@ nav {
     min-height: 90vh;
 }
 .scene-header {
+    font-size: 1.6rem;
     padding-bottom: 10px;
-    text-align: center;
     color: var(--theme-green);
 }
 .scene-text {
@@ -220,6 +220,8 @@ nav {
 #map {
     width: 50%;
     height: 550px;
+    position: sticky;
+    top: 60px;
 }
 /* END Map */
 /********/
