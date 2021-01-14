@@ -20,7 +20,8 @@ const map = new mapboxgl.Map({
     style: customStyles,
     attributionsControl: false,
     center: [-75.2273, 40.071],
-    zoom: 3
+    zoom: 3,
+    interactive: false
 })
 map.fitBounds([[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]);
 //***** END map
