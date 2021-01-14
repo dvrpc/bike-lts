@@ -215,6 +215,17 @@ nav {
 
 
 
+/*******/
+/* Map */
+#map {
+    width: 50%;
+    height: 550px;
+}
+/* END Map */
+/********/
+
+
+
 /**************/
 /* Animations */
 .fadein {
