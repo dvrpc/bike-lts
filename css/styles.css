@@ -205,7 +205,7 @@ nav {
     max-width: 60ch;
     opacity: 0;
 }
-.scene-figure {
+.scene-media {
     max-width: 50%;
     filter: var(--drop-shadow);
     border-radius: var(--border-radius);

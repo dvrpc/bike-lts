@@ -21,12 +21,16 @@
             <meta property="og:description" content="">
             <meta property="og:image" content="">
          -->
+
          <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&display=swap">
+         <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
          <link rel="stylesheet" href="css/styles.css">
 
-         <!-- scrollmagic -->
+         <!-- scrollmagic & mapbox -->
          <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+         <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+         
          <script defer type="module" src="./js/index.js"></script>
     </head>
     
@@ -129,7 +133,7 @@
             </nav>
 
             <section class="scene-section flex-row flex-row-around" id="what-is-lts-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="./img/scenes/what-is-lts.png" alt="cyclist type table" />
                 </figure>
 
@@ -143,9 +147,10 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="regional-lts-scene">
-                <figure class="scene-figure">
+                <!-- <figure class="scene-media">
                     <img src="./img/scenes/regional-lts.png" alt="regional LTS map" />
-                </figure>
+                </figure> -->
+                <div id="map"></div>
 
                 <article class="scene-text">
                     <h2 class="scene-header">Regional LTS</h2>
@@ -155,7 +160,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="using-data-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="./img/scenes/using-the-data.png" alt="downingtown LTS map extent" />
                 </figure>
 
@@ -166,7 +171,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="low-stress-1-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="./img/scenes/low-stress-islands-1.png" alt="low-stress islands (1) downingtown map extent" />
                 </figure>
                 
@@ -177,7 +182,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="low-stress-2-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="./img/scenes/low-stress-islands-2.png" alt="low-stress islands (2) downingtown map extent" />
                 </figure>
 
@@ -189,7 +194,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="connectivity-1-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="" alt="shortest path with census blocks overlaid downingtown LTS" />
                 </figure>
 
@@ -200,7 +205,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="connectivity-2-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="" alt=" downingtown by thickness" />
                 </figure>
                 
@@ -215,7 +220,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="connectivity-priorities-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="" alt="montgomery county connectivity priorities map extent" />
                 </figure>
                 
@@ -233,7 +238,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="trails-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="./img/scenes/connections-to-trails.png" alt="municipal connectivity to trails" />
                 </figure>
                 
@@ -245,7 +250,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="transit-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="./img/scenes/connections-to-transit.png" alt="municipal connectivity to transit" />
                 </figure>
                 
@@ -256,7 +261,7 @@
             </section>
 
             <section class="scene-section flex-row flex-row-around" id="schools-scene">
-                <figure class="scene-figure">
+                <figure class="scene-media">
                     <img src="./img/scenes/connections-to-schools.png" alt="municipal connectivity to schools" />
                 </figure>
                 
