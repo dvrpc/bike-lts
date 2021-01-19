@@ -234,7 +234,7 @@ nav {
 
 
 /* Individual Scenes */
-#regional-lts-scene {
+#regional-lts-scene, #connectivity-1-scene {
     margin-top: calc(var(--map-height) * -1);
 }
 /* END Individual Scenes */
@@ -243,12 +243,17 @@ nav {
 
 /*******/
 /* Map */
-#map {
+.map {
     width: 50%;
     height: var(--map-height);
     position: sticky;
     top: 105px;
+}
+#map {
     left: 80px;
+}
+#map-2 {
+    left: 50%;
 }
 /* END Map */
 /********/
