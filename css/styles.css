@@ -1,11 +1,19 @@
 /***********/
 /* General */
+
+/* @TODO switch to local fonts */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../Fonts/Roboto/')
+}
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
+/* END @TODO switch to local fonts */
+
 body {
     font-size: 15px;
     line-height: 145%;
@@ -27,7 +35,7 @@ p, em {
     margin: 10px 0;
 }
 nav {
-    padding: var(--wrapper-padding);
+    padding: var(--wrapper-padding-half);
 }
 :root {
     --theme-green: #498434;
@@ -36,6 +44,7 @@ nav {
     --theme-purple: #3F3047;
 
     --wrapper-padding: 20px;
+    --wrapper-padding-half: 10px;
     --wrapper-padding-double: 40px;
     
     /* standard shadow */
@@ -46,6 +55,8 @@ nav {
     --box-shadow-logo: rgb(247, 247, 247) -10px 10px 0px -3px, #fcd842 -10px 10px, rgb(247, 247, 247) -20px 20px 0px -3px, #498434 -20px 20px;
     
     --border-radius: 15px;
+
+    --map-height: 550px;
 }
 .em-block {
     display: block;
@@ -54,11 +65,18 @@ nav {
     display: flex;
     align-items: center;
 }
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 .flex-row-between {
     justify-content: space-between;
 }
 .flex-row-around {
     justify-content: space-around;
+}
+.flex-row-end {
+    justify-content: flex-end;
 }
 .list-unstyled {
     list-style-type: none;
@@ -194,7 +212,7 @@ nav {
     width: 90%;
     margin: 0 auto;
     padding: 30px 0;
-    min-height: 90vh;
+    min-height: 80vh;
 }
 .scene-header {
     font-size: 1.6rem;
@@ -215,13 +233,22 @@ nav {
 
 
 
+/* Individual Scenes */
+#regional-lts-scene {
+    margin-top: calc(var(--map-height) * -1);
+}
+/* END Individual Scenes */
+
+
+
 /*******/
 /* Map */
 #map {
     width: 50%;
-    height: 550px;
+    height: var(--map-height);
     position: sticky;
-    top: 60px;
+    top: 105px;
+    left: 80px;
 }
 /* END Map */
 /********/
@@ -252,7 +279,7 @@ nav {
 /* Footer */
 footer {
     color: #fff;
-    background: var(--theme-red);
+    background-color: var(--theme-red);
     padding: var(--wrapper-padding);
 }
 /* END Footer */
