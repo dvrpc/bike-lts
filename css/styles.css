@@ -212,7 +212,7 @@ nav {
     width: 90%;
     margin: 0 auto;
     padding: 30px 0;
-    min-height: 80vh;
+    min-height: 85vh;
 }
 .scene-header {
     font-size: 1.6rem;
@@ -234,7 +234,7 @@ nav {
 
 
 /* Individual Scenes */
-#regional-lts-scene, #connectivity-1-scene {
+#regional-lts-scene, #connectivity-1-scene, #trails-scene {
     margin-top: calc(var(--map-height) * -1);
 }
 /* END Individual Scenes */
@@ -249,7 +249,7 @@ nav {
     position: sticky;
     top: 105px;
 }
-#map {
+#map, #map-3 {
     left: 80px;
 }
 #map-2 {
