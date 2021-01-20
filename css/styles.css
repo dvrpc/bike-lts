@@ -204,6 +204,11 @@ nav {
     background-color: var(--theme-red);
     margin-bottom: 10px;
 }
+.scroll-story-nav-hr {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    width: 10px;
+}
 #what-is-lts-scene {
     /* height of story-nav*/
     margin-top: -300px;
