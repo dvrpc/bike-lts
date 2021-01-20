@@ -215,8 +215,8 @@ nav {
     min-height: 85vh;
 }
 .scene-header {
-    font-size: 1.6rem;
-    padding-bottom: 10px;
+    font-size: 1.8rem;
+    line-height: 145%;
     color: var(--theme-green);
 }
 .scene-text {
