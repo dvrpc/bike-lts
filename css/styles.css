@@ -39,6 +39,7 @@ nav {
 }
 :root {
     --theme-green: #498434;
+    --theme-green-light: #72bc58;
     --theme-yellow: #fcd842;
     --theme-red: #a50a0a;
     --theme-purple: #3F3047;
@@ -241,6 +242,24 @@ nav {
 /* Individual Scenes */
 #regional-lts-scene, #connectivity-1-scene, #trails-scene {
     margin-top: calc(var(--map-height) * -1);
+}
+#regional-lts-table {
+    background-color: white;
+}
+.regional-lts-table-cat {
+    color: white;
+}
+#regional-lts-table-1 {
+    background-color: var(--theme-green);
+}
+#regional-lts-table-2 {
+    background-color: var(--theme-green-light);
+}
+#regional-lts-table-3 {
+    background-color: var(--theme-yellow);
+}
+#regional-lts-table-4 {
+    background-color: var(--theme-red);
 }
 /* END Individual Scenes */
 
