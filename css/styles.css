@@ -37,6 +37,14 @@ p, em {
 nav {
     padding: var(--wrapper-padding-half);
 }
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: var(--wrapper-padding-half);
+}
 :root {
     --theme-green: #498434;
     --theme-green-light: #72bc58;
@@ -81,6 +89,12 @@ nav {
 }
 .list-unstyled {
     list-style-type: none;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
 }
 /* END General */
 /***************/
@@ -240,14 +254,35 @@ nav {
 
 
 /* Individual Scenes */
-#regional-lts-scene, #connectivity-1-scene, #trails-scene {
+.first-map-scene {
     margin-top: calc(var(--map-height) * -1);
 }
 #regional-lts-table {
     background-color: white;
+    text-align: center;
+}
+#regional-lts-table thead th:nth-child(1) {
+    width: 10%;
+}
+#regional-lts-table thead, #regional-lts-table tr:not(:last-child) {
+    border-bottom: 3px solid var(--theme-purple);
+}
+#regional-lts-table td:not(:last-child) {
+    border-right: 3px solid var(--theme-purple);
+}
+.regional-lts-table-th {
+    background-color: var(--theme-purple);
+    color: white;
+}
+.regional-lts-table-th:first-child {
+    border-top-left-radius: var(--border-radius);
+}
+.regional-lts-table-th:last-child {
+    border-top-right-radius: var(--border-radius);
 }
 .regional-lts-table-cat {
     color: white;
+    font-weight: 700;
 }
 #regional-lts-table-1 {
     background-color: var(--theme-green);
@@ -260,6 +295,7 @@ nav {
 }
 #regional-lts-table-4 {
     background-color: var(--theme-red);
+    border-bottom-left-radius: var(--border-radius);
 }
 /* END Individual Scenes */
 
@@ -299,6 +335,7 @@ nav {
         opacity: 100%;
     }
 }
+/* @TODO animate scene-media by adding filter drop-shadow from 0 */
 /* END Animations */
 /******************/
 
