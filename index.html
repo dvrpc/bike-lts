@@ -138,9 +138,57 @@
             </nav>
 
             <section class="scene-section flex-row flex-row-around" id="what-is-lts-scene">
-                <figure class="scene-media">
-                    <img src="./img/scenes/what-is-lts.png" alt="cyclist type table" />
-                </figure>
+                <table id="regional-lts-table" class="scene-media">
+                    <thead>
+                        <tr>
+                            <th class="regional-lts-table-th">LTS</th>
+                            <th class="regional-lts-table-th">Comfortable Enough For <br /> (Cyclist Type)</th>
+                            <th class="regional-lts-table-th">Characteristics</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="regional-lts-table-1" class="regional-lts-table-cat">1</td>
+                            <td>Most People</td>
+                            <td class="text-left">
+                                <ul class="list-unstyled">
+                                    <li>Lowest Stress</li>
+                                    <li>Comfortable for most ages and abilities</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="regional-lts-table-2" class="regional-lts-table-cat">2</td>
+                            <td>Interested, but Concerned</td>
+                            <td class="text-left">
+                                <ul class="list-unstyled">
+                                    <li>Suitable for most adults</li>
+                                    <li>Presenting little traffic stress</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="regional-lts-table-3" class="regional-lts-table-cat">3</td>
+                            <td>Enthused and Confident</td>
+                            <td class="text-left">
+                                <ul class="list-unstyled">
+                                    <li>Moderate traffic stress</li>
+                                    <li>Comfortable for those already biking in American cities</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="regional-lts-table-4" class="regional-lts-table-cat">4</td>
+                            <td>Strong and Fearless</td>
+                            <td class="text-left">
+                                <ul class="list-unstyled">
+                                    <li>High traffic stress</li>
+                                    <li>Multilane, fast moving traffic</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <article class="scene-text">
                     <h2 class="scene-header">What is Level of Traffic Stress (LTS)?</h2>
@@ -154,7 +202,7 @@
             <div>
                 <div id="map" class="map scene-media"></div>
 
-                <section class="scene-section flex-row flex-row-end" id="regional-lts-scene">
+                <section class="scene-section flex-row flex-row-end first-map-scene" id="regional-lts-scene">
                     <article class="scene-text">
                         <h2 class="scene-header">Regional LTS</h2>
                         <p>The map shows the DVRPC Region’s road segments colored by their LTS assignment. As indicated by the colors on the map, divided highways and major arterials are often higher stress, while local, residential streets often present the lowest stress. Trails and off-road paths are considered non-stressful in this analysis.</p>
@@ -195,7 +243,7 @@
             <div>
                 <div id="map-2" class="map scene-media"></div>
 
-                <section class="scene-section flex-row" id="connectivity-1-scene">
+                <section class="scene-section flex-row first-map-scene" id="connectivity-1-scene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis (1)</h2>
                         <p>The goal was to compare the connectivity benefit of each of the LTS 3 roads. Using a shortest path algorithm, we identified the shortest path from every census block in the region, to every other census block within five miles. Since we were focused on interested but concerned cyclists, we only let our paths use LTS 1, 2, and 3 roads.</p>
@@ -231,7 +279,7 @@
             <div>
                 <div id="map-3" class="map scene-media"></div>
 
-                <section class="scene-section flex-row flex-row-end" id="trails-scene">                
+                <section class="scene-section flex-row flex-row-end first-map-scene" id="trails-scene">                
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Trails</h2>
                         <p>Using the same method explained above, we calculated paths from trial access points to census blocks within 2.5 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination.  The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to trails.</p>
