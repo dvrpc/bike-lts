@@ -4,7 +4,7 @@
 /* @TODO switch to local fonts */
 @font-face {
     font-family: 'Roboto';
-    src: url('../../Fonts/Roboto/')
+    src: url('/Fonts/Roboto/')
 }
 * {
     font-family: 'Roboto', sans-serif;
@@ -211,13 +211,18 @@ th, td {
     top: 25%;
     width: 10px;
 }
+.scroll-story-nav-li {
+    background-color: var(--theme-red);
+}
 .scroll-story-nav-link {
+    border-radius: 50%;
+    margin-bottom: 10px;
     display: block;
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    background-color: var(--theme-red);
-    margin-bottom: 10px;
+}
+.scroll-story-nav-link-active {
+    background-color: var(--theme-green);
 }
 .scroll-story-nav-hr {
     margin-top: -5px;
@@ -265,7 +270,7 @@ th, td {
     width: 10%;
 }
 #regional-lts-table thead, #regional-lts-table tr:not(:last-child) {
-    border-bottom: 3px solid var(--theme-purple);
+    /* border-bottom: 3px solid var(--theme-purple); */
 }
 #regional-lts-table td:not(:last-child) {
     border-right: 3px solid var(--theme-purple);
