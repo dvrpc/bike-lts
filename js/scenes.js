@@ -21,6 +21,18 @@ for(let i = 0; i < l; i++) {
     }))
 }
 
+// add scroll nav hover effects
+scrollNavBtns.forEach(btn => {
+    let tooltip;
+
+    btn.onmouseover = e => {
+        tooltip = makeNavTooltip(e)
+        btn.insertAdjacentElement('afterend', tooltip)
+    }
+
+    btn.onmouseout = () => removeNavTooltip(tooltip)
+})
+
 // helper fncs to animate scene in/out, update side-nav link state and update map (when applicable)
 const toggleAnimation = (e, el) => {
     const text = el.children[1] ? el.children[1] : el.children[0]
@@ -33,15 +45,17 @@ const toggleNavLink = i => {
     // add active class to current scene
     scrollNavBtns[i].classList.add('scroll-story-nav-link-active')
 }
-const makeNavTooltip = el => {
-    const idToHeader =el.id.split('-').join(' ')
-
-    return `
-        <span>
-            ${idToHeader}
-        </span>
-    `
+const makeNavTooltip = e => {
+    const hrefToText = e.target.href.split('#')[1].split('-').join(' ')
+    
+    const tooltip = document.createElement('span')
+    tooltip.classList.add('scroll-story-nav-tooltip')
+    tooltip.textContent = hrefToText
+    
+    return tooltip
 }
+const removeNavTooltip = tooltip => tooltip.remove()
+
 // @TODO escape no-map cases
 const toggleMapView = e => {
 

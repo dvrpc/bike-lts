@@ -229,9 +229,17 @@ th, td {
     margin-bottom: 5px;
     width: 10px;
 }
-#what-is-lts-scene {
-    /* height of story-nav*/
-    margin-top: -300px;
+.scroll-story-nav-tooltip {
+    background: white;
+    border: 1px solid var(--theme-purple);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    z-index: 5;
+    width: 150px;
+    text-align: center;
+    position: absolute;
+    left: 30px;
+    margin-top: -30px;
 }
 .scene-section {
     width: 90%;
@@ -261,6 +269,10 @@ th, td {
 /* Individual Scenes */
 .first-map-scene {
     margin-top: calc(var(--map-height) * -1);
+}
+#what-is-lts-scene {
+    /* height of story-nav*/
+    margin-top: -300px;
 }
 #regional-lts-table {
     background-color: white;
