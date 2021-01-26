@@ -1,19 +1,11 @@
 /***********/
 /* General */
-
-/* @TODO switch to local fonts */
-@font-face {
-    font-family: 'Roboto';
-    src: url('/Fonts/Roboto/')
-}
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
-/* END @TODO switch to local fonts */
-
 body {
     font-size: 15px;
     line-height: 145%;
@@ -210,6 +202,7 @@ th, td {
     position: sticky;
     top: 25%;
     width: 10px;
+    z-index: 5;
 }
 .scroll-story-nav-li {
     background-color: var(--theme-red);
@@ -229,17 +222,19 @@ th, td {
     margin-bottom: 5px;
     width: 10px;
 }
+.scroll-story-nav-tooltip-wrapper {
+    filter: var(--drop-shadow);
+}
 .scroll-story-nav-tooltip {
-    background: white;
-    border: 1px solid var(--theme-purple);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    z-index: 5;
-    width: 150px;
+    background-color: var(--theme-green);
+    color: var(--theme-yellow);
+    clip-path: polygon(5% 0%,100% 0%,100% 100%,5% 100%,0% 50%);
+    width: 160px;
     text-align: center;
     position: absolute;
-    left: 30px;
-    margin-top: -30px;
+    left: 15px;
+    margin-top: -14px;
+    font-weight: 700;
 }
 .scene-section {
     width: 90%;
@@ -266,11 +261,11 @@ th, td {
 
 
 
-/* Individual Scenes */
+/* Individua Scenes */
 .first-map-scene {
     margin-top: calc(var(--map-height) * -1);
 }
-#what-is-lts-scene {
+#what-is-LTS-scene {
     /* height of story-nav*/
     margin-top: -300px;
 }
@@ -313,6 +308,9 @@ th, td {
 #regional-lts-table-4 {
     background-color: var(--theme-red);
     border-bottom-left-radius: var(--border-radius);
+}
+.lts-table-ul li {
+    margin-bottom: 5px;
 }
 /* END Individual Scenes */
 

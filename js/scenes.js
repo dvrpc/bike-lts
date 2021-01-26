@@ -46,13 +46,21 @@ const toggleNavLink = i => {
     scrollNavBtns[i].classList.add('scroll-story-nav-link-active')
 }
 const makeNavTooltip = e => {
-    const hrefToText = e.target.href.split('#')[1].split('-').join(' ')
+    let hrefToText = e.target.href.split('#')[1].split('-')
+    hrefToText.pop()
+    hrefToText = hrefToText.join(' ')
     
+    const tooltipWrapper = document.createElement('span')
     const tooltip = document.createElement('span')
-    tooltip.classList.add('scroll-story-nav-tooltip')
-    tooltip.textContent = hrefToText
     
-    return tooltip
+    tooltipWrapper.classList.add('scroll-story-nav-tooltip-wrapper')
+    tooltip.classList.add('scroll-story-nav-tooltip')
+
+    tooltip.textContent = hrefToText
+
+    tooltipWrapper.appendChild(tooltip)
+    
+    return tooltipWrapper
 }
 const removeNavTooltip = tooltip => tooltip.remove()
 
