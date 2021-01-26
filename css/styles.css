@@ -214,7 +214,7 @@ th, td {
     width: 12px;
     height: 12px;
 }
-.scroll-story-nav-link-active {
+.scroll-story-nav-link-active, .scroll-story-nav-link:hover {
     background-color: var(--theme-green);
 }
 .scroll-story-nav-hr {
