@@ -18,6 +18,9 @@ for(let i = 0; i < l; i++) {
         toggleAnimation(e, scenes[i])
         toggleNavLink(i)
         toggleMapView(e)
+        // update for map jawn:
+        // data-map ? toggleMapView(e, data-map) : null
+        // aka check for presence of map data attribute and invoke toggleMapView with it, or do nothing
     }))
 }
 
