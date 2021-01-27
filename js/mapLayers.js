@@ -43,4 +43,50 @@ const municipalityOutline = {
     }
 }
 
+
+////
+// Scene layers
+////
+const regionalScene = {
+
+}
+const usingDataScene = {
+
+}
+const lowStressOneScene = {
+
+}
+const lowStressTwoScene = {
+
+}
+const connectivityOneScene = {
+
+}
+const connectivityTwoScene = {
+    
+}
+const connectivityPrioritiesScene = {
+    
+}
+const trailsScene = {
+
+}
+const transitScene = {
+
+}
+const schoolsScene = {
+
+}
+const sceneLayers = {
+    regionalScene,
+    usingDataScene,
+    lowStressOneScene,
+    lowStressTwoScene,
+    connectivityOneScene,
+    connectivityTwoScene,
+    connectivityPrioritiesScene,
+    trailsScene,
+    transitScene,
+    schoolsScene
+}
 export { countyOutline, countyFill, municipalityOutline }
