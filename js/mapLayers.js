@@ -44,27 +44,16 @@ const municipalityOutline = {
 }
 
 
+
 ////
 // Scene layers
 ////
-
 // attributes that could update per scene
     // zoom level
     // center
     // line layers 
         // new layers
         // filters
-// updating the maps
-    // togglemapview in scenes.js needs to get a handle on the correct map instances
-        // each map instance belongs to a particular group - stress, connectivity or special
-        // add data-* attributes to each map element HTML
-            // data-* to signify groups i.e. data-map-stress, data-map-connectivity, data-map-special
-        // when creating scenes, check for the data-* attribute on a given scene
-            // if data-* map attribute is present, add toggleMapView hook to the onenter jawn (ignore otherwise)
-            // pass the data-* attribute (so it can know which section to select) and the scene id (so it can know which specific scene to select from the section) to toggleMapView
-    // from each group, select the scene obj that corresponds to the current scene
-        // iterate over the scene obj and apply the values from each key onto the corresponding map value
-            // scene obj and map attributes need to be the same
 const regionalScene = {
     zoom: 3,
     center: [-75.2273, 40.071]

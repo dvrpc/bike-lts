@@ -24,23 +24,23 @@ const maps = {
 
 // create scene objects
 for(let i = 0; i < l; i++) {
+    const scene = scenes[i]
+    const mapId = scene.dataset.mapId
+
     sceneObjs.push( new ScrollMagic.Scene({
         duration: 200,
-        triggerElement: scenes[i],
+        triggerElement: scene,
         reverse: true
     })
     .on('enter', e => {
-        toggleAnimation(e, scenes[i])
+        toggleAnimation(e, scene)
         toggleNavLink(i)
-        toggleMapView(e)
-        // update for map jawn:
-        // data-map ? toggleMapView(data-map-category, data-map-id) : null
-        // aka check for presence of map data attribute and invoke toggleMapView with it, or do nothing
-        // @TODO efficient way to automate getting the map instance
-            // one option is to check first for data-map-id
-                // if it exists, use a recursive helper that invokes previousElementSibling until previousElementSibling.classList.contain('map') and then return that element
-                // extract the data-map-category from the returned element
-                // invoke toggleMapView() w/data-map-category and data-map-id
+
+        if(mapId) {
+            const mapDiv = getMapCategory(scene)
+            const mapCategory = mapDiv.dataset.mapCategory
+            toggleMapView(mapCategory, mapId)
+        }
     }))
 }
 
@@ -86,8 +86,6 @@ const makeNavTooltip = e => {
     return tooltipWrapper
 }
 const removeNavTooltip = tooltip => tooltip.remove()
-
-// @TODO escape no-map cases
 const toggleMapView = (mapCat, sceneId) => {
     let mapInstance;
     let mapSceneLayer;
@@ -107,9 +105,17 @@ const toggleMapView = (mapCat, sceneId) => {
             mapSceneLayer = sceneLayers.stress[sceneId]
     }
 
+    console.log('map instance ', mapInstance)
+    console.log('scene info ', mapSceneLayer)
+
     // apply map scene info from mapSceneLayer
     // zoom, center and filter are straightforward. layer could be complicated..
     
+}
+const getMapCategory = el => {
+    const prev = el.previousElementSibling
+    if(prev.classList.contains('map')) return prev
+    else return getMapCategory(prev)
 }
 
 export default sceneObjs
