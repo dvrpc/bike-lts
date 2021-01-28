@@ -33,6 +33,8 @@ const customMap = container => {
     })
 
     map.fitBounds(bounds);
+
+    return map
 }
 
 export default customMap

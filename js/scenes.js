@@ -1,22 +1,26 @@
 import { sceneLayers } from './mapLayers.js'
+import customMap from './map.js'
 
-// get scene sections
+// get elements
 const scenes = document.querySelectorAll('.scene-section')
+const scrollNav = document.getElementById('scroll-story-nav-ul').children
+const mapContainer = document.getElementById('map')
+const mapTwoContainer = document.getElementById('map-2')
+const mapThreeContainer = document.getElementById('map-3')
+
+// set up scene variables
 const l = scenes.length
 const sceneObjs = []
 
 // get nav els minus hr
-const scrollNav = document.getElementById('scroll-story-nav-ul').children
 const scrollNavBtns = Array.from(scrollNav).filter(el => el.nodeName != 'HR')
 
-// get maps @NOTE this will be hte output of array.map on the 3 map instances.
-// move that from index.js into here. Will eventually help w/lazy loading too
+// create map instances and store in indexed object
 const maps = {
-    stress: {},
-    connectivity: {},
-    special: {}
+    stress: customMap(mapContainer),
+    connectivity: customMap(mapTwoContainer),
+    special: customMap(mapThreeContainer)
 }
-
 
 // create scene objects
 for(let i = 0; i < l; i++) {

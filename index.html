@@ -243,14 +243,14 @@
             <div>
                 <div id="map-2" class="map scene-media" data-map-category="connectivity"></div>
 
-                <section class="scene-section flex-row first-map-scene" id="connectivity-1-scene">
+                <section class="scene-section flex-row first-map-scene" id="connectivity-1-scene" data-map-id="connectivityOneScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis (1)</h2>
                         <p>The goal was to compare the connectivity benefit of each of the LTS 3 roads. Using a shortest path algorithm, we identified the shortest path from every census block in the region, to every other census block within five miles. Since we were focused on interested but concerned cyclists, we only let our paths use LTS 1, 2, and 3 roads.</p>
                     </article>
                 </section>
     
-                <section class="scene-section flex-row" id="connectivity-2-scene">
+                <section class="scene-section flex-row" id="connectivity-2-scene" data-map-id="connectivityTwoScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis (2)</h2>
                         <p>We tallied the number of shortest paths that use each road segment. We also weighted the paths using information about the populations that live near the origin or destination.</p>
@@ -261,7 +261,7 @@
                     </article>
                 </section>
     
-                <section class="scene-section flex-row" id="connectivity-priorities-scene">
+                <section class="scene-section flex-row" id="connectivity-priorities-scene" data-map-id="connectivityPrioritiesScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Network Connectivity Priorities</h2>
                         <p>These lines represent the LTS 3 roads that would allow for the most connections - the top 10% in each county. Since the shortest paths were calculated between census blocks, more shortest paths started and ended in more dense places, therefore inflating the number of paths in urban areas. We chose to prioritize the top 10% in each county to ensure the urban counties did not dominate the results.</p>
@@ -279,7 +279,7 @@
             <div>
                 <div id="map-3" class="map scene-media" data-map-category="special"></div>
 
-                <section class="scene-section flex-row flex-row-end first-map-scene" id="trails-scene">                
+                <section class="scene-section flex-row flex-row-end first-map-scene" id="trails-scene" data-map-id="trailsScene">                
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Trails</h2>
                         <p>Using the same method explained above, we calculated paths from trial access points to census blocks within 2.5 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination.  The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to trails.</p>
@@ -287,14 +287,14 @@
                     </article>
                 </section>
 
-                <section class="scene-section flex-row flex-row-end" id="transit-scene">
+                <section class="scene-section flex-row flex-row-end" id="transit-scene" data-map-id="transitScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Transit</h2>
                         <p>Similarly, we calculated paths from bus, rail, and trolley stops to census blocks within 3 miles (based on FTA bike to transit guidance). We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination. The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to transit stops.</p>
                     </article>
                 </section>
             
-                <section class="scene-section flex-row flex-row-end" id="schools-scene">
+                <section class="scene-section flex-row flex-row-end" id="schools-scene" data-map-id="schoolScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Schools</h2>
                         <p>To support Safe Routes to School efforts, we calculated paths from schools (up to high school) to census blocks within 2 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination. The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to schools.</p>
