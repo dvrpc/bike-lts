@@ -51,7 +51,9 @@ const municipalityOutline = {
 // attributes that could update per scene
     // zoom level
     // center
-    // line layers (filters)
+    // line layers 
+        // new layers
+        // filters
 // updating the maps
     // togglemapview in scenes.js needs to get a handle on the correct map instances
         // each map instance belongs to a particular group - stress, connectivity or special
@@ -64,10 +66,12 @@ const municipalityOutline = {
         // iterate over the scene obj and apply the values from each key onto the corresponding map value
             // scene obj and map attributes need to be the same
 const regionalScene = {
-
+    zoom: 3,
+    center: [-75.2273, 40.071]
 }
 const usingDataScene = {
-
+    zoom: 5,
+    center: [-75.3836, 40.101]
 }
 const lowStressOneScene = {
 
@@ -111,4 +115,4 @@ const sceneLayers = {
         schoolsScene
     }
 }
-export { countyOutline, countyFill, municipalityOutline }
+export { countyOutline, countyFill, municipalityOutline, sceneLayers }
