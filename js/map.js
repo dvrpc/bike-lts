@@ -23,6 +23,8 @@ const customMap = container => {
     const center = container.center || [-75.2273, 40.071]
     const bounds = container.bounds || [[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]
 
+    console.log('initial zoom ', zoom)
+
     const map = new mapboxgl.Map({
         container: container,
         style: customStyles,

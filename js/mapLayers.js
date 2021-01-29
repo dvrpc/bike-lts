@@ -55,42 +55,44 @@ const municipalityOutline = {
         // new layers
         // filters
 const regionalScene = {
-    zoom: 3,
+    zoom: 8.1,
     center: [-75.2273, 40.071]
 }
 const usingDataScene = {
-    zoom: 5,
-center: [-75.3836, 40.101],
+    zoom: 10.5,
     center: [-75.3836, 40.101]
 }
 const lowStressOneScene = {
-    zoom: 5,
+    zoom: 10.5,
     center: [-75.3836, 40.101]
 }
 const lowStressTwoScene = {
-    zoom: 5,
+    zoom: 10.5,
     center: [-75.3836, 40.101]
 }
 const connectivityOneScene = {
-
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
 }
 const connectivityTwoScene = {
-    
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
 }
 const connectivityPrioritiesScene = {
-        zoom: 5,
-    center: [-75.3836, 40.101]
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
 }
 const trailsScene = {
-    zoom: 5,
-    center: [-75.3836, 40.101]
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
 }
 const transitScene = {
-    zoom: 5,
-    center: [-75.3836, 40.101]
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
 }
 const schoolsScene = {
-
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
 }
 
 const sceneLayers = {

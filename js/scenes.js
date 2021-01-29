@@ -76,11 +76,17 @@ const toggleMapView = (mapCat, sceneId) => {
             mapSceneLayer = sceneLayers.stress[sceneId]
     }
 
-    console.log('map instance ', mapInstance)
-    console.log('scene info ', mapSceneLayer)
+    const zoom = mapSceneLayer.zoom
+    const center = mapSceneLayer.center
 
-    // apply map scene info from mapSceneLayer
-    // zoom, center and filter are straightforward. layer could be complicated..
+    mapInstance.flyTo({
+        center: center,
+        zoom: zoom,
+        speed: 0.8,
+        curve: 2
+    })
+
+    // @TODO handle layers/filters
 }
 
 export default sceneObjs
