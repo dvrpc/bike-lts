@@ -37,7 +37,7 @@
     <body>
         <nav aria-labelledby="intersite navigation" class="flex-row flex-row-between top-nav">
             <a href="/Transportation/Bicycle/" target="_blank" rel="noreferrer noopener">
-                <img src="./img/logo-dvrpc.png" alt="DVRPC logo" />
+                <img src="./img/logo-dvrpc.png" alt="DVRPC logo" id="nav-logo" />
             </a>
             <div class="flex-row flex-row-around">
                 <a href="/analysis/" target="_blank" rel="noreferrer noopener" id="nav-link-analysis">
@@ -54,7 +54,7 @@
                 <div id="story-intro-text" class="flex-row flex-row-between">
                     <img src="./img/logo-main.png" alt="Bike LTS main logo" id="story-logo-main" />
                     
-                    <div>
+                    <div id="story-intro-text-content">
                         <header>
                             <h1>Welcome to DVRPC's Bike LTS and Connectivity Analysis!</h1>
                         </header>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
     
-                <div class="flex-row flex-row-between story-intro-icon-btns">
+                <div class="flex-row flex-row-end story-intro-icon-btns">
                     <figure class="flex-row story-intro-icon-figure" id="analysis-figure">
                         <img src="./img/map-icon.png" alt="map icon" />
                         <figcaption><a href="/analysis/" target="_blank" rel="noopener noreferrer" class="story-intro-icon-btns-link">View Map</a></figcaption>
@@ -142,7 +142,7 @@
                     <thead>
                         <tr>
                             <th class="regional-lts-table-th">LTS</th>
-                            <th class="regional-lts-table-th">Comfortable Enough For <br /> (Cyclist Type)</th>
+                            <th class="regional-lts-table-th">Comfortable Enough For <img src="./img/bicycle.png" alt="cyclist type icon" id="cyclist-type-icon"/></th>
                             <th class="regional-lts-table-th">Characteristics</th>
                         </tr>
                     </thead>
@@ -233,9 +233,9 @@
                 </section>
             </div>
 
-            <section class="scene-section flex-row flex-row-around" id="analysis-buffer">
+            <section class="scene-section flex-row flex-row-around scene-buffer" id="analysis-buffer">
                 <article class="scene-text">
-                    <h2 class="scene-header">Analysis Buffer</h2>
+                    <h2 class="scene-header scene-buffer-header">Analysis Buffer</h2>
                     <p>Safe routes to school environmental quality act community Shanghai ideal, building code exurb external facilities planning land area home rule developing world crossing guard street parking.</p>
                 </article>
             </section>
@@ -243,14 +243,14 @@
             <div>
                 <div id="map-2" class="map scene-media" data-map-category="connectivity"></div>
 
-                <section class="scene-section flex-row first-map-scene" id="connectivity-1-scene" data-map-id="connectivityOneScene">
+                <section class="scene-section first-map-scene flex-row flex-row-end" id="connectivity-1-scene" data-map-id="connectivityOneScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis (1)</h2>
                         <p>The goal was to compare the connectivity benefit of each of the LTS 3 roads. Using a shortest path algorithm, we identified the shortest path from every census block in the region, to every other census block within five miles. Since we were focused on interested but concerned cyclists, we only let our paths use LTS 1, 2, and 3 roads.</p>
                     </article>
                 </section>
     
-                <section class="scene-section flex-row" id="connectivity-2-scene" data-map-id="connectivityTwoScene">
+                <section class="scene-section flex-row flex-row-end" id="connectivity-2-scene" data-map-id="connectivityTwoScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis (2)</h2>
                         <p>We tallied the number of shortest paths that use each road segment. We also weighted the paths using information about the populations that live near the origin or destination.</p>
@@ -261,7 +261,7 @@
                     </article>
                 </section>
     
-                <section class="scene-section flex-row" id="connectivity-priorities-scene" data-map-id="connectivityPrioritiesScene">
+                <section class="scene-section flex-row flex-row-end" id="connectivity-priorities-scene" data-map-id="connectivityPrioritiesScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Network Connectivity Priorities</h2>
                         <p>These lines represent the LTS 3 roads that would allow for the most connections - the top 10% in each county. Since the shortest paths were calculated between census blocks, more shortest paths started and ended in more dense places, therefore inflating the number of paths in urban areas. We chose to prioritize the top 10% in each county to ensure the urban counties did not dominate the results.</p>
@@ -269,9 +269,9 @@
                 </section>
             </div>
 
-            <section class="scene-section flex-row flex-row-around" id="special-destinations-scene">
+            <section class="scene-section flex-row flex-row-around scene-buffer" id="special-destinations-scene">
                 <article class="scene-text">
-                    <h2 class="scene-header">Special Destinations</h2>
+                    <h2 class="scene-header scene-buffer-header">Special Destinations</h2>
                     <p>Special destinations: In an effort to further prioritize segments based on their destinations, we calculated paths specifically to schools, transit stops, and trail intersections.</p>
                 </article>
             </section>
@@ -314,6 +314,11 @@
             </section>
         </main>
         
+        <div id="final-graphic">
+
+        </div>
+
+        </div>
         <footer>
             <div>
                 Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

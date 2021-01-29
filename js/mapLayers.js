@@ -60,13 +60,16 @@ const regionalScene = {
 }
 const usingDataScene = {
     zoom: 5,
+center: [-75.3836, 40.101],
     center: [-75.3836, 40.101]
 }
 const lowStressOneScene = {
-
+    zoom: 5,
+    center: [-75.3836, 40.101]
 }
 const lowStressTwoScene = {
-
+    zoom: 5,
+    center: [-75.3836, 40.101]
 }
 const connectivityOneScene = {
 
@@ -75,17 +78,21 @@ const connectivityTwoScene = {
     
 }
 const connectivityPrioritiesScene = {
-    
+        zoom: 5,
+    center: [-75.3836, 40.101]
 }
 const trailsScene = {
-
+    zoom: 5,
+    center: [-75.3836, 40.101]
 }
 const transitScene = {
-
+    zoom: 5,
+    center: [-75.3836, 40.101]
 }
 const schoolsScene = {
 
 }
+
 const sceneLayers = {
     stress: {
         regionalScene,
@@ -104,4 +111,5 @@ const sceneLayers = {
         schoolsScene
     }
 }
+
 export { countyOutline, countyFill, municipalityOutline, sceneLayers }
