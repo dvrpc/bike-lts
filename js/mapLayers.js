@@ -43,4 +43,75 @@ const municipalityOutline = {
     }
 }
 
-export { countyOutline, countyFill, municipalityOutline }
+
+
+////
+// Scene layers
+////
+// attributes that could update per scene
+    // zoom level
+    // center
+    // line layers 
+        // new layers
+        // filters
+const regionalScene = {
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
+}
+const usingDataScene = {
+    zoom: 10.5,
+    center: [-75.3836, 40.101]
+}
+const lowStressOneScene = {
+    zoom: 10.5,
+    center: [-75.3836, 40.101]
+}
+const lowStressTwoScene = {
+    zoom: 10.5,
+    center: [-75.3836, 40.101]
+}
+const connectivityOneScene = {
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
+}
+const connectivityTwoScene = {
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
+}
+const connectivityPrioritiesScene = {
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
+}
+const trailsScene = {
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
+}
+const transitScene = {
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
+}
+const schoolsScene = {
+    zoom: 8.1,
+    center: [-75.2273, 40.071]
+}
+
+const sceneLayers = {
+    stress: {
+        regionalScene,
+        usingDataScene,
+        lowStressOneScene,
+        lowStressTwoScene,
+    },
+    connectivity: {
+        connectivityOneScene,
+        connectivityTwoScene,
+        connectivityPrioritiesScene,
+    },
+    special: {
+        trailsScene,
+        transitScene,
+        schoolsScene
+    }
+}
+
+export { countyOutline, countyFill, municipalityOutline, sceneLayers }
