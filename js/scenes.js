@@ -82,7 +82,7 @@ const toggleMapView = (mapCat, sceneId) => {
     mapInstance.flyTo({
         center: center,
         zoom: zoom,
-        speed: 0.8,
+        speed: 0.4,
         curve: 2
     })
 

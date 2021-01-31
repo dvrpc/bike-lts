@@ -344,6 +344,9 @@ strong {
 .lts-table-ul li {
     margin-bottom: 5px;
 }
+.scene-media-img {
+    width: 400px;
+}
 /* END Individual Scenes */
 
 

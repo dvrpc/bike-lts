@@ -1,6 +1,13 @@
 const toggleAnimation = el => {
-    const text = el.children[1] ? el.children[1] : el.children[0]
-    text.classList.add('fadein')
+    const els = el.children
+    const l = els.length
+
+    for(let i = 0; i < l; i++) {
+        if(els[i].classList.contains('scene-text')) {
+            els[i].classList.add('fadein')
+            return
+        }
+    }
 }
 
 const toggleNavLink = (btns, i) => {

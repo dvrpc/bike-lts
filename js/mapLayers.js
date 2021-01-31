@@ -75,8 +75,8 @@ const connectivityOneScene = {
     center: [-75.2273, 40.071]
 }
 const connectivityTwoScene = {
-    zoom: 8.1,
-    center: [-75.2273, 40.071]
+    zoom: 9.6,
+    center: [-75.0173, 40.171]
 }
 const connectivityPrioritiesScene = {
     zoom: 8.1,

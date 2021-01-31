@@ -19,7 +19,7 @@ const customStyles = {
 }
 
 const customMap = container => {
-    const zoom = container.zoom || 3
+    const zoom = container.zoom || 8.1
     const center = container.center || [-75.2273, 40.071]
     const bounds = container.bounds || [[-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]]
 
