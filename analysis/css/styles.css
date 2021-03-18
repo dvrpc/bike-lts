@@ -15,8 +15,8 @@ p {
     margin-top: 5px;
 }
 :root {
-    --theme-dvrpc: #0078ae;
-    --theme-dark: #505a5e;
+    --theme-green: #498434;
+    --theme-black: #383838;
 
     --wrapper-padding: 10px;
     --wrapper-padding-double: 20px;
@@ -92,7 +92,7 @@ nav {
     position: relative;
     height: 6vh;
     padding: 0 var(--wrapper-padding);
-    background-color: var(--theme-dvrpc);
+    background-color: var(--theme-green);
     color: #f7f7f7;
     box-shadow: var(--box-shadow);
     z-index: 1;
@@ -136,7 +136,7 @@ nav {
     position: absolute;
     top: calc(6vh + 10px);
     left: var(--wrapper-padding);
-    width: 35vw;
+    width: 33vw;
     height: calc(88vh - 20px);
     z-index: 3;
     overflow-y: auto;
@@ -162,7 +162,7 @@ nav {
 .sidebar-fieldset {
     background: white;
     border-radius: var(--border-radius);
-    border: 2px solid var(--theme-dvrpc);
+    border: 2px solid var(--theme-green);
 }
 .sidebar-fieldset label {
     margin-right: 5px;
@@ -183,7 +183,7 @@ nav {
     display: block;
 }
 .popup-span:not(:last-of-type) {
-    border-bottom: 1px dotted var(--theme-dark);
+    border-bottom: 1px dotted var(--theme-black);
 }
 /* END Map */
 
@@ -195,7 +195,7 @@ footer {
     box-shadow: var(--box-shadow-up);
     padding: 0 var(--wrapper-padding);
     height: 6vh;
-    background-color: var(--theme-dark);
+    background-color: var(--theme-black);
     color: #f7f7f7;
 }
 /* END Footer */
