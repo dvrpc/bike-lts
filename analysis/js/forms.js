@@ -6,6 +6,7 @@ const processForm = form => {
 }
 
 // return layer to be toggled
+// @TODO 1st line turn spinner overlay on, last line turn it off
 const toggleLayers = (form, map) => {
     form.onchange = e => {
 
