@@ -1,18 +1,10 @@
-# Floating, responsive webmap template with full width footer
+# DVRPC Bike LTS Analysis Map
+## About
+    An update to the [existing](https://www.dvrpc.org/webmaps/BikeStress/) LTS map that will improve performance, add more features and streamline the user experience. We will be moving away from the existing AGO platform into a custom solution built with [mapboxgl js](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and custom vector tiles.
 
+## Development
+    - Map template float-wide starting point
+    - vanilla, mapbox, etc
 
-## Includes
-    - about modal (add tabs by pulling code from tabs folder)
-    - DVRPC extent map overlay to easily re-orient view to the DVRPC region
-    - easily append or update map sources and layers
-
-## Getting Started
-    - copy folder as root (or folder contents into root) of project folder
-    - spin up a local server (live server plugin if using vscode)
-    - that's it. Mapbox is the only external source, everything else is vanilla. The rest of the content and styles are up to you. Happy hacking. 
-
-## Output (desktop)
-![desktop screenshot](./desktop.png)
-
-## Output (mobile)
-![mobile screenshot](./mobile.png)
+## Deployment
+    - TBD
