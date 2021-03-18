@@ -8,7 +8,8 @@ const modal = document.getElementById('modal')
 const modalToggle = document.getElementById('modal-toggle')
 const closeModal = document.getElementById('close-modal')
 const forms = Array.from(document.querySelectorAll('.sidebar-form-toggle'))
-console.log(forms)
+
+
 // map
 const map = makeMap()
 
