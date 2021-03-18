@@ -49,9 +49,42 @@
         <main id="main-content-wrapper" class="flex-row flex-between">
             <article id="sidebar">
                 <div id="sidebar-content">
-                    <h1>Content Header</h1>
+                    <h1>Bike LTS</h1>
 
-                    <p>content goes here</p>
+                    <form class="sidebar-form sidebar-form-toggle">
+                        <fieldset class="sidebar-fieldset">
+                            <legend>toggle LTS layers</legend>
+        
+                            <label>
+                                low stress islands:
+                                <input type="checkbox" id="lowstress-islands" name="layer" value="lowstress-islands" checked>
+                            </label>
+        
+                            <label>
+                                existing conditions:
+                                <input type="checkbox" id="existing-conditions" name="layer" value="existing-conditions" checked>
+                            </label>
+                        </fieldset>
+                    </form>
+
+                    <form class="sidebar-form sidebar-form-toggle">
+                        <fieldset class="sidebar-fieldset">
+                            <legend>toggle transit layers</legend>
+        
+                            <label>
+                                passenger rail:
+                                <input type="checkbox" id="passenger-rail" name="layer" value="passenger-rail">
+                            </label>
+        
+                            <label>
+                                trolley:
+                                <input type="checkbox" id="trolley" name="layer" value="trolley">
+                            </label>
+                        </fieldset>
+                    </form>
+                    
+                    <p>It could make sense to have multiple layer toggle forms here. I.e. one for core LTS layers, one for public transit layers, one for IPD layers, etc.</p>
+                    <p>NOTE: Turning LTS layers on/off might not make sense given that's the point of the project but I just wanted to set up two forms to have a reference point.</p>
                 </div>
             </article>
             
