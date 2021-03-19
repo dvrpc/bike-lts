@@ -6,7 +6,7 @@ const layers = {
         "source-layer": "county",
         "paint": {
             'line-width': 2.5,
-            'line-color': '#383838'
+            'line-color': '#f7f7f7'
         },
         "filter": [
             "==",
@@ -21,7 +21,7 @@ const layers = {
         "source-layer": "municipalities",
         "paint": {
             'line-width': 0.5,
-            'line-color': '#383838'
+            'line-color': '#f7f7f7'
         }
     },
     lowstressIslands: {
