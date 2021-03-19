@@ -14,9 +14,13 @@ h1 {
 p {
     margin-top: 5px;
 }
+a {
+    color: var(--theme-yellow);
+}
 :root {
     --theme-green: #498434;
     --theme-yellow: #fcd842;
+    --theme-red: #a50a0a;
     --theme-black: #383838;
 
     --wrapper-padding: 10px;
@@ -58,14 +62,14 @@ p {
 
 
 /* Modal */
-#modal-content{
+#modal-content {
     box-shadow: var(--box-shadow);
 }
-#modal-toggle, #close-modal{
+#modal-toggle, #close-modal {
     cursor: pointer;
     font-size: inherit;
 }
-#modal{
+#modal {
     position: fixed;
     display: none;
     z-index: 3;
@@ -75,7 +79,7 @@ p {
     overflow: auto;
     background: rgba(0, 0, 0, 0.3);
 }
-#modal-content{
+#modal-content {
     position: relative;
     background: #fff;
     width: 50%;
@@ -83,7 +87,7 @@ p {
     border-radius: var(--border-radius);
     filter: brightness(150%);
 }
-#close-modal{
+#close-modal {
     position: absolute;
     right: 10px;
     top: 5px;
@@ -102,13 +106,15 @@ nav {
     position: relative;
     height: 6vh;
     padding: 0 var(--wrapper-padding);
-    background-color: var(--theme-green);
-    color: #f7f7f7;
     box-shadow: var(--box-shadow);
+    color: var(--theme-red);
     z-index: 1;
 }
+.header-nav {
+    background-color: var(--theme-green);
+}
 .nav-links {
-    color: #f7f7f7;
+    color: var(--theme-yellow);
 }
 .nav-btn {
     background: transparent;
@@ -118,6 +124,12 @@ nav {
 }
 .nav-vr {
     margin: 0 5px;
+    background-color: var(--theme-red);
+    border: 1px outset;
+    border-radius: var(--border-radius);
+}
+.nav-header-vr {
+    margin: 0 15px;
 }
 #dvrpc-logo {
     display: block;
@@ -155,6 +167,9 @@ nav {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
+#sidebar strong {
+    color: var(--theme-red);
+}
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
 }
@@ -171,7 +186,7 @@ nav {
 .sidebar-fieldset {
     background: white;
     border-radius: var(--border-radius);
-    border: 2px solid var(--theme-green);
+    border: 2px solid var(--theme-red);
 }
 .sidebar-fieldset label {
     margin-right: 5px;
@@ -206,15 +221,16 @@ footer {
     bottom: 0;
     box-shadow: var(--box-shadow-up);
     background-color: var(--theme-black);
-    color: #f7f7f7;
+    color: white;
 }
 .footer-nav {
     padding: 0;
-
+    background-color: var(--theme-green);
 }
 .footer-nav-ul {
     height: 100%;
     width: 100%;
     padding: 0%;
+    
 }
 /* END Footer */
