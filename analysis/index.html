@@ -31,13 +31,11 @@
     </head>
 
     <body>
-        <nav class="flex-row flex-between">
+        <nav aria-label="primary" class="flex-row flex-between">
             <div class="flex-row">
                 <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" id="dvrpc-logo" class="nav-logos" /></a>
                 <span class="nav-vr">|</span>
                 <img src="./imgs/project-logo.png" alt="project logo" class="nav-logos">
-                <span class="nav-vr">|</span>
-                <button id="modal-toggle" class="nav-btn nav-links">about</button>
             </div>
 
             <div>
@@ -83,11 +81,19 @@
                 </div>
 
                 <footer>
-                    <nav role="secondary" class="footer-nav">
+                    <nav aria-label="secondary" class="footer-nav">
                         <ul class="flex-row flex-around list-unstyled footer-nav-ul">
-                            <li>link</li>
-                            <li>link</li>
-                            <li>link</li>
+                            <li>
+                                <button class="nav-btn nav-links">link</button>
+                            </li>
+                            <span class="nav-vr">|</span>
+                            <li>
+                                <button id="modal-toggle" class="nav-btn nav-links">about</button>
+                            </li>
+                            <span class="nav-vr">|</span>
+                            <li>
+                                <button class="nav-btn nav-links">link</button>
+                            </li>
                         </ul>
                     </nav>
                 </footer>
