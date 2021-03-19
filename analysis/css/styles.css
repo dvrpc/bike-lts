@@ -126,7 +126,7 @@ nav {
     margin: 0 5px;
     padding: 0;
     width: 1px;
-    background-color: var(--theme-red);
+    background-color: var(--theme-black);
     height: 1.5rem;
     display: inline-block;
 }
