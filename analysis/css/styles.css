@@ -44,6 +44,15 @@ p {
 .flex-end {
     justify-content: flex-end;
 }
+.list-unstyled {
+    list-style-type: none;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
 /* END General */
 
 
@@ -120,7 +129,7 @@ nav {
 
 /* Main Webmap Area */
 #main-content-wrapper {
-    height: 88vh;
+    height: 94vh;
 }
 #regional-extent-img {
     display: block;
@@ -138,7 +147,7 @@ nav {
     top: calc(6vh + 10px);
     left: var(--wrapper-padding);
     width: 33vw;
-    height: calc(88vh - 20px);
+    height: calc(94vh - 20px);
     z-index: 3;
     overflow-y: auto;
     overflow-x: hidden;
@@ -148,7 +157,6 @@ nav {
 }
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
-    min-height: calc(90% - 40px);
 }
 .sidebar-img {
     display: block;
@@ -192,11 +200,21 @@ nav {
 
 /* Footer */
 footer {
-    position: relative;
-    box-shadow: var(--box-shadow-up);
-    padding: 0 var(--wrapper-padding);
     height: 6vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    box-shadow: var(--box-shadow-up);
     background-color: var(--theme-black);
     color: #f7f7f7;
+}
+.footer-nav {
+    padding: 0;
+
+}
+.footer-nav-ul {
+    height: 100%;
+    width: 100%;
+    padding: 0%;
 }
 /* END Footer */

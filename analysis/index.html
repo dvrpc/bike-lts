@@ -31,13 +31,11 @@
     </head>
 
     <body>
-        <nav class="flex-row flex-between">
+        <nav aria-label="primary" class="flex-row flex-between">
             <div class="flex-row">
                 <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" id="dvrpc-logo" class="nav-logos" /></a>
                 <span class="nav-vr">|</span>
                 <img src="./imgs/project-logo.png" alt="project logo" class="nav-logos">
-                <span class="nav-vr">|</span>
-                <button id="modal-toggle" class="nav-btn nav-links">about</button>
             </div>
 
             <div>
@@ -81,6 +79,24 @@
                     <p>It could make sense to have multiple layer toggle forms here. I.e. one for core LTS layers, one for public transit layers, one for IPD layers, one for priority layers etc.</p>
                     <p>We can also create another section of forms to filter within layers (i.e. turn properties on/off) as a supplement to turning the entire layer on/off.</p>
                 </div>
+
+                <footer>
+                    <nav aria-label="secondary" class="footer-nav">
+                        <ul class="flex-row flex-around list-unstyled footer-nav-ul">
+                            <li>
+                                <button class="nav-btn nav-links">link</button>
+                            </li>
+                            <span class="nav-vr">|</span>
+                            <li>
+                                <button id="modal-toggle" class="nav-btn nav-links">about</button>
+                            </li>
+                            <span class="nav-vr">|</span>
+                            <li>
+                                <button class="nav-btn nav-links">link</button>
+                            </li>
+                        </ul>
+                    </nav>
+                </footer>
             </article>
             
             <div id="map"></div>
@@ -94,10 +110,6 @@
                 <p>About the project, methodology, disclaimer, contact info, etc.</p>
             </div>
         </div>
-
-        <footer class="flex-column flex-around">
-            footer
-        </footer>
 
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
     </body>
