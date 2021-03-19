@@ -5,7 +5,7 @@
 body {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    line-height: 140%;
+    line-height: 145%;
     text-rendering: optimizeLegibility;
 }
 h1 {
@@ -124,9 +124,11 @@ nav {
 }
 .nav-vr {
     margin: 0 5px;
+    padding: 0;
+    width: 1px;
     background-color: var(--theme-red);
-    border: 1px outset;
-    border-radius: var(--border-radius);
+    height: 1.5rem;
+    display: inline-block;
 }
 .nav-header-vr {
     margin: 0 15px;
@@ -158,12 +160,13 @@ nav {
     position: absolute;
     top: calc(6vh + 10px);
     left: var(--wrapper-padding);
-    width: 33vw;
+    width: 30vw;
     height: calc(94vh - 20px);
     z-index: 3;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #f7f7f7;
+    background-color: var(--theme-black);
+    color: #f7f7f7;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
@@ -184,12 +187,14 @@ nav {
     margin: var(--wrapper-padding) auto;
 }
 .sidebar-fieldset {
-    background: white;
     border-radius: var(--border-radius);
-    border: 2px solid var(--theme-red);
+    border: 0.25rem solid var(--theme-green);
 }
 .sidebar-fieldset label {
     margin-right: 5px;
+}
+.sidebar-fieldset legend {
+    color: var(--theme-yellow);
 }
 /* END Sidebar */
 
