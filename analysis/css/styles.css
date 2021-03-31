@@ -145,6 +145,14 @@ nav {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
 }
+.sidebar-details {
+    margin-top: 5px;
+}
+.sidebar-summary{
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--theme-yellow);
+}
 .sidebar-form {
     margin: var(--wrapper-padding) auto;
 }
