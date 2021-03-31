@@ -50,6 +50,8 @@
                 <div id="sidebar-content">
                     <h1>Bike LTS</h1>
 
+                    <p>brief, introductory text goes here.</p>
+
                     <form class="sidebar-form sidebar-form-toggle">
                         <fieldset class="sidebar-fieldset">
                             <legend>toggle LTS layers</legend>
@@ -58,10 +60,28 @@
                                 existing conditions:
                                 <input type="checkbox" id="existing-conditions" name="layer" value="existing-conditions" checked>
                             </label>
-
                             <label>
                                 low stress islands:
                                 <input type="checkbox" id="lowstress-islands" name="layer" value="lowstress-islands">
+                            </label>
+                            
+                            <hr class="sidebar-form-hr" />
+
+                            <label>
+                                LTS 1:
+                                <input type="checkbox" id="lts-1" name="layer" value="lts-1">
+                            </label>
+                            <label>
+                                LTS 2:
+                                <input type="checkbox" id="lts-2" name="layer" value="lts-2">
+                            </label>
+                            <label>
+                                LTS 3:
+                                <input type="checkbox" id="lts-3" name="layer" value="lts-3">
+                            </label>
+                            <label>
+                                LTS 4:
+                                <input type="checkbox" id="lts-4" name="layer" value="lts-4">
                             </label>
                         </fieldset>
                     </form>
@@ -71,13 +91,39 @@
                             <legend>toggle LTS analysis layers</legend>
         
                             <label>
-                                IPD:
-                                <input type="checkbox" id="ipd-priorities" name="layer" value="ipd-priorities">
+                                priority:
+                                <input type="checkbox" id="priority" name="layer" value="priority">
                             </label>
-        
                             <label>
                                 school:
                                 <input type="checkbox" id="school" name="layer" value="school">
+                            </label>
+                            <label>
+                                trails:
+                                <input type="checkbox" id="trails" name="layer" value="trails">
+                            </label>
+                            <label>
+                                transit:
+                                <input type="checkbox" id="transit" name="layer" value="transit">
+                            </label>
+
+                            <hr class="sidebar-form-hr" />
+
+                            <label>
+                                priority (IPD):
+                                <input type="checkbox" id="priority-ipd" name="layer" value="priority-ipd">
+                            </label>
+                            <label>
+                                school (IPD):
+                                <input type="checkbox" id="school-ipd" name="layer" value="school-ipd">
+                            </label>
+                            <label>
+                                trails (IPD):
+                                <input type="checkbox" id="trails-ipd" name="layer" value="trails-ipd">
+                            </label>
+                            <label>
+                                transit (IPD):
+                                <input type="checkbox" id="transit-ipd" name="layer" value="transit-ipd">
                             </label>
                         </fieldset>
                     </form>
@@ -87,14 +133,25 @@
                             <legend>toggle resource layers</legend>
         
                             <label>
+                                bike facilities:
+                                <input type="checkbox" id="bike-facilities" name="layer" value="bike-facilities">
+                            </label>
+                            <label>
                                 passenger rail:
                                 <input type="checkbox" id="passenger-rail" name="layer" value="passenger-rail">
+                            </label>
+                            <label>
+                                trolley:
+                                <input type="checkbox" id="trolley" name="layer" value="trolley">
+                            </label>
+                            <label>
+                                bus:
+                                <input type="checkbox" id="bus" name="layer" value="bus">
                             </label>
                         </fieldset>
                     </form>
                     
-                    <p>It could make sense to have multiple layer toggle forms here. I.e. one for core LTS layers, one for public transit layers, one for IPD layers, one for priority layers etc.</p>
-                    <p>We can also create another section of forms to filter within layers (i.e. turn properties on/off) as a supplement to turning the entire layer on/off.</p>
+                    <p>analysis, click events, dynamic text, etc goes here.</p>
                 </div>
 
                 <footer>
@@ -103,11 +160,15 @@
                             <li class="footer-nav-li">
                                 <a href="./pdf/BikeStressDocumentation_phase3.pdf" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">documentation</a>
                             </li>
+
                             <span class="nav-vr"></span>
+
                             <li class="footer-nav-li">
                                 <button id="feedback-btn" class="nav-btn nav-links" type="button">feedback</button>
                             </li>
+
                             <span class="nav-vr"></span>
+
                             <li class="footer-nav-li">
                                 <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">download data</a>
                             </li>

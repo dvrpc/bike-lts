@@ -158,6 +158,9 @@ nav {
 .sidebar-fieldset legend {
     color: var(--theme-yellow);
 }
+.sidebar-form-hr {
+    margin: 2% 0;
+}
 /* END Sidebar */
 
 
