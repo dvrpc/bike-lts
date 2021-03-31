@@ -24,16 +24,6 @@ const layers = {
             'line-color': '#f7f7f7'
         }
     },
-    lowstressIslands: {
-        id: "lowstress-islands",
-        type: "line",
-        source: "lts",
-        "source-layer": "lowstress_islands",
-        "paint": {
-            "line-width": 0.25,
-            "line-color": "#498434"
-        }
-    },
     existingConditions: {
         id: "existing-conditions",
         type: "line",
