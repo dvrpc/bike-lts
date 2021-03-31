@@ -1,16 +1,4 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
-/*
-    lowstressIslands: {
-        id: "lowstress-islands",
-        type: "line",
-        source: "lts",
-        "source-layer": "lowstress_islands",
-        "paint": {
-            "line-width": 0.25,
-            "line-color": "#498434"
-        }
-    }
-*/
 
 // LTS filters
 const lowStressFilter = ['any',
