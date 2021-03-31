@@ -5,7 +5,7 @@
 body {
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    line-height: 145%;
+    line-height: 140%;
     text-rendering: optimizeLegibility;
 }
 h1 {
@@ -81,6 +81,8 @@ nav {
     border: none;
     text-decoration: underline;
     padding: 0;
+    cursor: pointer;
+    font-size: inherit;
 }
 .nav-vr {
     margin: 0 5px;
