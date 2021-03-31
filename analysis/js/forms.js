@@ -1,16 +1,4 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
-/*
-    lowstressIslands: {
-        id: "lowstress-islands",
-        type: "line",
-        source: "lts",
-        "source-layer": "lowstress_islands",
-        "paint": {
-            "line-width": 0.25,
-            "line-color": "#498434"
-        }
-    }
-*/
 
 // LTS filters
 const lowStressFilter = ['any',
@@ -19,6 +7,9 @@ const lowStressFilter = ['any',
 ]
 
 // @TODO 1st line turn spinner overlay on, last line turn it off
+// form fields that invoke this function:
+    // analysis layers
+    // resource layers
 const toggleLayers = (form, map) => {
     form.onchange = e => {
         const layer = e.target.value
@@ -30,7 +21,9 @@ const toggleLayers = (form, map) => {
     }
 }
 
-// return filter to be applied
+// @TODO 1st line turn spinner overlay on, last line turn it off
+// form fields that invoke this function:
+    // LTS layers
 const filterLayers = (layer, value) => {
     // process data
 
