@@ -30,7 +30,7 @@ const layers = {
         source: "lts",
         "source-layer": "existing_conditions_lts",
         "paint": {
-            "line-width": 0.5,
+            "line-width": 0.33,
             "line-color": [
                 'match', ['get', 'lts_score'],
                 "1", '#498434',
