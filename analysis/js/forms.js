@@ -8,7 +8,6 @@ const lowStressFilter = ['any',
 
 // @TODO 1st line turn spinner overlay on, last line turn it off
 // form fields that invoke this function:
-    // analysis layers
     // resource layers
 const toggleLayers = (form, map) => {
     form.onchange = e => {
@@ -24,6 +23,7 @@ const toggleLayers = (form, map) => {
 // @TODO 1st line turn spinner overlay on, last line turn it off
 // form fields that invoke this function:
     // LTS layers
+    // analysis layers
 const filterLayers = (layer, value) => {
     // process data
 
@@ -32,4 +32,4 @@ const filterLayers = (layer, value) => {
     // return filter
 }
 
-export { toggleLayers, filterLayers}
+export { toggleLayers, filterLayers }

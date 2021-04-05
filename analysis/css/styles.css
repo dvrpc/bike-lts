@@ -161,7 +161,10 @@ nav {
     border: 0.25rem solid var(--theme-green);
 }
 .sidebar-fieldset label {
-    margin-right: 5px;
+    margin-right: 10px;
+}
+.sidebar-fieldset label:last-child {
+    margin-right: 0;
 }
 .sidebar-fieldset legend {
     color: var(--theme-yellow);
