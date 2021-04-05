@@ -160,6 +160,59 @@ nav {
     border-radius: var(--border-radius);
     border: 0.25rem solid var(--theme-green);
 }
+
+
+
+
+
+/* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
+label {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+label span {
+    position: absolute;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    border: 2px solid black;
+    background: #eee;
+    transition: all 0.4s;
+}
+input[type="checkbox"]::before {
+width: 16px;
+height: 16px;
+border-radius: 50%;
+background-color: black;
+content: '';
+position: absolute;
+top: -6px;
+left: 3px;
+transition: all 0.4s;
+}
+input[type="checkbox"]:checked {
+background-color: #ffaa00;
+transition: all 0.4s;
+}
+input[type="checkbox"]:checked::before {
+left: 24px;
+transition: all 0.4s;
+}
+input[type="checkbox"] ~ label .on, input[type="checkbox"]:checked ~ label .off {
+opacity: 0;
+}
+input[type="checkbox"] ~ label .off, input[type="checkbox"]:checked ~ label .on {
+opacity: 1;
+}
+input:focus {
+outline: 1px dotted black;
+}
 .sidebar-fieldset label {
     margin-right: 10px;
 }
