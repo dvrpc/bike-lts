@@ -1,15 +1,16 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
 
-// general purpose form handler
-const processForm = form => {
+// LTS filters
+const lowStressFilter = ['any',
+    ['==', ['get', 'lts_score'], 1],
+    ['==', ['get', 'lts_score'], 2]
+]
 
-}
-
-// return layer to be toggled
 // @TODO 1st line turn spinner overlay on, last line turn it off
+// form fields that invoke this function:
+    // resource layers
 const toggleLayers = (form, map) => {
     form.onchange = e => {
-
         const layer = e.target.value
         const visibility = e.target.checked ? 'visible' : 'none'
 
@@ -19,8 +20,11 @@ const toggleLayers = (form, map) => {
     }
 }
 
-// return filter to be applied
-const filterLayers = values => {
+// @TODO 1st line turn spinner overlay on, last line turn it off
+// form fields that invoke this function:
+    // LTS layers
+    // analysis layers
+const filterLayers = (layer, value) => {
     // process data
 
     // create filter
@@ -28,4 +32,4 @@ const filterLayers = values => {
     // return filter
 }
 
-export { toggleLayers, filterLayers}
+export { toggleLayers, filterLayers }

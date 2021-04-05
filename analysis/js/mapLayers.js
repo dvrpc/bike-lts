@@ -24,29 +24,19 @@ const layers = {
             'line-color': '#f7f7f7'
         }
     },
-    lowstressIslands: {
-        id: "lowstress-islands",
-        type: "line",
-        source: "lts",
-        "source-layer": "lowstress_islands",
-        "paint": {
-            "line-width": 0.25,
-            "line-color": "#498434"
-        }
-    },
     existingConditions: {
         id: "existing-conditions",
         type: "line",
         source: "lts",
         "source-layer": "existing_conditions_lts",
         "paint": {
-            "line-width": 0.5,
+            "line-width": 0.33,
             "line-color": [
-                'match', ['get', 'lts'],
-                "LTS 1", '#498434',
-                "LTS 2", '#72bc58',
-                "LTS 3", '#fcd842',
-                "LTS 4", '#a50a0a',
+                'match', ['get', 'lts_score'],
+                "1", '#498434',
+                "2", '#72bc58',
+                "3", '#fcd842',
+                "4", '#a50a0a',
                 '#fff'
             ]
         }

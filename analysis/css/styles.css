@@ -145,6 +145,14 @@ nav {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
 }
+.sidebar-details {
+    margin-top: 5px;
+}
+.sidebar-summary{
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--theme-yellow);
+}
 .sidebar-form {
     margin: var(--wrapper-padding) auto;
 }
@@ -153,10 +161,16 @@ nav {
     border: 0.25rem solid var(--theme-green);
 }
 .sidebar-fieldset label {
-    margin-right: 5px;
+    margin-right: 10px;
+}
+.sidebar-fieldset label:last-child {
+    margin-right: 0;
 }
 .sidebar-fieldset legend {
     color: var(--theme-yellow);
+}
+.sidebar-form-hr {
+    margin: 2% 0;
 }
 /* END Sidebar */
 

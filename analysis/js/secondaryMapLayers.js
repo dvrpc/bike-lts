@@ -12,7 +12,7 @@ const layers = {
                 11, 4
             ],
             'circle-color': [
-                'match', ['get', 'OPERATOR'],
+                'match', ['get', 'operator'],
                 'Amtrak', '#004d6e',
                 'NJ Transit', '#f18541',
                 'PATCO', '#ed164b',
