@@ -4,9 +4,7 @@ import secondaryMapLayers from './secondaryMapLayers.js'
 // @TODO update lts_score to Int on tiles
 const ltsFilters = {
     'existing-conditions': false,
-    'lowstress-islands': [
-        ['<', 'lts_score', "3"]
-    ],
+    'lowstress-islands': false,
     'lts-1': [
         ['==', 'lts_score', "1"]
     ],
@@ -18,9 +16,6 @@ const ltsFilters = {
     ],
     'lts-4': [
         ['==', 'lts_score', "4"]
-    ],
-    'priority': [
-        ['==', '']
     ]
 }
 
@@ -55,7 +50,12 @@ const filterLayers = (form, map) => {
         let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', "0"]
 
         // handle special toggle case
-        if(input.classList.contains('core-lts')) handleCoreLayers()
+        if(input.classList.contains('core-lts')) {
+            const coreInputs = form.querySelectorAll('.core-lts')
+            const selectedState = {id: input.id, state: input.checked}
+
+            handleCoreLayers(coreInputs, selectedState)
+        }
 
         // loop checked inputs & append each to filter obj
         allChecked.forEach(input => {
@@ -63,18 +63,46 @@ const filterLayers = (form, map) => {
             baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
         })
 
-        map.setFilter(layer, baseFilter)
+        // map.setFilter(layer, baseFilter)
     }
 
     // turn spinner off
 }
 
 // this funciton just handles the UI changes associated with toggling the core layers
-const handleCoreLayers = layer => {
-    // each core layer has the possibility of toggling the other.
-    // ex. toggling existing-conditions toggles all lts-* layers to its state
-    // toggling low-stress-islands toggles lts-1 and lts-2 to its state while turning lts->2 off
-    // toggle input el class to reflect layers
+const handleCoreLayers = (coreInputs, selectedInput) => {
+    // get coreInputs inputs
+    // need to know the selected input and it's state (i.e. turning existing on or off)
+    let existing = selectedInput.id === 'existing-conditions' ? true : false
+    let lowStress = selectedInput.id === 'lowstress-islands' ? true : false
+    let on = selectedInput.state
+
+    // cases
+        // IF selected === existing, turn off low stress and turn on all 4 cores
+        // IF selected === low-stress, turn off existing and turn on lts 1 and 2
+
+    // check if existing or low stress is checked 
+    coreInputs.forEach(input => {
+        if(existing && on) {
+            input.id === 'lowstress-islands' ? input.checked = false : input.checked = true
+        }
+
+        if(existing && !on) {
+            input.checked = false
+        }
+
+        if(lowStress && on) {
+            input.id === 'existing-conditions' || input.id === 'lts-3' || input.id === 'lts-4' ? input.checked = false : input.checked = true
+        }
+
+        if(lowStress && !on) {
+            if(input.id === 'lts-1' || input.id === 'lts-2') input.checked = false
+        }
+
+        if(!existing && !on) {
+            if(input.id === 'existing-conditions') input.checked = false
+        }
+    })
 }
 
 export { toggleLayers, filterLayers }
