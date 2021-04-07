@@ -1,17 +1,34 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
 
 // LTS filters
+// @TODO update lts_score to Int on tiles
 const ltsFilters = {
+    'existing-conditions': false,
     'lowstress-islands': [
-        ['==', ['get', 'lts_score'], 1],
-        ['==', ['get', 'lts_score'], 2]
+        ['<', 'lts_score', "3"]
     ],
-    'existing-conditions': []
+    'lts-1': [
+        ['==', 'lts_score', "1"]
+    ],
+    'lts-2': [
+        ['==', 'lts_score', "2"]
+    ],
+    'lts-3': [
+        ['==', 'lts_score', "3"]
+    ],
+    'lts-4': [
+        ['==', 'lts_score', "4"]
+    ],
+    'priority': [
+        ['==', '']
+    ]
 }
 
 // @TODO 1st line turn spinner overlay on, last line turn it off
 // form fields that invoke this function:
     // resource layers
+    // analysis layers
+        // they are all lts-3 but painted according to the analysis results
 const toggleLayers = (form, map) => {
     form.onchange = e => {
         const layer = e.target.value
@@ -28,25 +45,29 @@ const toggleLayers = (form, map) => {
     // LTS layers
     // analysis layers
 const filterLayers = (form, map) => {
-    form.onchange = e => {
-        // process data
-        const input = e.target
-        let baseFilter = ['any']
-        const layer = input.dataset.layer
+    // turn spinner on 
 
-        // handle inactive toggling of core UI inputs
-        if(input.classList.contains('core-lts')) handleCoreLayers(input, map)
-    
-        // create filter
-        const layerFilter = ltsFilters[input.id]
-        baseFilter = baseFilter.concat(layerFilter)
-        
-        console.log('filter ', baseFilter)
-        console.log('layer is ', layer)
-        
-        // set filter
+    // set map filter 
+    form.onchange = e => {
+        const input = e.target
+        const layer = input.dataset.layer
+        const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
+        let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', "0"]
+
+        // handle special toggle case
+        if(input.classList.contains('core-lts')) handleCoreLayers()
+
+        // loop checked inputs & append each to filter obj
+        allChecked.forEach(input => {
+            const layerFilter = ltsFilters[input.id]
+            baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
+        })
+
+        console.log(baseFilter)
         map.setFilter(layer, baseFilter)
     }
+
+    // turn spinner off
 }
 
 // this funciton just handles the UI changes associated with toggling the core layers
