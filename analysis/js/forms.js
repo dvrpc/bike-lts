@@ -80,8 +80,10 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
     // cases
         // IF selected === existing, turn off low stress and turn on all 4 cores
         // IF selected === low-stress, turn off existing and turn on lts 1 and 2
+        // Edge case for toggling individual lts-layers that may trigger 
+            // ex lts 1-3 are selected and user selectes lts-4. Will need to turn existing toggle on 
 
-    // check if existing or low stress is checked 
+    // check if existing or low stress is checked
     coreInputs.forEach(input => {
         if(existing && on) {
             input.id === 'lowstress-islands' ? input.checked = false : input.checked = true
