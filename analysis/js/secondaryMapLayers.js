@@ -1,4 +1,5 @@
 const layers = {
+    // Resource Layers
     'passenger-rail': {
         id: 'passenger-rail',
         type: 'circle',
@@ -20,12 +21,30 @@ const layers = {
                 '#fff'
             ],
             'circle-stroke-color': '#fff',
-            'circle-stroke-width': 2
+            'circle-stroke-width': 1
         }
     },
-    // b/c of the fallback, all of the analysis layers have to paint the entire existing conditions layer
-    // toggling them on/off becomes really expensive cause it has to loop thru the entire network every time
-    // the tradeoff is vt size & more efficient initial paint vs much more efficient toggling
+    facilities: {
+        id: 'facilities',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'existing_conditions_lts',
+        paint: {
+            'line-width': 0.33,
+            'line-color': [
+                'match', ['get', 'bikefacili'],
+                'Bike Lane', '#e41a1c',
+                'Bike Route', '#377eb8',
+                'Buffered Bike Lane', '#4daf4a',
+                'No Accomodation', '#984ea3',
+                'Off-road Trail/Path', '#ff7f00',
+                'Protected Bike Lane', '#ffff33',
+                'Sharrows', '#a65628',
+                'rgba(0,0,0,0)'
+            ]
+        }
+    },
+    // Analysis Layers
     priority: {
         id: 'priority',
         type: 'line',
@@ -43,8 +62,54 @@ const layers = {
                 'rgba(0,0,0,0)'
             ]
         }
+    },
+    schools: {
+        id: 'schools',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'existing_conditions_lts',
+        paint: {
+            'line-width': 0.66,
+            'line-color': [
+                'match', ['get', 'schools_priorities'],
+                'Y', '#ffa600',
+                'rgba(0,0,0,0)'
+            ]
+        }
+    },
+    trails: {
+        id: 'trails',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'existing_conditions_lts',
+        paint: {
+            'line-width': 0.66,
+            'line-color': [
+                'match', ['get', 'trails_priorities'],
+                'Y', '#ffa600',
+                'rgba(0,0,0,0)'
+            ]
+        }
+    },
+    transit: {
+        id: 'transit',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'existing_conditions_lts',
+        paint: {
+            'line-width': 0.66,
+            'line-color': [
+                'match', ['get', 'transit_priorities'],
+                'bus', '#8dd3c7',
+                'rail', '#ffffb3',
+                'rail, bus', '#bebada',
+                'rail, trolley', '#fb8072',
+                'trolley', '#80b1d3',
+                'trolley, bus', '#fdb462',
+                'rgba(0,0,0,0)'
+            ]
+        }
     }
-    // @TODO add analysis layers
 }
 
 export default layers

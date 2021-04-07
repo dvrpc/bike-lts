@@ -63,7 +63,6 @@ const filterLayers = (form, map) => {
             baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
         })
 
-        console.log(baseFilter)
         map.setFilter(layer, baseFilter)
     }
 
