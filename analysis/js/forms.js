@@ -87,20 +87,14 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
 
     // check if existing or low stress is checked
     coreInputs.forEach(input => {
-        if(existing && on) {
-            input.id === 'lowstress-islands' ? input.checked = false : input.checked = true
+        if(existing) {
+            if(on) input.id === 'lowstress-islands' ? input.checked = false : input.checked = true
+            else input.checked = false
         }
 
-        if(existing && !on) {
-            input.checked = false
-        }
-
-        if(lowStress && on) {
-            input.id === 'existing-conditions' || input.id === 'lts-3' || input.id === 'lts-4' ? input.checked = false : input.checked = true
-        }
-
-        if(lowStress && !on) {
-            if(input.id === 'lts-1' || input.id === 'lts-2') input.checked = false
+        if(lowStress) {
+            if(on) input.id === 'existing-conditions' || input.id === 'lts-3' || input.id === 'lts-4' ? input.checked = false : input.checked = true
+            else if(input.id === 'lts-1' || input.id === 'lts-2') input.checked = false
         }
 
         if(!existing && !on) {
