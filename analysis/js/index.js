@@ -4,8 +4,8 @@ import layers from './mapLayers.js'
 import { toggleLayers, filterLayers } from './forms.js'
 import createFeedbackForm from './feedback.js'
 
-const toggleForms = Array.from(document.querySelectorAll('.sidebar-form-toggle'))
-const filterForms = Array.from(document.querySelectorAll('.sidebar-form-filter'))
+const toggleForms = document.querySelectorAll('.sidebar-form-toggle')
+const filterForms = document.querySelectorAll('.sidebar-form-filter')
 const feedbackBtn = document.getElementById('feedback-btn')
 
 // map

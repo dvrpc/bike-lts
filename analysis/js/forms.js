@@ -46,8 +46,6 @@ const filterLayers = (form, map) => {
     form.onchange = e => {
         const input = e.target
         const layer = input.dataset.layer
-        const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
-        let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', "0"]
 
         // handle special toggle case
         if(input.classList.contains('core-lts')) {
@@ -57,13 +55,17 @@ const filterLayers = (form, map) => {
             handleCoreLayers(coreInputs, selectedState)
         }
 
+        // get all checked boxes after handling core layers
+        const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
+        let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', "0"]
+
         // loop checked inputs & append each to filter obj
         allChecked.forEach(input => {
             const layerFilter = ltsFilters[input.id]
             baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
         })
 
-        // map.setFilter(layer, baseFilter)
+        map.setFilter(layer, baseFilter)
     }
 
     // turn spinner off

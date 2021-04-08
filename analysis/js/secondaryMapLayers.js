@@ -6,14 +6,14 @@ const layers = {
         source: 'lts',
         'source-layer': 'passengerrail',
         paint: {
-            'circle-radius': [
-                'interpolate', ['linear'], ['zoom'],
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
                 1, 1,
                 7, 3,
                 11, 4
             ],
-            'circle-color': [
-                'match', ['get', 'operator'],
+            'circle-color': ['match',
+                ['get', 'operator'],
                 'Amtrak', '#004d6e',
                 'NJ Transit', '#f18541',
                 'PATCO', '#ed164b',
@@ -31,8 +31,8 @@ const layers = {
         'source-layer': 'existing_conditions_lts',
         paint: {
             'line-width': 0.33,
-            'line-color': [
-                'match', ['get', 'bikefacili'],
+            'line-color': ['match',
+                ['get', 'bikefacili'],
                 'Bike Lane', '#e41a1c',
                 'Bike Route', '#377eb8',
                 'Buffered Bike Lane', '#4daf4a',
@@ -51,9 +51,14 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 0.66,
-            'line-color': [
-                'match', ['get', 'main_priority'],
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color': ['match',
+                ['get', 'main_priority'],
                 10, '#ffffd4',
                 20, '#fed98e',
                 30, '#fe9929',
@@ -69,10 +74,15 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 0.66,
-            'line-color': [
-                'match', ['get', 'schools_priorities'],
-                'Y', '#ffa600',
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color': ['match',
+                ['get', 'schools_priorities'],
+                'Y', '#984ea3',
                 'rgba(0,0,0,0)'
             ]
         }
@@ -83,10 +93,15 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 0.66,
-            'line-color': [
-                'match', ['get', 'trails_priorities'],
-                'Y', '#ffa600',
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color': ['match',
+                ['get', 'trails_priorities'],
+                'Y', '#377eb8',
                 'rgba(0,0,0,0)'
             ]
         }
@@ -97,9 +112,14 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 0.66,
-            'line-color': [
-                'match', ['get', 'transit_priorities'],
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color': ['match',
+                ['get', 'transit_priorities'],
                 'bus', '#8dd3c7',
                 'rail', '#ffffb3',
                 'rail, bus', '#bebada',
