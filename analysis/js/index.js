@@ -3,6 +3,7 @@ import sources from './mapSources.js'
 import layers from './mapLayers.js'
 import { toggleLayers, filterLayers } from './forms.js'
 import createFeedbackForm from './feedback.js'
+import { makePopup, makePopupContent } from './popup.js'
 
 const sidebar = document.getElementById('sidebar')
 const toggleForms = sidebar.querySelectorAll('.sidebar-form-toggle')
@@ -11,6 +12,7 @@ const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
 // map
 const map = makeMap()
+const ltsLayersPopup = makePopup()
 
 map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
@@ -18,6 +20,8 @@ map.on('load', () => {
 
     toggleForms.forEach(form => toggleLayers(form, map))
     filterForms.forEach(form => filterLayers(form, map))
+
+    map.on('click', 'existing-conditions', e => makePopupContent(map, e, ltsLayersPopup))
 })
 
 map.on('idle', () => {
