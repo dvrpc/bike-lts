@@ -40,7 +40,7 @@ const toggleLayers = (form, map) => {
     // LTS layers
     // analysis layers
 const filterLayers = (form, map) => {
-    // turn spinner on 
+    // turn spinner on
 
     // set map filter 
     form.onchange = e => {
