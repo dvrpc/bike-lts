@@ -38,7 +38,6 @@ const toggleLayers = (form, map) => {
     }
 }
 
-// @TODO 1st line turn spinner overlay on, last line turn it off
 // form fields that invoke this function:
     // LTS layers
     // analysis layers
@@ -73,7 +72,7 @@ const filterLayers = (form, map) => {
     }
 }
 
-// this funciton just handles the UI changes associated with toggling the core layers
+// handle UI changes associated with toggling the core layers
 const handleCoreLayers = (coreInputs, selectedInput) => {
     // get coreInputs inputs
     // need to know the selected input and it's state (i.e. turning existing on or off)
