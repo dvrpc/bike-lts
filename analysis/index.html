@@ -55,77 +55,78 @@
                     <details class="sidebar-details">
                         <summary class="sidebar-summary">toggle layers</summary>
 
-                        <form class="sidebar-form sidebar-form-toggle">
+                        <form class="sidebar-form sidebar-form-filter">
                             <fieldset class="sidebar-fieldset">
-                                <legend>toggle LTS layers</legend>
-            
-                                <label>
-                                    <input type="checkbox" id="existing-conditions" name="layer" value="existing-conditions" checked disabled>
-                                    existing conditions
+                                <legend>core LTS layers</legend>
+                                
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer="existing-conditions" id="existing-conditions" name="layer" value="existing-conditions" checked>
+                                    <span>full LTS network</span>
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="lowstress-islands" name="layer" value="lowstress-islands">
+                                
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer="existing-conditions" id="lowstress-islands" name="layer" value="lowstress-islands">
                                     low stress islands
                                 </label>
                                 
                                 <hr class="sidebar-form-hr" />
     
-                                <label>
-                                    <input type="checkbox" id="lts-1" name="layer" value="lts-1">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer="existing-conditions" id="lts-1" name="layer" value="lts-1" checked>
                                     LTS 1
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="lts-2" name="layer" value="lts-2">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer="existing-conditions" id="lts-2" name="layer" value="lts-2" checked>
                                     LTS 2
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="lts-3" name="layer" value="lts-3">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer="existing-conditions" id="lts-3" name="layer" value="lts-3" checked>
                                     LTS 3
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="lts-4" name="layer" value="lts-4">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer="existing-conditions" id="lts-4" name="layer" value="lts-4" checked>
                                     LTS 4
                                 </label>
                             </fieldset>
                         </form>
-    
+                        
                         <form class="sidebar-form sidebar-form-toggle">
                             <fieldset class="sidebar-fieldset">
-                                <legend>toggle LTS analysis layers</legend>
+                                <legend>LTS analysis layers</legend>
             
-                                <label>
-                                    <input type="checkbox" id="priority" name="layer" value="priority">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="priority" name="layer" value="priority">
                                     priority
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="school" name="layer" value="school">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="schools" name="layer" value="schools">
                                     school
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="trails" name="layer" value="trails">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="trails" name="layer" value="trails">
                                     trails
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="transit" name="layer" value="transit">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="transit" name="layer" value="transit">
                                     transit
                                 </label>
     
                                 <hr class="sidebar-form-hr" />
     
-                                <label>
-                                    <input type="checkbox" id="priority-ipd" name="layer" value="priority-ipd">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="priority-ipd" name="layer" value="priority-ipd">
                                     priority (IPD)
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="school-ipd" name="layer" value="school-ipd">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="school-ipd" name="layer" value="school-ipd">
                                     school (IPD)
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="trails-ipd" name="layer" value="trails-ipd">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="trails-ipd" name="layer" value="trails-ipd">
                                     trails (IPD)
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="transit-ipd" name="layer" value="transit-ipd">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="transit-ipd" name="layer" value="transit-ipd">
                                     transit (IPD)
                                 </label>
                             </fieldset>
@@ -133,22 +134,22 @@
     
                         <form class="sidebar-form sidebar-form-toggle">
                             <fieldset class="sidebar-fieldset">
-                                <legend>toggle resource layers</legend>
+                                <legend>resource layers</legend>
             
-                                <label>
-                                    <input type="checkbox" id="bike-facilities" name="layer" value="bike-facilities">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="facilities" name="layer" value="facilities">
                                     bike facilities
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="passenger-rail" name="layer" value="passenger-rail">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="passenger-rail" name="layer" value="passenger-rail">
                                     passenger rail
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="trolley" name="layer" value="trolley">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="trolley" name="layer" value="trolley">
                                     trolley
                                 </label>
-                                <label>
-                                    <input type="checkbox" id="bus" name="layer" value="bus">
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" id="bus" name="layer" value="bus">
                                     bus
                                 </label>
                             </fieldset>
@@ -181,7 +182,9 @@
                 </footer>
             </article>
             
-            <div id="map"></div>
+            <div id="map">
+                <div class="lds-ring lds-ring-active"><div></div><div></div><div></div><div></div></div>
+            </div>
         </main>
 
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
