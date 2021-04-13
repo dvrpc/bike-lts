@@ -19,15 +19,18 @@ const ltsFilters = {
     ]
 }
 
-// @TODO 1st line turn spinner overlay on, last line turn it off
 // form fields that invoke this function:
     // resource layers
     // analysis layers
         // they are all lts-3 but painted according to the analysis results
 const toggleLayers = (form, map) => {
     form.onchange = e => {
+        const spinner = map['_container'].querySelector('.lds-ring')
         const layer = e.target.value
         const visibility = e.target.checked ? 'visible' : 'none'
+
+        // turn spinner on
+        spinner.classList.add('lds-ring-active')
 
         if(!map.getLayer(layer)) map.addLayer(secondaryMapLayers[layer])
 
@@ -40,12 +43,13 @@ const toggleLayers = (form, map) => {
     // LTS layers
     // analysis layers
 const filterLayers = (form, map) => {
-    // turn spinner on
-
-    // set map filter 
     form.onchange = e => {
+        const spinner = map['_container'].querySelector('.lds-ring')
         const input = e.target
         const layer = input.dataset.layer
+        
+        // turn spinner on
+        spinner.classList.add('lds-ring-active')
 
         // handle special toggle case
         if(input.classList.contains('core-lts')) {
@@ -67,8 +71,6 @@ const filterLayers = (form, map) => {
 
         map.setFilter(layer, baseFilter)
     }
-
-    // turn spinner off
 }
 
 // this funciton just handles the UI changes associated with toggling the core layers

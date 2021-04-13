@@ -4,9 +4,10 @@ import layers from './mapLayers.js'
 import { toggleLayers, filterLayers } from './forms.js'
 import createFeedbackForm from './feedback.js'
 
-const toggleForms = document.querySelectorAll('.sidebar-form-toggle')
-const filterForms = document.querySelectorAll('.sidebar-form-filter')
-const feedbackBtn = document.getElementById('feedback-btn')
+const sidebar = document.getElementById('sidebar')
+const toggleForms = sidebar.querySelectorAll('.sidebar-form-toggle')
+const filterForms = sidebar.querySelectorAll('.sidebar-form-filter')
+const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
 // map
 const map = makeMap()
@@ -17,6 +18,11 @@ map.on('load', () => {
 
     toggleForms.forEach(form => toggleLayers(form, map))
     filterForms.forEach(form => filterLayers(form, map))
+})
+
+map.on('idle', () => {
+    const spinner = map['_container'].querySelector('.lds-ring')
+    spinner.classList.remove('lds-ring-active')
 })
 
 // feedback
