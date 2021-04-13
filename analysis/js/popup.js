@@ -1,7 +1,8 @@
 const makePopup = () => new mapboxgl.Popup()
 
 const makePopupContent = (map, target, popup) => {
-    const html = makePopupHTML(target.props)
+    const props = target.features[0].properties
+    const html = makePopupHTML(props)
 
     popup
     .setLngLat(target.lngLat)
@@ -9,23 +10,15 @@ const makePopupContent = (map, target, popup) => {
     .addTo(map)
 }
 
-// @params props
-    // {
-    //  display: 'name to display',
-    //  prop: 'value of property'
-    // }
 const makePopupHTML = props => {
-    let html = ''
-
-    props.forEach(prop => {
-        html += `
-            <span class="popup-span">
-                ${prop.display}: <strong>${prop.prop}</strong> 
-            </span>
-        `
-    })
-    
-    return html
+    return `
+        <span class="popup-span">
+            <strong>LTS Score:</strong> ${props.lts_score}<br />
+            <strong>Bike Facilities:</strong> ${props.bikefacili}<br />
+            <strong>Segment Length:</strong> ${props.length} miles<br />
+            <strong>Total Lanes:</strong> ${props.totnumlane}
+        </span>
+    `
 }
 
 export { makePopup, makePopupContent }
