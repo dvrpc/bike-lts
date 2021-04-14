@@ -1,21 +1,20 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
 
 // LTS filters
-// @TODO update lts_score to Int on tiles
 const ltsFilters = {
     'existing-conditions': false,
     'lowstress-islands': false,
     'lts-1': [
-        ['==', 'lts_score', "1"]
+        ['==', 'lts_score', 1]
     ],
     'lts-2': [
-        ['==', 'lts_score', "2"]
+        ['==', 'lts_score', 2]
     ],
     'lts-3': [
-        ['==', 'lts_score', "3"]
+        ['==', 'lts_score', 3]
     ],
     'lts-4': [
-        ['==', 'lts_score', "4"]
+        ['==', 'lts_score', 4]
     ]
 }
 
@@ -60,7 +59,7 @@ const filterLayers = (form, map) => {
 
         // get all checked boxes after handling core layers
         const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
-        let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', "0"]
+        let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', 0]
 
         // loop checked inputs & append each to filter obj
         allChecked.forEach(input => {
