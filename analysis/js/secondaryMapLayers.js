@@ -49,7 +49,7 @@ const layers = {
         id: 'priority',
         type: 'line',
         source: 'lts',
-        'source-layer': 'existing_conditions_lts',
+        'source-layer': 'priorities_all',
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
@@ -72,7 +72,7 @@ const layers = {
         id: 'schools',
         type: 'line',
         source: 'lts',
-        'source-layer': 'existing_conditions_lts',
+        'source-layer': 'priorities_schools',
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
@@ -91,7 +91,7 @@ const layers = {
         id: 'trails',
         type: 'line',
         source: 'lts',
-        'source-layer': 'existing_conditions_lts',
+        'source-layer': 'priorities_trail',
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
@@ -110,7 +110,7 @@ const layers = {
         id: 'transit',
         type: 'line',
         source: 'lts',
-        'source-layer': 'existing_conditions_lts',
+        'source-layer': 'priorities_alltransit',
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
@@ -119,7 +119,7 @@ const layers = {
                 11, 1
             ],
             'line-color': ['match',
-                ['get', 'transit_priorities'],
+                ['get', 'mode'],
                 'bus', '#8dd3c7',
                 'rail', '#ffffb3',
                 'rail, bus', '#bebada',
