@@ -269,6 +269,9 @@ transition: all 0.4s;
 .popup-span:not(:last-of-type) {
     border-bottom: 1px dotted var(--theme-black);
 }
+.popup-header {
+    text-align: center;
+}
 /* END Map */
 
 
