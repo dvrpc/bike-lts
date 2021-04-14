@@ -80,11 +80,7 @@ const layers = {
                 10, 2,
                 11, 1
             ],
-            'line-color': ['match',
-                ['get', 'schools_priorities'],
-                'Y', '#984ea3',
-                'rgba(0,0,0,0)'
-            ]
+            'line-color':'#984ea3'
         }
     },
     trails: {
@@ -99,11 +95,7 @@ const layers = {
                 10, 2,
                 11, 1
             ],
-            'line-color': ['match',
-                ['get', 'trails_priorities'],
-                'Y', '#377eb8',
-                'rgba(0,0,0,0)'
-            ]
+            'line-color': '#377eb8'
         }
     },
     transit: {

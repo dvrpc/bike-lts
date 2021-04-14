@@ -3,7 +3,6 @@ import secondaryMapLayers from './secondaryMapLayers.js'
 // LTS filters
 const ltsFilters = {
     'existing-conditions': false,
-    'lowstress-islands': false,
     'lts-1': [
         ['==', 'lts_score', 1]
     ],
@@ -18,41 +17,50 @@ const ltsFilters = {
     ]
 }
 
-// form fields that invoke this function:
-    // resource layers
-    // analysis layers
-        // they are all lts-3 but painted according to the analysis results
-const toggleLayers = (form, map) => {
+// @NEW form handlers
+/*
+    DELETE sidebar-form-toggle and sidebar-form-filter classes. 
+    KEEP sidebar-form
+    give each layer data-layer-type with value "toggle" or "filter"
+    Create larger fnc handleForms
+        create filter array
+        loop thru all checked toggles on change
+        check data-layer-type
+            invoke toggleLayers() for each "toggle" type
+            concat filter for each "filter" type
+            after the loop, invoke filterLayers() with the filter as a param
+                include logic for empty filter i.e. if(filter.length) ['<', 'lts_score', 0] + setFilter ELSE logic
+        spinner logic stays the same
+*/
+const handleForms = (form, map) => {
     form.onchange = e => {
         const spinner = map['_container'].querySelector('.lds-ring')
-        const layer = e.target.value
-        const visibility = e.target.checked ? 'visible' : 'none'
+        const toggle = e.target
+        const type = toggle.dataset.layerType
 
         // turn spinner on
         spinner.classList.add('lds-ring-active')
 
-        if(!map.getLayer(layer)) map.addLayer(secondaryMapLayers[layer])
-
-        map.setLayoutProperty(layer, 'visibility', visibility)
+        // determine action based on layer type
+        if(type === 'toggle') toggleLayers(toggle, map)
+        else filterLayers(form, toggle, map)
     }
 }
 
-// form fields that invoke this function:
-    // LTS layers
-    // analysis layers
-const filterLayers = (form, map) => {
-    form.onchange = e => {
-        const spinner = map['_container'].querySelector('.lds-ring')
-        const input = e.target
-        const layer = input.dataset.layer
-        
-        // turn spinner on
-        spinner.classList.add('lds-ring-active')
+const toggleLayers = (toggle, map) => {
+    const layer = toggle.value
+    const visibility = toggle.checked ? 'visible' : 'none'
 
-        // handle special toggle case
-        if(input.classList.contains('core-lts')) {
+    if(!map.getLayer(layer)) map.addLayer(secondaryMapLayers[layer])
+
+    map.setLayoutProperty(layer, 'visibility', visibility)
+}
+
+const filterLayers = (form, toggle, map) => {        
+        // handle special toggle case (currently this is all filters but build it for the future)
+        if(toggle.classList.contains('core-lts')) {
             const coreInputs = form.querySelectorAll('.core-lts')
-            const selectedState = {id: input.id, state: input.checked}
+            const selectedState = {id: toggle.id, state: toggle.checked}
 
             handleCoreLayers(coreInputs, selectedState)
         }
@@ -68,7 +76,6 @@ const filterLayers = (form, map) => {
         })
 
         map.setFilter(layer, baseFilter)
-    }
 }
 
 // handle UI changes associated with toggling the core layers
@@ -81,14 +88,7 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
     // get coreInputs inputs
     // need to know the selected input and it's state (i.e. turning existing on or off)
     let existing = selectedInput.id === 'existing-conditions' ? true : false
-    let lowStress = selectedInput.id === 'lowstress-islands' ? true : false
     let on = selectedInput.state
-
-    // cases
-        // IF selected === existing, turn off low stress and turn on all 4 cores
-        // IF selected === low-stress, turn off existing and turn on lts 1 and 2
-        // Edge case for toggling individual lts-layers that may trigger 
-            // ex lts 1-3 are selected and user selectes lts-4. Will need to turn existing toggle on 
 
     // check if existing or low stress is checked
     coreInputs.forEach(input => {
@@ -97,15 +97,10 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
             else input.checked = false
         }
 
-        if(lowStress) {
-            if(on) input.id === 'existing-conditions' || input.id === 'lts-3' || input.id === 'lts-4' ? input.checked = false : input.checked = true
-            else if(input.id === 'lts-1' || input.id === 'lts-2') input.checked = false
-        }
-
         if(!existing && !on) {
             if(input.id === 'existing-conditions') input.checked = false
         }
     })
 }
 
-export { toggleLayers, filterLayers }
+export default handleForms
