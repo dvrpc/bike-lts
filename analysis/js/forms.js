@@ -73,6 +73,11 @@ const filterLayers = (form, map) => {
 }
 
 // handle UI changes associated with toggling the core layers
+// @NEW: Low Stress islands toggle is independent on LTS 1 and 2 
+    // it is 1 and 2 but with islands grouped by color
+        // create it as a separate layer b/c it needs data driven styles
+    // remove it from the core layers fnc - the only interaction we need here is the existing conditions jawn
+    // IF LTS 1 or 2 are turned on while islands are on, kill islands. something like that.
 const handleCoreLayers = (coreInputs, selectedInput) => {
     // get coreInputs inputs
     // need to know the selected input and it's state (i.e. turning existing on or off)

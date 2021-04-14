@@ -1,7 +1,8 @@
 const makePopup = () => new mapboxgl.Popup()
 
 const makePopupContent = (map, target, popup) => {
-    const html = makePopupHTML(target.props)
+    const props = target.features[0].properties
+    const html = makePopupHTML(props)
 
     popup
     .setLngLat(target.lngLat)
@@ -9,23 +10,20 @@ const makePopupContent = (map, target, popup) => {
     .addTo(map)
 }
 
-// @params props
-    // {
-    //  display: 'name to display',
-    //  prop: 'value of property'
-    // }
+// add slope 
 const makePopupHTML = props => {
-    let html = ''
-
-    props.forEach(prop => {
-        html += `
-            <span class="popup-span">
-                ${prop.display}: <strong>${prop.prop}</strong> 
-            </span>
-        `
-    })
-    
-    return html
+    return `
+        <span class="popup-span">
+            <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
+            <p>LTS score is calculated as a function of the following 3 values:</p>
+            <strong>Bike Facilities:</strong> ${props.bikefacili}<br />
+            <strong>Total Lanes:</strong> ${props.totnumlane}<br />
+            <strong>Speed:</strong> ${props.speed_lts} mph<br />
+            <hr />
+            <strong>Segment Length:</strong> ${props.length} miles<br />
+            <strong>Slope:</strong> ${(props.slope_perc) * 100}%
+        </span>
+    `
 }
 
 export { makePopup, makePopupContent }
