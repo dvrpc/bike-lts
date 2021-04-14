@@ -31,10 +31,10 @@ const layers = {
             'line-width': 0.33,
             'line-color': ['match',
                 ['get', 'lts_score'],
-                '1', '#498434',
-                '2', '#72bc58',
-                '3', '#fcd842',
-                '4', '#a50a0a',
+                1, '#498434',
+                2, '#72bc58',
+                3, '#fcd842',
+                4, '#a50a0a',
                 '#fff'
             ]
         }
