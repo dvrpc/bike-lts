@@ -1,13 +1,12 @@
 import makeMap from './map.js'
 import sources from './mapSources.js'
 import layers from './mapLayers.js'
-import { toggleLayers, filterLayers } from './forms.js'
+import handleForms from './forms.js'
 import createFeedbackForm from './feedback.js'
 import { makePopup, makePopupContent } from './popup.js'
 
 const sidebar = document.getElementById('sidebar')
-const toggleForms = sidebar.querySelectorAll('.sidebar-form-toggle')
-const filterForms = sidebar.querySelectorAll('.sidebar-form-filter')
+const forms = sidebar.querySelectorAll('.sidebar-form')
 const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
 // map
@@ -18,8 +17,7 @@ map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
     for(const layer in layers) map.addLayer(layers[layer])
 
-    toggleForms.forEach(form => toggleLayers(form, map))
-    filterForms.forEach(form => filterLayers(form, map))
+    forms.forEach(form => handleForms(form, map))
 
     map.on('click', 'existing-conditions', e => makePopupContent(map, e, ltsLayersPopup))
 })
