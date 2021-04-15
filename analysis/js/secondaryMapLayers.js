@@ -1,46 +1,24 @@
 const layers = {
-    // Resource Layers
-    'passenger-rail': {
-        id: 'passenger-rail',
-        type: 'circle',
-        source: 'lts',
-        'source-layer': 'passengerrail',
-        paint: {
-            'circle-radius': ['interpolate',
-                ['linear'], ['zoom'],
-                1, 1,
-                7, 3,
-                11, 4
-            ],
-            'circle-color': ['match',
-                ['get', 'operator'],
-                'Amtrak', '#004d6e',
-                'NJ Transit', '#f18541',
-                'PATCO', '#ed164b',
-                'SEPTA', '#487997',
-                '#fff'
-            ],
-            'circle-stroke-color': '#fff',
-            'circle-stroke-width': 1
-        }
-    },
-    facilities: {
-        id: 'facilities',
+    'lowstress-islands': {
+        id: 'lowstress-islands',
         type: 'line',
         source: 'lts',
-        'source-layer': 'existing_conditions_lts',
-        paint: {
+        'source-layer': 'lowstress_islands',
+        'paint': {
             'line-width': 0.33,
-            'line-color': ['match',
-                ['get', 'bikefacili'],
-                'Bike Lane', '#e41a1c',
-                'Bike Route', '#377eb8',
-                'Buffered Bike Lane', '#4daf4a',
-                'No Accomodation', '#984ea3',
-                'Off-road Trail/Path', '#ff7f00',
-                'Protected Bike Lane', '#ffff33',
-                'Sharrows', '#a65628',
-                'rgba(0,0,0,0)'
+            'line-color': ['step',
+                ['get', 'island_num'],
+                '#fff',
+                18561, '#8dd3c7',
+                20055, '#ffffb3',
+                21549, '#bebada',
+                23043, '#fb8072',
+                24537, '#80b1d3',
+                26031, '#fdb462',
+                27525, '#b3de69',
+                29019, '#fccde5',
+                30513, '#d9d9d9',
+                32007, '#bc80bd'
             ]
         }
     },
@@ -120,6 +98,51 @@ const layers = {
                 'trolley, bus', '#fdb462',
                 'rgba(0,0,0,0)'
             ]
+        }
+    },
+    // Resource Layers
+    facilities: {
+        id: 'facilities',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'existing_conditions_lts',
+        paint: {
+            'line-width': 0.33,
+            'line-color': ['match',
+                ['get', 'bikefacili'],
+                'Bike Lane', '#e41a1c',
+                'Bike Route', '#377eb8',
+                'Buffered Bike Lane', '#4daf4a',
+                'No Accomodation', '#984ea3',
+                'Off-road Trail/Path', '#ff7f00',
+                'Protected Bike Lane', '#ffff33',
+                'Sharrows', '#a65628',
+                'rgba(0,0,0,0)'
+            ]
+        }
+    },
+    'passenger-rail': {
+        id: 'passenger-rail',
+        type: 'circle',
+        source: 'lts',
+        'source-layer': 'passengerrail',
+        paint: {
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
+                1, 1,
+                7, 3,
+                11, 4
+            ],
+            'circle-color': ['match',
+                ['get', 'operator'],
+                'Amtrak', '#004d6e',
+                'NJ Transit', '#f18541',
+                'PATCO', '#ed164b',
+                'SEPTA', '#487997',
+                '#fff'
+            ],
+            'circle-stroke-color': '#fff',
+            'circle-stroke-width': 1
         }
     }
 }

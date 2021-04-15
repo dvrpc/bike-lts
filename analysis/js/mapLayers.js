@@ -38,29 +38,6 @@ const layers = {
                 '#fff'
             ]
         }
-    },
-    lowStressIslands: {
-        id: 'lowstress-islands',
-        type: 'line',
-        source: 'lts',
-        'source-layer': 'lowstress_islands',
-        'paint': {
-            'line-width': 0.33,
-            'line-color': ['step',
-                ['get', 'island_num'],
-                '#fff',
-                18561, '#8dd3c7',
-                20055, '#ffffb3',
-                21549, '#bebada',
-                23043, '#fb8072',
-                24537, '#80b1d3',
-                26031, '#fdb462',
-                27525, '#b3de69',
-                29019, '#fccde5',
-                30513, '#d9d9d9',
-                32007, '#bc80bd'
-            ]
-        }
     }
 }
 
