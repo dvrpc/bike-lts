@@ -50,7 +50,7 @@ const layers = {
         id: 'schools',
         type: 'line',
         source: 'lts',
-        'source-layer': 'priorities_schools',
+        'source-layer': 'priorities_school',
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
