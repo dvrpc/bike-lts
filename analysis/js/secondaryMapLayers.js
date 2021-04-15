@@ -46,11 +46,49 @@ const layers = {
             ]
         }
     },
-    schools: {
-        id: 'schools',
+    'priority-ipd': {
+        id: 'priority-ipd',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'priorities_all_ipd',
+        paint: {
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color': ['match',
+                ['get', 'main_priority_ipd'],
+                10, '#ffffd4',
+                20, '#fed98e',
+                30, '#fe9929',
+                40, '#d95f0e',
+                50, '#993404',
+                'rgba(0,0,0,0)'
+            ]
+        }
+    },
+    school: {
+        id: 'school',
         type: 'line',
         source: 'lts',
         'source-layer': 'priorities_school',
+        paint: {
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color':'#984ea3'
+        }
+    },
+    'school-ipd': {
+        id: 'school-ipd',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'priorities_school_ipd',
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
@@ -76,11 +114,50 @@ const layers = {
             'line-color': '#377eb8'
         }
     },
+    'trails-ipd': {
+        id: 'trails-ipd',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'priorities_trail_ipd',
+        paint: {
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color': '#377eb8'
+        }
+    },
     transit: {
         id: 'transit',
         type: 'line',
         source: 'lts',
         'source-layer': 'priorities_alltransit',
+        paint: {
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                7.3, 3,
+                10, 2,
+                11, 1
+            ],
+            'line-color': ['match',
+                ['get', 'mode'],
+                'bus', '#8dd3c7',
+                'rail', '#ffffb3',
+                'rail, bus', '#bebada',
+                'rail, trolley', '#fb8072',
+                'trolley', '#80b1d3',
+                'trolley, bus', '#fdb462',
+                'rgba(0,0,0,0)'
+            ]
+        }
+    },
+    'transit-ipd': {
+        id: 'transit-ipd',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'priorities_alltransit_ipd',
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
