@@ -21,6 +21,7 @@ a {
 }
 :root {
     --theme-green: #498434;
+    --theme-green-2: #72bc58;
     --theme-yellow: #fcd842;
     --theme-red: #a50a0a;
     --theme-black: #383838;
@@ -263,6 +264,37 @@ nav {
 }
 .sidebar-form-hr {
     margin: 2% 0;
+}
+.sidebar-legend-section {
+    margin: var(--wrapper-padding) auto;
+    padding: var(--wrapper-padding-half) 0;
+    background: #f7f7f7;
+    color: var(--theme-black);
+    border-radius: var(--border-radius);
+}
+.sidebar-legend-subheader {
+    text-align: center;
+    margin-bottom: var(--wrapper-padding);
+}
+.sidebar-legend-content {
+    margin: 0 auto;
+}
+.lts-legend-icon {
+    height: 22.5px;
+    width: 5px;
+    transform: rotate(45deg);
+}
+.lts-legend-1 {
+    background-color: var(--theme-green);
+}
+.lts-legend-2 {
+    background:  var(--theme-green-2);
+}
+.lts-legend-3 {
+    background-color: var(--theme-yellow);
+}
+.lts-legend-4 {
+    background-color: var(--theme-red);
 }
 /* END Sidebar */
 
