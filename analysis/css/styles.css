@@ -23,6 +23,7 @@ a {
     --theme-red: #a50a0a;
     --theme-black: #383838;
 
+    --wrapper-padding-half: 5px;
     --wrapper-padding: 10px;
     --wrapper-padding-double: 20px;
 
@@ -166,7 +167,7 @@ nav {
     width: 30vw;
     height: calc(94vh - 20px);
     z-index: 3;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     background-color: var(--theme-black);
     color: #f7f7f7;
@@ -178,6 +179,8 @@ nav {
 }
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
+    height: 80vh;
+    overflow-y: auto;
 }
 .sidebar-img {
     display: block;
@@ -192,6 +195,8 @@ nav {
 .sidebar-summary{
     cursor: pointer;
     font-weight: 700;
+}
+.sidebar-details[open] summary {
     color: var(--theme-yellow);
 }
 .sidebar-form {
@@ -199,7 +204,8 @@ nav {
 }
 .sidebar-fieldset {
     border-radius: var(--border-radius);
-    border: 0.25rem solid var(--theme-green);
+    border: 0.15rem solid var(--theme-green);
+    margin-bottom: var(--wrapper-padding-half);
 }
 
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
@@ -236,12 +242,12 @@ nav {
     transition: all 0.4s;
 }
 .sidebar-form-checkbox:checked {
-background-color: var(--theme-green);
-transition: all 0.4s;
+    background-color: var(--theme-green);
+    transition: all 0.4s;
 }
 .sidebar-form-checkbox:checked::before {
-left: 22px;
-transition: all 0.4s;
+    left: 22px;
+    transition: all 0.4s;
 }
 /* end adopted code */
 

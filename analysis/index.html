@@ -51,14 +51,16 @@
                     <h1>Bike LTS</h1>
 
                     <p>brief, introductory text goes here.</p>
+                    
+                    <h2 class="sidebar-h2">layer toggles</h2>
+                    
+                    <details class="sidebar-details" open>
+                        <summary class="sidebar-summary">Core LTS Layers</summary>
 
-                    <details class="sidebar-details">
-                        <summary class="sidebar-summary">toggle layers</summary>
-
-                        <form class="sidebar-form">
+                        <form class="sidebar-form" aria-labelledby="core LTS layers">
                             <fieldset class="sidebar-fieldset">
-                                <legend>core LTS layers</legend>
-                                
+                                <legend>Core LTS Layers</legend>
+
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="existing-conditions" checked>
                                     Regional LTS Network
@@ -75,21 +77,28 @@
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-1" checked>
                                     LTS 1
                                 </label>
+                                
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-2" checked>
                                     LTS 2
                                 </label>
+                                
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-3" checked>
                                     LTS 3
                                 </label>
+                                
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-4" checked>
                                     LTS 4
                                 </label>
                             </fieldset>
                         </form>
-                        
+                    </details>
+
+                    <details class="sidebar-details">
+                        <summary class="sidebar-summary">Analysis Layers</summary>
+
                         <form class="sidebar-form">
                             <fieldset class="sidebar-fieldset">
                                 <legend>Bicycle Network Connectivity Analysis Results</legend>
@@ -111,9 +120,7 @@
                                     Priority Connections to Transit
                                 </label>
                             </fieldset>
-                        </form>
 
-                        <form class="sidebar-form">
                             <fieldset class="sidebar-fieldset">
                                 <legend>Equity-focused Connectivity Analysis Results</legend>
                                 <label class="sidebar-form-label">
@@ -134,27 +141,39 @@
                                 </label>
                             </fieldset>
                         </form>
-    
+                    </details>
+                    
+                    <details class="sidebar-details">
+                        <summary class="sidebar-summary">Reference Layers</summary>
+
                         <form class="sidebar-form sidebar-form-toggle">
                             <fieldset class="sidebar-fieldset">
-                                <legend>Reference Layers</legend>
+                                <legend>Facilities Access</legend>
             
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="facilities">
                                     Bicycle Facilities
                                 </label>
+
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trail-access">
                                     Trail Access Locations
                                 </label>
+                            </fieldset>
+
+                            <fieldset class="sidebar-fieldset">
+                                <legend>Public Transit</legend>
+
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="passenger-rail">
                                     Passenger Rail Stations
                                 </label>
+
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trolley">
                                     Trolley Stops
                                 </label>
+
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="bus">
                                     Bus Stops
@@ -163,7 +182,7 @@
                         </form>
                     </details>
                     
-                    <p>legend(s) go here</p>
+                    <h2 class="sidebar-h2">Legends</h2>
                 </div>
 
                 <footer>
