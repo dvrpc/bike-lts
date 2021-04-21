@@ -1,4 +1,5 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
+import { addLegend, removeLegend } from './legends.js'
 
 // LTS filters
 const ltsFilters = {
@@ -22,6 +23,7 @@ const handleForms = (form, map) => {
         const spinner = map['_container'].querySelector('.lds-ring')
         const toggle = e.target
         const type = toggle.dataset.layerType
+        const legend = toggle.dataset.legendType
 
         // turn spinner on
         spinner.classList.add('lds-ring-active')
@@ -29,6 +31,9 @@ const handleForms = (form, map) => {
         // determine action based on layer type
         if(type === 'toggle') toggleLayers(toggle, map)
         else filterLayers(form, toggle, map)
+
+        // add legend
+        addLegend(legend)
     }
 }
 
