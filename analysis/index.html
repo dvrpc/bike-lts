@@ -48,25 +48,27 @@
         <main id="main-content-wrapper" class="flex-row flex-between">
             <article id="sidebar">
                 <div id="sidebar-content">
-                    <h1>Bike LTS</h1>
+                    <h1>Bicycle LTS</h1>
 
                     <p>brief, introductory text goes here.</p>
+                    
+                    <h2 class="sidebar-h2">Layer Toggles</h2>
+                    
+                    <details class="sidebar-details" open>
+                        <summary class="sidebar-summary">Core LTS Layers</summary>
 
-                    <details class="sidebar-details">
-                        <summary class="sidebar-summary">toggle layers</summary>
-
-                        <form class="sidebar-form">
+                        <form class="sidebar-form" aria-labelledby="core LTS layers">
                             <fieldset class="sidebar-fieldset">
-                                <legend>core LTS layers</legend>
-                                
+                                <legend>Core LTS Layers</legend>
+
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="existing-conditions" checked>
-                                    <span>full LTS network</span>
+                                    Regional LTS Network
                                 </label>
                                 
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="lowstress-islands" value="lowstress-islands">
-                                    low stress islands
+                                    Low-stress Islands
                                 </label>
                                 
                                 <hr class="sidebar-form-hr" />
@@ -75,88 +77,112 @@
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-1" checked>
                                     LTS 1
                                 </label>
+                                
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-2" checked>
                                     LTS 2
                                 </label>
+                                
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-3" checked>
                                     LTS 3
                                 </label>
+                                
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-4" checked>
                                     LTS 4
                                 </label>
                             </fieldset>
                         </form>
-                        
+                    </details>
+
+                    <details class="sidebar-details">
+                        <summary class="sidebar-summary">Analysis Layers</summary>
+
                         <form class="sidebar-form">
                             <fieldset class="sidebar-fieldset">
-                                <legend>LTS analysis layers</legend>
+                                <legend>Bicycle Network Connectivity Analysis Results</legend>
             
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="priority">
-                                    priority
-                                </label>
+                                    Regional Connectivity Priorities
+                                </label><br />
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="school">
-                                    school
-                                </label>
+                                    Priority Connections to Schools
+                                </label><br />
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trails">
-                                    trails
-                                </label>
+                                    Priority Connections to Trails
+                                </label><br />
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="transit">
-                                    transit
-                                </label>
-    
-                                <hr class="sidebar-form-hr" />
-    
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="priority-ipd">
-                                    priority (IPD)
-                                </label>
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="school-ipd">
-                                    school (IPD)
-                                </label>
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trails-ipd">
-                                    trails (IPD)
-                                </label>
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="transit-ipd">
-                                    transit (IPD)
+                                    Priority Connections to Transit
                                 </label>
                             </fieldset>
-                        </form>
-    
-                        <form class="sidebar-form sidebar-form-toggle">
+
                             <fieldset class="sidebar-fieldset">
-                                <legend>resource layers</legend>
-            
+                                <legend>Equity-focused Connectivity Analysis Results</legend>
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="facilities">
-                                    bike facilities
-                                </label>
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="priority-ipd">
+                                    Equity-focused Regional Connectivity Priorities
+                                </label><br />
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="passenger-rail">
-                                    passenger rail
-                                </label>
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="school-ipd">
+                                    Equity-focused Priority Connections to Schools
+                                </label><br />
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trolley">
-                                    trolley
-                                </label>
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trails-ipd">
+                                    Equity-focused Priority Connections to Trails
+                                </label><br />
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="bus">
-                                    bus
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="transit-ipd">
+                                    Equity-focused Priority Connections to Transit
                                 </label>
                             </fieldset>
                         </form>
                     </details>
                     
-                    <p>analysis, click events, dynamic text, etc goes here.</p>
+                    <details class="sidebar-details">
+                        <summary class="sidebar-summary">Reference Layers</summary>
+
+                        <form class="sidebar-form sidebar-form-toggle">
+                            <fieldset class="sidebar-fieldset">
+                                <legend>Facilities Access</legend>
+            
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="facilities">
+                                    Bicycle Facilities
+                                </label>
+
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trail-access">
+                                    Trail Access Locations
+                                </label>
+                            </fieldset>
+
+                            <fieldset class="sidebar-fieldset">
+                                <legend>Public Transit</legend>
+
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="bus">
+                                    Bus Stops
+                                </label>
+
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="passenger-rail">
+                                    Passenger Rail Stations
+                                </label>
+
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trolley">
+                                    Trolley Stops
+                                </label>
+                            </fieldset>
+                        </form>
+                    </details>
+                    
+                    <h2 class="sidebar-h2">Legends</h2>
                 </div>
 
                 <footer>

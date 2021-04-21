@@ -32,6 +32,9 @@ body {
     box-shadow: none;
     border-radius: 0;
 }
+#sidebar-content {
+    /* height: ; */
+}
 /* END Sidebar */
 
 
