@@ -10,6 +10,8 @@ body {
 }
 h1 {
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--wrapper-padding-double);
 }
 p {
     margin-top: 5px;
@@ -188,6 +190,11 @@ nav {
     max-width: 100%;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
+}
+.sidebar-h2 {
+    font-size: 1.25rem;
+    margin-top: var(--wrapper-padding-double);
+    text-align: center;
 }
 .sidebar-details {
     margin-top: 5px;
