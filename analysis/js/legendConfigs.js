@@ -46,6 +46,12 @@ const legendConfigs = {
         icons: ['#004d6e','#f18541','#ed164b','#487997'],
         iconType: 'circle',
         text: ['Amtrak','NJ Transit','PATCO','SEPTA']
+    },
+    lowstress: {
+        title: 'Low-stress Islands',
+        icons: [],
+        iconType: '',
+        text: ['Different colors represent distinct low-stress (LTS 1 & 2) islands']
     }
 }
 
