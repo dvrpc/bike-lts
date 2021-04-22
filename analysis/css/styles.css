@@ -184,7 +184,7 @@ nav {
 }
 #sidebar-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
-    height: 80vh;
+    height: 81vh;
     overflow-y: auto;
 }
 .sidebar-img {
@@ -281,10 +281,13 @@ nav {
 .sidebar-legend-content {
     margin: 0 auto;
 }
-.lts-legend-icon {
+.legend-icon {
     height: 25px;
     width: 5px;
     transform: rotate(45deg);
+}
+.legend-text {
+    text-align: center;
 }
 .lts-legend-1 {
     background-color: var(--theme-green);

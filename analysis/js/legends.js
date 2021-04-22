@@ -21,7 +21,6 @@ const handleLegend = (legend, checked, acca) => {
     
     } else if(checked && !hasLegend) {
         const newLegend = makeLegend(legend, acca)
-        console.log('newLegend tfff ', newLegend)
         container.insertAdjacentHTML('beforeend', newLegend)
     
     // decrement if unchecked and either remove or update legendReps
@@ -35,18 +34,18 @@ const handleLegend = (legend, checked, acca) => {
 
 const makeLegend = (type, acca) => {
     const legend = legends[type]
-
+ 
     return `
         <section class="sidebar-legend-section" data-filter-type=${type} data-legend-reps=${acca}>
             <h3 class="sidebar-legend-subheader">${legend.title}</h3>
             
             <div class="sidebar-legend-content-container">
                 <div class="sidebar-legend-content sidebar-legend-icons flex-row flex-around">
-                    ${legend.icons.map(icon => `<span class="lts-legend-icon" style="background-color:${icon}"></span>`)}
+                    ${legend.icons.map(icon => `<span class="legend-icon" style="background-color:${icon}"></span>`).join(' ')}
                 </div>
 
                 <div class="sidebar-legend-content sidebar-legend-values flex-row flex-around">
-                    ${legend.text.map(text => `<span class="lts-legend">${text}</span>`)}
+                    ${legend.text.map(text => `<span class="legend-text">${text}</span>`).join(' ')}
                 </div>
             </div>
         </section>

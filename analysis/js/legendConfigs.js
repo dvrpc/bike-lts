@@ -1,29 +1,34 @@
 // objects with info for each legend type
 const legendConfigs = {
     lts: {
-        title: 'LTS Layers',
+        title: 'Levels of Traffic Stress',
         icons: ['var(--theme-green)', 'var(--theme-green-2)', 'var(--theme-yellow)', 'var(--theme-red)'],
         text: ['LTS 1', 'LTS 2', 'LTS 3', 'LTS 4']
     },
     priorities: {
         title: 'Regional Connectivity to Priorities',
         icons: ['#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404'],
-        text: ['10', '20', '30', '40', '50']        
+        text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
     },
     schools: {
-        title: '',
-        icons: [],
-        text: []        
+        title: 'Priority Connections to Schools',
+        icons: ['#984ea3'],
+        text: ['here there be learnin']        
     },
     trails: {
-        title: '',
-        icons: [],
-        text: []        
+        title: 'Priority Connections to Trails',
+        icons: ['#377eb8'],
+        text: ['here there be walkin']        
     },
     transit: {
-        title: '',
-        icons: [],
-        text: []            
+        title: 'Priority Connections to Transit',
+        icons: ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462'],
+        text: ['bus','rail','rail, bus','rail, trolley','trolley','trolley, bus']
+    },
+    facilities: {
+        title: 'Bicycle Facilities',
+        icons: ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628'],
+        text: ['Bike Lane','Bike Route','Buffered Bike Lane','No Accomodation','Off-road Trail/Path','Protected Bike Lane','Sharrows']
     }
 }
 

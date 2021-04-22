@@ -48,7 +48,7 @@ const toggleLayers = (toggle, map) => {
 const filterLayers = (form, toggle, map) => { 
         const layer = toggle.name 
         const legend = toggle.dataset.legendType
-        let acca = 1   
+        let acca = 1
         
         // handle meta toggles (currently all filter layers are part of a meta toggle but build it for the future)
         if(toggle.classList.contains('core-lts')) {
