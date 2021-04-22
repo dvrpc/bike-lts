@@ -69,7 +69,7 @@ const filterLayers = (form, toggle, map) => {
             baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
         })
 
-        // map.setFilter(layer, baseFilter)
+        map.setFilter(layer, baseFilter)
 
         handleLegend(legend, toggle.checked, acca)
 }

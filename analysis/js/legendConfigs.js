@@ -8,27 +8,38 @@ const legendConfigs = {
     priorities: {
         title: 'Regional Connectivity to Priorities',
         icons: ['#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404'],
+        iconType: 'line',
         text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
     },
     schools: {
         title: 'Priority Connections to Schools',
         icons: ['#984ea3'],
+        iconType: 'line',
         text: ['here there be learnin']        
     },
     trails: {
         title: 'Priority Connections to Trails',
         icons: ['#377eb8'],
+        iconType: 'line',
         text: ['here there be walkin']        
     },
     transit: {
         title: 'Priority Connections to Transit',
         icons: ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462'],
+        iconType: 'line',
         text: ['bus','rail','rail, bus','rail, trolley','trolley','trolley, bus']
     },
     facilities: {
         title: 'Bicycle Facilities',
         icons: ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628'],
+        iconType: 'line',
         text: ['Bike Lane','Bike Route','Buffered Bike Lane','No Accomodation','Off-road Trail/Path','Protected Bike Lane','Sharrows']
+    },
+    access: {
+        title: 'Trail Access Locations',
+        icons: ['#377eb8'],
+        iconType: 'circle',
+        text: ['here they be accessing trails']
     }
 }
 
