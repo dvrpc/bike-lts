@@ -40,6 +40,12 @@ const legendConfigs = {
         icons: ['#377eb8'],
         iconType: 'circle',
         text: ['here they be accessing trails']
+    },
+    rail: {
+        title: 'Passenger Rail Stations',
+        icons: ['#004d6e','#f18541','#ed164b','#487997'],
+        iconType: 'circle',
+        text: ['Amtrak','NJ Transit','PATCO','SEPTA']
     }
 }
 
