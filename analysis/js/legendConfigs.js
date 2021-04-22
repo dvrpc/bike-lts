@@ -15,13 +15,13 @@ const legendConfigs = {
         title: 'Priority Connections to Schools',
         icons: ['#984ea3'],
         iconType: 'line',
-        text: ['here there be learnin']        
+        text: ['Roads that would enable low-stress connections to schools within 2 miles']
     },
     trails: {
         title: 'Priority Connections to Trails',
         icons: ['#377eb8'],
         iconType: 'line',
-        text: ['here there be walkin']        
+        text: ['Roads that would enable low-stress connections to trails within 2.5 miles']
     },
     transit: {
         title: 'Priority Connections to Transit',
@@ -39,7 +39,7 @@ const legendConfigs = {
         title: 'Trail Access Locations',
         icons: ['#377eb8'],
         iconType: 'circle',
-        text: ['here they be accessing trails']
+        text: ['Trailheads']
     },
     rail: {
         title: 'Passenger Rail Stations',
