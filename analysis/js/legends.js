@@ -16,7 +16,8 @@ const handleLegend = (legend, checked, acca) => {
     }
     
     if(checked && hasLegend) {
-        const increment = legendReps + acca
+        // hack to handle existing conditions edge cases
+        const increment = legendReps + acca > 4 ? 4 : legendReps + acca
         hasLegend.dataset.legendReps = increment
     
     } else if(checked && !hasLegend) {

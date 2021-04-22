@@ -55,7 +55,8 @@ const filterLayers = (form, toggle, map) => {
             const coreInputs = form.querySelectorAll('.core-lts')
             const selectedInput = {value: toggle.value, state: toggle.checked}
 
-            handleCoreLayers(coreInputs, selectedInput)
+            // handle existing conditions legends special case
+            acca = handleCoreLayers(coreInputs, selectedInput)
         }
 
         // get all checked boxes after handling core layers
@@ -70,9 +71,6 @@ const filterLayers = (form, toggle, map) => {
 
         // map.setFilter(layer, baseFilter)
 
-        // handle existing conditions edge case (the weight of the existing-conditions toggle is the sum of the active lts toggles)
-        // this doesn't work b/c its working with checked state AFTER handling the existing-conditions edge case
-
         handleLegend(legend, toggle.checked, acca)
 }
 
@@ -80,17 +78,22 @@ const filterLayers = (form, toggle, map) => {
 const handleCoreLayers = (coreInputs, selectedInput) => {
     let existing = selectedInput.value === 'existing-conditions' ? true : false
     let on = selectedInput.state
+    let acca = 1
 
     coreInputs.forEach(input => {
         if(existing) {
-            if(on) input.checked = true
+            if(on)  input.checked = true
             else input.checked = false
+            // handle existing conditions acca math
+            acca = 4
         }
 
         if(!existing && !on) {
             if(input.value === 'existing-conditions') input.checked = false
         }
     })
+
+    return acca
 }
 
 export default handleForms
