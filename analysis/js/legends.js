@@ -1,31 +1,48 @@
 import legends from './legendConfigs.js'
 
-const addLegend = e => {
-    // loop thru existing legends to check if new legend 
+const handleLegend = (legend, checked, acca) => {
+    // get legend container (obviously not this way)
+    const container = document.querySelector('.sidebar-legends-container')
+    const children = container.children
+    let hasLegend = false
+    let legendReps = 0
+
+    // if legend already exists, get it
+    for(var i = 0; i < children.length; i++) {
+        if(children[i].dataset.filterType === legend) {
+            hasLegend = children[i]
+            legendReps = parseInt(hasLegend.dataset.legendReps)
+        }
+    }
     
-    // if yes, return false
+    if(checked && hasLegend) {
+        const increment = legendReps + acca
+        hasLegend.dataset.legendReps = increment
     
-    // if now, create appropriate legend and return el
-        // or just append cause we'll already be in contact w/legends container
+    } else if(checked && !hasLegend) {
+        const newLegend = makeLegend(legend, acca)
+        console.log('newLegend tfff ', newLegend)
+        container.insertAdjacentHTML('beforeend', newLegend)
+    
+    // decrement if unchecked and either remove or update legendReps
+    } else if(!checked) {
+        const decrement = legendReps - acca
+
+        if(decrement < 1) container.removeChild(hasLegend)
+        else hasLegend.dataset.legendReps = decrement
+    }
 }
 
-const removeLegend = e => {
-
-}
-
-const makeLegend = type => {
+const makeLegend = (type, acca) => {
     const legend = legends[type]
 
     return `
-        <section class="sidebar-legend-section">
+        <section class="sidebar-legend-section" data-filter-type=${type} data-legend-reps=${acca}>
             <h3 class="sidebar-legend-subheader">${legend.title}</h3>
             
             <div class="sidebar-legend-content-container">
                 <div class="sidebar-legend-content sidebar-legend-icons flex-row flex-around">
-                    <span class="lts-legend-icon lts-legend-1"></span>
-                    <span class="lts-legend-icon lts-legend-2"></span>
-                    <span class="lts-legend-icon lts-legend-3"></span>
-                    <span class="lts-legend-icon lts-legend-4"></span>
+                    ${legend.icons.map(icon => `<span class="lts-legend-icon" style="background-color:${icon}"></span>`)}
                 </div>
 
                 <div class="sidebar-legend-content sidebar-legend-values flex-row flex-around">
@@ -33,8 +50,7 @@ const makeLegend = type => {
                 </div>
             </div>
         </section>
-    
     `
 }
 
-export { addLegend, removeLegend }
+export default handleLegend

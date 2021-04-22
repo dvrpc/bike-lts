@@ -1,5 +1,5 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
-import { addLegend, removeLegend } from './legends.js'
+import handleLegend from './legends.js'
 
 // LTS filters
 const ltsFilters = {
@@ -23,7 +23,6 @@ const handleForms = (form, map) => {
         const spinner = map['_container'].querySelector('.lds-ring')
         const toggle = e.target
         const type = toggle.dataset.layerType
-        const legend = toggle.dataset.legendType
 
         // turn spinner on
         spinner.classList.add('lds-ring-active')
@@ -31,23 +30,25 @@ const handleForms = (form, map) => {
         // determine action based on layer type
         if(type === 'toggle') toggleLayers(toggle, map)
         else filterLayers(form, toggle, map)
-
-        // add legend
-        addLegend(legend)
     }
 }
 
 const toggleLayers = (toggle, map) => {
     const layer = toggle.value
     const visibility = toggle.checked ? 'visible' : 'none'
+    const legend = toggle.dataset.legendType
 
     if(!map.getLayer(layer)) map.addLayer(secondaryMapLayers[layer])
 
     map.setLayoutProperty(layer, 'visibility', visibility)
+
+    handleLegend(legend, toggle.checked, 1)
 }
 
 const filterLayers = (form, toggle, map) => { 
-        const layer = toggle.name       
+        const layer = toggle.name 
+        const legend = toggle.dataset.legendType
+        let acca = 1   
         
         // handle meta toggles (currently all filter layers are part of a meta toggle but build it for the future)
         if(toggle.classList.contains('core-lts')) {
@@ -67,7 +68,12 @@ const filterLayers = (form, toggle, map) => {
             baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
         })
 
-        map.setFilter(layer, baseFilter)
+        // map.setFilter(layer, baseFilter)
+
+        // handle existing conditions edge case (the weight of the existing-conditions toggle is the sum of the active lts toggles)
+        // this doesn't work b/c its working with checked state AFTER handling the existing-conditions edge case
+
+        handleLegend(legend, toggle.checked, acca)
 }
 
 // handle UI changes associated with toggling the core layers

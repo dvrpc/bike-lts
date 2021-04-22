@@ -62,34 +62,34 @@
                                 <legend>Core LTS Layers</legend>
 
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="existing-conditions" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="existing-conditions" checked>
                                     Regional LTS Network
                                 </label>
                                 
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="lowstress-islands" value="lowstress-islands">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
                                     Low-stress Islands
                                 </label>
                                 
                                 <hr class="sidebar-form-hr" />
     
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-1" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
                                     LTS 1
                                 </label>
                                 
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-2" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
                                     LTS 2
                                 </label>
                                 
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-3" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
                                     LTS 3
                                 </label>
                                 
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" name="existing-conditions" value="lts-4" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
                                     LTS 4
                                 </label>
                             </fieldset>
@@ -104,7 +104,7 @@
                                 <legend>Bicycle Network Connectivity Analysis Results</legend>
             
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="priority">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="priorities" name="layer" value="priority">
                                     Regional Connectivity Priorities
                                 </label><br />
                                 <label class="sidebar-form-label">
@@ -124,7 +124,7 @@
                             <fieldset class="sidebar-fieldset">
                                 <legend>Equity-focused Connectivity Analysis Results</legend>
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="priority-ipd">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="priorities" name="layer" value="priority-ipd">
                                     Equity-focused Regional Connectivity Priorities
                                 </label><br />
                                 <label class="sidebar-form-label">
@@ -186,9 +186,9 @@
                     <aside class="sidebar-legends-container">
                         <h2 class="sidebar-h2">Legends</h2>
 
-                        <section class="sidebar-legend-section">
+                        <section class="sidebar-legend-section" data-filter-type="lts" data-legend-reps="4">
                             <h3 class="sidebar-legend-subheader">LTS Layers</h3>
-                            
+
                             <div class="sidebar-legend-content-container">
                                 <div class="sidebar-legend-content sidebar-legend-icons flex-row flex-around">
                                     <span class="lts-legend-icon lts-legend-1"></span>
