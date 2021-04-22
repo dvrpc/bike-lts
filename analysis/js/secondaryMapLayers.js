@@ -221,6 +221,23 @@ const layers = {
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
+    },
+    'trail-access': {
+        id: 'trail-access',
+        type: 'circle',
+        source: 'lts',
+        'source-layer': 'bikefacintersect',
+        paint: {
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
+                1, 1,
+                7, 3,
+                11, 4
+            ],
+            'circle-color': '#377eb8',
+            'circle-stroke-color': '#fff',
+            'circle-stroke-width': 1
+        }
     }
 }
 
