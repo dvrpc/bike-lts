@@ -190,10 +190,10 @@ const layers = {
                 'Bike Lane', '#e41a1c',
                 'Bike Route', '#377eb8',
                 'Buffered Bike Lane', '#4daf4a',
-                'No Accomodation', '#984ea3',
+                'No Accomodation', '#a65628',
                 'Off-road Trail/Path', '#ff7f00',
                 'Protected Bike Lane', '#ffff33',
-                'Sharrows', '#a65628',
+                'Sharrows', '#984ea3',
                 'rgba(0,0,0,0)'
             ]
         }

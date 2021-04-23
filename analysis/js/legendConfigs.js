@@ -3,6 +3,7 @@ const legendConfigs = {
     lts: {
         title: 'Levels of Traffic Stress',
         icons: ['var(--theme-green)', 'var(--theme-green-2)', 'var(--theme-yellow)', 'var(--theme-red)'],
+        iconType: 'line',
         text: ['LTS 1', 'LTS 2', 'LTS 3', 'LTS 4']
     },
     priorities: {
@@ -31,7 +32,7 @@ const legendConfigs = {
     },
     facilities: {
         title: 'Bicycle Facilities',
-        icons: ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628'],
+        icons: ['#e41a1c','#377eb8','#4daf4a','#a65628','#ff7f00','#ffff33','#984ea3'],
         iconType: 'line',
         text: ['Bike Lane','Bike Route','Buffered Bike Lane','No Accomodation','Off-road Trail/Path','Protected Bike Lane','Sharrows']
     },

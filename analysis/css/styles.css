@@ -271,11 +271,13 @@ nav {
     margin-bottom: 8%;
 }
 .sidebar-legend-section {
-    margin: var(--wrapper-padding) auto;
-    padding: var(--wrapper-padding-half) 0;
+    margin: var(--wrapper-padding) auto var(--wrapper-padding-double) auto;
+    padding: var(--wrapper-padding);
     background-color: var(--theme-grey);
     color: var(--theme-white);
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
 }
 .sidebar-legend-subheader {
     font-size: 0.9rem;
