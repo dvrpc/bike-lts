@@ -1,8 +1,14 @@
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'lowstress-islands']
+
 const makePopup = () => new mapboxgl.Popup()
 
 const makePopupContent = (map, target, popup) => {
-    const props = target.features[0].properties
-    const html = makePopupHTML(props)
+    const features = target.features[0]
+    const props = features.properties
+    const layer = features.layer.id
+    const popupFnc = getPopupHTMLFnc[layer]
+
+    const html = popupFnc(props)
 
     popup
     .setLngLat(target.lngLat)
@@ -10,8 +16,8 @@ const makePopupContent = (map, target, popup) => {
     .addTo(map)
 }
 
-// add slope 
-const makePopupHTML = props => {
+// LTS popups
+const makeLTSPopupHTML = props => {
     return `
         <span class="popup-span">
             <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
@@ -21,9 +27,25 @@ const makePopupHTML = props => {
             <strong>Speed:</strong> ${props.speed_lts} mph<br />
             <hr />
             <strong>Segment Length:</strong> ${props.length} miles<br />
-            <strong>Slope:</strong> ${(props.slope_perc) * 100}%
+            <strong>Slope:</strong> ${Math.round((props.slope_perc) * 100)}%
         </span>
     `
+}
+
+// priority popups
+const makePriorityPopupHTML = props => {
+    return `
+    <span class="popup-span">
+        <h3 class="popup-header">Priority Score: ${props.main_priority}%</h3>
+        <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
+    </span>
+    `
+}
+
+// all popups
+const getPopupHTMLFnc = {
+    'existing-conditions': makeLTSPopupHTML,
+    'priority': makePriorityPopupHTML
 }
 
 export { makePopup, makePopupContent }

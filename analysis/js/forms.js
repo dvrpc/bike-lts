@@ -1,5 +1,6 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
 import handleLegend from './legends.js'
+import { clickLayers, makePopup, makePopupContent } from './popup.js'
 
 // LTS filters
 const ltsFilters = {
@@ -42,6 +43,7 @@ const toggleLayers = (toggle, map) => {
     if(!map.getLayer(layer)) {
         const order = layer === 'facilities' ? 'existing-conditions' : ''
         map.addLayer(newLayer, order)
+        // handle layers that have popups
     }
 
     map.setLayoutProperty(layer, 'visibility', visibility)
