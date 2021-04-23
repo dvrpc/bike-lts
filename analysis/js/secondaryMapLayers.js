@@ -5,7 +5,12 @@ const layers = {
         source: 'lts',
         'source-layer': 'lowstress_islands',
         'paint': {
-            'line-width': 0.33,
+            'line-width': ['interpolate', 
+                ['linear'], ['zoom'],
+                8.35, 0.33,
+                10, 0.66,
+                11, 1
+            ],
             'line-color': ['step',
                 ['get', 'island_num'],
                 '#fff',
