@@ -184,8 +184,8 @@ nav {
     color: var(--theme-red);
 }
 #sidebar-content {
-    padding: var(--wrapper-padding-double) var(--wrapper-padding);
-    height: 81vh;
+    padding: var(--wrapper-padding);
+    height: calc(94% - 20px);
     overflow-y: auto;
 }
 .sidebar-img {
