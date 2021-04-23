@@ -20,6 +20,8 @@ map.on('load', () => {
     forms.forEach(form => handleForms(form, map))
 
     map.on('click', 'existing-conditions', e => makePopupContent(map, e, ltsLayersPopup))
+    map.on('mousemove', 'existing-conditions', () => map.getCanvas().style.cursor = 'pointer')
+    map.on('mouseleave', 'existing-conditions', () => map.getCanvas().style.cursor = '')
 })
 
 map.on('idle', () => {

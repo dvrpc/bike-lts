@@ -48,6 +48,8 @@ const toggleLayers = (toggle, map) => {
         if(clickLayers.includes(layer)) {
             const layerPopup = makePopup()
             map.on('click', layer, e => makePopupContent(map, e, layerPopup))
+            map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')
+            map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
         }
     }
 

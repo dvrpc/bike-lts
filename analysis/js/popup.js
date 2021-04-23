@@ -1,4 +1,4 @@
-const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'lowstress-islands']
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail']
 
 const makePopup = () => new mapboxgl.Popup()
 
@@ -46,10 +46,22 @@ const makePriorityPopupHTML = (props, layer) => {
     }
     
     return `
-    <span class="popup-span">
-        <h3 class="popup-header">${isIPD} Priority Score: ${score}%</h3>
-        <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
-    </span>
+        <span class="popup-span">
+            <h3 class="popup-header">${isIPD} Priority Score: ${score}%</h3>
+            <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
+        </span>
+    `
+}
+
+// passenger rail
+const makePassengerRailPopupHTML = props => {
+    return `
+        <span class="popup-span">
+            <h3 class="popup-header">Operator: ${props.operator}</h3>
+            <strong>type:</strong> ${props.type}<br />
+            <strong>line name:</strong> ${props.line}<br />
+            <strong>station:</strong> ${props.station}
+        </span>
     `
 }
 
@@ -57,7 +69,8 @@ const makePriorityPopupHTML = (props, layer) => {
 const getPopupHTMLFnc = {
     'existing-conditions': makeLTSPopupHTML,
     'priority': makePriorityPopupHTML,
-    'priority-ipd': makePriorityPopupHTML
+    'priority-ipd': makePriorityPopupHTML,
+    'passenger-rail': makePassengerRailPopupHTML
 }
 
 export { makePopup, makePopupContent, clickLayers }
