@@ -187,13 +187,12 @@ const layers = {
             'line-width': 0.33,
             'line-color': ['match',
                 ['get', 'bikefacili'],
-                'Bike Lane', '#e41a1c',
-                'Bike Route', '#377eb8',
-                'Buffered Bike Lane', '#4daf4a',
-                'No Accomodation', '#555555',
-                'Off-road Trail/Path', '#ff7f00',
-                'Protected Bike Lane', '#ffff33',
-                'Sharrows', '#984ea3',
+                'Bike Lane', '#8dd3c7',
+                'Bike Route', '#ffffb3',
+                'Buffered Bike Lane', '#bebada',
+                'Off-road Trail/Path', '#fb8072',
+                'Protected Bike Lane', '#80b1d3',
+                'Sharrows', '#fdb462',
                 'rgba(0,0,0,0)'
             ]
         }
