@@ -267,6 +267,9 @@ nav {
 .sidebar-form-hr {
     margin: 2% 0;
 }
+.sidebar-legends-container {
+    margin-bottom: 8%;
+}
 .sidebar-legend-section {
     margin: var(--wrapper-padding) auto;
     padding: var(--wrapper-padding-half) 0;
@@ -275,6 +278,8 @@ nav {
     border-radius: var(--border-radius);
 }
 .sidebar-legend-subheader {
+    font-size: 0.9rem;
+    text-transform: uppercase;
     text-align: center;
     margin-bottom: var(--wrapper-padding);
 }
@@ -294,6 +299,7 @@ nav {
 }
 .legend-text {
     text-align: center;
+    font-size: 0.8rem;
 }
 .lts-legend-1 {
     background-color: var(--theme-green);
@@ -334,7 +340,8 @@ nav {
 
 /* Footer */
 footer {
-    height: 6vh;
+    height: 6%;
+    min-height: 1.5rem;
     width: 100%;
     position: absolute;
     bottom: 0;
