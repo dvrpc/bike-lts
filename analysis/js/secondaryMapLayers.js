@@ -196,8 +196,7 @@ const layers = {
                 'Sharrows', '#984ea3',
                 'rgba(0,0,0,0)'
             ]
-        },
-        order: 'existingConditions'
+        }
     },
     'passenger-rail': {
         id: 'passenger-rail',
