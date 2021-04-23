@@ -7,7 +7,7 @@ const legendConfigs = {
         text: ['LTS 1', 'LTS 2', 'LTS 3', 'LTS 4']
     },
     priorities: {
-        title: 'Regional Connectivity to Priorities',
+        title: 'Regional Connectivity Priorities',
         icons: ['#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404'],
         iconType: 'line',
         text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
