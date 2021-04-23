@@ -299,6 +299,10 @@ nav {
     border-radius: 50%;
     border: 1px solid white;
 }
+.legend-icon-circle,
+.legend-icon-line {
+    display: inline-block;
+}
 .legend-text {
     text-align: center;
     font-size: 0.8rem;
