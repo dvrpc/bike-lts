@@ -5,7 +5,12 @@ const layers = {
         source: 'lts',
         'source-layer': 'lowstress_islands',
         'paint': {
-            'line-width': 0.33,
+            'line-width': ['interpolate', 
+                ['linear'], ['zoom'],
+                8.35, 0.33,
+                10, 0.66,
+                11, 1
+            ],
             'line-color': ['step',
                 ['get', 'island_num'],
                 '#fff',
@@ -31,7 +36,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
@@ -54,7 +59,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
@@ -77,7 +82,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
@@ -92,7 +97,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
@@ -107,7 +112,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
@@ -122,7 +127,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
@@ -137,7 +142,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
@@ -161,7 +166,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
-                7.3, 3,
+                8.35, 3,
                 10, 2,
                 11, 1
             ],
