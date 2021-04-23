@@ -265,7 +265,8 @@ nav {
     color: var(--theme-yellow);
 }
 .sidebar-form-hr {
-    margin: 2% 0;
+    margin: 1% 0;
+    border: none;
 }
 .sidebar-legends-container {
     margin-bottom: 8%;

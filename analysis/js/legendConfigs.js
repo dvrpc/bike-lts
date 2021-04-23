@@ -50,7 +50,7 @@ const legendConfigs = {
     },
     lowstress: {
         title: 'Low-stress Islands',
-        icons: [],
+        icons: [''],
         iconType: '',
         text: ['Different colors represent distinct low-stress (LTS 1 & 2) islands']
     }
