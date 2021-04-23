@@ -10,7 +10,7 @@ body {
 }
 h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: var(--wrapper-padding-double);
 }
 p {
