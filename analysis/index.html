@@ -48,9 +48,9 @@
         <main id="main-content-wrapper" class="flex-row flex-between">
             <article id="sidebar">
                 <div id="sidebar-content">
-                    <h1>Bicycle LTS</h1>
+                    <h1>Bicycle Level of Traffic Stress (LTS)<br /> and Connectivity Analysis</h1>
 
-                    <p>brief, introductory text goes here.</p>
+                    <p>introductory text goes here.</p>
                     
                     <h2 class="sidebar-h2">Layer Toggles</h2>
                     
@@ -174,6 +174,8 @@
                                     Passenger Rail Stations
                                 </label>
 
+                                <hr class="sidebar-form-hr" />
+
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trolley">
                                     Trolley Stops
@@ -181,26 +183,31 @@
                             </fieldset>
                         </form>
                     </details>
-                    
-                    
+
                     <aside class="sidebar-legends-container">
                         <h2 class="sidebar-h2">Legends</h2>
 
                         <section class="sidebar-legend-section" data-filter-type="lts" data-legend-reps="4">
                             <h3 class="sidebar-legend-subheader">Levels of Traffic Stress</h3>
 
-                            <div class="sidebar-legend-content-container">
-                                <div class="sidebar-legend-content sidebar-legend-icons flex-row flex-around">
+                            <div class="sidebar-legend-content-container flex-row">
+                                <div class="sidebar-legend-content flex-column">
                                     <span class="legend-icon-line lts-legend-1"></span>
-                                    <span class="legend-icon-line lts-legend-2"></span>
-                                    <span class="legend-icon-line lts-legend-3"></span>
-                                    <span class="legend-icon-line lts-legend-4"></span>
+                                    <span class="legend-text">LTS 1</span>
                                 </div>
 
-                                <div class="sidebar-legend-content sidebar-legend-values flex-row flex-around">
-                                    <span class="legend-text">LTS 1</span>
+                                <div class="sidebar-legend-content flex-column">
+                                    <span class="legend-icon-line lts-legend-2"></span>
                                     <span class="legend-text">LTS 2</span>
+                                </div>
+
+                                <div class="sidebar-legend-content flex-column">                                    
+                                    <span class="legend-icon-line lts-legend-3"></span>
                                     <span class="legend-text">LTS 3</span>
+                                </div>
+
+                                <div class="sidebar-legend-content sidebar-legend-icons flex-column">                                
+                                    <span class="legend-icon-line lts-legend-4"></span>
                                     <span class="legend-text">LTS 4</span>
                                 </div>
                             </div>

@@ -3,10 +3,11 @@ const legendConfigs = {
     lts: {
         title: 'Levels of Traffic Stress',
         icons: ['var(--theme-green)', 'var(--theme-green-2)', 'var(--theme-yellow)', 'var(--theme-red)'],
+        iconType: 'line',
         text: ['LTS 1', 'LTS 2', 'LTS 3', 'LTS 4']
     },
     priorities: {
-        title: 'Regional Connectivity to Priorities',
+        title: 'Regional Connectivity Priorities',
         icons: ['#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404'],
         iconType: 'line',
         text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
@@ -31,9 +32,9 @@ const legendConfigs = {
     },
     facilities: {
         title: 'Bicycle Facilities',
-        icons: ['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628'],
+        icons: ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462'],
         iconType: 'line',
-        text: ['Bike Lane','Bike Route','Buffered Bike Lane','No Accomodation','Off-road Trail/Path','Protected Bike Lane','Sharrows']
+        text: ['Bike Lane','Bike Route','Buffered Bike Lane','Off-road Trail/Path','Protected Bike Lane','Sharrows']
     },
     access: {
         title: 'Trail Access Locations',
@@ -49,7 +50,7 @@ const legendConfigs = {
     },
     lowstress: {
         title: 'Low-stress Islands',
-        icons: [],
+        icons: [''],
         iconType: '',
         text: ['Different colors represent distinct low-stress (LTS 1 & 2) islands']
     }

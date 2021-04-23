@@ -37,8 +37,12 @@ const toggleLayers = (toggle, map) => {
     const layer = toggle.value
     const visibility = toggle.checked ? 'visible' : 'none'
     const legend = toggle.dataset.legendType
-
-    if(!map.getLayer(layer)) map.addLayer(secondaryMapLayers[layer])
+    const newLayer = secondaryMapLayers[layer]
+    
+    if(!map.getLayer(layer)) {
+        const order = layer === 'facilities' ? 'existing-conditions' : ''
+        map.addLayer(newLayer, order)
+    }
 
     map.setLayoutProperty(layer, 'visibility', visibility)
 

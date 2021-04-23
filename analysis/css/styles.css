@@ -10,7 +10,8 @@ body {
 }
 h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    line-height: initial;
     margin-bottom: var(--wrapper-padding-double);
 }
 p {
@@ -183,8 +184,8 @@ nav {
     color: var(--theme-red);
 }
 #sidebar-content {
-    padding: var(--wrapper-padding-double) var(--wrapper-padding);
-    height: 81vh;
+    padding: var(--wrapper-padding);
+    height: calc(94% - 20px);
     overflow-y: auto;
 }
 .sidebar-img {
@@ -265,16 +266,24 @@ nav {
     color: var(--theme-yellow);
 }
 .sidebar-form-hr {
-    margin: 2% 0;
+    margin: var(--wrapper-padding-half) 0;
+    border: none;
+}
+.sidebar-legends-container {
+    margin-bottom: 8%;
 }
 .sidebar-legend-section {
-    margin: var(--wrapper-padding) auto;
-    padding: var(--wrapper-padding-half) 0;
+    margin: var(--wrapper-padding) auto var(--wrapper-padding-double) auto;
+    padding: var(--wrapper-padding);
     background-color: var(--theme-grey);
     color: var(--theme-white);
     border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
 }
 .sidebar-legend-subheader {
+    font-size: 0.9rem;
+    text-transform: uppercase;
     text-align: center;
     margin-bottom: var(--wrapper-padding);
 }
@@ -292,8 +301,13 @@ nav {
     border-radius: 50%;
     border: 1px solid white;
 }
+.legend-icon-circle,
+.legend-icon-line {
+    display: inline-block;
+}
 .legend-text {
     text-align: center;
+    font-size: 0.8rem;
 }
 .lts-legend-1 {
     background-color: var(--theme-green);
@@ -334,7 +348,8 @@ nav {
 
 /* Footer */
 footer {
-    height: 6vh;
+    height: 6%;
+    min-height: 1.5rem;
     width: 100%;
     position: absolute;
     bottom: 0;
