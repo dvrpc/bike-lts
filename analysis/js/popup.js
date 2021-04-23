@@ -1,4 +1,4 @@
-const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail']
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands']
 
 const makePopup = () => new mapboxgl.Popup()
 
@@ -65,12 +65,24 @@ const makePassengerRailPopupHTML = props => {
     `
 }
 
+// low-stress *special case. Needs to generate popup AND update map styles w/selected island.
+// highlighting tbd
+const makeLowStressPopupHTML = props => {
+    return `
+        <span class="popup-span">
+            <h3 class="popup-header">Island Number: ${props.island_num}</h3>
+            <p>Please note: island numbers have no meaning, they are simply used to identify unique groups of connected, low-stress (LTS 1 & LTS 2) islands. At least that's what it seems like, I'm making this up. Sarah let me know. These will eventually highlight islands but that's a problem for future Marc to solve. 5:20pm on a Friday Marc is clocking out.</p>
+        </span>
+    `
+}
+
 // all popups
 const getPopupHTMLFnc = {
     'existing-conditions': makeLTSPopupHTML,
     'priority': makePriorityPopupHTML,
     'priority-ipd': makePriorityPopupHTML,
-    'passenger-rail': makePassengerRailPopupHTML
+    'passenger-rail': makePassengerRailPopupHTML,
+    'lowstress-islands': makeLowStressPopupHTML
 }
 
 export { makePopup, makePopupContent, clickLayers }
