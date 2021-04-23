@@ -8,7 +8,7 @@ const makePopupContent = (map, target, popup) => {
     const layer = features.layer.id
     const popupFnc = getPopupHTMLFnc[layer]
 
-    const html = popupFnc(props)
+    const html = popupFnc(props, layer)
 
     popup
     .setLngLat(target.lngLat)
@@ -33,10 +33,21 @@ const makeLTSPopupHTML = props => {
 }
 
 // priority popups
-const makePriorityPopupHTML = props => {
+const makePriorityPopupHTML = (props, layer) => {
+    let score = 0
+    let isIPD = ''
+
+    if(layer === 'priority') {
+        score = props.main_priority
+        
+    } else {
+        score = props.main_priority_ipd
+        isIPD = 'Equity-focused'
+    }
+    
     return `
     <span class="popup-span">
-        <h3 class="popup-header">Priority Score: ${props.main_priority}%</h3>
+        <h3 class="popup-header">${isIPD} Priority Score: ${score}%</h3>
         <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
     </span>
     `
@@ -45,7 +56,8 @@ const makePriorityPopupHTML = props => {
 // all popups
 const getPopupHTMLFnc = {
     'existing-conditions': makeLTSPopupHTML,
-    'priority': makePriorityPopupHTML
+    'priority': makePriorityPopupHTML,
+    'priority-ipd': makePriorityPopupHTML
 }
 
-export { makePopup, makePopupContent }
+export { makePopup, makePopupContent, clickLayers }

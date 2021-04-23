@@ -43,7 +43,12 @@ const toggleLayers = (toggle, map) => {
     if(!map.getLayer(layer)) {
         const order = layer === 'facilities' ? 'existing-conditions' : ''
         map.addLayer(newLayer, order)
+
         // handle layers that have popups
+        if(clickLayers.includes(layer)) {
+            const layerPopup = makePopup()
+            map.on('click', layer, e => makePopupContent(map, e, layerPopup))
+        }
     }
 
     map.setLayoutProperty(layer, 'visibility', visibility)
