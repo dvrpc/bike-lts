@@ -6,7 +6,7 @@ const layers = {
         'source-layer': 'county',
         'paint': {
             'line-width': 2.5,
-            'line-color': '#f7f7f7'
+            'line-color': '#242424'
         },
         'filter': ['==',
             'dvrpc', 'Yes'
@@ -19,7 +19,7 @@ const layers = {
         'source-layer': 'municipalities',
         'paint': {
             'line-width': 0.5,
-            'line-color': '#f7f7f7'
+            'line-color': '#242424'
         }
     },
     existingConditions: {
