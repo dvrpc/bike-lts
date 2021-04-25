@@ -7,8 +7,9 @@ const layers = {
         'paint': {
             'line-width': ['interpolate', 
                 ['linear'], ['zoom'],
-                8.35, 3,
-                11, 2
+                8.35, 0.33,
+                10, 0.66,
+                11, 1
             ],
             'line-color': ['step',
                 ['get', 'island_num'],
@@ -188,7 +189,11 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 0.33,
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                8.35, 3,
+                11, 1.5
+            ],
             'line-color': ['match',
                 ['get', 'bikefacili'],
                 'Bike Lane', '#8dd3c7',
