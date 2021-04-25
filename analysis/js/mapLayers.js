@@ -31,8 +31,10 @@ const layers = {
             'line-width': ['interpolate', 
                 ['linear'], ['zoom'],
                 8.35, 0.33,
-                10, 0.66,
-                11, 1
+                10, 0.99,
+                11, 1.5,
+                17, 2,
+                20, 2.33
             ],
             'line-color': ['match',
                 ['get', 'lts_score'],
