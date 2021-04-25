@@ -38,7 +38,7 @@ const legendConfigs = {
     },
     access: {
         title: 'Trail Access Locations',
-        icons: ['#377eb8'],
+        icons: ['#498434'],
         iconType: 'circle',
         text: ['Trailheads']
     },

@@ -106,6 +106,6 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
     })
 
     return acca
-}
+} 
 
 export default handleForms

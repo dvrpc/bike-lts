@@ -242,7 +242,7 @@ const layers = {
                 7, 3,
                 11, 4
             ],
-            'circle-color': '#377eb8',
+            'circle-color': '#498434',
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }

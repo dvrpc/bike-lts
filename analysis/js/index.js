@@ -13,9 +13,19 @@ const feedbackBtn = sidebar.querySelector('#feedback-btn')
 const map = makeMap()
 const ltsLayersPopup = makePopup()
 
+const getFirstSymbolId = map => {
+    const layers = map.getStyle().layers;
+
+    for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol') return layers[i].id;
+    }
+}
+
 map.on('load', () => {
+    const firstSymbolId = getFirstSymbolId(map)
+
     for(const source in sources) map.addSource(source, sources[source])
-    for(const layer in layers) map.addLayer(layers[layer])
+    for(const layer in layers) map.addLayer(layers[layer], firstSymbolId)
 
     forms.forEach(form => handleForms(form, map))
 
