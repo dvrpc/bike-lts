@@ -27,7 +27,7 @@ const makeLTSPopupHTML = props => {
             <strong>Speed:</strong> ${props.speed_lts} mph<br />
             <hr />
             <strong>Segment Length:</strong> ${props.length} miles<br />
-            <strong>Slope:</strong> ${Math.round((props.slope_perc) * 100)}%
+            <strong>Slope:</strong> ${(props.slope_perc * 100).toPrecision(2)}%
         </span>
     `
 }
