@@ -333,6 +333,11 @@ nav {
 .mapboxgl-popup-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
 }
+.mapboxgl-ctrl-geocoder {
+    left: calc(30vw + 10px);
+    background-color: var(--theme-white);
+    padding: 0;
+}
 .popup-span {
     display: block;
 }
