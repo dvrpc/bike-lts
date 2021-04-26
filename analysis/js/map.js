@@ -43,10 +43,12 @@ const makeRegionalExtentEls = map => {
 }
 
 const makeControls = map => {
+    const geocoder = new MapboxGeocoder({accessToken: mapboxgl.accessToken})
     const navigationControl = new mapboxgl.NavigationControl();
     const extentControl = makeRegionalExtentEls(map)
 
     // plug into mapbox fncs
+    map.addControl(geocoder)
     navigationControl._extent = extentControl
     navigationControl._container.appendChild(extentControl)
 
