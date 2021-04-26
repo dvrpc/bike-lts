@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5e
 
 const initMap = () => {
     const longitudeOffset = window.innerWidth > 800 ? -75.8 : -75.2273
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.25
+    const zoom = window.innerWidth <= 420 ? 7.3 : 8.35
 
     return new mapboxgl.Map({
         container: 'map',
@@ -14,7 +14,7 @@ const initMap = () => {
 
 const makeRegionalExtentControl = map => {
     const longitudeOffset = window.innerWidth > 800 ? -75.8 : -75.2273
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.3
+    const zoom = window.innerWidth <= 420 ? 7.3 : 8.35
 
     const dvrpcExtent = {
         center: [longitudeOffset, 40.0518322],

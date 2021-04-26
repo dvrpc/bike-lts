@@ -1,2 +1,11 @@
-// put functions for map events - hover, click, popups, etc in here
-// import into index.js and add to map within map.on('load')
+const getFirstSymbolId = map => {
+    const layers = map.getStyle().layers;
+
+    for (var i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol') return layers[i].id;
+    }
+}
+
+const mapUtils = { getFirstSymbolId }
+
+export default mapUtils

@@ -1,4 +1,6 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
+import handleLegend from './legends.js'
+import { clickLayers, makePopup, makePopupContent } from './popup.js'
 
 // LTS filters
 const ltsFilters = {
@@ -35,21 +37,38 @@ const handleForms = (form, map) => {
 const toggleLayers = (toggle, map) => {
     const layer = toggle.value
     const visibility = toggle.checked ? 'visible' : 'none'
+    const legend = toggle.dataset.legendType
+    const newLayer = secondaryMapLayers[layer]
+    
+    if(!map.getLayer(layer)) {
+        map.addLayer(newLayer)
 
-    if(!map.getLayer(layer)) map.addLayer(secondaryMapLayers[layer])
+        // handle layers that have popups
+        if(clickLayers.includes(layer)) {
+            const layerPopup = makePopup()
+            map.on('click', layer, e => makePopupContent(map, e, layerPopup))
+            map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')
+            map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
+        }
+    }
 
     map.setLayoutProperty(layer, 'visibility', visibility)
+
+    handleLegend(legend, toggle.checked, 1)
 }
 
 const filterLayers = (form, toggle, map) => { 
-        const layer = toggle.name       
+        const layer = toggle.name 
+        const legend = toggle.dataset.legendType
+        let acca = 1
         
         // handle meta toggles (currently all filter layers are part of a meta toggle but build it for the future)
         if(toggle.classList.contains('core-lts')) {
             const coreInputs = form.querySelectorAll('.core-lts')
             const selectedInput = {value: toggle.value, state: toggle.checked}
 
-            handleCoreLayers(coreInputs, selectedInput)
+            // handle existing conditions legends special case
+            acca = handleCoreLayers(coreInputs, selectedInput)
         }
 
         // get all checked boxes after handling core layers
@@ -63,23 +82,30 @@ const filterLayers = (form, toggle, map) => {
         })
 
         map.setFilter(layer, baseFilter)
+
+        handleLegend(legend, toggle.checked, acca)
 }
 
 // handle UI changes associated with toggling the core layers
 const handleCoreLayers = (coreInputs, selectedInput) => {
     let existing = selectedInput.value === 'existing-conditions' ? true : false
     let on = selectedInput.state
+    let acca = 1
 
     coreInputs.forEach(input => {
         if(existing) {
-            if(on) input.checked = true
+            if(on)  input.checked = true
             else input.checked = false
+            // handle existing conditions acca math
+            acca = 4
         }
 
         if(!existing && !on) {
             if(input.value === 'existing-conditions') input.checked = false
         }
     })
-}
+
+    return acca
+} 
 
 export default handleForms

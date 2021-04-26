@@ -6,7 +6,8 @@ const layers = {
         'source-layer': 'county',
         'paint': {
             'line-width': 2.5,
-            'line-color': '#f7f7f7'
+            'line-color': '#242424'
+            // 'line-color': '#e9e9e9'
         },
         'filter': ['==',
             'dvrpc', 'Yes'
@@ -19,7 +20,8 @@ const layers = {
         'source-layer': 'municipalities',
         'paint': {
             'line-width': 0.5,
-            'line-color': '#f7f7f7'
+            'line-color': '#242424'
+            // 'line-color': '#e9e9e9'
         }
     },
     existingConditions: {
@@ -28,7 +30,14 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         'paint': {
-            'line-width': 0.33,
+            'line-width': ['interpolate', 
+                ['linear'], ['zoom'],
+                8.35, 0.33,
+                10, 0.99,
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
+            ],
             'line-color': ['match',
                 ['get', 'lts_score'],
                 1, '#498434',
