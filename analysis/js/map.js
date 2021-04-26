@@ -12,7 +12,8 @@ const initMap = () => {
     })
 }
 
-const makeControls = map => {
+// create custom extent btn
+const makeRegionalExtentEls = map => {
     const longitudeOffset = window.innerWidth > 800 ? -75.8 : -75.2273
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.35
 
@@ -21,9 +22,6 @@ const makeControls = map => {
         zoom: zoom
     }
 
-    const navigationControl = new mapboxgl.NavigationControl();
-
-    // create custom button elements
     const button = document.createElement('button')
     const icon = document.createElement('img')
 
@@ -41,9 +39,16 @@ const makeControls = map => {
 
     button.appendChild(icon)
 
+    return button
+}
+
+const makeControls = map => {
+    const navigationControl = new mapboxgl.NavigationControl();
+    const extentControl = makeRegionalExtentEls(map)
+
     // plug into mapbox fncs
-    navigationControl._extent = button
-    navigationControl._container.appendChild(button)
+    navigationControl._extent = extentControl
+    navigationControl._container.appendChild(extentControl)
 
     return navigationControl
 }
