@@ -4,7 +4,9 @@
   "description": "improved bike lts analysis webmap",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "webpack && npm version patch",
+    "build:prod": "webpack -p && npm version minor"
   },
   "repository": {
     "type": "git",
