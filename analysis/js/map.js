@@ -12,7 +12,7 @@ const initMap = () => {
     })
 }
 
-const makeRegionalExtentControl = map => {
+const makeControls = map => {
     const longitudeOffset = window.innerWidth > 800 ? -75.8 : -75.2273
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.35
 
@@ -50,7 +50,7 @@ const makeRegionalExtentControl = map => {
 
 const makeMap = () => {
     const map = initMap()
-    const control = makeRegionalExtentControl(map)
+    const control = makeControls(map)
 
     map.addControl(control);
 
