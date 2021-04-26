@@ -41,8 +41,7 @@ const toggleLayers = (toggle, map) => {
     const newLayer = secondaryMapLayers[layer]
     
     if(!map.getLayer(layer)) {
-        const order = layer === 'facilities' ? 'existing-conditions' : ''
-        map.addLayer(newLayer, order)
+        map.addLayer(newLayer)
 
         // handle layers that have popups
         if(clickLayers.includes(layer)) {
@@ -107,6 +106,6 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
     })
 
     return acca
-}
+} 
 
 export default handleForms

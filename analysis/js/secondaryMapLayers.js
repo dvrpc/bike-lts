@@ -8,8 +8,10 @@ const layers = {
             'line-width': ['interpolate', 
                 ['linear'], ['zoom'],
                 8.35, 0.33,
-                10, 0.66,
-                11, 1
+                10, 0.99,
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color': ['step',
                 ['get', 'island_num'],
@@ -37,8 +39,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color': ['match',
                 ['get', 'main_priority'],
@@ -60,8 +63,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color': ['match',
                 ['get', 'main_priority_ipd'],
@@ -83,8 +87,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color':'#984ea3'
         }
@@ -98,8 +103,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color':'#984ea3'
         }
@@ -113,8 +119,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color': '#377eb8'
         }
@@ -128,8 +135,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color': '#377eb8'
         }
@@ -143,8 +151,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color': ['match',
                 ['get', 'mode'],
@@ -167,8 +176,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                10, 2,
-                11, 1
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
             ],
             'line-color': ['match',
                 ['get', 'mode'],
@@ -189,7 +199,13 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 0.33,
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                8.35, 3,
+                11, 1.5,
+                17, 2.5,
+                20, 3.5
+            ],
             'line-color': ['match',
                 ['get', 'bikefacili'],
                 'Bike Lane', '#8dd3c7',
@@ -238,7 +254,7 @@ const layers = {
                 7, 3,
                 11, 4
             ],
-            'circle-color': '#377eb8',
+            'circle-color': '#498434',
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
