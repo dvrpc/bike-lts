@@ -336,7 +336,8 @@ nav {
 .mapboxgl-ctrl-geocoder {
     left: calc(30vw + 10px);
     background-color: var(--theme-white);
-    padding: 0;
+    color: var(--theme-black);
+    border-radius: var(--border-radius);
 }
 .popup-span {
     display: block;

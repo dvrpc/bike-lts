@@ -42,14 +42,28 @@ const makeRegionalExtentEls = map => {
     return button
 }
 
+const offsetGeocoder = (e, map) => {
+    const bbox = e.result.bbox
+    const leftPad = Math.round(window.innerWidth * 0.31)
+
+    map.fitBounds(bbox, {
+        padding: {left: leftPad}
+    })
+}
+
 const makeControls = map => {
     const geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         placeholder: 'Zoom to location',
-        bbox: [-76.09405517578125,39.49211914385648,-74.32525634765625,40.614734298694216]
+        bbox: [-76.09405517578125,39.49211914385648,-74.32525634765625,40.614734298694216],
+        marker: false
     })
     const navigationControl = new mapboxgl.NavigationControl();
     const extentControl = makeRegionalExtentEls(map)
+
+    geocoder.on('result', e => {
+        if(window.innerWidth > 800) offsetGeocoder(e, map)
+    })
 
     // plug into mapbox fncs
     map.addControl(geocoder, 'top-left')
