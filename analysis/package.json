@@ -1,0 +1,29 @@
+{
+  "name": "analysis",
+  "version": "1.0.0",
+  "description": "improved bike lts analysis webmap",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvrpc/bike-lts/tree/main/analysis"
+  },
+  "keywords": [
+    "bicycle",
+    "level",
+    "of",
+    "traffic",
+    "stress",
+    "and",
+    "connectivity",
+    "analysis",
+    "bicyle",
+    "planning",
+    "network",
+    "analysis"
+  ],
+  "author": "marc molta",
+  "license": "ISC"
+}
