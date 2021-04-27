@@ -21,13 +21,15 @@ const makeLTSPopupHTML = props => {
     return `
         <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
         <span class="popup-span">
-            <p>LTS score is calculated as a function of the following 3 values:</p>
-            <strong>Bike Facilities:</strong> ${props.bikefacili}<br />
-            <strong>Total Lanes:</strong> ${props.totnumlane}<br />
-            <strong>Speed:</strong> ${props.speed_lts} mph<br />
-            <hr />
-            <strong>Segment Length:</strong> ${props.length} miles<br />
-            <strong>Slope:</strong> ${(props.slope_perc * 100).toPrecision(2)}%
+            <p>LTS score is calculated as a function of the following three values:</p>
+            <ul class="list-unstyled">
+                <li class="popup-li"><strong>Bike Facilities:</strong> ${props.bikefacili}</li>
+                <li class="popup-li"><strong>Total Lanes:</strong> ${props.totnumlane}</li>
+                <li class="popup-li"><strong>Speed:</strong> ${props.speed_lts} mph</li>
+                <hr class="popup-hr" />
+                <li class="popup-li"><strong>Segment Length:</strong> ${props.length} miles</li>
+                <li class="popup-li"><strong>Slope:</strong> ${(props.slope_perc * 100).toPrecision(2)}%</li>
+            </ul>
         </span>
     `
 }
@@ -71,7 +73,7 @@ const makeLowStressPopupHTML = props => {
     return `
         <h3 class="popup-header">Island Number: ${props.island_num}</h3>
         <span class="popup-span">
-            <p>Please note: island numbers have no meaning, they are simply used to identify unique groups of connected, low-stress (LTS 1 & LTS 2) islands. At least that's what it seems like, I'm making this up. Sarah let me know. These will eventually highlight islands but that's a problem for future Marc to solve. 5:20pm on a Friday Marc is clocking out.</p>
+            <p>Clicking a segment will highlight the island it belongs to. Popup text tbd if needed.</p>
         </span>
     `
 }
