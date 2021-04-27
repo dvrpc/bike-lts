@@ -332,7 +332,7 @@ nav {
 	background: var(--theme-black);
 	color: var(--theme-white);
 	box-shadow: var(--box-shadow);
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	font-family: Roboto,sans-serif;
 }
 .mapboxgl-ctrl-geocoder {
@@ -343,7 +343,7 @@ nav {
 }
 .popup-span {
     display: block;
-    padding: var(--wrapper-padding) var(--wrapper-padding-double);
+    padding: var(--wrapper-padding);
 }
 .popup-span:not(:last-of-type) {
     border-bottom: 1px dotted var(--theme-black);
@@ -351,7 +351,7 @@ nav {
 .popup-header {
 	text-align: center;
 	background: var(--theme-green);
-	padding: var(--wrapper-padding) 0;
+	padding: var(--wrapper-padding);
 	color: var(--theme-white);
 	border-top-right-radius: var(--border-radius);
 	border-top-left-radius: var(--border-radius);

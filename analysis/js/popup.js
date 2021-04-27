@@ -56,11 +56,11 @@ const makePriorityPopupHTML = (props, layer) => {
 // passenger rail
 const makePassengerRailPopupHTML = props => {
     return `
-        <h3 class="popup-header">Operator: ${props.operator}</h3>
+        <h3 class="popup-header">${props.station} Station</h3>
         <span class="popup-span">
-            <strong>type:</strong> ${props.type}<br />
             <strong>line name:</strong> ${props.line}<br />
-            <strong>station:</strong> ${props.station}
+            <strong>type:</strong> ${props.type}<br />
+            <strong>operator:</strong> ${props.operator}
         </span>
     `
 }
