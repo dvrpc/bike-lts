@@ -19,8 +19,8 @@ const makePopupContent = (map, target, popup) => {
 // LTS popups
 const makeLTSPopupHTML = props => {
     return `
+        <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
         <span class="popup-span">
-            <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
             <p>LTS score is calculated as a function of the following 3 values:</p>
             <strong>Bike Facilities:</strong> ${props.bikefacili}<br />
             <strong>Total Lanes:</strong> ${props.totnumlane}<br />
@@ -42,12 +42,12 @@ const makePriorityPopupHTML = (props, layer) => {
         
     } else {
         score = props.main_priority_ipd
-        isIPD = 'Equity-focused'
+        isIPD = 'Equity-focused '
     }
     
     return `
+        <h3 class="popup-header">${isIPD}Priority Score: ${score}%</h3>
         <span class="popup-span">
-            <h3 class="popup-header">${isIPD} Priority Score: ${score}%</h3>
             <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
         </span>
     `
@@ -56,8 +56,8 @@ const makePriorityPopupHTML = (props, layer) => {
 // passenger rail
 const makePassengerRailPopupHTML = props => {
     return `
+        <h3 class="popup-header">Operator: ${props.operator}</h3>
         <span class="popup-span">
-            <h3 class="popup-header">Operator: ${props.operator}</h3>
             <strong>type:</strong> ${props.type}<br />
             <strong>line name:</strong> ${props.line}<br />
             <strong>station:</strong> ${props.station}
@@ -69,8 +69,8 @@ const makePassengerRailPopupHTML = props => {
 // highlighting tbd
 const makeLowStressPopupHTML = props => {
     return `
+        <h3 class="popup-header">Island Number: ${props.island_num}</h3>
         <span class="popup-span">
-            <h3 class="popup-header">Island Number: ${props.island_num}</h3>
             <p>Please note: island numbers have no meaning, they are simply used to identify unique groups of connected, low-stress (LTS 1 & LTS 2) islands. At least that's what it seems like, I'm making this up. Sarah let me know. These will eventually highlight islands but that's a problem for future Marc to solve. 5:20pm on a Friday Marc is clocking out.</p>
         </span>
     `
