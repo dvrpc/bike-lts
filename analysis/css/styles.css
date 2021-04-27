@@ -331,7 +331,12 @@ nav {
     height: 100%;
 }
 .mapboxgl-popup-content {
-    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+	padding: 0;
+	background: var(--theme-black);
+	color: var(--theme-white);
+	box-shadow: var(--box-shadow);
+	font-size: 0.8rem;
+	font-family: Roboto,sans-serif;
 }
 .mapboxgl-ctrl-geocoder {
     left: calc(30vw + 10px);
@@ -346,7 +351,12 @@ nav {
     border-bottom: 1px dotted var(--theme-black);
 }
 .popup-header {
-    text-align: center;
+	text-align: center;
+	background: var(--theme-green);
+	padding: var(--wrapper-padding-half) 0;
+	color: var(--theme-white);
+	border-top-right-radius: var(--border-radius);
+	border-top-left-radius: var(--border-radius);
 }
 /* END Map */
 
