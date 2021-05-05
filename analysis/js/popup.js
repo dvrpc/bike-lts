@@ -19,15 +19,17 @@ const makePopupContent = (map, target, popup) => {
 // LTS popups
 const makeLTSPopupHTML = props => {
     return `
+        <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
         <span class="popup-span">
-            <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
-            <p>LTS score is calculated as a function of the following 3 values:</p>
-            <strong>Bike Facilities:</strong> ${props.bikefacili}<br />
-            <strong>Total Lanes:</strong> ${props.totnumlane}<br />
-            <strong>Speed:</strong> ${props.speed_lts} mph<br />
-            <hr />
-            <strong>Segment Length:</strong> ${props.length} miles<br />
-            <strong>Slope:</strong> ${(props.slope_perc * 100).toPrecision(2)}%
+            <p>LTS score is calculated as a function of the following three values:</p>
+            <ul class="list-unstyled">
+                <li class="popup-li"><strong>Bike Facilities:</strong> ${props.bikefacili}</li>
+                <li class="popup-li"><strong>Total Lanes:</strong> ${props.totnumlane}</li>
+                <li class="popup-li"><strong>Speed:</strong> ${props.speed_lts} mph</li>
+                <hr class="popup-hr" />
+                <li class="popup-li"><strong>Segment Length:</strong> ${props.length} miles</li>
+                <li class="popup-li"><strong>Slope:</strong> ${(props.slope_perc * 100).toPrecision(2)}%</li>
+            </ul>
         </span>
     `
 }
@@ -42,12 +44,12 @@ const makePriorityPopupHTML = (props, layer) => {
         
     } else {
         score = props.main_priority_ipd
-        isIPD = 'Equity-focused'
+        isIPD = 'Equity-focused '
     }
     
     return `
+        <h3 class="popup-header">${isIPD}Priority Score: ${score}%</h3>
         <span class="popup-span">
-            <h3 class="popup-header">${isIPD} Priority Score: ${score}%</h3>
             <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
         </span>
     `
@@ -56,11 +58,11 @@ const makePriorityPopupHTML = (props, layer) => {
 // passenger rail
 const makePassengerRailPopupHTML = props => {
     return `
+        <h3 class="popup-header">${props.station} Station</h3>
         <span class="popup-span">
-            <h3 class="popup-header">Operator: ${props.operator}</h3>
-            <strong>type:</strong> ${props.type}<br />
             <strong>line name:</strong> ${props.line}<br />
-            <strong>station:</strong> ${props.station}
+            <strong>type:</strong> ${props.type}<br />
+            <strong>operator:</strong> ${props.operator}
         </span>
     `
 }
@@ -69,9 +71,9 @@ const makePassengerRailPopupHTML = props => {
 // highlighting tbd
 const makeLowStressPopupHTML = props => {
     return `
+        <h3 class="popup-header">Island Number: ${props.island_num}</h3>
         <span class="popup-span">
-            <h3 class="popup-header">Island Number: ${props.island_num}</h3>
-            <p>Please note: island numbers have no meaning, they are simply used to identify unique groups of connected, low-stress (LTS 1 & LTS 2) islands. At least that's what it seems like, I'm making this up. Sarah let me know. These will eventually highlight islands but that's a problem for future Marc to solve. 5:20pm on a Friday Marc is clocking out.</p>
+            <p>Clicking a segment will highlight the island it belongs to. Popup text tbd if needed.</p>
         </span>
     `
 }
