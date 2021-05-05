@@ -167,7 +167,7 @@ nav {
 
 
 /* Sidebar */
-#sidebar {
+.sidebar {
     position: absolute;
     top: calc(6vh + 10px);
     left: var(--wrapper-padding);
@@ -181,11 +181,17 @@ nav {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
-#sidebar strong {
+.sidebar strong {
     color: var(--theme-red);
 }
-#sidebar-content {
-    padding: var(--wrapper-padding);
+.sidebar-lead-p {
+    font-size: 1.2rem;
+}
+.sidebar-hr {
+    margin-top: var(--wrapper-padding-double);
+}
+.sidebar-content {
+    padding: var(--wrapper-padding-double) var(--wrapper-padding);
     height: calc(94% - 20px);
     overflow-y: auto;
 }
@@ -197,9 +203,9 @@ nav {
     border-radius: var(--border-radius);
 }
 .sidebar-h2 {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     margin-top: var(--wrapper-padding-double);
-    text-align: center;
+    margin-bottom: var(--wrapper-padding);
 }
 .sidebar-details {
     margin-top: 5px;
