@@ -15,7 +15,8 @@ h1 {
     text-shadow: var(--box-shadow);
 }
 a {
-    color: var(--theme-yellow);
+    color: var(--theme-white);
+    font-weight: 700;
 }
 :root {
     --theme-green: #498434;
@@ -81,9 +82,6 @@ nav {
 .header-nav {
     background-color: var(--theme-green);
 }
-.nav-links {
-    color: var(--theme-yellow);
-}
 .nav-btn {
     background: transparent;
     border: none;
@@ -91,6 +89,8 @@ nav {
     padding: 0;
     cursor: pointer;
     font-size: inherit;
+    color: var(--theme-white);
+    font-weight: 700;
 }
 .nav-vr {
     margin: 0 5px;
@@ -203,19 +203,19 @@ nav {
     border-radius: var(--border-radius);
 }
 .sidebar-h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-top: var(--wrapper-padding-double);
     margin-bottom: var(--wrapper-padding);
+    color: var(--theme-yellow);
 }
 .sidebar-details {
     margin-top: 5px;
 }
 .sidebar-summary{
     cursor: pointer;
-    font-weight: 700;
 }
 .sidebar-details[open] summary {
-    color: var(--theme-yellow);
+    font-weight: 700;
 }
 .sidebar-form {
     margin: var(--wrapper-padding) auto;
@@ -269,9 +269,6 @@ nav {
 }
 /* end adopted code */
 
-.sidebar-fieldset legend {
-    color: var(--theme-yellow);
-}
 .sidebar-form-hr {
     margin: var(--wrapper-padding-half) 0;
     border: none;
