@@ -97,7 +97,7 @@ nav {
     margin: 0 5px;
     padding: 0;
     width: 1px;
-    background-color: var(--theme-black);
+    background-color: var(--theme-white);
     height: 1.5rem;
     display: inline-block;
 }
@@ -192,7 +192,7 @@ nav {
     margin-top: var(--wrapper-padding-double);
 }
 .sidebar-content {
-    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+    padding: var(--wrapper-padding);
     height: calc(94% - 20px);
     overflow-y: auto;
 }
@@ -274,12 +274,12 @@ nav {
     margin: var(--wrapper-padding-half) 0;
     border: none;
 }
-.sidebar-legends-container {
+.sidebar-container {
     margin-bottom: 8%;
 }
 .sidebar-legend-section {
     margin: var(--wrapper-padding) auto var(--wrapper-padding-double) auto;
-    padding: var(--wrapper-padding);
+    padding: var(--wrapper-padding-half);
     background-color: var(--theme-grey);
     color: var(--theme-white);
     border-radius: var(--border-radius);
@@ -296,7 +296,7 @@ nav {
     margin: 0 auto;
 }
 .legend-icon-line {
-    height: 25px;
+    height: 20px;
     width: 5px;
     transform: rotate(45deg);
 }

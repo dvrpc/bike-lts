@@ -2,7 +2,7 @@ import legends from './legendConfigs.js'
 
 const handleLegend = (legend, checked, acca) => {
     // get legend container (obviously not this way)
-    const container = document.querySelector('.sidebar-legends-container')
+    const container = document.getElementById('sidebar-legends-container')
     const children = container.children
     let hasLegend = false
     let legendReps = 0
@@ -40,7 +40,7 @@ const makeLegend = (type, acca) => {
     const text = legend.text
  
     return `
-        <section class="sidebar-legend-section" data-filter-type=${type} data-legend-reps=${acca}>
+        <article class="sidebar-legend-section" data-filter-type=${type} data-legend-reps=${acca}>
             <h3 class="sidebar-legend-subheader">${legend.title}</h3>
             
             <div class="sidebar-legend-content-container flex-row flex-around">
@@ -51,7 +51,7 @@ const makeLegend = (type, acca) => {
                     </div>
                 `).join(' ')}
             </div>
-        </section>
+        </article>
     `
 }
 
