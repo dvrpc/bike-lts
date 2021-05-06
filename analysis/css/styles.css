@@ -204,7 +204,7 @@ nav {
     border-radius: var(--border-radius);
 }
 .sidebar-h2 {
-    font-size: 1.4rem;
+    font-size: inherit;
     margin-top: var(--wrapper-padding-double);
     margin-bottom: var(--wrapper-padding);
     color: var(--theme-yellow);
