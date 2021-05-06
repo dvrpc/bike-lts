@@ -18,7 +18,7 @@ const makeRegionalExtentEls = map => {
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.45
 
     const dvrpcExtent = {
-        center: [longitudeOffset, 40.0518322],
+        center: [longitudeOffset, 40.071],
         zoom: zoom
     }
 
