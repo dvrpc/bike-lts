@@ -192,7 +192,7 @@ nav {
     margin-top: var(--wrapper-padding-double);
 }
 .sidebar-content {
-    padding: var(--wrapper-padding);
+    padding: var(--wrapper-padding-double);
     height: calc(94% - 20px);
     overflow-y: auto;
 }
