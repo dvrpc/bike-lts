@@ -214,6 +214,9 @@ nav {
 .sidebar-summary{
     cursor: pointer;
 }
+.sidebar-details[open] {
+    margin-bottom: var(--wrapper-padding-double);
+}
 .sidebar-details[open] summary {
     font-weight: 700;
 }
