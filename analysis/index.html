@@ -87,39 +87,43 @@
                             <summary class="sidebar-summary">core LTS layers</summary>
     
                             <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form">
-                                <fieldset class="sidebar-fieldset">
+                                <fieldset class="sidebar-fieldset flex-column">
                                     <legend>Core LTS Layers</legend>
-    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="existing-conditions" checked>
-                                        Regional LTS Network
-                                    </label>
-                                    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
-                                        Low-stress Islands
-                                    </label>
+
+                                    <div class=" flex-row flex-between">                                        
+                                        <label class="sidebar-form-label">
+                                            <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="existing-conditions" checked>
+                                            <span>1-4</span>
+                                        </label>
+
+                                        <div class="lts-layer-wrapper">
+                                            <label class="sidebar-form-label">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+                                                LTS 1
+                                            </label>
+                                            
+                                            <label class="sidebar-form-label">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+                                                LTS 2
+                                            </label>
+                                            
+                                            <label class="sidebar-form-label">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+                                                LTS 3
+                                            </label>
+                                            
+                                            <label class="sidebar-form-label lts-layer-4">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+                                                LTS 4
+                                            </label>
+                                        </div>
+                                    </div>
                                     
                                     <hr class="sidebar-form-hr" />
-        
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-                                        LTS 1
-                                    </label>
-                                    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-                                        LTS 2
-                                    </label>
-                                    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-                                        LTS 3
-                                    </label>
-                                    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-                                        LTS 4
+
+                                    <label class="sidebar-form-label side-form-label-lts">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
+                                        low-stress areas
                                     </label>
                                 </fieldset>
                             </form>
@@ -136,7 +140,7 @@
                                 <select class="sidebar-select" id="analysis-type-select">
                                     <option></option>
                                     <option>Low-stress Network Connectivity</option>
-                                    <option>Equity-focused Connectivity</option>
+                                    <option>Equity-focused Network Connectivity</option>
                                 </select>
                                 
                                 <label for="analysis-results-select" class="sidebar-form-label sidebar-select-label">
@@ -198,7 +202,7 @@
                             </form> -->
                         </details>
                         
-                        <details class="sidebar-details" open>
+                        <details class="sidebar-details">
                             <summary class="sidebar-summary">reference layers</summary>
     
                             <form autocomplete="off" class="sidebar-form">

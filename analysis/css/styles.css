@@ -53,6 +53,9 @@ a {
 .flex-end {
     justify-content: flex-end;
 }
+.flex-align-start {
+    align-items: flex-start;
+}
 .list-unstyled {
     list-style-type: none;
     padding-left: 0;
@@ -188,7 +191,11 @@ nav {
     font-size: 1.2rem;
 }
 .sidebar-hr {
-    margin-top: var(--wrapper-padding-double);
+    margin: var(--wrapper-padding-double) 0;
+    color: var(--theme-grey);
+}
+.sidebar-hr-slim {
+    margin: var(--wrapper-padding-half) 0;
 }
 .sidebar-content {
     padding: var(--wrapper-padding-double);
@@ -230,6 +237,8 @@ nav {
 }
 .sidebar-select {
     margin-bottom: var(--wrapper-padding);
+    background-color: var(--theme-white);
+    width: 70%;
 }
 .sidebar-select, .btn-submit {
     padding: var(--wrapper-padding-half);
@@ -240,13 +249,21 @@ nav {
     margin-top: var(--wrapper-padding-half);
     width: 100%;
     cursor: pointer;
+    border: 2px outset;
+}
+.btn-submit:hover {
+    filter: brightness(110%);
+    box-shadow: var(--box-shadow);
+}
+.btn-submit:active {
+    box-shadow: none;
+    border: 2px inset;
+    /* filter: none; */
 }
 
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
 .sidebar-form-label {
     width: auto;
-    height: 20px;
-    line-height: 20px;
     position: relative;
     margin-right: 10px;
 }
@@ -286,8 +303,8 @@ nav {
 /* end adopted code */
 
 .sidebar-form-hr {
-    margin: var(--wrapper-padding-half) 0;
-    border: none;
+    margin: var(--wrapper-padding) 0;
+    color: var(--theme-grey);
 }
 .sidebar-container {
     margin-bottom: 8%;
@@ -328,6 +345,17 @@ nav {
 .legend-text {
     text-align: center;
     font-size: 0.8rem;
+}
+.sidebar-form-label-lts {
+    margin-right: 0;
+
+}
+.lts-layer-wrapper {
+    /* letters x2 + toggle x2 + margin x2*/
+    width: calc(10ch + 80px + 20px);
+}
+.lts-layer-4 {
+    justify-self: flex-end;
 }
 .lts-legend-1 {
     background-color: var(--theme-green);
