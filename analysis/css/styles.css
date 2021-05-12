@@ -56,6 +56,12 @@ a {
 .flex-align-start {
     align-items: flex-start;
 }
+.flex-align-center {
+    align-items: center;
+}
+.flex-align-end {
+    align-items: flex-end;
+}
 .list-unstyled {
     list-style-type: none;
     padding-left: 0;
@@ -263,7 +269,6 @@ nav {
 
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
 .sidebar-form-label {
-    width: auto;
     position: relative;
     margin-right: 10px;
 }
@@ -348,9 +353,11 @@ nav {
 }
 .sidebar-form-label-lts {
     margin-right: 0;
-
 }
 .lts-layer-wrapper {
+    width: 100%;
+}
+.lts-sublayer-wrapper {
     /* letters x2 + toggle x2 + margin x2*/
     width: calc(10ch + 80px + 20px);
 }

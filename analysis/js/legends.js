@@ -45,7 +45,7 @@ const makeLegend = (type, acca) => {
             
             <div class="sidebar-legend-content-container flex-row flex-around">
                 ${legend.icons.map((icon, i) => `
-                    <div class="sidebar-legend-content flex-column">
+                    <div class="sidebar-legend-content flex-column flex-align-center">
                         <span class="legend-icon-${legend.iconType}" style="background-color:${icon}"></span>
                         <span class="legend-text">${text[i]}</span>
                     </div>
