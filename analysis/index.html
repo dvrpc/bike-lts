@@ -128,29 +128,33 @@
                         <details class="sidebar-details" open>
                             <summary class="sidebar-summary">analysis layers</summary>
                             
-                            <form autocomplete="off" class="sidebar-form sidebar-select-form">
-                                <label class="sidebar-form-label">
+                            <form autocomplete="off" class="sidebar-form-submit flex-column">
+                                <label for="analysis-type-select" class="sidebar-form-label sidebar-select-label">
                                     select type:
-                                    <select>
-                                        <option></option>
-                                        <option>Low-stress Network Connectivity</option>
-                                        <option>Equity-focused Connectivity</option>
-                                    </select>
                                 </label>
-                                <label class="sidebar-form-label">
-                                    select results:
-                                    <select>
-                                        <option></option>
-                                        <option>Regional Connectivity Priorities</option>
-                                        <option>Priority Connections to Schools</option>
-                                        <option>Priority Connections to Trails</option>
-                                        <option>Priority Connections to Transit</option>
-                                    </select>
-                                </label>
-                            </form>
 
+                                <select class="sidebar-select" id="analysis-type-select">
+                                    <option></option>
+                                    <option>Low-stress Network Connectivity</option>
+                                    <option>Equity-focused Connectivity</option>
+                                </select>
+                                
+                                <label for="analysis-results-select" class="sidebar-form-label sidebar-select-label">
+                                    select results:
+                                </label>
+
+                                <select class="sidebar-select" id="analysis-results-select">
+                                    <option></option>
+                                    <option>Regional Connectivity Priorities</option>
+                                    <option>Priority Connections to Schools</option>
+                                    <option>Priority Connections to Trails</option>
+                                    <option>Priority Connections to Transit</option>
+                                </select>
+
+                                <button type="submit" class="btn-submit">get analysis</button>
                             </form>
-                            <form autocomplete="off" class="sidebar-form">
+                                                        
+                            <!-- <form autocomplete="off" class="sidebar-form">
                                 <fieldset class="sidebar-fieldset">
                                     <legend>Bicycle Network Connectivity Analysis Results</legend>
                 
@@ -191,7 +195,7 @@
                                         Equity-focused Priority Connections to Transit
                                     </label>
                                 </fieldset>
-                            </form>
+                            </form> -->
                         </details>
                         
                         <details class="sidebar-details" open>
