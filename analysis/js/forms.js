@@ -19,18 +19,32 @@ const ltsFilters = {
     ]
 }
 
+// @UPDATE: move onchange logic into separate fnc
+// check if form type is submit or not
+    // form.onsubmit invokes refactored onchange logic for submit forms
+    // form.onchange invokes refactored onchange logic for defafult form types
 const handleForms = (form, map) => {
-    form.onchange = e => {
-        const spinner = map['_container'].querySelector('.lds-ring')
-        const toggle = e.target
-        const type = toggle.dataset.layerType
+    const type = form.dataset.formType || 'temp'
 
-        // turn spinner on
-        spinner.classList.add('lds-ring-active')
-
-        // determine action based on layer type
-        if(type === 'toggle') toggleLayers(toggle, map)
-        else filterLayers(form, toggle, map)
+    if(type === 'submit') {
+        form.onsubmit = e => {
+            e.preventDefault()
+            console.log('submit select form')
+        }
+        
+    } else {
+        form.onchange = e => {
+            const spinner = map['_container'].querySelector('.lds-ring')
+            const toggle = e.target
+            const type = toggle.dataset.layerType
+    
+            // turn spinner on
+            spinner.classList.add('lds-ring-active')
+    
+            // determine action based on layer type
+            if(type === 'toggle') toggleLayers(toggle, map)
+            else filterLayers(form, toggle, map)
+        }
     }
 }
 

@@ -220,7 +220,7 @@ nav {
 .sidebar-details[open] summary {
     font-weight: 700;
 }
-.sidebar-form, .sidebar-form-submit {
+.sidebar-form {
     margin: var(--wrapper-padding) auto;
 }
 .sidebar-fieldset {
