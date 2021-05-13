@@ -18,12 +18,8 @@ const ltsFilters = {
         ['==', 'lts_score', 4]
     ]
 }
-const analysisLookup = ['priority', 'school', 'trail', 'transit', 'priority-ipd', 'school-ipd', 'trail-ipd', 'transit-ipd']
+const analysisLookup = ['priority', 'school', 'trails', 'transit', 'priority-ipd', 'school-ipd', 'trails-ipd', 'transit-ipd']
 
-// @UPDATE: move onchange logic into separate fnc
-// check if form type is submit or not
-    // form.onsubmit invokes refactored onchange logic for submit forms
-    // form.onchange invokes refactored onchange logic for defafult form types
 const handleForms = (form, map) => {
     const type = form.dataset.formType
     const spinner = map['_container'].querySelector('.lds-ring')
@@ -36,7 +32,8 @@ const handleForms = (form, map) => {
 
                 const analysisType = form.querySelector('#analysis-type-select').value
                 const analysisLayerSelect = form.querySelector('#analysis-results-select')
-                const analysisLayer = analysisLayerSelect.value + analysisType
+                let analysisLayerValue = analysisLayerSelect.value
+                const analysisLayer = analysisType ? analysisLayerValue + analysisType : analysisLayerValue.replace('-ipd', '')
                 const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
                 const type = toggle.dataset.layerType
 
