@@ -21,11 +21,9 @@ const ltsFilters = {
 const analysisLookup = ['priority', 'school', 'trails', 'transit', 'priority-ipd', 'school-ipd', 'trails-ipd', 'transit-ipd']
 
 const handleForms = (form, map) => {
-    const type = form.dataset.formType
-    const spinner = map['_container'].querySelector('.lds-ring')
-    spinner.classList.add('lds-ring-active')
+    const formType = form.dataset.formType
 
-    switch(type) {
+    switch(formType) {
         case 'submit':
             form.onsubmit = e => {
                 e.preventDefault()
@@ -34,23 +32,30 @@ const handleForms = (form, map) => {
             break 
         default:
             form.onchange = e => {
+                const spinner = map['_container'].querySelector('.lds-ring')
                 const toggle = e.target
-                const type = toggle.dataset.layerType
+                const layerType = toggle.dataset.layerType
+
+                spinner.classList.add('lds-ring-active')
         
                 // determine action based on layer type
-                if(type === 'toggle') toggleLayers(toggle, map)
+                if(layerType === 'toggle') toggleLayers(toggle, map)
                 else filterLayers(form, toggle, map)
             }
     }
 }
 
+// @TODO handle legend decrements/increments. Legends never go away w/select forms
 const submitForm = (form, map) => {
+    const spinner = map['_container'].querySelector('.lds-ring')
     const analysisType = form.querySelector('#analysis-type-select').value
     const analysisLayerSelect = form.querySelector('#analysis-results-select')
     let analysisLayerValue = analysisLayerSelect.value
     const analysisLayer = analysisType ? analysisLayerValue + analysisType : analysisLayerValue.replace('-ipd', '')
     const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
     const type = toggle.dataset.layerType
+
+    spinner.classList.add('lds-ring-active')
 
     toggle.checked = true
     toggle.value = analysisLayer
