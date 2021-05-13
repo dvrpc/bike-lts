@@ -29,23 +29,7 @@ const handleForms = (form, map) => {
         case 'submit':
             form.onsubmit = e => {
                 e.preventDefault()
-
-                const analysisType = form.querySelector('#analysis-type-select').value
-                const analysisLayerSelect = form.querySelector('#analysis-results-select')
-                let analysisLayerValue = analysisLayerSelect.value
-                const analysisLayer = analysisType ? analysisLayerValue + analysisType : analysisLayerValue.replace('-ipd', '')
-                const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
-                const type = toggle.dataset.layerType
-
-                toggle.checked = true
-                toggle.value = analysisLayer
-
-                // clear analysis layers 
-                clearAnalysisLayers(map)
-
-                // determine action based on layer type
-                if(type === 'toggle') toggleLayers(toggle, map)
-                else filterLayers(form, toggle, map)
+                submitForm(form, map)
             }
             break 
         default:
@@ -58,6 +42,25 @@ const handleForms = (form, map) => {
                 else filterLayers(form, toggle, map)
             }
     }
+}
+
+const submitForm = (form, map) => {
+    const analysisType = form.querySelector('#analysis-type-select').value
+    const analysisLayerSelect = form.querySelector('#analysis-results-select')
+    let analysisLayerValue = analysisLayerSelect.value
+    const analysisLayer = analysisType ? analysisLayerValue + analysisType : analysisLayerValue.replace('-ipd', '')
+    const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
+    const type = toggle.dataset.layerType
+
+    toggle.checked = true
+    toggle.value = analysisLayer
+
+    // clear analysis layers 
+    clearAnalysisLayers(map)
+
+    // determine action based on layer type
+    if(type === 'toggle') toggleLayers(toggle, map)
+    else filterLayers(form, toggle, map)
 }
 
 const toggleLayers = (toggle, map) => {
