@@ -86,7 +86,7 @@
                         <details class="sidebar-details">
                             <summary class="sidebar-summary">core LTS layers</summary>
     
-                            <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form">
+                            <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="change">
                                 <fieldset class="sidebar-fieldset flex-column">
                                     <legend>Core LTS Layers</legend>
 
@@ -140,21 +140,20 @@
                                 </label>
 
                                 <select class="sidebar-select" id="analysis-type-select">
-                                    <option></option>
-                                    <option>Low-stress Network Connectivity</option>
-                                    <option>Equity-focused Network Connectivity</option>
+                                    <option value="">Low-stress Network Connectivity</option>
+                                    <option value="-ipd">Equity-focused Network Connectivity</option>
                                 </select>
                                 
                                 <label for="analysis-results-select" class="sidebar-form-label sidebar-select-label">
                                     select analysis:
                                 </label>
 
-                                <select class="sidebar-select" id="analysis-results-select">
+                                <select class="sidebar-select" id="analysis-results-select" required>
                                     <option></option>
-                                    <option data-legend-type="priorities">Regional Connectivity Priorities</option>
-                                    <option data-legend-type="schools">Priority Connections to Schools</option>
-                                    <option data-legend-type="trails">Priority Connections to Trails</option>
-                                    <option data-legend-type="transit">Priority Connections to Transit</option>
+                                    <option data-layer-type="toggle" data-legend-type="priorities" value="priority">Regional Connectivity Priorities</option>
+                                    <option data-layer-type="toggle" data-legend-type="schools" value="school">Priority Connections to Schools</option>
+                                    <option data-layer-type="toggle" data-legend-type="trails" value="trails">Priority Connections to Trails</option>
+                                    <option data-layer-type="toggle" data-legend-type="transit" value="transit">Priority Connections to Transit</option>
                                 </select>
 
                                 <button type="submit" class="btn-submit">get results</button>
@@ -207,7 +206,7 @@
                         <details class="sidebar-details">
                             <summary class="sidebar-summary">reference layers</summary>
     
-                            <form autocomplete="off" class="sidebar-form">
+                            <form autocomplete="off" class="sidebar-form" data-form-type="change">
                                 <fieldset class="sidebar-fieldset">
                                     <legend>Facilities Access</legend>
                 

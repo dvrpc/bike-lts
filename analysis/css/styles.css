@@ -246,6 +246,7 @@ nav {
     background-color: var(--theme-white);
     /* length of longest option */
     width: 35ch;
+    max-width: 100%;
 }
 .sidebar-select, .btn-submit {
     padding: var(--wrapper-padding-half);

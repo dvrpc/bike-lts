@@ -18,33 +18,48 @@ const ltsFilters = {
         ['==', 'lts_score', 4]
     ]
 }
+const analysisLookup = ['priority', 'school', 'trail', 'transit', 'priority-ipd', 'school-ipd', 'trail-ipd', 'transit-ipd']
 
 // @UPDATE: move onchange logic into separate fnc
 // check if form type is submit or not
     // form.onsubmit invokes refactored onchange logic for submit forms
     // form.onchange invokes refactored onchange logic for defafult form types
 const handleForms = (form, map) => {
-    const type = form.dataset.formType || 'temp'
+    const type = form.dataset.formType
+    const spinner = map['_container'].querySelector('.lds-ring')
+    spinner.classList.add('lds-ring-active')
 
-    if(type === 'submit') {
-        form.onsubmit = e => {
-            e.preventDefault()
-            console.log('submit select form')
-        }
+    switch(type) {
+        case 'submit':
+            form.onsubmit = e => {
+                e.preventDefault()
+
+                const analysisType = form.querySelector('#analysis-type-select').value
+                const analysisLayerSelect = form.querySelector('#analysis-results-select')
+                const analysisLayer = analysisLayerSelect.value + analysisType
+                const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
+                const type = toggle.dataset.layerType
+
+                toggle.checked = true
+                toggle.value = analysisLayer
+
+                // clear analysis layers 
+                clearAnalysisLayers(map)
+
+                // determine action based on layer type
+                if(type === 'toggle') toggleLayers(toggle, map)
+                else filterLayers(form, toggle, map)
+            }
+            break 
+        default:
+            form.onchange = e => {
+                const toggle = e.target
+                const type = toggle.dataset.layerType
         
-    } else {
-        form.onchange = e => {
-            const spinner = map['_container'].querySelector('.lds-ring')
-            const toggle = e.target
-            const type = toggle.dataset.layerType
-    
-            // turn spinner on
-            spinner.classList.add('lds-ring-active')
-    
-            // determine action based on layer type
-            if(type === 'toggle') toggleLayers(toggle, map)
-            else filterLayers(form, toggle, map)
-        }
+                // determine action based on layer type
+                if(type === 'toggle') toggleLayers(toggle, map)
+                else filterLayers(form, toggle, map)
+            }
     }
 }
 
@@ -120,6 +135,12 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
     })
 
     return acca
-} 
+}
+
+const clearAnalysisLayers = map => {
+    analysisLookup.forEach(layer => {
+        if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+    })
+}
 
 export default handleForms
