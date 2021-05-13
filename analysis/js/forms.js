@@ -31,17 +31,7 @@ const handleForms = (form, map) => {
             }
             break 
         default:
-            form.onchange = e => {
-                const spinner = map['_container'].querySelector('.lds-ring')
-                const toggle = e.target
-                const layerType = toggle.dataset.layerType
-
-                spinner.classList.add('lds-ring-active')
-        
-                // determine action based on layer type
-                if(layerType === 'toggle') toggleLayers(toggle, map)
-                else filterLayers(form, toggle, map)
-            }
+            form.onchange = e => toggleForm(e, form, map)
     }
 }
 
@@ -65,6 +55,18 @@ const submitForm = (form, map) => {
 
     // determine action based on layer type
     if(type === 'toggle') toggleLayers(toggle, map)
+    else filterLayers(form, toggle, map)
+}
+
+const toggleForm = (e, form, map) => {
+    const spinner = map['_container'].querySelector('.lds-ring')
+    const toggle = e.target
+    const layerType = toggle.dataset.layerType
+
+    spinner.classList.add('lds-ring-active')
+
+    // determine action based on layer type
+    if(layerType === 'toggle') toggleLayers(toggle, map)
     else filterLayers(form, toggle, map)
 }
 
