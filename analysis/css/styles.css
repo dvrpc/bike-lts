@@ -244,6 +244,7 @@ nav {
 .sidebar-select {
     margin-bottom: var(--wrapper-padding);
     background-color: var(--theme-white);
+    cursor: pointer;
     /* length of longest option */
     width: 35ch;
     max-width: 100%;
