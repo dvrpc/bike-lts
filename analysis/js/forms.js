@@ -18,20 +18,56 @@ const ltsFilters = {
         ['==', 'lts_score', 4]
     ]
 }
+const analysisLookup = ['priority', 'school', 'trails', 'transit', 'priority-ipd', 'school-ipd', 'trails-ipd', 'transit-ipd']
 
 const handleForms = (form, map) => {
-    form.onchange = e => {
-        const spinner = map['_container'].querySelector('.lds-ring')
-        const toggle = e.target
-        const type = toggle.dataset.layerType
+    const formType = form.dataset.formType
 
-        // turn spinner on
-        spinner.classList.add('lds-ring-active')
-
-        // determine action based on layer type
-        if(type === 'toggle') toggleLayers(toggle, map)
-        else filterLayers(form, toggle, map)
+    switch(formType) {
+        case 'submit':
+            form.onsubmit = e => {
+                e.preventDefault()
+                submitForm(form, map)
+            }
+            break 
+        default:
+            form.onchange = e => toggleForm(e, form, map)
     }
+}
+
+// @TODO handle legend decrements/increments. Legends never go away w/select forms
+const submitForm = (form, map) => {
+    const spinner = map['_container'].querySelector('.lds-ring')
+    const analysisType = form.querySelector('#analysis-type-select').value
+    const analysisLayerSelect = form.querySelector('#analysis-results-select')
+    let analysisLayerValue = analysisLayerSelect.value
+    const analysisLayer = analysisType ? analysisLayerValue + analysisType : analysisLayerValue.replace('-ipd', '')
+    const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
+    const type = toggle.dataset.layerType
+
+    spinner.classList.add('lds-ring-active')
+
+    toggle.checked = true
+    toggle.value = analysisLayer
+
+    // clear analysis layers 
+    clearAnalysisLayers(map)
+
+    // determine action based on layer type
+    if(type === 'toggle') toggleLayers(toggle, map)
+    else filterLayers(form, toggle, map)
+}
+
+const toggleForm = (e, form, map) => {
+    const spinner = map['_container'].querySelector('.lds-ring')
+    const toggle = e.target
+    const layerType = toggle.dataset.layerType
+
+    spinner.classList.add('lds-ring-active')
+
+    // determine action based on layer type
+    if(layerType === 'toggle') toggleLayers(toggle, map)
+    else filterLayers(form, toggle, map)
 }
 
 const toggleLayers = (toggle, map) => {
@@ -106,6 +142,12 @@ const handleCoreLayers = (coreInputs, selectedInput) => {
     })
 
     return acca
-} 
+}
+
+const clearAnalysisLayers = map => {
+    analysisLookup.forEach(layer => {
+        if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+    })
+}
 
 export default handleForms

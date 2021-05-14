@@ -1,5 +1,7 @@
 import legends from './legendConfigs.js'
 
+const selectExceptions = ['priorities', 'schools', 'trails', 'transit']
+
 const handleLegend = (legend, checked, acca) => {
     // get legend container (obviously not this way)
     const container = document.getElementById('sidebar-legends-container')
@@ -9,7 +11,16 @@ const handleLegend = (legend, checked, acca) => {
 
     // if legend already exists, get it
     for(var i = 0; i < children.length; i++) {
-        if(children[i].dataset.filterType === legend) {
+        const legendType = children[i].dataset.filterType
+
+        // force remove select legends
+        if(selectExceptions.includes(legendType)) {
+            container.removeChild(children[i])
+            break
+        }
+
+        // acca the rest
+        if(legendType === legend) {
             hasLegend = children[i]
             legendReps = parseInt(hasLegend.dataset.legendReps)
         }
@@ -45,7 +56,7 @@ const makeLegend = (type, acca) => {
             
             <div class="sidebar-legend-content-container flex-row flex-around">
                 ${legend.icons.map((icon, i) => `
-                    <div class="sidebar-legend-content flex-column">
+                    <div class="sidebar-legend-content flex-column flex-align-center">
                         <span class="legend-icon-${legend.iconType}" style="background-color:${icon}"></span>
                         <span class="legend-text">${text[i]}</span>
                     </div>
