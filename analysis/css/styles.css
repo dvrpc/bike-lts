@@ -259,6 +259,7 @@ nav {
     width: 100%;
     cursor: pointer;
     border: 2px outset;
+    color: var(--theme-white);
 }
 .btn-submit:hover {
     filter: brightness(110%);
@@ -268,6 +269,12 @@ nav {
     box-shadow: none;
     border: 2px inset;
     /* filter: none; */
+}
+.btn-action {
+    background-color: var(--theme-green);
+}
+.btn-cancel {
+    background-color: var(--theme-red);
 }
 
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
