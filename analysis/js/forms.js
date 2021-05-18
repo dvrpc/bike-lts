@@ -27,6 +27,7 @@ const handleForms = (form, map) => {
         case 'submit':
             form.onsubmit = e => {
                 e.preventDefault()
+                console.log('target ', e)
                 submitForm(form, map)
             }
             break 
@@ -35,7 +36,6 @@ const handleForms = (form, map) => {
     }
 }
 
-// @TODO handle legend decrements/increments. Legends never go away w/select forms
 const submitForm = (form, map) => {
     const spinner = map['_container'].querySelector('.lds-ring')
     const analysisType = form.querySelector('#analysis-type-select').value

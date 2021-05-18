@@ -14,7 +14,7 @@ const handleLegend = (legend, checked, acca) => {
         const legendType = children[i].dataset.filterType
 
         // force remove select legends
-        if(selectExceptions.includes(legendType)) {
+        if(selectExceptions.includes(legend) && selectExceptions.includes(legendType)) {
             container.removeChild(children[i])
             break
         }

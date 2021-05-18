@@ -256,7 +256,7 @@ nav {
 }
 .btn-submit {
     margin-top: var(--wrapper-padding-half);
-    width: 100%;
+    width: 49%;
     cursor: pointer;
     border: 2px outset;
     color: var(--theme-white);
