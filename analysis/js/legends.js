@@ -9,15 +9,12 @@ const handleLegend = (legend, checked, acca) => {
     let hasLegend = false
     let legendReps = 0
 
+    // force remove select legends
+    if(selectExceptions.includes(legend)) clearAnalysisLegends(container)
+
     // if legend already exists, get it
     for(var i = 0; i < children.length; i++) {
         const legendType = children[i].dataset.filterType
-
-        // force remove select legends
-        if(selectExceptions.includes(legendType)) {
-            container.removeChild(children[i])
-            break
-        }
 
         // acca the rest
         if(legendType === legend) {
@@ -66,4 +63,19 @@ const makeLegend = (type, acca) => {
     `
 }
 
-export default handleLegend
+const clearAnalysisLegends = legendsContainer => {
+    const container = legendsContainer || document.getElementById('sidebar-legends-container')
+    const children = container.children
+
+    for(var i = 0; i < children.length; i++) {
+        const legendType = children[i].dataset.filterType
+
+        // force remove select legends (break cause there can only ever be 1)
+        if(selectExceptions.includes(legendType)) {
+            container.removeChild(children[i])
+            break
+        }
+    }
+}
+
+export { handleLegend, clearAnalysisLegends }

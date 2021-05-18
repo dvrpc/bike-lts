@@ -1,5 +1,5 @@
 import secondaryMapLayers from './secondaryMapLayers.js'
-import handleLegend from './legends.js'
+import { handleLegend, clearAnalysisLegends } from './legends.js'
 import { clickLayers, makePopup, makePopupContent } from './popup.js'
 
 // LTS filters
@@ -25,18 +25,16 @@ const handleForms = (form, map) => {
 
     switch(formType) {
         case 'submit':
-            form.onsubmit = e => {
-                e.preventDefault()
-                submitForm(form, map)
-            }
+            form.onsubmit = e => submitForm(e, form, map)
             break 
         default:
             form.onchange = e => toggleForm(e, form, map)
     }
 }
 
-// @TODO handle legend decrements/increments. Legends never go away w/select forms
-const submitForm = (form, map) => {
+const submitForm = (e, form, map) => {
+    e.preventDefault()
+
     const spinner = map['_container'].querySelector('.lds-ring')
     const analysisType = form.querySelector('#analysis-type-select').value
     const analysisLayerSelect = form.querySelector('#analysis-results-select')
@@ -122,6 +120,11 @@ const filterLayers = (form, toggle, map) => {
         handleLegend(legend, toggle.checked, acca)
 }
 
+const resetAnalysisLayers = map => {
+    clearAnalysisLayers(map)
+    clearAnalysisLegends()
+}
+
 // handle UI changes associated with toggling the core layers
 const handleCoreLayers = (coreInputs, selectedInput) => {
     let existing = selectedInput.value === 'existing-conditions' ? true : false
@@ -150,4 +153,4 @@ const clearAnalysisLayers = map => {
     })
 }
 
-export default handleForms
+export { handleForms, resetAnalysisLayers }
