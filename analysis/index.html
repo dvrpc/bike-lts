@@ -37,184 +37,178 @@
             <div class="flex-row">
                 <a href="/" class="nav-links"><img src="./img/logo-dvrpc.png" alt="DVRPC logo" id="dvrpc-logo" class="nav-logos" /></a>
                 <span class="nav-header-vr nav-vr"></span>
-                <a href="/#what-is-LTS-scene">story <img src="./img/scroll-icon-nav.png" alt="project logo" class="nav-logos"></a>
+                <h1><b class="font-ultra-heavy">Bicycle Level</b> of <b class="font-ultra-heavy">Traffic Stress (LTS)</b> and <b class="font-ultra-heavy">Connectivity Analysis</b></h1>
             </div>
-
-            <div class="flex-row">
-                <a href="/" class="nav-links">other</a>
-                <span class="nav-header-vr nav-vr"></span>
-                <a href="/" class="nav-links">links</a>
-            </div>
+            
+            <a href="/#what-is-LTS-scene">View Story <img src="./img/scroll-icon-nav.png" alt="project logo" class="nav-logos"></a>
         </nav>
 
         <main id="main-content-wrapper" class="flex-row flex-between">
-            <article id="sidebar">
-                <div id="sidebar-content">
-                    <h1>Bicycle Level of Traffic Stress (LTS)<br /> and Connectivity Analysis</h1>
-
-                    <p>Explore and analyze LTS and bicycle network connectivity priorities by toggling the layers below. Learn more about the analysis  and how these layers were created <a href="/review/bike-lts/" target="_blank" rel="noreferrer noopener">here</a>.</p>
+            <article id="sidebar" class="sidebar">
+                <div id="sidebar-content" class="sidebar-content">
+                    <p class="sidebar-lead-p">Explore and analyze LTS and bicycle network connectivity priorities by toggling the layers below. Learn more about the analysis  and how these layers were created <a href="/review/bike-lts/" target="_blank" rel="noreferrer noopener">here</a>.</p>
                     
-                    <h2 class="sidebar-h2">Layer Toggles</h2>
-                    
-                    <details class="sidebar-details" open>
-                        <summary class="sidebar-summary">Core LTS Layers</summary>
+                    <hr class="sidebar-hr"/>
 
-                        <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form">
-                            <fieldset class="sidebar-fieldset">
-                                <legend>Core LTS Layers</legend>
+                    <section class="sidebar-container" id="sidebar-legends-container">
+                        <h2 class="sidebar-h2">legend(s)</h2>
 
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="existing-conditions" checked>
-                                    Regional LTS Network
-                                </label>
-                                
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
-                                    Low-stress Islands
-                                </label>
-                                
-                                <hr class="sidebar-form-hr" />
-    
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-                                    LTS 1
-                                </label>
-                                
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-                                    LTS 2
-                                </label>
-                                
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-                                    LTS 3
-                                </label>
-                                
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-                                    LTS 4
-                                </label>
-                            </fieldset>
-                        </form>
-                    </details>
-
-                    <details class="sidebar-details">
-                        <summary class="sidebar-summary">Analysis Layers</summary>
-
-                        <form autocomplete="off" class="sidebar-form">
-                            <fieldset class="sidebar-fieldset">
-                                <legend>Bicycle Network Connectivity Analysis Results</legend>
-            
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="priorities" name="layer" value="priority">
-                                    Regional Connectivity Priorities
-                                </label><br />
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="schools" name="layer" value="school">
-                                    Priority Connections to Schools
-                                </label><br />
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="trails" name="layer" value="trails">
-                                    Priority Connections to Trails
-                                </label><br />
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" data-legend-type="transit" value="transit">
-                                    Priority Connections to Transit
-                                </label>
-                            </fieldset>
-
-                            <fieldset class="sidebar-fieldset">
-                                <legend>Equity-focused Connectivity Analysis Results</legend>
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="priorities" name="layer" value="priority-ipd">
-                                    Equity-focused Regional Connectivity Priorities
-                                </label><br />
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="schools" name="layer" value="school-ipd">
-                                    Equity-focused Priority Connections to Schools
-                                </label><br />
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="trails" name="layer" value="trails-ipd">
-                                    Equity-focused Priority Connections to Trails
-                                </label><br />
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" data-legend-type="transit" value="transit-ipd">
-                                    Equity-focused Priority Connections to Transit
-                                </label>
-                            </fieldset>
-                        </form>
-                    </details>
-                    
-                    <details class="sidebar-details">
-                        <summary class="sidebar-summary">Reference Layers</summary>
-
-                        <form autocomplete="off" class="sidebar-form">
-                            <fieldset class="sidebar-fieldset">
-                                <legend>Facilities Access</legend>
-            
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
-                                    Bicycle Facilities
-                                </label>
-
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="access" name="layer" value="trail-access">
-                                    Trail Access Locations
-                                </label>
-                            </fieldset>
-
-                            <fieldset class="sidebar-fieldset">
-                                <legend>Public Transit</legend>
-
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="bus">
-                                    Bus Stops
-                                </label>
-
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="rail" name="layer" value="passenger-rail">
-                                    Passenger Rail Stations
-                                </label>
-
-                                <hr class="sidebar-form-hr" />
-
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trolley">
-                                    Trolley Stops
-                                </label>
-                            </fieldset>
-                        </form>
-                    </details>
-
-                    <aside class="sidebar-legends-container">
-                        <h2 class="sidebar-h2">Legends</h2>
-
-                        <section class="sidebar-legend-section" data-filter-type="lts" data-legend-reps="4">
+                        <article class="sidebar-legend-section" data-filter-type="lts" data-legend-reps="4">
                             <h3 class="sidebar-legend-subheader">Levels of Traffic Stress</h3>
 
                             <div class="sidebar-legend-content-container flex-row">
-                                <div class="sidebar-legend-content flex-column">
+                                <div class="sidebar-legend-content flex-column flex-align-center">
                                     <span class="legend-icon-line lts-legend-1"></span>
                                     <span class="legend-text">LTS 1</span>
                                 </div>
 
-                                <div class="sidebar-legend-content flex-column">
+                                <div class="sidebar-legend-content flex-column flex-align-center">
                                     <span class="legend-icon-line lts-legend-2"></span>
                                     <span class="legend-text">LTS 2</span>
                                 </div>
 
-                                <div class="sidebar-legend-content flex-column">                                    
+                                <div class="sidebar-legend-content flex-column flex-align-center">                                    
                                     <span class="legend-icon-line lts-legend-3"></span>
                                     <span class="legend-text">LTS 3</span>
                                 </div>
 
-                                <div class="sidebar-legend-content sidebar-legend-icons flex-column">                                
+                                <div class="sidebar-legend-content flex-column flex-align-center">
                                     <span class="legend-icon-line lts-legend-4"></span>
                                     <span class="legend-text">LTS 4</span>
                                 </div>
                             </div>
-                        </section>
-                    </aside>
+                        </article>
+                    </section>
+
+                    <section class="sidebar-container">
+                        <h2 class="sidebar-h2">layers</h2>
+                        
+                        <details class="sidebar-details">
+                            <summary class="sidebar-summary">core LTS layers</summary>
+    
+                            <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="change">
+                                <fieldset class="sidebar-fieldset flex-column">
+                                    <legend>Core LTS Layers</legend>
+
+                                    <div class=" flex-row flex-between lts-layer-wrapper">                                        
+                                        <div>
+                                            <label class="sidebar-form-label">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+                                                LTS 1
+                                            </label>
+                                            
+                                            <label class="sidebar-form-label">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+                                                LTS 2
+                                            </label>
+                            
+                                            <br />
+
+                                            <label class="sidebar-form-label">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+                                                LTS 3
+                                            </label>
+                                            
+                                            <label class="sidebar-form-label lts-layer-4">
+                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+                                                LTS 4
+                                            </label>
+                                        </div>
+
+                                        <label class="sidebar-form-label">
+                                            <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="existing-conditions" checked>
+                                            <span>LTS 1 - 4</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <hr class="sidebar-form-hr" />
+
+                                    <label class="sidebar-form-label side-form-label-lts">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
+                                        low-stress areas
+                                    </label>
+                                </fieldset>
+                            </form>
+                        </details>
+    
+                        <details class="sidebar-details">
+                            <summary class="sidebar-summary">analysis layers</summary>
+                            
+                            <form autocomplete="off" class="sidebar-form flex-column" data-form-type="submit">
+                                <label for="analysis-type-select" class="sidebar-form-label sidebar-select-label">
+                                    select type:
+                                </label>
+
+                                <select class="sidebar-select" id="analysis-type-select">
+                                    <option value="">Low-stress Network Connectivity</option>
+                                    <option value="-ipd">Equity-focused Network Connectivity</option>
+                                </select>
+                                
+                                <label for="analysis-results-select" class="sidebar-form-label sidebar-select-label">
+                                    select analysis:
+                                </label>
+
+                                <select class="sidebar-select" id="analysis-results-select" required>
+                                    <option></option>
+                                    <option data-layer-type="toggle" data-legend-type="priorities" value="priority">Regional Connectivity Priorities</option>
+                                    <option data-layer-type="toggle" data-legend-type="schools" value="school">Priority Connections to Schools</option>
+                                    <option data-layer-type="toggle" data-legend-type="trails" value="trails">Priority Connections to Trails</option>
+                                    <option data-layer-type="toggle" data-legend-type="transit" value="transit">Priority Connections to Transit</option>
+                                </select>
+
+                                <div class="flex-row flex-between">
+                                    <button type="submit" class="btn-submit btn-action" id="get-analysis-btn">get results</button>
+                                    <button type="button" class="btn-submit btn-cancel" id="clear-analysis-btn" aria-label="reset analysis layers">clear results</button>
+                                </div>
+                            </form>
+                        </details>
+                        
+                        <details class="sidebar-details">
+                            <summary class="sidebar-summary">reference layers</summary>
+    
+                            <form autocomplete="off" class="sidebar-form" data-form-type="change">
+                                <fieldset class="sidebar-fieldset">
+                                    <legend>Facilities Access</legend>
+                
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
+                                        Bicycle Facilities
+                                    </label>
+    
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="access" name="layer" value="trail-access">
+                                        Trail Access Locations
+                                    </label>
+                                </fieldset>
+    
+                                <fieldset class="sidebar-fieldset">
+                                    <legend>Public Transit</legend>    
+                                    
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="rail" name="layer" value="passenger-rail">
+                                        Passenger Rail Stations
+                                    </label>
+        
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="trolley">
+                                        Trolley Stops
+                                    </label>
+
+                                    <br />
+
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" name="layer" value="bus">
+                                        Bus Stops
+                                    </label>
+                                </fieldset>
+                            </form>
+                        </details>
+                    </section>
+
+                    <section class="sidebar-container">
+                        <h2 class="sidebar-h2">disclaimer</h2>
+                        <p>Due to the limited number of attributes considered, and the impossibility of ensuring accuracy on a regional scale, this data is best used as a screening tool for planning purposes. Any detailed local analysis should verify roadway attributes independently.</p>
+                    </section>
                 </div>
 
                 <footer>
@@ -227,13 +221,13 @@
                             <span class="nav-vr"></span>
 
                             <li class="footer-nav-li">
-                                <button id="feedback-btn" class="nav-btn nav-links" type="button">feedback</button>
+                                <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">download data</a>
                             </li>
 
                             <span class="nav-vr"></span>
 
                             <li class="footer-nav-li">
-                                <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">download data</a>
+                                <button id="feedback-btn" class="nav-btn" type="button">feedback</button>
                             </li>
                         </ul>
                     </nav>

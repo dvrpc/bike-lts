@@ -1,15 +1,23 @@
 import legends from './legendConfigs.js'
 
+const selectExceptions = ['priorities', 'schools', 'trails', 'transit']
+
 const handleLegend = (legend, checked, acca) => {
     // get legend container (obviously not this way)
-    const container = document.querySelector('.sidebar-legends-container')
+    const container = document.getElementById('sidebar-legends-container')
     const children = container.children
     let hasLegend = false
     let legendReps = 0
 
+    // force remove select legends
+    if(selectExceptions.includes(legend)) clearAnalysisLegends(container)
+
     // if legend already exists, get it
     for(var i = 0; i < children.length; i++) {
-        if(children[i].dataset.filterType === legend) {
+        const legendType = children[i].dataset.filterType
+
+        // acca the rest
+        if(legendType === legend) {
             hasLegend = children[i]
             legendReps = parseInt(hasLegend.dataset.legendReps)
         }
@@ -40,19 +48,34 @@ const makeLegend = (type, acca) => {
     const text = legend.text
  
     return `
-        <section class="sidebar-legend-section" data-filter-type=${type} data-legend-reps=${acca}>
+        <article class="sidebar-legend-section" data-filter-type=${type} data-legend-reps=${acca}>
             <h3 class="sidebar-legend-subheader">${legend.title}</h3>
             
             <div class="sidebar-legend-content-container flex-row flex-around">
                 ${legend.icons.map((icon, i) => `
-                    <div class="sidebar-legend-content flex-column">
+                    <div class="sidebar-legend-content flex-column flex-align-center">
                         <span class="legend-icon-${legend.iconType}" style="background-color:${icon}"></span>
                         <span class="legend-text">${text[i]}</span>
                     </div>
                 `).join(' ')}
             </div>
-        </section>
+        </article>
     `
 }
 
-export default handleLegend
+const clearAnalysisLegends = legendsContainer => {
+    const container = legendsContainer || document.getElementById('sidebar-legends-container')
+    const children = container.children
+
+    for(var i = 0; i < children.length; i++) {
+        const legendType = children[i].dataset.filterType
+
+        // force remove select legends (break cause there can only ever be 1)
+        if(selectExceptions.includes(legendType)) {
+            container.removeChild(children[i])
+            break
+        }
+    }
+}
+
+export { handleLegend, clearAnalysisLegends }

@@ -7,7 +7,6 @@ const layers = {
         'paint': {
             'line-width': 2.5,
             'line-color': '#242424'
-            // 'line-color': '#e9e9e9'
         },
         'filter': ['==',
             'dvrpc', 'Yes'
@@ -21,7 +20,6 @@ const layers = {
         'paint': {
             'line-width': 0.5,
             'line-color': '#242424'
-            // 'line-color': '#e9e9e9'
         }
     },
     existingConditions: {
