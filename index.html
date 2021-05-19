@@ -31,11 +31,11 @@
     </head>
     
     <body>
-        <nav aria-labelledby="intersite navigation" class="flex-row flex-row-between top-nav">
+        <nav aria-labelledby="intersite navigation" class="flex-row flex-justify-between top-nav">
             <a href="/Transportation/Bicycle/" target="_blank" rel="noreferrer noopener">
                 <img src="./img/logo-dvrpc.png" alt="DVRPC logo" id="nav-logo" />
             </a>
-            <div class="flex-row flex-row-around">
+            <div class="flex-row flex-justify-around">
                 <a href="/review/bike-lts/analysis/" target="_blank" rel="noreferrer noopener" id="nav-link-analysis">
                     <img src="./img/map-icon-nav.png" class="nav-link-icon" alt="webmap icon" />view map
                 </a>
@@ -47,7 +47,7 @@
         
         <div id="story-intro-overflow">
             <section id="story-intro">
-                <div id="story-intro-text" class="flex-row flex-row-between">
+                <div id="story-intro-text" class="flex-row flex-justify-between">
                     <img src="./img/logo-main.png" alt="Bike LTS main logo" id="story-logo-main" />
                     
                     <div id="story-intro-text-content">
@@ -68,15 +68,18 @@
                     </div>
                 </div>
     
-                <div class="flex-row flex-row-end story-intro-icon-btns">
-                    <figure class="flex-row story-intro-icon-figure" id="analysis-figure">
-                        <img src="./img/map-icon.png" alt="map icon" />
-                        <figcaption><a href="/analysis/" target="_blank" rel="noopener noreferrer" class="story-intro-icon-btns-link">View Map</a></figcaption>
-                    </figure>
-                    <a href="#scroll-story-main">
+                <div class="flex-column flex-align-center story-intro-icon-btns">
+                    <a href="/analysis/" target="_blank" rel="noopener noreferrer" class="story-intro-icon-btns-link">
+                        <figure class="flex-row story-intro-icon-figure" id="analysis-figure">
+                            <img src="./img/map-icon.png" alt="map icon" />
+                            <figcaption>View Map</figcaption>
+                        </figure>
+                    </a>
+
+                    <a href="#scroll-story-main" class="story-intro-icon-btns-link">
                         <figure class="flex-row story-intro-icon-figure" id="story-map-figure">
                             <img src="./img/scroll-icon.png" alt="down arrow" />
-                            <figcaption class="story-intro-icon-btns-link">Read Story</figcaption>
+                            <figcaption>Read Story</figcaption>
                         </figure>
                     </a>
                 </div>
@@ -133,7 +136,7 @@
                 </ul>
             </nav>
 
-            <section class="scene-section flex-row flex-row-around" id="what-is-LTS-scene">
+            <section class="scene-section flex-row flex-justify-around" id="what-is-LTS-scene">
                 <table id="regional-lts-table" class="scene-media">
                     <thead>
                         <tr>
@@ -198,7 +201,7 @@
             <div>
                 <div id="map" class="map scene-media" data-map-category="stress"></div>
 
-                <section class="scene-section flex-row flex-row-end first-map-scene" id="regional-LTS-scene" data-map-id="regionalScene">
+                <section class="scene-section flex-row flex-justify-end first-map-scene" id="regional-LTS-scene" data-map-id="regionalScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Regional LTS</h2>
                         <p>The map shows the DVRPC Region's road segments colored by their LTS assignment. As indicated by the colors on the map, divided highways and major arterials are often higher stress, while local, residential streets often present the lowest stress. Trails and off-road paths are considered non-stressful in this analysis.</p>
@@ -206,21 +209,21 @@
                     </article>
                 </section>
     
-                <section class="scene-section flex-row flex-row-end" id="using-the-data-scene" data-map-id="usingDataScene">
+                <section class="scene-section flex-row flex-justify-end" id="using-the-data-scene" data-map-id="usingDataScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Using the Data</h2>
                         <p>Zooming in, here is an example of a downtown area in a suburban county in Pennsylvania with LTS assigned to the road network.</p>
                     </article>
                 </section>
     
-                <section class="scene-section flex-row flex-row-end" id="low-stress-1-scene" data-map-id="lowStressOneScene">
+                <section class="scene-section flex-row flex-justify-end" id="low-stress-1-scene" data-map-id="lowStressOneScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Islands (1)</h2>
                         <p>If we look at just the LTS 1 and 2 roads, those that are comfortable for most cyclists, you start to see gaps in the network, creating low-stress islands. If an interested but concerned cyclist starts their trip on one of these islands, and they are uncomfortable using the higher LTS roads that connect them, this person is limited to their island. If they want to travel off their island, they are unlikely to ride their bike.</p>
                     </article>
                 </section>
     
-                <section class="scene-section flex-row flex-row-end" id="low-stress-2-scene" data-map-id="lowStressTwoScene">
+                <section class="scene-section flex-row flex-justify-end" id="low-stress-2-scene" data-map-id="lowStressTwoScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Islands (2)</h2>
                         <p>What if we made LTS 3 roads more comfortable by making changes to them to lower their stress level to the point that they become LTS 1 or 2 roads? You can see that the islands are larger and much more connected.</p>
@@ -229,7 +232,7 @@
                 </section>
             </div>
 
-            <section class="scene-section flex-row flex-row-around scene-buffer" id="analysis-buffer">
+            <section class="scene-section flex-row flex-justify-around scene-buffer" id="analysis-buffer">
                 <article class="scene-text">
                     <h2 class="scene-header scene-buffer-header">Analysis Buffer</h2>
                     <p>Safe routes to school environmental quality act community Shanghai ideal, building code exurb external facilities planning land area home rule developing world crossing guard street parking.</p>
@@ -241,14 +244,14 @@
             <div>
                 <div id="map-2" class="map scene-media" data-map-category="connectivity"></div>
 
-                <section class="scene-section first-map-scene flex-row flex-row-end" id="connectivity-1-scene" data-map-id="connectivityOneScene">
+                <section class="scene-section first-map-scene flex-row flex-justify-end" id="connectivity-1-scene" data-map-id="connectivityOneScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis (1)</h2>
                         <p>The goal was to compare the connectivity benefit of each of the LTS 3 roads. Using a shortest path algorithm, we identified the shortest path from every census block in the region, to every other census block within five miles. Since we were focused on interested but concerned cyclists, we only let our paths use LTS 1, 2, and 3 roads.</p>
                     </article>
                 </section>
     
-                <section class="scene-section flex-row flex-row-end" id="connectivity-2-scene" data-map-id="connectivityTwoScene">
+                <section class="scene-section flex-row flex-justify-end" id="connectivity-2-scene" data-map-id="connectivityTwoScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis (2)</h2>
                         <p>We tallied the number of shortest paths that use each road segment. We also weighted the paths using information about the populations that live near the origin or destination.</p>
@@ -259,7 +262,7 @@
                     </article>
                 </section>
     
-                <section class="scene-section flex-row flex-row-end" id="connectivity-priorities-scene" data-map-id="connectivityPrioritiesScene">
+                <section class="scene-section flex-row flex-justify-end" id="connectivity-priorities-scene" data-map-id="connectivityPrioritiesScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Network Connectivity Priorities</h2>
                         <p>These lines represent the LTS 3 roads that would allow for the most connections - the top 10% in each county. Since the shortest paths were calculated between census blocks, more shortest paths started and ended in more dense places, therefore inflating the number of paths in urban areas. We chose to prioritize the top 10% in each county to ensure the urban counties did not dominate the results.</p>
@@ -267,7 +270,7 @@
                 </section>
             </div>
 
-            <section class="scene-section flex-row flex-row-around scene-buffer" id="special-destinations-scene">
+            <section class="scene-section flex-row flex-justify-around scene-buffer" id="special-destinations-scene">
                 <article class="scene-text">
                     <h2 class="scene-header scene-buffer-header">Special Destinations</h2>
                     <p>Special destinations: In an effort to further prioritize segments based on their destinations, we calculated paths specifically to schools, transit stops, and trail intersections.</p>
@@ -279,7 +282,7 @@
             <div>
                 <div id="map-3" class="map scene-media" data-map-category="special"></div>
 
-                <section class="scene-section flex-row flex-row-end first-map-scene" id="trails-scene" data-map-id="trailsScene">                
+                <section class="scene-section flex-row flex-justify-end first-map-scene" id="trails-scene" data-map-id="trailsScene">                
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Trails</h2>
                         <p>Using the same method explained above, we calculated paths from trial access points to census blocks within 2.5 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination.  The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to trails.</p>
@@ -287,14 +290,14 @@
                     </article>
                 </section>
 
-                <section class="scene-section flex-row flex-row-end" id="transit-scene" data-map-id="transitScene">
+                <section class="scene-section flex-row flex-justify-end" id="transit-scene" data-map-id="transitScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Transit</h2>
                         <p>Similarly, we calculated paths from bus, rail, and trolley stops to census blocks within 3 miles (based on FTA bike to transit guidance). We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination. The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to transit stops.</p>
                     </article>
                 </section>
             
-                <section class="scene-section flex-row flex-row-end" id="schools-scene" data-map-id="schoolScene">
+                <section class="scene-section flex-row flex-justify-end" id="schools-scene" data-map-id="schoolScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Schools</h2>
                         <p>To support Safe Routes to School efforts, we calculated paths from schools (up to high school) to census blocks within 2 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination. The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to schools.</p>
@@ -302,7 +305,7 @@
                 </section>
             </div>
 
-            <section class="scene-section flex-row flex-row-around" id="limitations-scene">
+            <section class="scene-section flex-row flex-justify-around" id="limitations-scene">
                 <article class="scene-text">
                     <h2 class="scene-header">Technical Limitations/Assumptions</h2>
                     <h3 class="scene-subheader">Density</h3>
