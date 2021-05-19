@@ -177,12 +177,13 @@ strong {
 .story-intro-p {
     line-height: 150%;
     font-size: 1.2rem;
-    margin: 0 0 var(--wrapper-padding) 0;
+    margin: 0;
     font-weight: 300;
     max-width: 75ch;
 }
 .story-intro-p-large {
     font-size: 1.5rem;
+    margin-bottom: var(--wrapper-padding);
 }
 .story-intro-icon-btns {
     width: 45%;
