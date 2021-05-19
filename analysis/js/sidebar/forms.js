@@ -1,4 +1,4 @@
-import secondaryMapLayers from '../map/secondaryMapLayers'
+import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { handleLegend, clearAnalysisLegends } from './legends.js'
 
