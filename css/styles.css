@@ -15,6 +15,7 @@
     --wrapper-padding: 20px;
     --wrapper-padding-half: 10px;
     --wrapper-padding-double: 40px;
+    --wrapper-padding-quad: 60px;
     
     /* standard shadow */
     --box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -31,12 +32,6 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     line-height: 145%;
-}
-h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    line-height: 100%;
-    margin-top: 0.2rem;
 }
 a {
     color: var(--theme-black);
@@ -150,19 +145,28 @@ strong {
     left: 0;
     content: '';
     background-color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%);
 }
 #story-intro-text {
     position: relative;
-    padding: var(--wrapper-padding);
+    padding: var(--wrapper-padding-quad) var(--wrapper-padding) var(--wrapper-padding);
     z-index: 2;
 }
+.header {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    line-height: 145%;
+    margin-top: 0.33rem;
+    margin-right: var(--wrapper-padding);
+}
 .h1-special {
-    font-size: 3.5rem;
+    font-size: 4.25rem;
     color: var(--theme-green-light);
 }
 #story-intro-text-content {
     width: 75ch;
+    padding-left: var(--wrapper-padding);
+    border-left: 3px solid var(--theme-black);
 }
 #story-logo-main {
     width: 380px;
@@ -175,12 +179,13 @@ strong {
     font-size: 1.2rem;
     margin: 0 0 var(--wrapper-padding) 0;
     font-weight: 300;
+    max-width: 75ch;
 }
 .story-intro-p-large {
     font-size: 1.5rem;
 }
 .story-intro-icon-btns {
-    width: 50%;
+    width: 45%;
     padding: var(--wrapper-padding);
     position: relative;
     z-index: 2;
