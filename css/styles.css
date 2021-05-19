@@ -33,8 +33,9 @@ body {
     line-height: 145%;
 }
 h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 a {
     color: var(--theme-yellow);
@@ -154,8 +155,12 @@ strong {
     align-items: flex-start;
     z-index: 2;
 }
+.h1-special {
+    font-size: 3rem;
+    color: var(--theme-green);
+}
 #story-intro-text-content {
-    margin-top: 15px;
+    width: 75ch;
 }
 #story-logo-main {
     width: 380px;
