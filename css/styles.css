@@ -179,14 +179,22 @@ strong {
 .story-intro-btns-wrapper {
     width: 40%;
     padding: var(--wrapper-padding);
-    margin-top: calc(var(--wrapper-padding)* -1);
+    margin-top: calc(var(--wrapper-padding-double)* -1);
     position: relative;
     z-index: 2;
 }
 .story-intro-icon-btns-link {
-    width: 20ch;
-    font-size: 1.15rem;
-    border-bottom: 3px solid var(--theme-green);
+    width: 25ch;
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 4px solid;
+    text-decoration: none;
+}
+#read-story-btn {
+    border-color: var(--theme-green);
+}
+#view-map-btn {
+    border-color: var(--theme-yellow);
 }
 .story-intro-icon-figure {
     cursor: pointer;
