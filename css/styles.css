@@ -20,10 +20,7 @@
     /* standard shadow */
     --box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     --drop-shadow: drop-shadow(1px 2px 3px rgba(0,0,0,0.3));
-    
-    /* stepped shadow @ DEPRECATED */
-    --box-shadow-logo: rgb(247, 247, 247) -10px 10px 0px -3px, #fcd842 -10px 10px, rgb(247, 247, 247) -20px 20px 0px -3px, #498434 -20px 20px;
-    
+        
     --border-radius: 15px;
 
     --map-height: 550px;
@@ -38,7 +35,7 @@ a {
     font-weight: bold;
 }
 a:hover {
-    text-decoration: underline;
+    color: var(--theme-green);
 }
 p, em {
     max-width: 70ch;
@@ -145,7 +142,7 @@ strong {
     left: 0;
     content: '';
     background-color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%);
 }
 #story-intro-text {
     position: relative;
@@ -168,12 +165,6 @@ strong {
     padding-left: var(--wrapper-padding);
     border-left: 3px solid var(--theme-black);
 }
-#story-logo-main {
-    width: 380px;
-    border: 4px solid var(--theme-red);
-    border-radius: 50%;
-    box-shadow: var(--box-shadow);
-}
 .story-intro-p {
     line-height: 150%;
     font-size: 1.2rem;
@@ -185,32 +176,24 @@ strong {
     font-size: 1.5rem;
     margin-bottom: var(--wrapper-padding);
 }
-.story-intro-icon-btns {
-    width: 45%;
+.story-intro-btns-wrapper {
+    width: 40%;
     padding: var(--wrapper-padding);
+    margin-top: calc(var(--wrapper-padding)* -1);
     position: relative;
     z-index: 2;
 }
 .story-intro-icon-btns-link {
+    width: 20ch;
     font-size: 1.15rem;
-    width: max-content;
+    border-bottom: 3px solid var(--theme-green);
 }
 .story-intro-icon-figure {
     cursor: pointer;
-    border-radius: var(--border-radius);
-    padding: 5px 15px;
-    box-shadow: var(--box-shadow);
+    padding: var(--wrapper-padding)
 }
 .story-intro-icon-figure:hover {
     text-decoration: underline;
-}
-#analysis-figure {
-    background-color: var(--theme-green);
-}
-#story-map-figure {
-    background-color: #f7f7f7;
-    color: var(--theme-green);
-    font-weight: bold;
 }
 /* END Homepage */
 /****************/
