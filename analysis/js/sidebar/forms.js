@@ -1,6 +1,6 @@
-import secondaryMapLayers from './secondaryMapLayers.js'
+import secondaryMapLayers from '../map/secondaryMapLayers'
+import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { handleLegend, clearAnalysisLegends } from './legends.js'
-import { clickLayers, makePopup, makePopupContent } from './popup.js'
 
 // LTS filters
 const ltsFilters = {
