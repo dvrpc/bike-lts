@@ -74,9 +74,22 @@ const handleForms = (form, map) => {
         case 'submit':
             form.onsubmit = e => submitForm(e, form, map)
             break 
+        case 'content-replace':
+            form.onchange = () => handleSelectContentUpdate(form)
+            break
         default:
             form.onchange = e => toggleForm(e, form, map)
     }
+}
+
+const handleSelectContentUpdate = form => {
+    const select = form.querySelector('.sidebar-select')
+    const selected = select.options[select.selectedIndex].value
+    const newContent = selectContentUpdates[selected]
+    const oldContent = select.nextElementSibling
+    
+    oldContent.remove()
+    select.insertAdjacentHTML('afterend', newContent)
 }
 
 const submitForm = (e, form, map) => {
@@ -202,4 +215,4 @@ const clearAnalysisLayers = map => {
     })
 }
 
-export { handleForms, resetAnalysisLayers }
+export { handleForms, resetAnalysisLayers, handleSelectContentUpdate }
