@@ -97,6 +97,7 @@ const filterLayers = (form, toggle, map) => {
         let acca = 1
         
         // handle meta toggles (currently all filter layers are part of a meta toggle but build it for the future)
+        // @UPDATE: probably don't need handleCoreLayers w/updated layout.
         if(toggle.classList.contains('core-lts')) {
             const coreInputs = form.querySelectorAll('.core-lts')
             const selectedInput = {value: toggle.value, state: toggle.checked}
@@ -126,6 +127,7 @@ const resetAnalysisLayers = map => {
 }
 
 // handle UI changes associated with toggling the core layers
+// @UPDATE probably can delete
 const handleCoreLayers = (coreInputs, selectedInput) => {
     let existing = selectedInput.value === 'existing-conditions' ? true : false
     let on = selectedInput.state
