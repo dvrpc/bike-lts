@@ -155,4 +155,6 @@ const clearAnalysisLayers = map => {
     })
 }
 
+// @TODO clearCoreLayers fnc (obj w/arrays for lts & low-stress toggles. Hide the !selected on change)
+
 export { handleForms, resetAnalysisLayers, handleSelectContentUpdate }

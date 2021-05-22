@@ -83,6 +83,7 @@ strong {
 }
 .list-unstyled {
     list-style-type: none;
+    padding-left: 0;
 }
 .text-right {
     text-align: right;
@@ -167,20 +168,21 @@ strong {
 }
 .story-intro-p {
     line-height: 150%;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     margin: 0;
     font-weight: 300;
     max-width: 75ch;
 }
 .story-intro-p-large {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: var(--wrapper-padding);
 }
 .story-intro-btns-wrapper {
     width: 40%;
     padding: var(--wrapper-padding);
     margin-top: calc(var(--wrapper-padding-double)* -1);
-    position: relative;
+    position: absolute;
+    bottom: 1.75rem;
     z-index: 2;
 }
 .story-intro-icon-btns-link {
