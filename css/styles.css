@@ -2,7 +2,14 @@
 /* General */
 * {
     margin: 0;
+}
+html {
     scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 145%;
 }
 :root {
     --theme-green: #498434;
@@ -24,11 +31,6 @@
     --border-radius: 15px;
 
     --map-height: 550px;
-}
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    line-height: 145%;
 }
 a {
     color: var(--theme-black);

@@ -13,6 +13,7 @@ const handleForms = (form, map) => {
         case 'content-replace':
             const select = form.querySelector('.sidebar-select')
             select.onchange = () => handleSelectContentUpdate(select, map)
+            form.onchange = e => toggleForm(e, form, map)
             break
         default:
             form.onchange = e => toggleForm(e, form, map)
@@ -23,13 +24,11 @@ const handleSelectContentUpdate = (select, map) => {
     const selected = select.options[select.selectedIndex].value
     const newContent = selectContentUpdates[selected]
     const oldContent = select.nextElementSibling
-    const form = select.parentElement
     
     oldContent.remove()
     select.insertAdjacentHTML('afterend', newContent)
 
     // @TODO: clear existing layers and apply defaults of new select content
-    form.onchange = e => toggleForm(e, form, map)
 }
 
 const submitForm = (e, form, map) => {
