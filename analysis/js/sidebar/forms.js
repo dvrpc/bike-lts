@@ -44,8 +44,8 @@ const handleSelectContentUpdate = (select, map) => {
         
         // remove low-stress and set LTS to visislbe
         default:
-            map.setFilter('existing-conditions', '')
-            map.setLayoutProperty('lowstress-islands', 'visibility', false)
+            map.setFilter('existing-conditions', null)
+            map.setLayoutProperty('lowstress-islands', 'visibility', 'none')
     }
 }
 
