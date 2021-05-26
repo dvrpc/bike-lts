@@ -32,6 +32,8 @@ const handleSelectContentUpdate = (select, map) => {
     oldContent.remove()
     select.insertAdjacentHTML('afterend', newContent)
     
+    // clears old layers and sets new ones
+    // @TODO handle legends
     switch(selected) {
         // remove all lts layers & set low-stress to visible
         case 'low-stress':
