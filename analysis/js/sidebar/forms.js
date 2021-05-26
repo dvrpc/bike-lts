@@ -10,10 +10,13 @@ const handleForms = (form, map) => {
         case 'submit':
             form.onsubmit = e => submitForm(e, form, map)
             break 
-        case 'content-replace':
-            const select = form.querySelector('.sidebar-select')
-            select.onchange = () => handleSelectContentUpdate(select, map)
-            form.onchange = e => toggleForm(e, form, map)
+        case 'content-replace':            
+            form.onchange = e => {
+                const target = e.target
+
+                if(target.nodeName !== 'SELECT') toggleForm(e, form, map)
+                else handleSelectContentUpdate(target, map)
+            }
             break
         default:
             form.onchange = e => toggleForm(e, form, map)
@@ -24,11 +27,24 @@ const handleSelectContentUpdate = (select, map) => {
     const selected = select.options[select.selectedIndex].value
     const newContent = selectContentUpdates[selected]
     const oldContent = select.nextElementSibling
+    const form = select.parentElement
     
     oldContent.remove()
     select.insertAdjacentHTML('afterend', newContent)
-
-    // @TODO: clear existing layers and apply defaults of new select content
+    
+    switch(selected) {
+        // remove all lts layers & set low-stress to visible
+        case 'low-stress':
+            const toggle = form.querySelector('input[name="lowstress-islands"]')
+            map.setFilter('existing-conditions', ['<', 'lts_score', 0])
+            toggleLayers(toggle, map)
+            break
+        
+        // remove low-stress and set LTS to visislbe
+        default:
+            map.setFilter('existing-conditions', '')
+            map.setLayoutProperty('lowstress-islands', 'visibility', false)
+    }
 }
 
 const submitForm = (e, form, map) => {
@@ -152,6 +168,16 @@ const clearAnalysisLayers = map => {
     analysisLookup.forEach(layer => {
         if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
     })
+}
+
+const clearCoreLayers = (val, map) => {
+    switch(val) {
+        case 'low-stress':
+
+            break
+        default: 
+
+    }
 }
 
 // @TODO clearCoreLayers fnc (obj w/arrays for lts & low-stress toggles. Hide the !selected on change)
