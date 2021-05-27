@@ -141,4 +141,4 @@ const clearAnalysisLayers = map => {
     })
 }
 
-export { handleForms, resetAnalysisLayers, handleSelectContentUpdate }
+export { handleForms, resetAnalysisLayers }
