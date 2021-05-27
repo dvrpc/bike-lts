@@ -38,15 +38,20 @@ const handleSelectContentUpdate = (select, map) => {
         // remove all lts layers & set low-stress to visible
         case 'low-stress':
             const toggle = form.querySelector('input[name="lowstress-islands"]')
+
             map.setFilter('existing-conditions', ['<', 'lts_score', 0])
             toggleLayers(toggle, map)
+            handleLegend('lts', false, 1)
             break
         
         // remove low-stress and set LTS to visislbe
         default:
             map.setFilter('existing-conditions', null)
             map.setLayoutProperty('lowstress-islands', 'visibility', 'none')
+            handleLegend('lowstress', false, 1)
     }
+
+
 }
 
 const submitForm = (e, form, map) => {
