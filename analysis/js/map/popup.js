@@ -1,4 +1,4 @@
-const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley']
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley', 'bus']
 
 const makePopup = () => new mapboxgl.Popup()
 
@@ -88,6 +88,17 @@ const makeTrolleyPopupHTML = props => {
     `
 }
 
+const makeBusPopupHTML = props => {
+    return `
+        <h3 class="popup-header">Route: ${props.route}</h3>
+        <ul class="list-unstyled popup-ul">
+            <li class="popup-li"><strong>Stop Name:</strong> ${props.stop_name}</li>
+            <li class="popup-li"><strong>Line:</strong> ${props.line}</li>
+            <li class="popup-li"><strong>Direction:</strong> ${props.direction}</li>
+        </ul>
+    `
+}
+
 // all popups
 const getPopupHTMLFnc = {
     'existing-conditions': makeLTSPopupHTML,
@@ -95,7 +106,8 @@ const getPopupHTMLFnc = {
     'priority-ipd': makePriorityPopupHTML,
     'passenger-rail': makePassengerRailPopupHTML,
     'lowstress-islands': makeLowStressPopupHTML,
-    'trolley': makeTrolleyPopupHTML
+    'trolley': makeTrolleyPopupHTML,
+    'bus': makeBusPopupHTML
 }
 
 export { makePopup, makePopupContent, clickLayers }
