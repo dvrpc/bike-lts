@@ -86,46 +86,37 @@
                         <details class="sidebar-details">
                             <summary class="sidebar-summary">core LTS layers</summary>
     
-                            <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="change">
-                                <fieldset class="sidebar-fieldset flex-column">
-                                    <legend>Core LTS Layers</legend>
+                            <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
+                                <label for="core-layer-select" class="sidebar-form-label sidebar-select-label">
+                                    select type:
+                                </label>
 
-                                    <div class=" flex-row flex-between lts-layer-wrapper">                                        
-                                        <div>
-                                            <label class="sidebar-form-label">
-                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-                                                LTS 1
-                                            </label>
-                                            
-                                            <label class="sidebar-form-label">
-                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-                                                LTS 2
-                                            </label>
-                            
-                                            <br />
+                                <select class="sidebar-select" id="core-layer-select">
+                                    <option value="regional-connectivity">Full LTS Network</option>
+                                    <option value="low-stress">Low-stress Areas</option>
+                                </select>
 
-                                            <label class="sidebar-form-label">
-                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-                                                LTS 3
-                                            </label>
-                                            
-                                            <label class="sidebar-form-label lts-layer-4">
-                                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-                                                LTS 4
-                                            </label>
-                                        </div>
+                                <fieldset class="sidebar-fieldset">
+                                    <legend>Levels of Traffic Stress (LTS)</legend>
 
-                                        <label class="sidebar-form-label">
-                                            <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="existing-conditions" checked>
-                                            <span>LTS 1 - 4</span>
-                                        </label>
-                                    </div>
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+                                        LTS 1
+                                    </label>
                                     
-                                    <hr class="sidebar-form-hr" />
-
-                                    <label class="sidebar-form-label side-form-label-lts">
-                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
-                                        low-stress areas
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+                                        LTS 2
+                                    </label>
+                    
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+                                        LTS 3
+                                    </label>
+                                    
+                                    <label class="sidebar-form-label lts-layer-4">
+                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+                                        LTS 4
                                     </label>
                                 </fieldset>
                             </form>

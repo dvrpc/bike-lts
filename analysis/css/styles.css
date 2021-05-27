@@ -205,7 +205,7 @@ nav {
 }
 .sidebar-content {
     padding: var(--wrapper-padding-double);
-    height: calc(94% - 20px);
+    height: calc(94% - var(--wrapper-padding-double)*2);
     overflow-y: auto;
 }
 .sidebar-img {
@@ -261,9 +261,11 @@ nav {
     border: 2px outset;
     color: var(--theme-white);
 }
+.sidebar-select:hover, .btn-submit:hover {
+    box-shadow: var(--box-shadow);
+}
 .btn-submit:hover {
     filter: brightness(110%);
-    box-shadow: var(--box-shadow);
 }
 .btn-submit:active {
     box-shadow: none;
@@ -317,6 +319,9 @@ nav {
 }
 /* end adopted code */
 
+.sidebar-form-checkbox:hover {
+    box-shadow: var(--box-shadow);
+}
 .sidebar-form-hr {
     margin: var(--wrapper-padding) 0;
     color: var(--theme-grey);

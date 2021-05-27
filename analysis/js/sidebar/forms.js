@@ -1,24 +1,7 @@
 import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { handleLegend, clearAnalysisLegends } from './legends.js'
-
-// LTS filters
-const ltsFilters = {
-    'existing-conditions': false,
-    'lts-1': [
-        ['==', 'lts_score', 1]
-    ],
-    'lts-2': [
-        ['==', 'lts_score', 2]
-    ],
-    'lts-3': [
-        ['==', 'lts_score', 3]
-    ],
-    'lts-4': [
-        ['==', 'lts_score', 4]
-    ]
-}
-const analysisLookup = ['priority', 'school', 'trails', 'transit', 'priority-ipd', 'school-ipd', 'trails-ipd', 'transit-ipd']
+import { ltsFilters, analysisLookup, selectContentUpdates } from './formsConfigs.js'
 
 const handleForms = (form, map) => {
     const formType = form.dataset.formType
@@ -27,8 +10,45 @@ const handleForms = (form, map) => {
         case 'submit':
             form.onsubmit = e => submitForm(e, form, map)
             break 
+        case 'content-replace':            
+            form.onchange = e => {
+                const target = e.target
+
+                if(target.nodeName !== 'SELECT') toggleForm(e, form, map)
+                else handleSelectContentUpdate(target, map)
+            }
+            break
         default:
             form.onchange = e => toggleForm(e, form, map)
+    }
+}
+
+const handleSelectContentUpdate = (select, map) => {
+    const selected = select.options[select.selectedIndex].value
+    const newContent = selectContentUpdates[selected]
+    const oldContent = select.nextElementSibling
+    const form = select.parentElement
+    
+    oldContent.remove()
+    select.insertAdjacentHTML('afterend', newContent)
+    
+    // clears old layers and sets new ones
+    switch(selected) {
+        // remove all lts layers & set low-stress to visible
+        case 'low-stress':
+            const toggle = form.querySelector('input[name="lowstress-islands"]')
+
+            map.setFilter('existing-conditions', ['<', 'lts_score', 0])
+            toggleLayers(toggle, map)
+            handleLegend('lts', false, 4)
+            break
+        
+        // remove low-stress and set LTS to visislbe
+        default:
+            map.setFilter('existing-conditions', null)
+            map.setLayoutProperty('lowstress-islands', 'visibility', 'none')
+            handleLegend('lowstress', false, 1)
+            handleLegend('lts', true, 4)
     }
 }
 
@@ -94,16 +114,6 @@ const toggleLayers = (toggle, map) => {
 const filterLayers = (form, toggle, map) => { 
         const layer = toggle.name 
         const legend = toggle.dataset.legendType
-        let acca = 1
-        
-        // handle meta toggles (currently all filter layers are part of a meta toggle but build it for the future)
-        if(toggle.classList.contains('core-lts')) {
-            const coreInputs = form.querySelectorAll('.core-lts')
-            const selectedInput = {value: toggle.value, state: toggle.checked}
-
-            // handle existing conditions legends special case
-            acca = handleCoreLayers(coreInputs, selectedInput)
-        }
 
         // get all checked boxes after handling core layers
         const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
@@ -117,34 +127,12 @@ const filterLayers = (form, toggle, map) => {
 
         map.setFilter(layer, baseFilter)
 
-        handleLegend(legend, toggle.checked, acca)
+        handleLegend(legend, toggle.checked, 1)
 }
 
 const resetAnalysisLayers = map => {
     clearAnalysisLayers(map)
     clearAnalysisLegends()
-}
-
-// handle UI changes associated with toggling the core layers
-const handleCoreLayers = (coreInputs, selectedInput) => {
-    let existing = selectedInput.value === 'existing-conditions' ? true : false
-    let on = selectedInput.state
-    let acca = 1
-
-    coreInputs.forEach(input => {
-        if(existing) {
-            if(on)  input.checked = true
-            else input.checked = false
-            // handle existing conditions acca math
-            acca = 4
-        }
-
-        if(!existing && !on) {
-            if(input.value === 'existing-conditions') input.checked = false
-        }
-    })
-
-    return acca
 }
 
 const clearAnalysisLayers = map => {
