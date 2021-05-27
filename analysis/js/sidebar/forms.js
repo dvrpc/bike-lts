@@ -1,5 +1,6 @@
 import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
+import { highlightLowStress, highlightLayers } from '../map/highlights.js'
 import { handleLegend, clearAnalysisLegends } from './legends.js'
 import { ltsFilters, analysisLookup, selectContentUpdates } from './formsConfigs.js'
 
@@ -100,9 +101,14 @@ const toggleLayers = (toggle, map) => {
         // handle layers that have popups
         if(clickLayers.includes(layer)) {
             const layerPopup = makePopup()
+
             map.on('click', layer, e => makePopupContent(map, e, layerPopup))
             map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')
             map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
+        }
+
+        if(highlightLayers.includes(layer)) {
+            map.on('click', layer, e => highlightLowStress(e, map))
         }
     }
 
