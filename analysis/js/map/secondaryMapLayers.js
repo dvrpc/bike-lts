@@ -258,6 +258,15 @@ const layers = {
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
+    },
+    trolley: {
+        id: 'trolley',
+        type: 'point',
+        source: 'lts',
+        'source-layer': 'trolley',
+        paint: {
+            
+        }
     }
 }
 
