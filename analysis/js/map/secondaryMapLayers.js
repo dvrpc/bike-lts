@@ -261,11 +261,24 @@ const layers = {
     },
     trolley: {
         id: 'trolley',
-        type: 'point',
+        type: 'circle',
         source: 'lts',
         'source-layer': 'trolley',
         paint: {
-            
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
+                1, 1,
+                7, 3,
+                11, 4
+            ],
+            'circle-color': ['match',
+                ['get', 'direction'],
+                'Eastbound', '#984ea3',
+                'Westbound', '#4e2853',
+                '#fff'
+            ],
+            'circle-stroke-color': '#fff',
+            'circle-stroke-width': 1
         }
     }
 }
