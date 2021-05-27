@@ -114,17 +114,6 @@ const toggleLayers = (toggle, map) => {
 const filterLayers = (form, toggle, map) => { 
         const layer = toggle.name 
         const legend = toggle.dataset.legendType
-        let acca = 1
-        
-        // handle meta toggles (currently all filter layers are part of a meta toggle but build it for the future)
-        // @UPDATE: probably don't need handleCoreLayers w/updated layout.
-        if(toggle.classList.contains('core-lts')) {
-            const coreInputs = form.querySelectorAll('.core-lts')
-            const selectedInput = {value: toggle.value, state: toggle.checked}
-
-            // handle existing conditions legends special case
-            acca = handleCoreLayers(coreInputs, selectedInput)
-        }
 
         // get all checked boxes after handling core layers
         const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
@@ -138,7 +127,7 @@ const filterLayers = (form, toggle, map) => {
 
         map.setFilter(layer, baseFilter)
 
-        handleLegend(legend, toggle.checked, acca)
+        handleLegend(legend, toggle.checked, 1)
 }
 
 const resetAnalysisLayers = map => {
@@ -146,45 +135,10 @@ const resetAnalysisLayers = map => {
     clearAnalysisLegends()
 }
 
-// handle UI changes associated with toggling the core layers
-// @UPDATE probably can delete
-const handleCoreLayers = (coreInputs, selectedInput) => {
-    let existing = selectedInput.value === 'existing-conditions' ? true : false
-    let on = selectedInput.state
-    let acca = 1
-
-    coreInputs.forEach(input => {
-        if(existing) {
-            if(on)  input.checked = true
-            else input.checked = false
-            // handle existing conditions acca math
-            acca = 4
-        }
-
-        if(!existing && !on) {
-            if(input.value === 'existing-conditions') input.checked = false
-        }
-    })
-
-    return acca
-}
-
 const clearAnalysisLayers = map => {
     analysisLookup.forEach(layer => {
         if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
     })
 }
-
-const clearCoreLayers = (val, map) => {
-    switch(val) {
-        case 'low-stress':
-
-            break
-        default: 
-
-    }
-}
-
-// @TODO clearCoreLayers fnc (obj w/arrays for lts & low-stress toggles. Hide the !selected on change)
 
 export { handleForms, resetAnalysisLayers, handleSelectContentUpdate }
