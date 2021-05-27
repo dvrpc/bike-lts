@@ -412,6 +412,9 @@ nav {
     color: var(--theme-black);
     border-radius: var(--border-radius);
 }
+.popup-ul {
+    padding: var(--wrapper-padding);
+}
 .popup-span {
     display: block;
     padding: var(--wrapper-padding);

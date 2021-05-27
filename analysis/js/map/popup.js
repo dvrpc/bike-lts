@@ -1,4 +1,4 @@
-const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands']
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley']
 
 const makePopup = () => new mapboxgl.Popup()
 
@@ -59,11 +59,11 @@ const makePriorityPopupHTML = (props, layer) => {
 const makePassengerRailPopupHTML = props => {
     return `
         <h3 class="popup-header">${props.station} Station</h3>
-        <span class="popup-span">
-            <strong>line name:</strong> ${props.line}<br />
-            <strong>type:</strong> ${props.type}<br />
-            <strong>operator:</strong> ${props.operator}
-        </span>
+        <ul class="list-unstyled popup-ul">
+            <li class="popup-li"><strong>line name:</strong> ${props.line}</li>
+            <li class="popup-li"><strong>type:</strong> ${props.type}</li>
+            <li class="popup-li"><strong>operator:</strong> ${props.operator}</li>
+        </ul>
     `
 }
 
@@ -78,13 +78,24 @@ const makeLowStressPopupHTML = props => {
     `
 }
 
+const makeTrolleyPopupHTML = props => {
+    return `
+        <h3 class="popup-header">Route ${props.route}</h3>
+        <ul class="list-unstyled popup-ul">
+            <li class="popup-li"><strong>Stop Name:</strong> ${props.stop_name}</li>
+            <li class="popup-li"><strong>Sequence:</strong> ${props.sequence}</li>
+        </ul>
+    `
+}
+
 // all popups
 const getPopupHTMLFnc = {
     'existing-conditions': makeLTSPopupHTML,
     'priority': makePriorityPopupHTML,
     'priority-ipd': makePriorityPopupHTML,
     'passenger-rail': makePassengerRailPopupHTML,
-    'lowstress-islands': makeLowStressPopupHTML
+    'lowstress-islands': makeLowStressPopupHTML,
+    'trolley': makeTrolleyPopupHTML
 }
 
 export { makePopup, makePopupContent, clickLayers }
