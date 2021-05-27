@@ -33,7 +33,6 @@ const handleSelectContentUpdate = (select, map) => {
     select.insertAdjacentHTML('afterend', newContent)
     
     // clears old layers and sets new ones
-    // @TODO handle legends
     switch(selected) {
         // remove all lts layers & set low-stress to visible
         case 'low-stress':
@@ -41,7 +40,7 @@ const handleSelectContentUpdate = (select, map) => {
 
             map.setFilter('existing-conditions', ['<', 'lts_score', 0])
             toggleLayers(toggle, map)
-            handleLegend('lts', false, 1)
+            handleLegend('lts', false, 4)
             break
         
         // remove low-stress and set LTS to visislbe
@@ -49,9 +48,8 @@ const handleSelectContentUpdate = (select, map) => {
             map.setFilter('existing-conditions', null)
             map.setLayoutProperty('lowstress-islands', 'visibility', 'none')
             handleLegend('lowstress', false, 1)
+            handleLegend('lts', true, 4)
     }
-
-
 }
 
 const submitForm = (e, form, map) => {
