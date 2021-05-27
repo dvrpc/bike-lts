@@ -258,6 +258,50 @@ const layers = {
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
+    },
+    trolley: {
+        id: 'trolley',
+        type: 'circle',
+        source: 'lts',
+        'source-layer': 'trolley',
+        paint: {
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
+                1, 1,
+                7, 3,
+                11, 4
+            ],
+            'circle-color': ['match',
+                ['get', 'direction'],
+                'Eastbound', '#984ea3',
+                'Westbound', '#4e2853',
+                '#fff'
+            ],
+            'circle-stroke-color': '#fff',
+            'circle-stroke-width': 1
+        }
+    },
+    bus: {
+        id: 'bus',
+        type: 'circle',
+        source: 'lts',
+        'source-layer': 'bus_region',
+        paint: {
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
+                1, 1,
+                7, 3,
+                11, 4
+            ],
+            'circle-color': ['match',
+                ['get', 'layer'],
+                'NJTBus', '#f18541',
+                'SEPTABus', '#487997',
+                '#fff'
+            ],
+            'circle-stroke-color': '#fff',
+            'circle-stroke-width': 1
+        }
     }
 }
 

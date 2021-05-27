@@ -53,6 +53,18 @@ const legendConfigs = {
         icons: [''],
         iconType: '',
         text: ['Different colors represent distinct low-stress (LTS 1 & 2) islands']
+    },
+    trolley: {
+        title: 'Trolley Stops',
+        icons: ['#984ea3', '#4e2853'],
+        iconType: 'circle',
+        text: ['Eastbound', 'Westbound']
+    },
+    bus: {
+        title: 'Bus Stops',
+        icons: ['#f18541', '#487997'],
+        iconType: 'circle',
+        text: ['NJT Bus', 'SEPTA Bus']
     }
 }
 
