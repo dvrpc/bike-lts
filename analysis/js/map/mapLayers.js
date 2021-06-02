@@ -45,7 +45,27 @@ const layers = {
     //             '#fff'
     //         ]
     //     }
-    // }
+    // },
+    'lowstress-click': {
+        id: 'lowstress-click',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'lowstress_islands',
+        paint: {
+            'line-width': ['interpolate', 
+                ['linear'], ['zoom'],
+                8.35, 0.66,
+                10, 1.8,
+                11, 3,
+                17, 5,
+                20, 7
+            ],
+            'line-color': '#fff'
+        },
+        filter: ['==',
+            'island_num', 0
+        ]
+    }
 }
 
 export default layers
