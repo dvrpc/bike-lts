@@ -49,10 +49,10 @@ const legendConfigs = {
         text: ['Amtrak','NJ Transit','PATCO','SEPTA']
     },
     lowstress: {
-        title: 'Low-stress Islands',
+        title: 'Low-stress Areas',
         icons: [''],
         iconType: '',
-        text: ['Different colors represent distinct low-stress (LTS 1 & 2) islands']
+        text: ['Different colors represent distinct low-stress (LTS 1 & 2) areas']
     },
     trolley: {
         title: 'Trolley Stops',
