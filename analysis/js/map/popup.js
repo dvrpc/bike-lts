@@ -69,15 +69,7 @@ const makePassengerRailPopupHTML = props => {
 }
 
 // low-stress *special case. Needs to generate popup AND update map styles w/selected island.
-// highlighting tbd
-const makeLowStressPopupHTML = props => {
-    return `
-        <h3 class="popup-header">Island Number: ${props.island_num}</h3>
-        <span class="popup-span">
-            <p>Clicking a segment will highlight the island it belongs to. Popup text tbd if needed.</p>
-        </span>
-    `
-}
+const makeLowStressPopupHTML = props => `<h3 class="popup-header">Island Number: ${props.island_num}</h3>`
 
 const makeTrolleyPopupHTML = props => {
     return `

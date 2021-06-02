@@ -54,14 +54,14 @@ const layers = {
         paint: {
             'line-width': ['interpolate', 
                 ['linear'], ['zoom'],
-                8.35, 0.66,
+                8.35, 1,
                 10, 1.8,
                 11, 3,
                 17, 5,
                 20, 7
             ],
             'line-color': '#fff',
-            'line-dasharray': [2, 1]
+            'line-dasharray': [2, 0.5]
         },
         filter: ['==',
             'island_num', 0
