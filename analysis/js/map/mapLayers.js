@@ -60,7 +60,8 @@ const layers = {
                 17, 5,
                 20, 7
             ],
-            'line-color': '#fff'
+            'line-color': '#fff',
+            'line-dasharray': [2, 1]
         },
         filter: ['==',
             'island_num', 0
