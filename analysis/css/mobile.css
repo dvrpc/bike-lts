@@ -27,8 +27,8 @@ nav {
 }
 .lds-ring {
     /* half of map area */
-    top: 21vh; 
-    left: calc(50vw - 50px);
+    top: calc(23.5vh - 50px); 
+    left: calc(50vw - 40px);
 }
 /* END Main Webmap Area */
 
