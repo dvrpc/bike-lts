@@ -44,4 +44,7 @@ h1 {
 #map {
     width: 100%;
 }
+.mapboxgl-ctrl-geocoder {
+    left: 0;
+}
 /* END Map */
