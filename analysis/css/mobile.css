@@ -5,6 +5,9 @@ body {
 h1 {
     font-size: 1rem;
 }
+nav {
+    padding: 2px var(--wrapper-padding);
+}
 /* END General */
 
 
@@ -20,6 +23,7 @@ h1 {
 /* Main Webmap Area */
 #main-content-wrapper {
     flex-direction: column-reverse;
+    height: calc(94vh - 4px);
 }
 /* END Main Webmap Area */
 
