@@ -5,7 +5,7 @@ h1 {
     margin: 0 0.5rem;
 }
 .mapboxgl-ctrl-geocoder {
-    width: 70%;
+    width: 85%;
     font-size: 1rem;
 }
 .mapboxgl-ctrl-geocoder--input {
@@ -15,4 +15,7 @@ h1 {
 .mapboxgl-ctrl-geocoder--icon-search {
     top: 6px;
     left: 6px;
+}
+.sidebar-fieldset {
+    font-size: 0.9rem;
 }
