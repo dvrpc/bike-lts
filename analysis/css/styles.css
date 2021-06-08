@@ -264,6 +264,9 @@ nav {
 .sidebar-select:hover, .btn-submit:hover {
     box-shadow: var(--box-shadow);
 }
+.sidebar-form-helper-text {
+    margin-bottom: var(--wrapper-padding);
+}
 .btn-submit:hover {
     filter: brightness(110%);
 }
