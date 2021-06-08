@@ -60,6 +60,8 @@ const selectContentUpdates = {
                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4">
                     LTS 4
                 </label>
+                <hr class="sidebar-form-hr" />
+                <p>Low-stress areas are made up of connected LTS 1 and LTS 2 segments. LTS 3 and LTS 4 layers are provided here for context.</p>
         </fieldset>
     `
 }
