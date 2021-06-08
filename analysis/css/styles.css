@@ -264,6 +264,9 @@ nav {
 .sidebar-select:hover, .btn-submit:hover {
     box-shadow: var(--box-shadow);
 }
+.sidebar-form-helper-text {
+    margin-bottom: var(--wrapper-padding);
+}
 .btn-submit:hover {
     filter: brightness(110%);
 }
@@ -297,6 +300,8 @@ nav {
     background: #eee;
     transition: all 0.4s;
     cursor: pointer;
+    /* vertically align jawns */
+    margin-bottom: -3px;
 }
 .sidebar-form-checkbox::before {
     width: 14px;
@@ -305,7 +310,7 @@ nav {
     background-color: var(--theme-black);
     content: '';
     position: absolute;
-    top: -3px;
+    top: 0px;
     left: 3px;
     transition: all 0.4s;
 }
