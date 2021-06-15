@@ -54,7 +54,7 @@ const layers = {
         paint: {
             'line-width': ['interpolate', 
                 ['linear'], ['zoom'],
-                8.35, 1,
+                8.35, 1.2,
                 10, 1.8,
                 11, 3,
                 17, 5,
