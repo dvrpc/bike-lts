@@ -16,13 +16,13 @@ const legendConfigs = {
         title: 'Priority Connections to Schools',
         icons: ['#984ea3'],
         iconType: 'line',
-        text: ['Roads that would enable low-stress connections to schools within 2 miles']
+        text: ['LTS 3 road segments that would enable low-stress connections to schools within 2 miles']
     },
     trails: {
         title: 'Priority Connections to Trails',
         icons: ['#377eb8'],
         iconType: 'line',
-        text: ['Roads that would enable low-stress connections to trails within 2.5 miles']
+        text: ['LTS 3 road segments that would enable low-stress connections to trails within 2.5 miles']
     },
     transit: {
         title: 'Priority Connections to Transit',
@@ -65,6 +65,12 @@ const legendConfigs = {
         icons: ['#f18541', '#487997'],
         iconType: 'circle',
         text: ['NJT Bus', 'SEPTA Bus']
+    },
+    schoolsCombo: {
+        title: 'Schools',
+        icons: [],
+        iconType: 'circle',
+        text: []
     }
 }
 

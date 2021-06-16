@@ -8,7 +8,7 @@ import createFeedbackForm from './sidebar/feedback.js'
 
 const sidebar = document.getElementById('sidebar')
 const forms = sidebar.querySelectorAll('.sidebar-form')
-const feedbackBtn = sidebar.querySelector('#feedback-btn')
+// const feedbackBtn = sidebar.querySelector('#feedback-btn')
 const resetAnalysisBtn = sidebar.querySelector('#clear-analysis-btn')
 
 // map
@@ -34,5 +34,5 @@ map.on('idle', () => {
     spinner.classList.remove('lds-ring-active')
 })
 
-// feedback
-feedbackBtn.onclick = () => createFeedbackForm()
+// feedback (upcoming)
+// feedbackBtn.onclick = () => createFeedbackForm()

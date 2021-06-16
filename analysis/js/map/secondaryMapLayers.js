@@ -305,6 +305,15 @@ const layers = {
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
+    },
+    schoolsCombo: {
+        id: 'schools-combined',
+        type: 'circle',
+        source: 'lts',
+        'source-layer': 'schools_combined_region',
+        paint: {
+            
+        }
     }
 }
 
