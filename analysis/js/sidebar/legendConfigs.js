@@ -8,7 +8,7 @@ const legendConfigs = {
     },
     priorities: {
         title: 'Regional Connectivity Priorities',
-        icons: ['#ffffd4', '#fed98e', '#fe9929', '#d95f0e', '#993404'],
+        icons: ['#993404', '#d95f0e', '#fe9929', '#fed98e', '#ffffd4'],
         iconType: 'line',
         text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
     },

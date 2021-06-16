@@ -48,11 +48,11 @@ const layers = {
             ],
             'line-color': ['match',
                 ['get', 'main_priority'],
-                10, '#ffffd4',
-                20, '#fed98e',
+                10, '#993404',
+                20, '#d95f0e',
                 30, '#fe9929',
-                40, '#d95f0e',
-                50, '#993404',
+                40, '#fed98e',
+                50, '#ffffd4',
                 'rgba(0,0,0,0)'
             ]
         }
@@ -72,11 +72,11 @@ const layers = {
             ],
             'line-color': ['match',
                 ['get', 'main_priority_ipd'],
-                10, '#ffffd4',
-                20, '#fed98e',
+                10, '#993404',
+                20, '#d95f0e',
                 30, '#fe9929',
-                40, '#d95f0e',
-                50, '#993404',
+                40, '#fed98e',
+                50, '#ffffd4',
                 'rgba(0,0,0,0)'
             ]
         }
