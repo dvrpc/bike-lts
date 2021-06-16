@@ -306,13 +306,26 @@ const layers = {
             'circle-stroke-width': 1
         }
     },
-    schoolsCombo: {
+    'schools-combined': {
         id: 'schools-combined',
         type: 'circle',
         source: 'lts',
         'source-layer': 'schools_combined_region',
         paint: {
-            
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
+                1, 1,
+                7, 3,
+                11, 4
+            ],
+            'circle-color': ['match',
+                ['get', 'layer'],
+                'priv_schools_2012', '#66c2a5',
+                'pub_schools_2013', '#fc8d62',
+                '#fff'
+            ],
+            'circle-stroke-color': '#fff',
+            'circle-stroke-width': 1
         }
     }
 }

@@ -4,7 +4,7 @@ import layers from './map/mapLayers.js'
 import mapUtils from './map/mapUtils.js'
 import { makePopup, makePopupContent } from './map/popup.js'
 import { handleForms, resetAnalysisLayers } from './sidebar/forms.js'
-import createFeedbackForm from './sidebar/feedback.js'
+// import createFeedbackForm from './sidebar/feedback.js'
 
 const sidebar = document.getElementById('sidebar')
 const forms = sidebar.querySelectorAll('.sidebar-form')

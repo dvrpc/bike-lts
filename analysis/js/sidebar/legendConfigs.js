@@ -66,11 +66,11 @@ const legendConfigs = {
         iconType: 'circle',
         text: ['NJT Bus', 'SEPTA Bus']
     },
-    schoolsCombo: {
+    'schools-combined': {
         title: 'Schools',
-        icons: [],
+        icons: ['#fc8d62', '#66c2a5'],
         iconType: 'circle',
-        text: []
+        text: ['public', 'private']
     }
 }
 
