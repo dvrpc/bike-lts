@@ -3,7 +3,8 @@ import sources from './map/mapSources.js'
 import layers from './map/mapLayers.js'
 import mapUtils from './map/mapUtils.js'
 import { makePopup, makePopupContent } from './map/popup.js'
-import { handleForms, resetAnalysisLayers, resetLTSLayers } from './sidebar/forms.js'
+import { handleForms, resetAnalysisLayers } from './sidebar/forms.js'
+import { resetLTSLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
 
 const sidebar = document.getElementById('sidebar')
