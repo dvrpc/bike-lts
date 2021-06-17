@@ -147,10 +147,14 @@ const resetAnalysisLayers = map => {
     clearAnalysisLegends()
 }
 
+const resetLTSLayers = map => {
+    map.setFilter('existing-conditions', ['<', 'lts_score', 0])
+}
+
 const clearAnalysisLayers = map => {
     analysisLookup.forEach(layer => {
         if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
     })
 }
 
-export { handleForms, resetAnalysisLayers }
+export { handleForms, resetAnalysisLayers, resetLTSLayers }
