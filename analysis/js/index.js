@@ -24,7 +24,7 @@ map.on('load', () => {
 
     forms.forEach(form => handleForms(form, map))
     resetAnalysisBtn.onclick = () => resetAnalysisLayers(map)
-    resetLTSBtn.onclick = () => resetLTSLayers(map)
+    resetLTSBtn.onclick = e => resetLTSLayers(map, e)
 
     map.on('click', 'existing-conditions', e => makePopupContent(map, e, ltsLayersPopup))
     map.on('mousemove', 'existing-conditions', () => map.getCanvas().style.cursor = 'pointer')

@@ -127,7 +127,7 @@ const filterLayers = (form, toggle, map) => {
         const layer = toggle.name 
         const legend = toggle.dataset.legendType
 
-        // get all checked boxes after handling core layers
+        // get all checked boxes
         const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
         let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', 0]
 
@@ -147,8 +147,20 @@ const resetAnalysisLayers = map => {
     clearAnalysisLegends()
 }
 
-const resetLTSLayers = map => {
+const resetLTSLayers = (map, e) => {
+    const btn = e.target
+    const parent = btn.parentElement
+    const labels = parent.querySelectorAll('label')
+
+    // update toggles
+    labels.forEach(label => {
+        const input = label.firstElementChild
+        input.checked = false
+    })
+    
+    // set filter and remove legend
     map.setFilter('existing-conditions', ['<', 'lts_score', 0])
+    handleLegend('lts', false, 4)
 }
 
 const clearAnalysisLayers = map => {
