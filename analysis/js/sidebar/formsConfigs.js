@@ -61,7 +61,7 @@ const selectContentUpdates = {
                     LTS 4
                 </label>
                 <hr class="sidebar-form-hr" />
-                <p>Low-stress areas are made up of connected LTS 1 and LTS 2 segments. LTS 3 and LTS 4 layers are provided here for context.</p>
+                <p>Low-stress areas include connected LTS 1 and LTS 2 segments. LTS 3 and LTS 4 layers are provided separately for context.</p>
         </fieldset>
     `
 }

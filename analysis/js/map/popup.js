@@ -1,4 +1,4 @@
-const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley', 'bus']
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley', 'bus', 'schools-combined']
 
 const makePopup = () => new mapboxgl.Popup()
 
@@ -92,6 +92,17 @@ const makeBusPopupHTML = props => {
     `
 }
 
+const makeSchoolsCombinedHTML = props => {
+    // @NOTE: instead of being blank, empty districts are an empty field of length 1...
+    return `
+    <h3 class="popup-header">${props.schoolname}</h3>
+    <ul class="list-unstyled popup-ul">
+            <li class="popup-li"><strong>District:</strong> ${props.districtna.length > 2 ? props.districtna : 'not provided'}</li>
+            <li class="popup-li"><strong>City:</strong> ${props.city}</li>
+        </ul>
+    `
+}
+
 // all popups
 const getPopupHTMLFnc = {
     'existing-conditions': makeLTSPopupHTML,
@@ -100,7 +111,8 @@ const getPopupHTMLFnc = {
     'passenger-rail': makePassengerRailPopupHTML,
     'lowstress-islands': makeLowStressPopupHTML,
     'trolley': makeTrolleyPopupHTML,
-    'bus': makeBusPopupHTML
+    'bus': makeBusPopupHTML,
+    'schools-combined': makeSchoolsCombinedHTML
 }
 
 export { makePopup, makePopupContent, clickLayers }

@@ -48,11 +48,11 @@ const layers = {
             ],
             'line-color': ['match',
                 ['get', 'main_priority'],
-                10, '#ffffd4',
-                20, '#fed98e',
+                10, '#993404',
+                20, '#d95f0e',
                 30, '#fe9929',
-                40, '#d95f0e',
-                50, '#993404',
+                40, '#fed98e',
+                50, '#ffffd4',
                 'rgba(0,0,0,0)'
             ]
         }
@@ -72,11 +72,11 @@ const layers = {
             ],
             'line-color': ['match',
                 ['get', 'main_priority_ipd'],
-                10, '#ffffd4',
-                20, '#fed98e',
+                10, '#993404',
+                20, '#d95f0e',
                 30, '#fe9929',
-                40, '#d95f0e',
-                50, '#993404',
+                40, '#fed98e',
+                50, '#ffffd4',
                 'rgba(0,0,0,0)'
             ]
         }
@@ -300,6 +300,28 @@ const layers = {
                 ['get', 'layer'],
                 'NJTBus', '#f18541',
                 'SEPTABus', '#487997',
+                '#fff'
+            ],
+            'circle-stroke-color': '#fff',
+            'circle-stroke-width': 1
+        }
+    },
+    'schools-combined': {
+        id: 'schools-combined',
+        type: 'circle',
+        source: 'lts',
+        'source-layer': 'schools_combined_region',
+        paint: {
+            'circle-radius': ['interpolate',
+                ['linear'], ['zoom'],
+                1, 1,
+                7, 3,
+                11, 4
+            ],
+            'circle-color': ['match',
+                ['get', 'layer'],
+                'priv_schools_2012', '#66c2a5',
+                'pub_schools_2013', '#fc8d62',
                 '#fff'
             ],
             'circle-stroke-color': '#fff',

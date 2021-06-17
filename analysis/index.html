@@ -120,6 +120,10 @@
                                         <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
                                         LTS 4
                                     </label>
+
+                                    <hr class="sidebar-form-hr" />
+
+                                    <button type="button" class="btn-submit btn-cancel" id="clear-lts-btn" aria-label="reset LTS layers">clear LTS layers</button>
                                 </fieldset>
                             </form>
                         </details>
@@ -137,10 +141,13 @@
                                     <option value="-ipd">Equity-focused Network Connectivity</option>
                                 </select>
 
-                                <p class="sidebar-form-helper-text">
-                                    The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region.<br />
+                                <span class="sidebar-form-helper-text">
+                                    The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
+                                </span>
+
+                                <span class="sidebar-form-helper-text">
                                     In the <em>Equity-focused Network Connectivity </em> analysis, these shortest paths are weighted by the characteristics of the population living in the origin and destination census tracts, with emphasis on populations of interest under Title VI.
-                                </p>
+                                </span>
                                 
                                 <label for="analysis-results-select" class="sidebar-form-label sidebar-select-label">
                                     select analysis:
@@ -172,15 +179,10 @@
                                         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
                                         Bicycle Facilities
                                     </label>
-    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="access" name="layer" value="trail-access">
-                                        Trail Access Locations
-                                    </label>
                                 </fieldset>
     
                                 <fieldset class="sidebar-fieldset">
-                                    <legend>Public Transit</legend>    
+                                    <legend>Destinations</legend>    
                                     
                                     <label class="sidebar-form-label">
                                         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="rail" name="layer" value="passenger-rail">
@@ -198,14 +200,28 @@
                                         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="bus" name="layer" value="bus">
                                         Bus Stops
                                     </label>
+
+                                    <br />
+
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="access" name="layer" value="trail-access">
+                                        Trail Access Locations
+                                    </label>
+
+                                    <label class="sidebar-form-label">
+                                        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="schools-combined" name="layer" value="schools-combined">
+                                        Schools
+                                    </label>
                                 </fieldset>
                             </form>
                         </details>
                     </section>
 
+                    <hr class="sidebar-hr"/>
+
                     <section class="sidebar-container">
                         <h2 class="sidebar-h2">disclaimer</h2>
-                        <p>Due to the limited number of attributes considered, and the impossibility of ensuring accuracy on a regional scale, this data is best used as a screening tool for planning purposes. Any detailed local analysis should verify roadway attributes independently.</p>
+                        <small><i>Due to the limited number of attributes considered, and the impossibility of ensuring accuracy on a regional scale, this data is best used as a screening tool for planning purposes. Any detailed local analysis should verify roadway attributes independently.</i></small>
                     </section>
                 </div>
 
