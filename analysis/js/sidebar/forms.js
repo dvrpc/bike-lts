@@ -1,8 +1,9 @@
 import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { highlightLowStress, highlightLayers } from '../map/highlights.js'
-import { handleLegend, clearAnalysisLegends } from './legends.js'
-import { ltsFilters, analysisLookup, selectContentUpdates } from './formsConfigs.js'
+import { handleLegend } from './legends.js'
+import { ltsFilters, selectContentUpdates } from './formsConfigs.js'
+import { clearAnalysisLayers } from './formsUtils.js'
 
 const handleForms = (form, map) => {
     const formType = form.dataset.formType
@@ -142,15 +143,4 @@ const filterLayers = (form, toggle, map) => {
         handleLegend(legend, toggle.checked, 1)
 }
 
-const resetAnalysisLayers = map => {
-    clearAnalysisLayers(map)
-    clearAnalysisLegends()
-}
-
-const clearAnalysisLayers = map => {
-    analysisLookup.forEach(layer => {
-        if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
-    })
-}
-
-export { handleForms, resetAnalysisLayers }
+export default handleForms
