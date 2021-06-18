@@ -1,4 +1,4 @@
-const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley', 'bus', 'schools-combined']
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley', 'bus', 'schools-combined', 'transit', 'transit-ipd']
 
 const makePopup = () => new mapboxgl.Popup()
 
@@ -52,6 +52,15 @@ const makePriorityPopupHTML = (props, layer) => {
         <h3 class="popup-header">${isIPD}Priority Score: ${score}%</h3>
         <span class="popup-span">
             <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
+        </span>
+    `
+}
+
+const makeTransitHTML = props => {
+    return `
+        <h3 class="popup-header">Segment id: ${props.id}</h3>
+        <span class="popup-span">
+            This road segment enables low-stress connections to <strong>${props.mode}</strong> stops within 3 miles
         </span>
     `
 }
@@ -112,7 +121,9 @@ const getPopupHTMLFnc = {
     'lowstress-islands': makeLowStressPopupHTML,
     'trolley': makeTrolleyPopupHTML,
     'bus': makeBusPopupHTML,
-    'schools-combined': makeSchoolsCombinedHTML
+    'schools-combined': makeSchoolsCombinedHTML,
+    'transit': makeTransitHTML,
+    'transit-ipd': makeTransitHTML
 }
 
 export { makePopup, makePopupContent, clickLayers }
