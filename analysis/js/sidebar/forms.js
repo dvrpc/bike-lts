@@ -3,7 +3,7 @@ import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { highlightLowStress, highlightLayers } from '../map/highlights.js'
 import { handleLegend } from './legends.js'
 import { ltsFilters, selectContentUpdates } from './formsConfigs.js'
-import { clearAnalysisLayers } from './formsUtils.js'
+import { clearAnalysisLayers, resetLTSLayers } from './formsUtils.js'
 
 const handleForms = (form, map) => {
     const formType = form.dataset.formType
@@ -49,6 +49,10 @@ const handleSelectContentUpdate = (select, map) => {
         
         // remove low-stress and set LTS to visislbe
         default:
+            const resetLTSBtn = form.querySelector('#clear-lts-btn')
+
+            resetLTSBtn.onclick = e => resetLTSLayers(map, e)
+
             map.setFilter('existing-conditions', null)
             map.setFilter('lowstress-click', ['==', 'island_num', 0])
 
