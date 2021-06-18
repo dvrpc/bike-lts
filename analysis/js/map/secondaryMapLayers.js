@@ -158,16 +158,7 @@ const layers = {
                 17, 2.5,
                 20, 3.5
             ],
-            'line-color': ['match',
-                ['get', 'mode'],
-                'bus', '#8dd3c7',
-                'rail', '#ffffb3',
-                'rail, bus', '#bebada',
-                'rail, trolley', '#fb8072',
-                'trolley', '#80b1d3',
-                'trolley, bus', '#fdb462',
-                'rgba(0,0,0,0)'
-            ]
+            'line-color': '#fdb462'
         }
     },
     'transit-ipd': {
@@ -183,16 +174,7 @@ const layers = {
                 17, 2.5,
                 20, 3.5
             ],
-            'line-color': ['match',
-                ['get', 'mode'],
-                'bus', '#8dd3c7',
-                'rail', '#ffffb3',
-                'rail, bus', '#bebada',
-                'rail, trolley', '#fb8072',
-                'trolley', '#80b1d3',
-                'trolley, bus', '#fdb462',
-                'rgba(0,0,0,0)'
-            ]
+            'line-color': '#fdb462'
         }
     },
     // Resource Layers

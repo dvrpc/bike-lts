@@ -26,9 +26,9 @@ const legendConfigs = {
     },
     transit: {
         title: 'Priority Connections to Transit',
-        icons: ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462'],
+        icons: ['#fdb462'],
         iconType: 'line',
-        text: ['bus','rail','rail, bus','rail, trolley','trolley','trolley, bus']
+        text: ['LTS 3 road segments that would enable low-stress connections to transit stops within 3 miles']
     },
     facilities: {
         title: 'Bicycle Facilities',
