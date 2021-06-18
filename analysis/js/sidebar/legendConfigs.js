@@ -26,7 +26,7 @@ const legendConfigs = {
     },
     transit: {
         title: 'Priority Connections to Transit',
-        icons: ['#fdb462'],
+        icons: ['#bebada'],
         iconType: 'line',
         text: ['LTS 3 road segments that would enable low-stress connections to transit stops within 3 miles']
     },

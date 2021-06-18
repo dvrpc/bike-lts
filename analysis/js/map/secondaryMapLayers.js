@@ -158,7 +158,7 @@ const layers = {
                 17, 2.5,
                 20, 3.5
             ],
-            'line-color': '#fdb462'
+            'line-color': '#bebada'
         }
     },
     'transit-ipd': {
@@ -174,7 +174,7 @@ const layers = {
                 17, 2.5,
                 20, 3.5
             ],
-            'line-color': '#fdb462'
+            'line-color': '#bebada'
         }
     },
     // Resource Layers
