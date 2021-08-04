@@ -221,6 +221,24 @@ nav {
     margin-bottom: var(--wrapper-padding);
     color: var(--theme-yellow);
 }
+.sidebar-tab {
+    width: 50%;
+    text-align: center;
+    border: none;
+    padding: var(--wrapper-padding-double) 0;
+    background-color: transparent;
+}
+.sidebar-tab-active {
+    color: var(--theme-yellow);
+    border-left: 1px solid var(--theme-black-dark);
+    border-right: 1px solid var(--theme-black-dark);
+    border-top: 3px solid var(--theme-black-dark);
+    font-weight: 700;
+}
+.sidebar-tab-inactive {
+    color: var(--theme-white);
+    border-bottom: 3px solid var(--theme-black-dark);
+}
 .sidebar-details {
     margin-top: 5px;
 }
