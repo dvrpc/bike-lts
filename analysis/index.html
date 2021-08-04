@@ -50,7 +50,7 @@
                 <div id="sidebar-content" class="sidebar-content">
                     <p class="sidebar-lead-p">Explore and analyze LTS and bicycle network connectivity priorities by toggling the layers below. Learn more about the analysis  and how these layers were created <a href="/review/bike-lts/" target="_blank" rel="noreferrer noopener">here</a>.</p>
                     
-                    <hr class="sidebar-hr"/>
+                    <!-- <hr class="sidebar-hr"/> -->
 
                     <!-- <section class="sidebar-container" id="sidebar-legends-container">
                         <h2 class="sidebar-h2">legend(s)</h2>
@@ -93,28 +93,28 @@
 
                     <section class="sidebar-container">
                         <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
-                            <div class="flex-column">
+                            <label class="sidebar-form-label">
+                                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
+                                All LTS Layers
+                            </label>
+                            <div class="sidebar-nested-inputs-wrapper flex-column">
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
-                                    All LTS Layers
-                                </label>
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox sidebar-form-checkbox-nested core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
                                     LTS 1
                                 </label>
                                 
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox sidebar-form-checkbox-nested core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
                                     LTS 2
                                 </label>
                 
                                 <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox sidebar-form-checkbox-nested core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
                                     LTS 3
                                 </label>
                                 
                                 <label class="sidebar-form-label lts-layer-4">
-                                    <input type="checkbox" class="sidebar-form-checkbox sidebar-form-checkbox-nested core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+                                    <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
                                     LTS 4
                                 </label>
                             </div>
@@ -124,6 +124,11 @@
                             <label class="sidebar-form-label side-form-label-lts">
                                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
                                 low-stress areas
+                            </label>
+
+                            <label class="sidebar-form-label">
+                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
+                                Bicycle Facilities
                             </label>
                         </form>
                     </section>

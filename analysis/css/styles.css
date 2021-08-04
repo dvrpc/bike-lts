@@ -195,6 +195,7 @@ nav {
 }
 .sidebar-lead-p {
     font-size: 1.2rem;
+    margin-bottom: var(--wrapper-padding-double);
 }
 .sidebar-hr {
     margin: var(--wrapper-padding-double) 0;
@@ -349,7 +350,7 @@ nav {
 .sidebar-form-checkbox:hover {
     box-shadow: var(--box-shadow);
 }
-.sidebar-form-checkbox-nested {
+.sidebar-nested-inputs-wrapper {
     margin-left: 40px;
 }
 .sidebar-form-hr {
