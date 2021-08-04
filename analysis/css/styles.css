@@ -227,17 +227,19 @@ nav {
     border: none;
     padding: var(--wrapper-padding-double) 0;
     background-color: transparent;
+    font-size: 1rem;
 }
 .sidebar-tab-active {
     color: var(--theme-yellow);
-    border-left: 1px solid var(--theme-black-dark);
-    border-right: 1px solid var(--theme-black-dark);
-    border-top: 3px solid var(--theme-black-dark);
+    border-left: 3px outset var(--theme-black-dark);
+    border-right: 3px outset var(--theme-black-dark);
+    border-top: 3px outset var(--theme-black-dark);
     font-weight: 700;
 }
 .sidebar-tab-inactive {
     color: var(--theme-white);
-    border-bottom: 3px solid var(--theme-black-dark);
+    border-bottom: 2.5px inset var(--theme-black-dark);
+    cursor: pointer;
 }
 .sidebar-details {
     margin-top: 5px;
@@ -253,6 +255,8 @@ nav {
 }
 .sidebar-form {
     margin: var(--wrapper-padding) auto;
+    /* double tab width */
+    margin-left: 6px;
 }
 .sidebar-fieldset {
     border-radius: var(--border-radius);
@@ -344,6 +348,9 @@ nav {
 
 .sidebar-form-checkbox:hover {
     box-shadow: var(--box-shadow);
+}
+.sidebar-form-checkbox-nested {
+    margin-left: 40px;
 }
 .sidebar-form-hr {
     margin: var(--wrapper-padding) 0;
