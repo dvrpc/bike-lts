@@ -95,8 +95,9 @@
                         <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
                             <label class="sidebar-form-label">
                                 <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
-                                All LTS Layers
+                                all LTS layers
                             </label>
+
                             <div class="sidebar-nested-inputs-wrapper flex-column">
                                 <label class="sidebar-form-label">
                                     <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
@@ -120,16 +121,22 @@
                             </div>
                         </form>
 
-                        <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
-                            <label class="sidebar-form-label side-form-label-lts">
-                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
-                                low-stress areas
-                            </label>
+                        <hr class="sidebar-hr" />
 
-                            <label class="sidebar-form-label">
-                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
-                                Bicycle Facilities
-                            </label>
+                        <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
+                            <div class="flex-column">
+                                <label class="sidebar-form-label side-form-label-lts">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
+                                    low-stress areas
+                                </label>
+                                
+                            <hr class="sidebar-hr" />
+                            
+                                <label class="sidebar-form-label">
+                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
+                                    bicycle facilities
+                                </label>
+                            </div>
                         </form>
                     </section>
                             

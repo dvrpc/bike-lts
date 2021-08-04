@@ -35,6 +35,8 @@ a {
     --border-radius: 4px;
     --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
     --box-shadow-up: 1px -2px 3px rgba(0,0,0,0.3);
+
+    --active-tab-border: 2.5px outset var(--theme-black-dark);
 }
 .flex-row {
     display: flex;
@@ -190,6 +192,11 @@ nav {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
+.sidebar-content {
+    padding: var(--wrapper-padding-double);
+    height: calc(94% - var(--wrapper-padding-double)*2);
+    overflow-y: auto;
+}
 .sidebar strong {
     color: var(--theme-red);
 }
@@ -201,13 +208,15 @@ nav {
     margin: var(--wrapper-padding-double) 0;
     color: var(--theme-grey);
 }
+.sidebar-container {
+    border: var(--active-tab-border);
+    border-top: none;
+    padding: var(--wrapper-padding);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
 .sidebar-hr-slim {
     margin: var(--wrapper-padding-half) 0;
-}
-.sidebar-content {
-    padding: var(--wrapper-padding-double);
-    height: calc(94% - var(--wrapper-padding-double)*2);
-    overflow-y: auto;
 }
 .sidebar-img {
     display: block;
@@ -232,9 +241,11 @@ nav {
 }
 .sidebar-tab-active {
     color: var(--theme-yellow);
-    border-left: 3px outset var(--theme-black-dark);
-    border-right: 3px outset var(--theme-black-dark);
-    border-top: 3px outset var(--theme-black-dark);
+    border-left: var(--active-tab-border);
+    border-right: var(--active-tab-border);
+    border-top: var(--active-tab-border);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     font-weight: 700;
 }
 .sidebar-tab-inactive {
@@ -253,11 +264,6 @@ nav {
 }
 .sidebar-details[open] summary {
     font-weight: 700;
-}
-.sidebar-form {
-    margin: var(--wrapper-padding) auto;
-    /* double tab width */
-    margin-left: 6px;
 }
 .sidebar-fieldset {
     border-radius: var(--border-radius);
@@ -356,9 +362,6 @@ nav {
 .sidebar-form-hr {
     margin: var(--wrapper-padding) 0;
     color: var(--theme-grey);
-}
-.sidebar-container {
-    margin-bottom: 8%;
 }
 .sidebar-legend-section {
     margin: var(--wrapper-padding) auto var(--wrapper-padding-double) auto;
