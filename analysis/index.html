@@ -82,16 +82,16 @@
                         </article>
                     </section> -->
 
-                    <div class="flex-row flex-between">
-                        <button type="button" class="sidebar-tab sidebar-tab-active" id="lts">
+                    <div class="flex-row flex-between" id="sidebar-tabs">
+                        <button type="button" class="sidebar-tab sidebar-tab-active" id="lts-tab">
                             LTS Analysis
                         </button>
-                        <button type="button" class="sidebar-tab sidebar-tab-inactive" id="connectivity">
+                        <button type="button" class="sidebar-tab sidebar-tab-inactive" id="connectivity-tab">
                             Connectivity Analysis
                         </button>
                     </div>
 
-                    <section class="sidebar-container">
+                    <section class="sidebar-container" id="toggles-container">
                         <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
                             <label class="sidebar-form-label">
                                 <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
@@ -139,7 +139,6 @@
                             </div>
                         </form>
                     </section>
-                            
 
                     <!-- <hr class="sidebar-hr" /> -->
                     <!-- @OLD STUFF -->
