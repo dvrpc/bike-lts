@@ -18,6 +18,14 @@ const togglesContainer = sidebar.querySelector('#toggles-container')
 // @UPDATES TODO:
     // look into resetAnalysisLayers and resetLTSLayers fncs to see if they're still needed
 
+const demoAnalysis = `<h2>analysis jawn</h2>`
+const demoLTS = `<h2>LTS jawn</h2>`
+
+const togglesContent = {
+    'lts-tab': demoLTS,
+    'connectivity-tab': demoAnalysis
+}
+
 // sidebar
 tabs.forEach(tab => {
     tab.onclick = e => {
@@ -33,6 +41,8 @@ tabs.forEach(tab => {
         tab.classList.add('sidebar-tab-active')
 
         // use tabID to update togglesContainer content
+        while(togglesContainer.firstChild) togglesContainer.removeChild(togglesContainer.firstChild)
+        togglesContainer.insertAdjacentHTML('afterbegin', togglesContent[tabID])
 
         // use tabID to update map layers
     }
