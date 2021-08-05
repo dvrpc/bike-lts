@@ -202,7 +202,9 @@ nav {
 }
 .sidebar-lead-p {
     font-size: 1.2rem;
-    margin-bottom: var(--wrapper-padding-double);
+    padding: var(--wrapper-padding-double);
+    box-shadow: var(--box-shadow);
+    background-color: var(--theme-black-dark);
 }
 .sidebar-hr {
     margin: var(--wrapper-padding-double) 0;
