@@ -21,36 +21,36 @@ const togglesContainer = sidebar.querySelector('#toggles-container')
 const demoLTS = `
     <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
         <label class="sidebar-form-label">
-            <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
+            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
             all LTS layers
         </label>
 
-        <div class="sidebar-nested-inputs-wrapper flex-column">
-            <label class="sidebar-form-label">
-                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+        <div class="sidebar-nested-inputs-wrapper">
+            <label class="sidebar-form-label core-lts">
+                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
                 LTS 1
             </label>
             
-            <label class="sidebar-form-label">
-                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+            <label class="sidebar-form-label core-lts">
+                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
                 LTS 2
             </label>
 
-            <label class="sidebar-form-label">
-                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+            <label class="sidebar-form-label core-lts">
+                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
                 LTS 3
             </label>
             
-            <label class="sidebar-form-label lts-layer-4">
-                <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+            <label class="sidebar-form-label lts-layer-4 core-lts">
+                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
                 LTS 4
             </label>
         </div>
-    </form>
+        </form>
 
-    <hr class="sidebar-hr" />
+        <hr class="sidebar-hr" />
 
-    <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
+        <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
         <div class="flex-column">
             <label class="sidebar-form-label side-form-label-lts">
                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
@@ -67,7 +67,43 @@ const demoLTS = `
     </form>
 `
 
-const demoAnalysis = `<h2>Analysis jawn</h2>`
+const demoAnalysis = `
+    <form autocomplete="off" class="sidebar-form flex-column" data-form-type="submit">
+        <span class="sidebar-form-helper-text">
+            The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
+        </span>
+
+        <span class="sidebar-form-helper-text">
+            In the <em>Equity-focused Network Connectivity </em> analysis, these shortest paths are weighted by the characteristics of the population living in the origin and destination census blocks, with emphasis on populations of interest under Title VI.
+        </span>
+
+        <label for="analysis-type-select" class="sidebar-form-label sidebar-select-label">
+            select type:
+        </label>
+
+        <select class="sidebar-select" id="analysis-type-select">
+            <option value="">Low-stress Network Connectivity</option>
+            <option value="-ipd">Equity-focused Network Connectivity</option>
+        </select>
+
+        <label for="analysis-results-select" class="sidebar-form-label sidebar-select-label">
+            select priority connections to:
+        </label>
+
+        <select class="sidebar-select" id="analysis-results-select" required>
+            <option></option>
+            <option data-layer-type="toggle" data-legend-type="priorities" value="priority">everywhere</option>
+            <option data-layer-type="toggle" data-legend-type="schools" value="school">schools</option>
+            <option data-layer-type="toggle" data-legend-type="trails" value="trails">trails</option>
+            <option data-layer-type="toggle" data-legend-type="transit" value="transit">transit</option>
+        </select>
+
+        <div class="flex-row flex-between">
+            <button type="submit" class="btn-submit btn-action" id="get-analysis-btn">get results</button>
+            <button type="button" class="btn-submit btn-cancel" id="clear-analysis-btn" aria-label="reset analysis layers">clear results</button>
+        </div>
+    </form>
+`
 
 const togglesContent = {
     'lts-tab': demoLTS,
