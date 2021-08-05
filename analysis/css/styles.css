@@ -193,7 +193,7 @@ nav {
     box-shadow: var(--box-shadow);
 }
 .sidebar-content {
-    padding: var(--wrapper-padding-double);
+    padding: var(--wrapper-padding-double) var(--wrapper-padding);
     height: calc(94% - var(--wrapper-padding-double)*2);
     overflow-y: auto;
 }
@@ -201,7 +201,7 @@ nav {
     color: var(--theme-red);
 }
 .sidebar-lead-p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: var(--wrapper-padding-double);
     box-shadow: var(--box-shadow);
     background-color: var(--theme-black-dark);
@@ -316,7 +316,8 @@ nav {
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
 .sidebar-form-label {
     position: relative;
-    margin-right: 10px;
+    display: block;
+    width: 100%;
 }
 .sidebar-form-label:last-child {
     margin-right: 0;
@@ -341,7 +342,7 @@ nav {
     background-color: var(--theme-black);
     content: '';
     position: absolute;
-    top: 0px;
+    top: 2.5px;
     left: 3px;
     transition: all 0.4s;
 }
@@ -360,6 +361,10 @@ nav {
 }
 .sidebar-nested-inputs-wrapper {
     margin-left: 40px;
+    margin-top: var(--wrapper-padding-half);
+}
+.core-lts {
+    margin-bottom: var(--wrapper-padding-half);
 }
 .sidebar-form-hr {
     margin: var(--wrapper-padding) 0;
