@@ -17,6 +17,7 @@ const ltsFilters = {
 
 const analysisLookup = ['priority', 'school', 'trails', 'transit', 'priority-ipd', 'school-ipd', 'trails-ipd', 'transit-ipd']
 
+// @UPDATE delete and replace w/new object currently in index.js
 const selectContentUpdates = {
     ['regional-connectivity']: `
         <fieldset class="sidebar-fieldset">

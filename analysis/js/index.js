@@ -15,10 +15,11 @@ const togglesContainer = sidebar.querySelector('#toggles-container')
 // const resetAnalysisBtn = sidebar.querySelector('#clear-analysis-btn')
 // const resetLTSBtn = sidebar.querySelector('#clear-lts-btn')
 
-// @UPDATES TODO:
+// @UPDATES TEMP:
     // look into resetAnalysisLayers and resetLTSLayers fncs to see if they're still needed
-    // for both of these strings, the form itself will have to be created via createElement to apply event listeners
+    // for both of these strings, the form itself will have to be created via createElement to re-apply handleForms
         // all content within the form can be query strings
+        // formsConfig objs already do this, just mimic that
 const demoLTS = `
     <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
         <label class="sidebar-form-label">
@@ -125,6 +126,7 @@ const togglesContent = {
     'lts-tab': demoLTS,
     'connectivity-tab': demoAnalysis
 }
+// @UPDATES TEMP END
 
 // sidebar
 tabs.forEach(tab => {
