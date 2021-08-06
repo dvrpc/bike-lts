@@ -17,7 +17,8 @@ const togglesContainer = sidebar.querySelector('#toggles-container')
 
 // @UPDATES TODO:
     // look into resetAnalysisLayers and resetLTSLayers fncs to see if they're still needed
-
+    // for both of these strings, the form itself will have to be created via createElement to apply event listeners
+        // all content within the form can be query strings
 const demoLTS = `
     <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
         <label class="sidebar-form-label">
@@ -50,7 +51,7 @@ const demoLTS = `
 
         <hr class="sidebar-hr" />
 
-        <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
+        <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="content-replace">
         <div class="flex-column">
             <label class="sidebar-form-label side-form-label-lts">
                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
@@ -90,8 +91,7 @@ const demoAnalysis = `
             select priority connections to:
         </label>
 
-        <select class="sidebar-select" id="analysis-results-select" required>
-            <option></option>
+        <select class="sidebar-select" id="analysis-results-select">
             <option data-layer-type="toggle" data-legend-type="priorities" value="priority">everywhere</option>
             <option data-layer-type="toggle" data-legend-type="schools" value="school">schools</option>
             <option data-layer-type="toggle" data-legend-type="trails" value="trails">trails</option>
@@ -102,6 +102,22 @@ const demoAnalysis = `
             <button type="submit" class="btn-submit btn-action" id="get-analysis-btn">get results</button>
             <button type="button" class="btn-submit btn-cancel" id="clear-analysis-btn" aria-label="reset analysis layers">clear results</button>
         </div>
+    </form>
+
+    <hr class="sidebar-hr" />
+
+    <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="content-replace">
+        <label class="sidebar-form-label side-form-label-lts">
+            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
+            low-stress areas
+        </label>
+        
+        <hr class="sidebar-hr" />
+
+        <label class="sidebar-form-label">
+            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
+            bicycle facilities
+        </label>
     </form>
 `
 

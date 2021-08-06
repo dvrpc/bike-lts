@@ -47,8 +47,8 @@
 
         <main id="main-content-wrapper" class="flex-row flex-between">
             <article id="sidebar" class="sidebar">
-                <p class="sidebar-lead-p">Explore and analyze LTS and bicycle network connectivity priorities by toggling the layers below. Learn more about the analysis  and how these layers were created <a href="/review/bike-lts/" target="_blank" rel="noreferrer noopener">here</a>.</p>
                 <div id="sidebar-content" class="sidebar-content">
+                    <p class="sidebar-lead-p">Explore and analyze LTS and bicycle network connectivity priorities by toggling the layers below. Learn more about the analysis  and how these layers were created <a href="/review/bike-lts/" target="_blank" rel="noreferrer noopener">here</a>.</p>
                     
                     <!-- <hr class="sidebar-hr"/> -->
 
@@ -123,20 +123,18 @@
 
                         <hr class="sidebar-hr" />
 
-                        <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
-                            <div class="flex-column">
-                                <label class="sidebar-form-label side-form-label-lts">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
-                                    low-stress areas
-                                </label>
-                                
+                        <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="content-replace">
+                            <label class="sidebar-form-label side-form-label-lts">
+                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
+                                low-stress areas
+                            </label>
+                            
                             <hr class="sidebar-hr" />
 
-                                <label class="sidebar-form-label">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
-                                    bicycle facilities
-                                </label>
-                            </div>
+                            <label class="sidebar-form-label">
+                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
+                                bicycle facilities
+                            </label>
                         </form>
                     </section>
 
@@ -144,91 +142,6 @@
                     <!-- @OLD STUFF -->
                     <!-- <h2>OLD STUFF HERE</h2>
                     <section class="sidebar-container">
-                        <h2 class="sidebar-h2">layers</h2>
-                        
-                        <details class="sidebar-details">
-                            <summary class="sidebar-summary">core LTS layers</summary>
-    
-                            <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
-                                <label for="core-layer-select" class="sidebar-form-label sidebar-select-label">
-                                    select type:
-                                </label>
-
-                                <select class="sidebar-select" id="core-layer-select">
-                                    <option value="regional-connectivity">Full LTS Network</option>
-                                    <option value="low-stress">Low-stress Areas</option>
-                                </select>
-
-                                <fieldset class="sidebar-fieldset">
-                                    <legend>Levels of Traffic Stress (LTS)</legend>
-
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-                                        LTS 1
-                                    </label>
-                                    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-                                        LTS 2
-                                    </label>
-                    
-                                    <label class="sidebar-form-label">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-                                        LTS 3
-                                    </label>
-                                    
-                                    <label class="sidebar-form-label lts-layer-4">
-                                        <input type="checkbox" class="sidebar-form-checkbox core-lts" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-                                        LTS 4
-                                    </label>
-
-                                    <hr class="sidebar-form-hr" />
-
-                                    <button type="button" class="btn-submit btn-cancel" id="clear-lts-btn" aria-label="reset LTS layers">clear LTS layers</button>
-                                </fieldset>
-                            </form>
-                        </details>
-    
-                        <details class="sidebar-details">
-                            <summary class="sidebar-summary">analysis layers</summary>
-                            
-                            <form autocomplete="off" class="sidebar-form flex-column" data-form-type="submit">
-                                <label for="analysis-type-select" class="sidebar-form-label sidebar-select-label">
-                                    select type:
-                                </label>
-
-                                <select class="sidebar-select" id="analysis-type-select">
-                                    <option value="">Low-stress Network Connectivity</option>
-                                    <option value="-ipd">Equity-focused Network Connectivity</option>
-                                </select>
-
-                                <span class="sidebar-form-helper-text">
-                                    The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
-                                </span>
-
-                                <span class="sidebar-form-helper-text">
-                                    In the <em>Equity-focused Network Connectivity </em> analysis, these shortest paths are weighted by the characteristics of the population living in the origin and destination census tracts, with emphasis on populations of interest under Title VI.
-                                </span>
-                                
-                                <label for="analysis-results-select" class="sidebar-form-label sidebar-select-label">
-                                    select analysis:
-                                </label>
-
-                                <select class="sidebar-select" id="analysis-results-select" required>
-                                    <option></option>
-                                    <option data-layer-type="toggle" data-legend-type="priorities" value="priority">Regional Connectivity Priorities</option>
-                                    <option data-layer-type="toggle" data-legend-type="schools" value="school">Priority Connections to Schools</option>
-                                    <option data-layer-type="toggle" data-legend-type="trails" value="trails">Priority Connections to Trails</option>
-                                    <option data-layer-type="toggle" data-legend-type="transit" value="transit">Priority Connections to Transit</option>
-                                </select>
-
-                                <div class="flex-row flex-between">
-                                    <button type="submit" class="btn-submit btn-action" id="get-analysis-btn">get results</button>
-                                    <button type="button" class="btn-submit btn-cancel" id="clear-analysis-btn" aria-label="reset analysis layers">clear results</button>
-                                </div>
-                            </form>
-                        </details>
-                        
                         <details class="sidebar-details">
                             <summary class="sidebar-summary">reference layers</summary>
     
@@ -278,8 +191,10 @@
                         </details>
                     </section> -->
 
-                    <h2 class="sidebar-h2">disclaimer</h2>
-                    <small><i>Due to the limited number of attributes considered, and the impossibility of ensuring accuracy on a regional scale, this data is best used as a screening tool for planning purposes. Any detailed local analysis should verify roadway attributes independently.</i></small>
+                    <details class="sidebar-details">
+                        <summary class="sidebar-summary">disclaimer</summary>
+                        <small><i>Due to the limited number of attributes considered, and the impossibility of ensuring accuracy on a regional scale, this data is best used as a screening tool for planning purposes. Any detailed local analysis should verify roadway attributes independently.</i></small>
+                    </details>
                 </div>
 
                 <footer>
