@@ -13,8 +13,8 @@ const forms = sidebar.querySelectorAll('.sidebar-form')
 const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 const togglesContainer = sidebar.querySelector('#toggles-container')
 // const feedbackBtn = sidebar.querySelector('#feedback-btn')
+
 // const resetAnalysisBtn = sidebar.querySelector('#clear-analysis-btn')
-// const resetLTSBtn = sidebar.querySelector('#clear-lts-btn')
 
 // sidebar
 tabs.forEach(tab => {
@@ -48,9 +48,11 @@ map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
     for(const layer in layers) map.addLayer(layers[layer], firstSymbolId)
 
+    // @UPDATES form context is loss on tabs replace.
+        // either hook into existing form to preserve handler or re-assign
+        // handleForms when the tab switches
     forms.forEach(form => handleForms(form, map))
     // resetAnalysisBtn.onclick = () => resetAnalysisLayers(map)
-    // resetLTSBtn.onclick = e => resetLTSLayers(map, e)
 
     map.on('click', 'existing-conditions', e => makePopupContent(map, e, ltsLayersPopup))
     map.on('mousemove', 'existing-conditions', () => map.getCanvas().style.cursor = 'pointer')
