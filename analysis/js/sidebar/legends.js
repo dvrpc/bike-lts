@@ -6,6 +6,8 @@ const selectExceptions = ['priorities', 'schools', 'trails', 'transit']
     // legend sets instead of individuals
         // legends for LTS view & legends for Connectivity view
         // show all for each view
+    // no longer need to track state for adding/removing legends (acca and checked state irrelevant)
+    // legend param update to ID - which section is active and iterate over makeLegend to create appropriate legnds
 const handleLegend = (legend, checked, acca) => {
     // get legend container (obviously not this way)
     const container = document.getElementById('sidebar-legends-container')
