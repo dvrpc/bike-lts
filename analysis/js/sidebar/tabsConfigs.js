@@ -1,8 +1,5 @@
-// for both of these strings, the form itself will have to be created via createElement to re-apply handleForms
-    // all content within the form can be query strings
-    // formsConfig objs already do this, just mimic that
 const demoLTS = `
-    <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="content-replace">
+    <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="change">
         <label class="sidebar-form-label">
             <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
             all LTS layers
@@ -33,7 +30,7 @@ const demoLTS = `
 
     <hr class="sidebar-hr" />
 
-    <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="content-replace">
+    <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="change">
         <div class="flex-column">
             <label class="sidebar-form-label side-form-label-lts">
                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
@@ -88,7 +85,7 @@ const demoAnalysis = `
 
     <hr class="sidebar-hr" />
 
-    <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="content-replace">
+    <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="change">
         <label class="sidebar-form-label side-form-label-lts">
             <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
             low-stress areas

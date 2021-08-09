@@ -2,6 +2,10 @@ import legends from './legendConfigs.js'
 
 const selectExceptions = ['priorities', 'schools', 'trails', 'transit']
 
+// @UPDATE: change handleLegend to replacing content within map overlay
+    // legend sets instead of individuals
+        // legends for LTS view & legends for Connectivity view
+        // show all for each view
 const handleLegend = (legend, checked, acca) => {
     // get legend container (obviously not this way)
     const container = document.getElementById('sidebar-legends-container')

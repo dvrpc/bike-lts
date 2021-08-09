@@ -2,7 +2,8 @@ import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { highlightLowStress, highlightLayers } from '../map/highlights.js'
 import { handleLegend } from './legends.js'
-import { ltsFilters, selectContentUpdates } from './formsConfigs.js'
+import { ltsFilters } from './formsConfigs.js'
+// @UPDATE keep resetLTSLayers, it's unused because it only exists in contentUpdate as of now
 import { clearAnalysisLayers, resetLTSLayers } from './formsUtils.js'
 
 const handleForms = (form, map) => {
@@ -11,57 +12,60 @@ const handleForms = (form, map) => {
     switch(formType) {
         case 'submit':
             form.onsubmit = e => submitForm(e, form, map)
-            break 
-        case 'content-replace':            
-            form.onchange = e => {
-                const target = e.target
-
-                if(target.nodeName !== 'SELECT') toggleForm(e, form, map)
-                else handleSelectContentUpdate(target, map)
-            }
             break
+        // @TODO possibly delete
+        // case 'content-replace':            
+        //     form.onchange = e => {
+        //         const target = e.target
+
+        //         if(target.nodeName !== 'SELECT') toggleForm(e, form, map)
+        //         else handleSelectContentUpdate(target, map)
+        //     }
+        //     break
         default:
             form.onchange = e => toggleForm(e, form, map)
     }
 }
 
-const handleSelectContentUpdate = (select, map) => {
-    const selected = select.options[select.selectedIndex].value
-    const newContent = selectContentUpdates[selected]
-    const oldContent = select.nextElementSibling
-    const form = select.parentElement
-    
-    oldContent.remove()
-    select.insertAdjacentHTML('afterend', newContent)
-    
-    // clears old layers and sets new ones
-    switch(selected) {
-        // remove all lts layers & set low-stress to visible
-        case 'low-stress':
-            const toggle = form.querySelector('input[name="lowstress-islands"]')
+// @TODO possibly delete
 
-            map.setFilter('existing-conditions', ['<', 'lts_score', 0])
+// const handleSelectContentUpdate = (select, map) => {
+//     const selected = select.options[select.selectedIndex].value
+//     const newContent = selectContentUpdates[selected]
+//     const oldContent = select.nextElementSibling
+//     const form = select.parentElement
+    
+//     oldContent.remove()
+//     select.insertAdjacentHTML('afterend', newContent)
+    
+//     // clears old layers and sets new ones
+//     switch(selected) {
+//         // remove all lts layers & set low-stress to visible
+//         case 'low-stress':
+//             const toggle = form.querySelector('input[name="lowstress-islands"]')
+
+//             map.setFilter('existing-conditions', ['<', 'lts_score', 0])
             
-            toggleLayers(toggle, map)
-            handleLegend('lts', false, 4)
+//             toggleLayers(toggle, map)
+//             handleLegend('lts', false, 4)
             
-            break
+//             break
         
-        // remove low-stress and set LTS to visislbe
-        default:
-            const resetLTSBtn = form.querySelector('#clear-lts-btn')
+//         // remove low-stress and set LTS to visislbe
+//         default:
+//             const resetLTSBtn = form.querySelector('#clear-lts-btn')
 
-            resetLTSBtn.onclick = e => resetLTSLayers(map, e)
+//             resetLTSBtn.onclick = e => resetLTSLayers(map, e)
 
-            map.setFilter('existing-conditions', null)
-            map.setFilter('lowstress-click', ['==', 'island_num', 0])
+//             map.setFilter('existing-conditions', null)
+//             map.setFilter('lowstress-click', ['==', 'island_num', 0])
 
-            map.setLayoutProperty('lowstress-islands', 'visibility', 'none')
+//             map.setLayoutProperty('lowstress-islands', 'visibility', 'none')
             
-            handleLegend('lowstress', false, 1)
-            handleLegend('lts', true, 4)
-    }
-}
+//             handleLegend('lowstress', false, 1)
+//             handleLegend('lts', true, 4)
+//     }
+// }
 
 const submitForm = (e, form, map) => {
     e.preventDefault()
@@ -144,7 +148,8 @@ const filterLayers = (form, toggle, map) => {
 
         map.setFilter(layer, baseFilter)
 
-        handleLegend(legend, toggle.checked, 1)
+        // @UPDATE comment out for now until legend overlay is added and hooked into
+        //handleLegend(legend, toggle.checked, 1)
 }
 
 export default handleForms

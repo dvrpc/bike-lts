@@ -48,8 +48,8 @@ map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
     for(const layer in layers) map.addLayer(layers[layer], firstSymbolId)
 
-    // @UPDATES form context is loss on tabs replace.
-        // either hook into existing form to preserve handler or re-assign
+    // @TODO form handlers are lost on tabs replace.
+        // either hook into existing form(s) to preserve handler or re-assign
         // handleForms when the tab switches
     forms.forEach(form => handleForms(form, map))
     // resetAnalysisBtn.onclick = () => resetAnalysisLayers(map)
