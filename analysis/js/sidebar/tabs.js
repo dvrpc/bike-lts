@@ -5,7 +5,6 @@ const handleTabs = tab => {
 
     const tabID = tab.id
     const togglesContainer = tab.parentElement.nextElementSibling
-
     const currentActive = tab.previousElementSibling || tab.nextElementSibling
 
     currentActive.classList.remove('sidebar-tab-active')
@@ -18,7 +17,8 @@ const handleTabs = tab => {
     while(togglesContainer.firstChild) togglesContainer.removeChild(togglesContainer.firstChild)
     togglesContainer.insertAdjacentHTML('afterbegin', tabsContent[tabID])
 
-    // use tabID to update map layers
+    // return tabID to update map layers
+    return tabID
 }
 
 export default handleTabs

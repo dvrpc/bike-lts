@@ -17,7 +17,11 @@ const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 
 // sidebar
 tabs.forEach(tab => {
-    tab.onclick = () => handleTabs(tab)
+    tab.onclick = () => {
+        const tabID = handleTabs(tab)
+        console.log(tabID)
+        // @TODO pass tabID into map update fncs
+    }
 })
 
 // map
