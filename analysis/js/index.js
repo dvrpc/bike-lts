@@ -3,7 +3,7 @@ import sources from './map/mapSources.js'
 import layers from './map/mapLayers.js'
 import mapUtils from './map/mapUtils.js'
 import handleForms from './sidebar/forms.js'
-import tabsContent from './sidebar/tabsConfigs.js'
+import handleTabs from './sidebar/tabs.js'
 import { makePopup, makePopupContent } from './map/popup.js'
 // import { resetLTSLayers, resetAnalysisLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
@@ -11,31 +11,13 @@ import { makePopup, makePopupContent } from './map/popup.js'
 const sidebar = document.getElementById('sidebar')
 const forms = sidebar.querySelectorAll('.sidebar-form')
 const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
-const togglesContainer = sidebar.querySelector('#toggles-container')
 // const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
 // const resetAnalysisBtn = sidebar.querySelector('#clear-analysis-btn')
 
 // sidebar
 tabs.forEach(tab => {
-    tab.onclick = e => {
-        if(tab.classList.contains('sidebar-tab-active')) return false
-        const tabID = tab.id
-
-        const currentActive = tab.previousElementSibling || tab.nextElementSibling
-
-        currentActive.classList.remove('sidebar-tab-active')
-        currentActive.classList.add('sidebar-tab-inactive')
-        
-        tab.classList.remove('sidebar-tab-inactive')
-        tab.classList.add('sidebar-tab-active')
-
-        // use tabID to update togglesContainer content
-        while(togglesContainer.firstChild) togglesContainer.removeChild(togglesContainer.firstChild)
-        togglesContainer.insertAdjacentHTML('afterbegin', tabsContent[tabID])
-
-        // use tabID to update map layers
-    }
+    tab.onclick = () => handleTabs(tab)
 })
 
 // map
