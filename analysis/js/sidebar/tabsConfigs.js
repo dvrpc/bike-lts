@@ -83,6 +83,7 @@ const analysisFormContent = `
         <button type="button" class="btn-submit btn-cancel" id="clear-analysis-btn" aria-label="reset analysis layers">clear results</button>
     </div>
 `
+
 const analysisReferenceFormContent = `
     <label class="sidebar-form-label side-form-label-lts">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
@@ -109,26 +110,16 @@ const demoAnalysis = map => {
     referenceForm.insertAdjacentHTML('afterbegin', analysisReferenceFormContent)
 
     // set attributes and assign event handlers
+    // @TODO add aria-labels to each form
     forms.forEach(form => {
         form.autocomplete = 'off'
         form.classList.add('sidebar-form', 'flex-column')
         form.dataset.formType = 'submit'
-        
+
         handleForms(form, map)
     })
 
     hr.classList.add('sidebar-hr')
-    
-    const bruh = `
-    <form autocomplete="off" class="sidebar-form flex-column" data-form-type="submit">
-        
-    </form>
-
-    <hr class="sidebar-hr" />
-
-    <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="change">
-    </form>
-    `
 
     frag.appendChild(analysisForm)
     frag.appendChild(hr)
