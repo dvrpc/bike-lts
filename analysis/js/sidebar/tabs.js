@@ -22,6 +22,7 @@ const handleTabs = (tab, map) => {
     const contentFnc = tabsContent[tabID]
     const contentFrag = contentFnc(map)
     console.log('frag from contentFnc ', contentFrag)
+    togglesContainer.appendChild(contentFrag)
 
     // return tabID to update map layers
     return tabID
