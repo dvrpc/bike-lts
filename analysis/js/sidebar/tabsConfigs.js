@@ -1,3 +1,5 @@
+import handleForms from "./forms.js"
+
 const demoLTS = `
     <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="change">
         <label class="sidebar-form-label">
@@ -47,7 +49,16 @@ const demoLTS = `
     </form>
 `
 
-const demoAnalysis = `
+const demoAnalysis = map => {
+    const frag = document.createDocumentFragment()
+    const analysisForm = document.createElement('form')
+    const referenceForm = document.createElement('form')
+
+    // [analysisForm, referenceForm].forEach(form => handleForms(form, map))
+    handleForms(analysisForm, map)
+    handleForms(referenceForm, map)
+    
+    const bruh = `
     <form autocomplete="off" class="sidebar-form flex-column" data-form-type="submit">
         <span class="sidebar-form-helper-text">
             The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
@@ -98,7 +109,10 @@ const demoAnalysis = `
             bicycle facilities
         </label>
     </form>
-`
+    `
+
+    return frag
+}
 
 const tabsContent = {
     'lts-tab': demoLTS,

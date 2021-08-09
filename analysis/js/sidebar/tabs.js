@@ -1,6 +1,6 @@
 import tabsContent from './tabsConfigs.js'
 
-const handleTabs = tab => {
+const handleTabs = (tab, map) => {
     if(tab.classList.contains('sidebar-tab-active')) return false
 
     const tabID = tab.id
@@ -15,7 +15,13 @@ const handleTabs = tab => {
 
     // use tabID to update togglesContainer content
     while(togglesContainer.firstChild) togglesContainer.removeChild(togglesContainer.firstChild)
-    togglesContainer.insertAdjacentHTML('afterbegin', tabsContent[tabID])
+    
+    // @TODO update to insertElement once tabsConfigs is refactored to return a documentFragment
+    // that has forms w/handlers built in
+    // togglesContainer.insertAdjacentHTML('afterbegin', tabsContent[tabID])
+    const contentFnc = tabsContent[tabID]
+    const contentFrag = contentFnc(map)
+    console.log('frag from contentFnc ', contentFrag)
 
     // return tabID to update map layers
     return tabID

@@ -15,15 +15,6 @@ const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 
 // const resetAnalysisBtn = sidebar.querySelector('#clear-analysis-btn')
 
-// sidebar
-tabs.forEach(tab => {
-    tab.onclick = () => {
-        const tabID = handleTabs(tab)
-        console.log(tabID)
-        // @TODO pass tabID into map update fncs
-    }
-})
-
 // map
 const map = makeMap()
 const ltsLayersPopup = makePopup()
@@ -48,6 +39,15 @@ map.on('load', () => {
 map.on('idle', () => {
     const spinner = map['_container'].querySelector('.lds-ring')
     spinner.classList.remove('lds-ring-active')
+})
+
+// sidebar
+tabs.forEach(tab => {
+    tab.onclick = () => {
+        const tabID = handleTabs(tab, map)
+        console.log(tabID)
+        // @TODO pass tabID into map update fncs
+    }
 })
 
 // feedback (upcoming)
