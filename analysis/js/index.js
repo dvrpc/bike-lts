@@ -1,6 +1,7 @@
 import makeMap from './map/map.js'
 import sources from './map/mapSources.js'
 import layers from './map/mapLayers.js'
+import secondaryMapLayers from './map/secondaryMapLayers.js'
 import mapUtils from './map/mapUtils.js'
 import handleForms from './sidebar/forms.js'
 import handleTabs from './sidebar/tabs.js'
@@ -14,8 +15,6 @@ const forms = sidebar.querySelectorAll('.sidebar-form')
 const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 // const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
-// const resetAnalysisBtn = sidebar.querySelector('#clear-analysis-btn')
-
 // map
 const map = makeMap()
 const ltsLayersPopup = makePopup()
@@ -27,7 +26,6 @@ map.on('load', () => {
     for(const layer in layers) map.addLayer(layers[layer], firstSymbolId)
 
     forms.forEach(form => handleForms(form, map))
-    // resetAnalysisBtn.onclick = () => resetAnalysisLayers(map)
 
     map.on('click', 'existing-conditions', e => makePopupContent(map, e, ltsLayersPopup))
     map.on('mousemove', 'existing-conditions', () => map.getCanvas().style.cursor = 'pointer')
@@ -68,9 +66,16 @@ tabs.forEach(tab => {
                 // priority for connectivity analysis
             // b/c of this, it could make sense to include the default layers for each tab view as part of the 
             // base map
+                // for now just priority
+            // import toggleLayers and its internal fncs
+                // 
         tabsLayersToSet[tabID].forEach(layer => {
-            // add layer if it doesn't already exist
-            map.setLayoutProperty(layer, 'visibility', 'visible')
+            const toggle = {
+                value: layer,
+                checked: 'visible'
+            }
+
+            toggleLayers(toggle, map)
         })
 
     }

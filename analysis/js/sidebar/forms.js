@@ -4,7 +4,7 @@ import { highlightLowStress, highlightLayers } from '../map/highlights.js'
 import { handleLegend } from './legends.js'
 import { ltsFilters } from './formsConfigs.js'
 // @UPDATE keep resetLTSLayers, it's unused because it only exists in contentUpdate as of now
-import { clearAnalysisLayers, resetLTSLayers } from './formsUtils.js'
+import { resetLTSLayers } from './formsUtils.js'
 
 const handleForms = (form, map) => {
     const formType = form.dataset.formType
@@ -33,9 +33,6 @@ const submitForm = (e, form, map) => {
 
     toggle.checked = true
     toggle.value = analysisLayer
-
-    // clear analysis layers 
-    clearAnalysisLayers(map)
 
     // determine action based on layer type
     if(type === 'toggle') toggleLayers(toggle, map)

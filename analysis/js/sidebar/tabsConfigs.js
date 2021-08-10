@@ -75,7 +75,6 @@ const analysisFormContent = `
 
     <div class="flex-row flex-between">
         <button type="submit" class="btn-submit btn-action" id="get-analysis-btn">get results</button>
-        <button type="button" class="btn-submit btn-cancel" id="clear-analysis-btn" aria-label="reset analysis layers">clear results</button>
     </div>
 `
 const analysisReferenceFormContent = `

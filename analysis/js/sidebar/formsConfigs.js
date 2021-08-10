@@ -15,6 +15,5 @@ const ltsFilters = {
     ]
 }
 
-const analysisLookup = ['priority', 'school', 'trails', 'transit', 'priority-ipd', 'school-ipd', 'trails-ipd', 'transit-ipd']
 
-export { ltsFilters, analysisLookup }
+export { ltsFilters }
