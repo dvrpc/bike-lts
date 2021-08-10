@@ -7,7 +7,7 @@ import handleForms from './sidebar/forms.js'
 import handleTabs from './sidebar/tabs.js'
 import { tabsLayersToSet } from './sidebar/tabsConfigs.js'
 import { makePopup, makePopupContent } from './map/popup.js'
-// import { resetLTSLayers, resetAnalysisLayers } from './sidebar/formsUtils.js'
+// import { resetLTSLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
 
 const sidebar = document.getElementById('sidebar')
@@ -18,6 +18,10 @@ const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 // map
 const map = makeMap()
 const ltsLayersPopup = makePopup()
+const tabLayers = {
+    'lts-tab': Object.keys(layers).map(layer => layers[layer].id),
+    'connectivity-tab': Object.keys(secondaryMapLayers).map(layer => secondaryMapLayers[layer].id)
+}
 
 map.on('load', () => {
     const firstSymbolId = mapUtils.getFirstSymbolId(map)
@@ -43,20 +47,10 @@ tabs.forEach(tab => {
         // update content
         const tabID = handleTabs(tab, map)
 
-        // clear map
-            // option 1: 
-                // use tab-clear keys in tabsContent obj to iterate over all possible layers
-                // in a given tab and setLayoutProperty to invisible
-
-            // option 2:
-                // iterate over secondaryMapLayers object and clear all layers in it
-                // doesn't account for LTS layer but that can be handled separately
-                // advantage here is no need to maintain 2 arrays for clear. Any additional secondary layers
-                // will automatically be cleared when they're added
-                
-                
-        // @TODO pass tabID into map update fncs
-        // map.setLayoutProperty(layer, 'visibility', 'none')
+        // only exception here is county and muni layers should never be toggled
+        tabLayers[tabID].forEach(layer => {
+            if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+        })
 
         // apply new map
         // @ISSUE: check toggleLayers fnc for full requirements
