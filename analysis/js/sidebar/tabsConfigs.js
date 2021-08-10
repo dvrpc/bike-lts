@@ -162,7 +162,12 @@ const analysisTabForms = map => {
 
 const tabsContent = {
     'lts-tab': ltsTabForms,
-    'connectivity-tab': analysisTabForms
+    'connectivity-tab': analysisTabForms,
 }
 
-export default tabsContent
+const tabsLayersToSet = {
+    'lts-tab': [],
+    'connectivity-tab': ['priority']
+}
+
+export { tabsContent, tabsLayersToSet }
