@@ -6,6 +6,7 @@ import mapUtils from './map/mapUtils.js'
 import handleForms from './sidebar/forms.js'
 import handleTabs from './sidebar/tabs.js'
 import { tabsLayersToSet } from './sidebar/tabsConfigs.js'
+import { geoCallback } from './sidebar/tabsUtils.js'
 import { makePopup, makePopupContent } from './map/popup.js'
 // import { resetLTSLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
@@ -18,9 +19,10 @@ const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 // map
 const map = makeMap()
 const ltsLayersPopup = makePopup()
+
 const tabLayers = {
-    'lts-tab': Object.keys(layers).map(layer => layers[layer].id),
-    'connectivity-tab': Object.keys(secondaryMapLayers).map(layer => secondaryMapLayers[layer].id)
+    'connectivity-tab': Object.keys(layers).map(layer => layers[layer].id).filter(layer => geoCallback(layer)),
+    'lts-tab': Object.keys(secondaryMapLayers).map(layer => secondaryMapLayers[layer].id)
 }
 
 map.on('load', () => {
@@ -46,8 +48,8 @@ tabs.forEach(tab => {
     tab.onclick = () => {
         // update content
         const tabID = handleTabs(tab, map)
-
-        // only exception here is county and muni layers should never be toggled
+        
+        console.log(tabLayers[tabID])
         tabLayers[tabID].forEach(layer => {
             if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
         })
@@ -69,7 +71,7 @@ tabs.forEach(tab => {
                 checked: 'visible'
             }
 
-            toggleLayers(toggle, map)
+            // toggleLayers(toggle, map)
         })
 
     }
