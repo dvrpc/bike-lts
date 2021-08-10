@@ -1,54 +1,49 @@
 import handleForms from "./forms.js"
 
-const demoLTS = `
-    <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="change">
-        <label class="sidebar-form-label">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
-            all LTS layers
+// LTS Form content
+const ltsFormContent = `
+    <label class="sidebar-form-label">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
+        all LTS layers
+    </label>
+
+    <div class="sidebar-nested-inputs-wrapper">
+        <label class="sidebar-form-label core-lts">
+            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+            LTS 1
+        </label>
+        
+        <label class="sidebar-form-label core-lts">
+            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+            LTS 2
         </label>
 
-        <div class="sidebar-nested-inputs-wrapper">
-            <label class="sidebar-form-label core-lts">
-                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-                LTS 1
-            </label>
-            
-            <label class="sidebar-form-label core-lts">
-                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-                LTS 2
-            </label>
-
-            <label class="sidebar-form-label core-lts">
-                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-                LTS 3
-            </label>
-            
-            <label class="sidebar-form-label lts-layer-4 core-lts">
-                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-                LTS 4
-            </label>
-        </div>
-    </form>
+        <label class="sidebar-form-label core-lts">
+            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+            LTS 3
+        </label>
+        
+        <label class="sidebar-form-label lts-layer-4 core-lts">
+            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+            LTS 4
+        </label>
+    </div>
+`
+const ltsReferenceFormContent = `
+    <label class="sidebar-form-label side-form-label-lts">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
+        low-stress areas
+    </label>
 
     <hr class="sidebar-hr" />
 
-    <form autocomplete="off" class="sidebar-form" aria-label="LTS reference form" data-form-type="change">
-        <div class="flex-column">
-            <label class="sidebar-form-label side-form-label-lts">
-                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
-                low-stress areas
-            </label>
-            
-            <hr class="sidebar-hr" />
-
-            <label class="sidebar-form-label">
-                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
-                bicycle facilities
-            </label>
-        </div>
-    </form>
+    <label class="sidebar-form-label">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
+        bicycle facilities
+    </label>
 `
 
+// Connectivity Analysis form content
 const analysisFormContent = `
     <span class="sidebar-form-helper-text">
         The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
@@ -83,7 +78,6 @@ const analysisFormContent = `
         <button type="button" class="btn-submit btn-cancel" id="clear-analysis-btn" aria-label="reset analysis layers">clear results</button>
     </div>
 `
-
 const analysisReferenceFormContent = `
     <label class="sidebar-form-label side-form-label-lts">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
@@ -98,7 +92,41 @@ const analysisReferenceFormContent = `
     </label>
 `
 
-const demoAnalysis = map => {
+// form fncs @TODO abstract into 1 generalized form creating fnc
+const ltsTabForms = map => {
+    const frag = document.createDocumentFragment()
+    const ltsForm = document.createElement('form')
+    const hr = document.createElement('hr')
+    const referenceForm = document.createElement('form')
+    const forms = [ltsForm, referenceForm]
+
+    // insert content
+    ltsForm.insertAdjacentHTML('afterbegin', ltsFormContent)
+    referenceForm.insertAdjacentHTML('afterbegin', ltsReferenceFormContent)
+
+    // set attributes and assign event handlers
+    forms.forEach(form => {
+        form.autocomplete = 'off'
+        form.classList.add('sidebar-form', 'flex-column')
+        form.dataset.formType = 'toggle'
+
+        handleForms(form, map)
+    })
+
+    // add custom attributes
+    ltsForm.ariaLabel = 'core LTS layers form'
+    referenceForm.ariaLabel = 'LTS layers reference form'
+
+    hr.classList.add('sidebar-hr')
+
+    frag.appendChild(ltsForm)
+    frag.appendChild(hr)
+    frag.appendChild(referenceForm)
+
+    return frag
+}
+
+const analysisTabForms = map => {
     const frag = document.createDocumentFragment()
     const analysisForm = document.createElement('form')
     const hr = document.createElement('hr')
@@ -110,7 +138,6 @@ const demoAnalysis = map => {
     referenceForm.insertAdjacentHTML('afterbegin', analysisReferenceFormContent)
 
     // set attributes and assign event handlers
-    // @TODO add aria-labels to each form
     forms.forEach(form => {
         form.autocomplete = 'off'
         form.classList.add('sidebar-form', 'flex-column')
@@ -121,6 +148,8 @@ const demoAnalysis = map => {
     // add custom attributes
     analysisForm.dataset.formType = 'submit'
     referenceForm.dataset.formType = 'toggle'
+    analysisForm.ariaLabel = 'Connectivity analysis form'
+    referenceForm.ariaLabel = 'Connectivity analysis reference form'
 
     hr.classList.add('sidebar-hr')
 
@@ -132,8 +161,8 @@ const demoAnalysis = map => {
 }
 
 const tabsContent = {
-    'lts-tab': demoLTS,
-    'connectivity-tab': demoAnalysis
+    'lts-tab': ltsTabForms,
+    'connectivity-tab': analysisTabForms
 }
 
 export default tabsContent
