@@ -114,10 +114,13 @@ const demoAnalysis = map => {
     forms.forEach(form => {
         form.autocomplete = 'off'
         form.classList.add('sidebar-form', 'flex-column')
-        form.dataset.formType = 'submit'
 
         handleForms(form, map)
     })
+
+    // add custom attributes
+    analysisForm.dataset.formType = 'submit'
+    referenceForm.dataset.formType = 'toggle'
 
     hr.classList.add('sidebar-hr')
 
