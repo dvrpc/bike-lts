@@ -176,7 +176,7 @@ const tabsContent = {
 }
 
 const tabsLayersToSet = {
-    'lts-tab': [],
+    'lts-tab': ['existing-conditions'],
     'connectivity-tab': ['priority']
 }
 
