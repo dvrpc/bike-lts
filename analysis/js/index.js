@@ -68,6 +68,9 @@ tabs.forEach(tab => {
                 map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
             }
             
+            // reset LTS map layer to default state (handle toggling, tabbinb and then tabbing back)
+            if(tabID === 'lts-tab') map.setFilter(layer, null)
+            
             map.setLayoutProperty(layer, 'visibility', 'visible')
 
         // @NOTE for connectivity
