@@ -80,6 +80,13 @@ const analysisFormContent = `
     </div>
 `
 const analysisReferenceFormContent = `
+    <label class="sidebar-form-label">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all">
+        full LTS network
+    </label>
+
+    <hr class="sidebar-hr" />
+
     <label class="sidebar-form-label side-form-label-lts">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
         low-stress areas
