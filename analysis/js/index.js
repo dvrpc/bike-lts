@@ -20,10 +20,13 @@ const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 const map = makeMap()
 const ltsLayersPopup = makePopup()
 
+// identify layers to turn off on tab switch
 const tabLayers = {
     'connectivity-tab': Object.keys(layers).map(layer => layers[layer].id).filter(layer => geoCallback(layer)),
     'lts-tab': Object.keys(secondaryMapLayers).map(layer => secondaryMapLayers[layer].id)
 }
+// handle extra reference layers for LTS..
+tabLayers['connectivity-tab'].push('lowstress-islands', 'facilities')
 
 map.on('load', () => {
     const firstSymbolId = mapUtils.getFirstSymbolId(map)
@@ -49,7 +52,6 @@ tabs.forEach(tab => {
         // update content
         const tabID = handleTabs(tab, map)
         
-        console.log(tabLayers[tabID])
         tabLayers[tabID].forEach(layer => {
             if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
         })
@@ -60,9 +62,9 @@ tabs.forEach(tab => {
             // don't need full jawn b/c default layers will always be the same
                 // LTS for LTS analysis
                 // priority for connectivity analysis
-            // b/c of this, it could make sense to include the default layers for each tab view as part of the 
-            // base map
+            // b/c of this, it could make sense to include the priority in default layers
                 // for now just priority
+                // problem is ^ will include priority in the tabLayers loop...
             // import toggleLayers and its internal fncs
                 // 
         tabsLayersToSet[tabID].forEach(layer => {
