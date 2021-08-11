@@ -72,8 +72,14 @@ tabs.forEach(tab => {
                 value: layer,
                 checked: 'visible'
             }
-
-            // toggleLayers(toggle, map)
+        
+        // @NOTE for connectivity
+            // everywhere - no reference points
+            // special destinations (school, trails, transit) automatically display the reference poitns for their respective reference layers
+            // reference layers
+                // add LTS (full network only, no need to add individual toggles)
+                
+        // toggleLayers(toggle, map)
         })
 
     }

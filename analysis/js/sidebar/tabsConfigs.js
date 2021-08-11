@@ -4,7 +4,7 @@ import handleForms from "./forms.js"
 const ltsFormContent = `
     <label class="sidebar-form-label">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
-        all LTS layers
+        full LTS network
     </label>
 
     <div class="sidebar-nested-inputs-wrapper">
@@ -44,6 +44,7 @@ const ltsReferenceFormContent = `
 `
 
 // Connectivity Analysis form content
+// @TODO pop the intro paragraphs into details with summary of "What is Low-stress Network Connectivity?" and "What is Equity-focused Network Connectivity?"
 const analysisFormContent = `
     <span class="sidebar-form-helper-text">
         The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.

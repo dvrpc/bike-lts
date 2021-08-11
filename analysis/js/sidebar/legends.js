@@ -6,6 +6,9 @@ import legends from './legendConfigs.js'
         // show all for each view
     // no longer need to track state for adding/removing legends (acca and checked state irrelevant)
     // legend param update to ID - which section is active and iterate over makeLegend to create appropriate legnds
+    // put legend container dropdown where the zoomTo jawn currently is
+        // move zoomTo next to the other map controls to create a grouped area of map panning/interactive controls
+    
 const handleLegend = (legend, checked, acca) => {
     // get legend container (obviously not this way)
     const container = document.getElementById('sidebar-legends-container')
