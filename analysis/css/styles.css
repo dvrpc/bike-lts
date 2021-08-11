@@ -35,6 +35,8 @@ a {
     --border-radius: 4px;
     --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
     --box-shadow-up: 1px -2px 3px rgba(0,0,0,0.3);
+
+    --active-tab-border: 2.5px outset var(--theme-black-dark);
 }
 .flex-row {
     display: flex;
@@ -190,23 +192,38 @@ nav {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
+.sidebar-content {
+    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+    padding-top: 0;
+    height: calc(94% - var(--wrapper-padding)*2);
+    overflow-y: auto;
+}
 .sidebar strong {
     color: var(--theme-red);
 }
 .sidebar-lead-p {
-    font-size: 1.2rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+    margin-left: calc(var(--wrapper-padding) * -1);
+    margin-bottom: var(--wrapper-padding-double);
+    box-shadow: var(--box-shadow);
+    background-color: var(--theme-black-dark);
 }
 .sidebar-hr {
     margin: var(--wrapper-padding-double) 0;
     color: var(--theme-grey);
 }
+.sidebar-container {
+    border: var(--active-tab-border);
+    border-top: none;
+    padding: var(--wrapper-padding);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    margin-bottom: var(--wrapper-padding-double);
+}
 .sidebar-hr-slim {
     margin: var(--wrapper-padding-half) 0;
-}
-.sidebar-content {
-    padding: var(--wrapper-padding-double);
-    height: calc(94% - var(--wrapper-padding-double)*2);
-    overflow-y: auto;
 }
 .sidebar-img {
     display: block;
@@ -221,8 +238,37 @@ nav {
     margin-bottom: var(--wrapper-padding);
     color: var(--theme-yellow);
 }
+.sidebar-tab {
+    width: 50%;
+    text-align: center;
+    border: none;
+    padding: var(--wrapper-padding-double) 0;
+    background-color: transparent;
+    font-size: 1rem;
+}
+.sidebar-tab-active {
+    color: var(--theme-yellow);
+    border-left: var(--active-tab-border);
+    border-right: var(--active-tab-border);
+    border-top: var(--active-tab-border);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    font-weight: 700;
+}
+.sidebar-tab-inactive {
+    color: var(--theme-white);
+    border-bottom: 2.5px inset var(--theme-black-dark);
+    cursor: pointer;
+}
+.sidebar-tab-inactive:hover {
+    text-decoration: underline;
+}
+
 .sidebar-details {
-    margin-top: 5px;
+    margin-bottom: var(--wrapper-padding);
+}
+.sidebar-details-no-margin {
+    margin: 0;
 }
 .sidebar-summary{
     cursor: pointer;
@@ -233,14 +279,13 @@ nav {
 .sidebar-details[open] summary {
     font-weight: 700;
 }
-.sidebar-form {
-    margin: var(--wrapper-padding) auto;
-}
 .sidebar-fieldset {
     border-radius: var(--border-radius);
     border: 0.15rem solid var(--theme-green);
     margin-bottom: var(--wrapper-padding-half);
 }
+/* @UPDATE end */
+
 .sidebar-select {
     margin-bottom: var(--wrapper-padding);
     background-color: var(--theme-white);
@@ -256,7 +301,8 @@ nav {
 }
 .btn-submit {
     margin-top: var(--wrapper-padding-half);
-    width: 49%;
+    /* same width as sidebar-select */
+    width: 35ch;
     cursor: pointer;
     border: 2px outset;
     color: var(--theme-white);
@@ -285,7 +331,8 @@ nav {
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
 .sidebar-form-label {
     position: relative;
-    margin-right: 10px;
+    display: block;
+    width: 100%;
 }
 .sidebar-form-label:last-child {
     margin-right: 0;
@@ -310,7 +357,7 @@ nav {
     background-color: var(--theme-black);
     content: '';
     position: absolute;
-    top: 0px;
+    top: 2.5px;
     left: 3px;
     transition: all 0.4s;
 }
@@ -327,12 +374,16 @@ nav {
 .sidebar-form-checkbox:hover {
     box-shadow: var(--box-shadow);
 }
+.sidebar-nested-inputs-wrapper {
+    margin-left: 40px;
+    margin-top: var(--wrapper-padding-half);
+}
+.core-lts {
+    margin-bottom: var(--wrapper-padding-half);
+}
 .sidebar-form-hr {
     margin: var(--wrapper-padding) 0;
     color: var(--theme-grey);
-}
-.sidebar-container {
-    margin-bottom: 8%;
 }
 .sidebar-legend-section {
     margin: var(--wrapper-padding) auto var(--wrapper-padding-double) auto;
@@ -453,7 +504,6 @@ footer {
     position: absolute;
     bottom: 0;
     box-shadow: var(--box-shadow-up);
-    color: white;
     background-color: var(--theme-black-dark);
 }
 .footer-nav {

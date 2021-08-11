@@ -1,5 +1,4 @@
-import { handleLegend, clearAnalysisLegends } from "./legends.js"
-import { analysisLookup } from "./formsConfigs.js"
+import { handleLegend } from "./legends.js"
 
 const resetLTSLayers = (map, e) => {
     const btn = e.target
@@ -17,15 +16,5 @@ const resetLTSLayers = (map, e) => {
     handleLegend('lts', false, 4)
 }
 
-const resetAnalysisLayers = map => {
-    clearAnalysisLayers(map)
-    clearAnalysisLegends()
-}
-
-const clearAnalysisLayers = map => {
-    analysisLookup.forEach(layer => {
-        if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
-    })
-}
-
-export { resetLTSLayers, resetAnalysisLayers, clearAnalysisLayers }
+// @TODO make default export
+export { resetLTSLayers }
