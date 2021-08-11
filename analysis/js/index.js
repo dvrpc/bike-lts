@@ -64,13 +64,17 @@ tabs.forEach(tab => {
                 // b/c of this, it could make sense to include the priority in default layers
                     // problem is ^ will include priority in the tabLayers loop...
         tabsLayersToSet[tabID].forEach(layer => {
-            const toggle = {
-                value: layer,
-                checked: 'visible'
-            }
+            // truncated version of toggleLayers b/c we know the default layer for connectivity analysis will always JUST be priority
+            if(!map.getLayer(layer)){
+                const newLayer = secondaryMapLayers[layer]
+                map.addLayer(newLayer)
 
-            console.log('toggle is ', toggle)
-            if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'visible')
+                map.on('click', layer, e => makePopupContent(map, e, ltsLayersPopup))
+                map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')
+                map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
+            }
+            
+            map.setLayoutProperty(layer, 'visibility', 'visible')
 
         
         // @NOTE for connectivity
@@ -78,8 +82,6 @@ tabs.forEach(tab => {
             // special destinations (school, trails, transit) automatically display the reference poitns for their respective reference layers
             // reference layers
                 // add LTS (full network only, no need to add individual toggles)
-                
-        // toggleLayers(toggle, map)
         })
 
     }
