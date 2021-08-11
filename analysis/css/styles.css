@@ -298,7 +298,8 @@ nav {
 }
 .btn-submit {
     margin-top: var(--wrapper-padding-half);
-    width: 49%;
+    /* same width as sidebar-select */
+    width: 35ch;
     cursor: pointer;
     border: 2px outset;
     color: var(--theme-white);
