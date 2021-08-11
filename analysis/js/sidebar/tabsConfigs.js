@@ -44,15 +44,16 @@ const ltsReferenceFormContent = `
 `
 
 // Connectivity Analysis form content
-// @TODO pop the intro paragraphs into details with summary of "What is Low-stress Network Connectivity?" and "What is Equity-focused Network Connectivity?"
 const analysisFormContent = `
-    <span class="sidebar-form-helper-text">
+    <details class="sidebar-details">
+        <summary class="sidebar-summary">What is Low-stress Network Connectivity?</summary>
         The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
-    </span>
+    </details>
 
-    <span class="sidebar-form-helper-text">
+    <details class="sidebar-details">
+        <summary class="sidebar-summary">What is Equity-focused Network Connectivity?</summary>
         In the <em>Equity-focused Network Connectivity </em> analysis, these shortest paths are weighted by the characteristics of the population living in the origin and destination census blocks, with emphasis on populations of interest under Title VI.
-    </span>
+    </details>
 
     <label for="analysis-type-select" class="sidebar-form-label sidebar-select-label">
         select type:

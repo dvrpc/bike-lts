@@ -220,6 +220,7 @@ nav {
     padding: var(--wrapper-padding);
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
+    margin-bottom: var(--wrapper-padding-double);
 }
 .sidebar-hr-slim {
     margin: var(--wrapper-padding-half) 0;
@@ -263,9 +264,8 @@ nav {
     text-decoration: underline;
 }
 
-/* @UPDATE might not be needed */
 .sidebar-details {
-    margin-top: var(--wrapper-padding-double);
+    margin-bottom: var(--wrapper-padding);
 }
 .sidebar-summary{
     cursor: pointer;
