@@ -26,7 +26,6 @@ const tabLayers = {
     'lts-tab': Object.keys(secondaryMapLayers).map(layer => secondaryMapLayers[layer].id)
 }
 // handle extra reference layers for LTS..
-// @HACK: could just hardcode the connectivity tab case. LTS, lowstress, facilities.
 tabLayers['connectivity-tab'].push('lowstress-islands', 'facilities')
 
 map.on('load', () => {
@@ -57,12 +56,7 @@ tabs.forEach(tab => {
             if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
         })
 
-        // apply new map
-        // @ISSUE: check toggleLayers fnc for full requirements
-            // if layer hasn't already been applied, it neither exists on the map nor has event handlers
-                // only applies to priority on the first pass
-                // b/c of this, it could make sense to include the priority in default layers
-                    // problem is ^ will include priority in the tabLayers loop...
+        // update map
         tabsLayersToSet[tabID].forEach(layer => {
             // truncated version of toggleLayers b/c we know the default layer for connectivity analysis will always JUST be priority
             if(!map.getLayer(layer)){
@@ -76,14 +70,12 @@ tabs.forEach(tab => {
             
             map.setLayoutProperty(layer, 'visibility', 'visible')
 
-        
         // @NOTE for connectivity
             // everywhere - no reference points
             // special destinations (school, trails, transit) automatically display the reference poitns for their respective reference layers
             // reference layers
                 // add LTS (full network only, no need to add individual toggles)
         })
-
     }
 })
 
