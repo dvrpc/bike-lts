@@ -267,6 +267,9 @@ nav {
 .sidebar-details {
     margin-bottom: var(--wrapper-padding);
 }
+.sidebar-details-no-margin {
+    margin: 0;
+}
 .sidebar-summary{
     cursor: pointer;
 }
