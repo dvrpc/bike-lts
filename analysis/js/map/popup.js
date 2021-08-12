@@ -21,7 +21,7 @@ const makeLTSPopupHTML = props => {
     return `
         <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
         <span class="popup-span">
-            <p>LTS score is calculated as a function of the following three values:</p>
+            <p>LTS score factors:</p>
             <ul class="list-unstyled">
                 <li class="popup-li"><strong>Bike Facilities:</strong> ${props.bikefacili}</li>
                 <li class="popup-li"><strong>Total Lanes:</strong> ${props.totnumlane}</li>
