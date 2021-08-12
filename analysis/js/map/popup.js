@@ -27,7 +27,6 @@ const makeLTSPopupHTML = props => {
                 <li class="popup-li"><strong>Total Lanes:</strong> ${props.totnumlane}</li>
                 <li class="popup-li"><strong>Speed:</strong> ${props.speed_lts} mph</li>
                 <hr class="popup-hr" />
-                <span>additional information:</span>
                 <li class="popup-li"><strong>Segment Length:</strong> ${props.length} miles</li>
                 <li class="popup-li"><strong>Slope:</strong> ${(props.slope_perc * 100).toPrecision(2)}%</li>
             </ul>
