@@ -29,31 +29,30 @@ const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
 
     const spinner = map['_container'].querySelector('.lds-ring')
-    const analysisType = form.querySelector('#analysis-type-select').value
+    const isIPD = form.querySelector('#analysis-type-select').value
     const analysisLayerSelect = form.querySelector('#analysis-results-select').value
 
-    // let analysisLayerValue = analysisLayerSelect.value
-    const analysisLayer = analysisType ? analysisLayerSelect + analysisType : analysisLayerSelect.replace('-ipd', '')
-    //const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
+    const analysisIgnoreLayer = isIPD ? analysisLayerSelect : analysisLayerSelect + '-ipd'
+    let destination;
 
     spinner.classList.add('lds-ring-active')
 
-    // toggle.checked = true
-    // toggle.value = analysisLayer
-
-    let destination;
-    console.log('layerValue ', analysisLayerSelect)
     for(destination in specialDestinationLayers) {
-        console.log('destination is ', destination)
+
         // turn on special + associated reference layers
         if(destination === analysisLayerSelect) {
             specialDestinationLayers[destination].forEach(layer => {
-                console.log('layer name for selected jawn ', layer)
-                const toggle = {
-                    value: layer,
-                    checked: true
+                if(layer !== analysisIgnoreLayer) {
+                    const toggle = {
+                        value: layer,
+                        checked: true
+                    }
+    
+                    toggleLayers(toggle, map)
+                } else {
+                    // hide other analysis layer
+                    if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
                 }
-                toggleLayers(toggle, map)
             })
 
         // hide all others
