@@ -2,7 +2,7 @@ import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { highlightLowStress, highlightLayers } from '../map/highlights.js'
 import { handleLegend } from './legends.js'
-import { ltsFilters } from './formsConfigs.js'
+import { ltsFilters, specialDestinationLayers } from './formsConfigs.js'
 // @UPDATE keep resetLTSLayers, it's unused because it only exists in contentUpdate as of now
 import { resetLTSLayers } from './formsUtils.js'
 
@@ -16,14 +16,6 @@ const handleForms = (form, map) => {
         default:
             form.onchange = e => toggleForm(e, form, map)
     }
-}
-
-// order matters - mapbox prioritizes layers by order & we want analysis on top
-const specialDestinationLayers = {
-    school: ['schools-combined', 'school', 'school-ipd'],
-    trails: ['trail-access', 'trails', 'trails-ipd'],
-    transit: ['trolley', 'passenger-rail', 'bus', 'transit', 'transit-ipd'],
-    priority: ['priority', 'priority-ipd']
 }
 
 const toggleSelectForm = (e, form, map) => {
@@ -40,9 +32,10 @@ const toggleSelectForm = (e, form, map) => {
 
     for(destination in specialDestinationLayers) {
 
-        // turn on special + associated reference layers
+        // toggle on special + associated reference layers
         if(destination === analysisLayerSelect) {
             specialDestinationLayers[destination].forEach(layer => {
+
                 if(layer !== analysisIgnoreLayer) {
                     const toggle = {
                         value: layer,
@@ -51,7 +44,6 @@ const toggleSelectForm = (e, form, map) => {
     
                     toggleLayers(toggle, map)
                 } else {
-                    // hide other analysis layer
                     if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
                 }
             })
