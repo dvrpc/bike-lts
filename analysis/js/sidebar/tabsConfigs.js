@@ -76,10 +76,6 @@ const analysisFormContent = `
         <option data-layer-type="toggle" data-legend-type="trails" value="trails">trails</option>
         <option data-layer-type="toggle" data-legend-type="transit" value="transit">transit</option>
     </select>
-
-    <div class="flex-row flex-between">
-        <button type="submit" class="btn-submit btn-action" id="get-analysis-btn">get results</button>
-    </div>
 `
 const analysisReferenceFormContent = `
     <label class="sidebar-form-label stacked-inputs">
