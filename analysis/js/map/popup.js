@@ -1,4 +1,4 @@
-const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'lowstress-islands', 'trolley', 'bus', 'schools-combined', 'transit', 'transit-ipd']
+const clickLayers = ['priority', 'priority-ipd', 'existing-conditions', 'passenger-rail', 'trolley', 'bus', 'schools-combined', 'transit', 'transit-ipd']
 
 const makePopup = () => new mapboxgl.Popup()
 
@@ -76,9 +76,6 @@ const makePassengerRailPopupHTML = props => {
     `
 }
 
-// low-stress *special case. Needs to generate popup AND update map styles w/selected island.
-const makeLowStressPopupHTML = props => `<h3 class="popup-header">Island Number: ${props.island_num}</h3>`
-
 const makeTrolleyPopupHTML = props => {
     return `
         <h3 class="popup-header">Route ${props.route}</h3>
@@ -116,7 +113,6 @@ const getPopupHTMLFnc = {
     'priority': makePriorityPopupHTML,
     'priority-ipd': makePriorityPopupHTML,
     'passenger-rail': makePassengerRailPopupHTML,
-    'lowstress-islands': makeLowStressPopupHTML,
     'trolley': makeTrolleyPopupHTML,
     'bus': makeBusPopupHTML,
     'schools-combined': makeSchoolsCombinedHTML,
