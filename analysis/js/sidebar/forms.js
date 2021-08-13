@@ -18,10 +18,11 @@ const handleForms = (form, map) => {
     }
 }
 
+// order matters - mapbox prioritizes layers by order & we want analysis on top
 const specialDestinationLayers = {
-    school: ['school', 'school-ipd', 'schools-combined'],
-    trails: ['trails', 'trails-ipd', 'trail-access'],
-    transit: ['transit', 'transit-ipd', 'trolley', 'passenger-rail', 'bus'],
+    school: ['schools-combined', 'school', 'school-ipd'],
+    trails: ['trail-access', 'trails', 'trails-ipd'],
+    transit: ['trolley', 'passenger-rail', 'bus', 'transit', 'transit-ipd'],
     priority: ['priority', 'priority-ipd']
 }
 

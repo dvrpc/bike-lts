@@ -212,8 +212,9 @@ const layers = {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
                 1, 0.5,
-                8, 0.75,
-                11, 4
+                8, 0.7,
+                11, 3,
+                19, 4
             ],
             'circle-color': ['match',
                 ['get', 'operator'],
@@ -236,8 +237,9 @@ const layers = {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
                 1, 0.5,
-                8, 0.75,
-                11, 4
+                8, 0.7,
+                11, 3,
+                19, 4
             ],
             'circle-color': '#498434',
             'circle-stroke-color': '#fff',
@@ -253,8 +255,9 @@ const layers = {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
                 1, 0.5,
-                8, 0.75,
-                11, 4
+                8, 0.7,
+                11, 3,
+                19, 4
             ],
             'circle-color': ['match',
                 ['get', 'direction'],
@@ -275,8 +278,9 @@ const layers = {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
                 1, 0.5,
-                8, 0.75,
-                11, 4
+                8, 0.7,
+                11, 3,
+                19, 4
             ],
             'circle-color': ['match',
                 ['get', 'layer'],
@@ -297,8 +301,9 @@ const layers = {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
                 1, 0.5,
-                8, 0.75,
-                11, 4
+                8, 0.7,
+                11, 3,
+                19, 4
             ],
             'circle-color': ['match',
                 ['get', 'layer'],
