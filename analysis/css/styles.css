@@ -378,7 +378,7 @@ nav {
     margin-left: 40px;
     margin-top: var(--wrapper-padding-half);
 }
-.core-lts {
+.stacked-inputs {
     margin-bottom: var(--wrapper-padding-half);
 }
 .sidebar-form-hr {
@@ -486,9 +486,9 @@ nav {
 }
 .popup-header {
 	text-align: center;
-	background: var(--theme-green);
+	background: var(--theme-white);
 	padding: var(--wrapper-padding);
-	color: var(--theme-white);
+	color: var(--theme-black-dark);
 	border-top-right-radius: var(--border-radius);
 	border-top-left-radius: var(--border-radius);
 }

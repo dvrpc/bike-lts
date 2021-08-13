@@ -6,7 +6,6 @@ import mapUtils from './map/mapUtils.js'
 import handleForms from './sidebar/forms.js'
 import handleTabs from './sidebar/tabs.js'
 import { tabsLayersToSet } from './sidebar/tabsConfigs.js'
-import { geoCallback } from './sidebar/tabsUtils.js'
 import { makePopup, makePopupContent } from './map/popup.js'
 // import { resetLTSLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
@@ -21,12 +20,11 @@ const map = makeMap()
 const ltsLayersPopup = makePopup()
 
 // identify layers to turn off on tab switch
+// hardcode connectivity b/c looping thru default layers just to extract existing-conditions and then appending lowstress and facilities doesn't make sense
 const tabLayers = {
-    'connectivity-tab': Object.keys(layers).map(layer => layers[layer].id).filter(layer => geoCallback(layer)),
+    'connectivity-tab': ['lowstress-islands', 'facilities', 'existing-conditions'],
     'lts-tab': Object.keys(secondaryMapLayers).map(layer => secondaryMapLayers[layer].id)
 }
-// handle extra reference layers for LTS..
-tabLayers['connectivity-tab'].push('lowstress-islands', 'facilities')
 
 map.on('load', () => {
     const firstSymbolId = mapUtils.getFirstSymbolId(map)
@@ -68,9 +66,6 @@ tabs.forEach(tab => {
                 map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
             }
             
-            // reset LTS map layer to default state (handle toggling, tabbinb and then tabbing back)
-            if(tabID === 'lts-tab') map.setFilter(layer, null)
-            
             map.setLayoutProperty(layer, 'visibility', 'visible')
 
         // @NOTE for connectivity
@@ -79,6 +74,10 @@ tabs.forEach(tab => {
             // reference layers
                 // add LTS (full network only, no need to add individual toggles)
         })
+
+        // reset special filter cases (LTS & low-stress-click)
+        if(tabID === 'lts-tab') map.setFilter('existing-conditions', null)
+        map.setFilter('lowstress-click', ['==','island_num', 0])
     }
 })
 
