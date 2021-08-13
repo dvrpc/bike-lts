@@ -46,11 +46,13 @@ const makePriorityPopupHTML = (props, layer) => {
         score = props.main_priority_ipd
         isIPD = 'Equity-focused '
     }
+
+    const moreThan = 100 - score
     
     return `
         <h3 class="popup-header">${isIPD}Priority Score: ${score}%</h3>
         <span class="popup-span">
-            <p>Priority units are percentage bins, the top 10% are more important than the top 50%.</p>
+            <p>This segment would enable more low-stress connections than <strong>${moreThan}%</strong> of the other LTS 3 segments in the County.</p>
         </span>
     `
 }
