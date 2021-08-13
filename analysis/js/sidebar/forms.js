@@ -18,25 +18,51 @@ const handleForms = (form, map) => {
     }
 }
 
+const specialDestinationLayers = {
+    school: ['school', 'school-ipd', 'schools-combined'],
+    trails: ['trails', 'trails-ipd', 'trail-access'],
+    transit: ['transit', 'transit-ipd', 'trolley', 'passenger-rail', 'bus'],
+    priority: ['priority', 'priority-ipd']
+}
+
 const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
 
     const spinner = map['_container'].querySelector('.lds-ring')
     const analysisType = form.querySelector('#analysis-type-select').value
-    const analysisLayerSelect = form.querySelector('#analysis-results-select')
-    let analysisLayerValue = analysisLayerSelect.value
-    const analysisLayer = analysisType ? analysisLayerValue + analysisType : analysisLayerValue.replace('-ipd', '')
-    const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
-    const type = toggle.dataset.layerType
+    const analysisLayerSelect = form.querySelector('#analysis-results-select').value
+
+    // let analysisLayerValue = analysisLayerSelect.value
+    const analysisLayer = analysisType ? analysisLayerSelect + analysisType : analysisLayerSelect.replace('-ipd', '')
+    //const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
 
     spinner.classList.add('lds-ring-active')
 
-    toggle.checked = true
-    toggle.value = analysisLayer
+    // toggle.checked = true
+    // toggle.value = analysisLayer
 
-    // determine action based on layer type
-    if(type === 'toggle') toggleLayers(toggle, map)
-    else filterLayers(form, toggle, map)
+    let destination;
+    console.log('layerValue ', analysisLayerSelect)
+    for(destination in specialDestinationLayers) {
+        console.log('destination is ', destination)
+        // turn on special + associated reference layers
+        if(destination === analysisLayerSelect) {
+            specialDestinationLayers[destination].forEach(layer => {
+                console.log('layer name for selected jawn ', layer)
+                const toggle = {
+                    value: layer,
+                    checked: true
+                }
+                toggleLayers(toggle, map)
+            })
+
+        // hide all others
+        } else {
+            specialDestinationLayers[destination].forEach(layer => {
+                if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+            })
+        }
+    }
 }
 
 const toggleForm = (e, form, map) => {
