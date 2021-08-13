@@ -10,15 +10,15 @@ const handleForms = (form, map) => {
     const formType = form.dataset.formType
 
     switch(formType) {
-        case 'submit':
-            form.onsubmit = e => submitForm(e, form, map)
+        case 'toggle-select':
+            form.onchange = e => toggleSelectForm(e, form, map)
             break
         default:
             form.onchange = e => toggleForm(e, form, map)
     }
 }
 
-const submitForm = (e, form, map) => {
+const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
 
     const spinner = map['_container'].querySelector('.lds-ring')
@@ -34,6 +34,8 @@ const submitForm = (e, form, map) => {
     toggle.checked = true
     toggle.value = analysisLayer
 
+    console.log('toggle is ', toggle)
+
     // determine action based on layer type
     if(type === 'toggle') toggleLayers(toggle, map)
     else filterLayers(form, toggle, map)
@@ -45,7 +47,9 @@ const toggleForm = (e, form, map) => {
     const layerType = toggle.dataset.layerType
 
     spinner.classList.add('lds-ring-active')
-
+    
+    console.log('toggle at toggleForm ', toggle)
+    
     // determine action based on layer type
     if(layerType === 'toggle') toggleLayers(toggle, map)
     else filterLayers(form, toggle, map)

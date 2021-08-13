@@ -150,7 +150,7 @@ const analysisTabForms = map => {
     })
 
     // add custom attributes
-    analysisForm.dataset.formType = 'submit'
+    analysisForm.dataset.formType = 'toggle-select'
     referenceForm.dataset.formType = 'toggle'
     analysisForm.ariaLabel = 'Connectivity analysis form'
     referenceForm.ariaLabel = 'Connectivity analysis reference form'
