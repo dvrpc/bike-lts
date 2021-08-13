@@ -8,22 +8,22 @@ const ltsFormContent = `
     </label>
 
     <div class="sidebar-nested-inputs-wrapper">
-        <label class="sidebar-form-label core-lts">
+        <label class="sidebar-form-label stacked-inputs">
             <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
             LTS 1
         </label>
         
-        <label class="sidebar-form-label core-lts">
+        <label class="sidebar-form-label stacked-inputs">
             <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
             LTS 2
         </label>
 
-        <label class="sidebar-form-label core-lts">
+        <label class="sidebar-form-label stacked-inputs">
             <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
             LTS 3
         </label>
         
-        <label class="sidebar-form-label lts-layer-4 core-lts">
+        <label class="sidebar-form-label lts-layer-4">
             <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
             LTS 4
         </label>
@@ -82,12 +82,10 @@ const analysisFormContent = `
     </div>
 `
 const analysisReferenceFormContent = `
-    <label class="sidebar-form-label">
+    <label class="sidebar-form-label stacked-inputs">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all">
         full LTS network
     </label>
-
-    <hr class="sidebar-hr" />
 
     <label class="sidebar-form-label side-form-label-lts">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
