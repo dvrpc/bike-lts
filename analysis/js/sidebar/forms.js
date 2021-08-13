@@ -68,9 +68,16 @@ const toggleLayers = (toggle, map) => {
 
             map.on('click', layer, e => {
                 makePopupContent(map, e, layerPopup)
-                if(highlightLayers.includes(layer)) highlightLowStress(map, e)
             })
             
+            map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')
+            map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
+        }
+        
+        // handle layers that have non-popup click events (highlights)
+        if(highlightLayers.includes(layer)) {
+            map.on('click', layer, e => highlightLowStress(map, e))
+
             map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')
             map.on('mouseleave', layer, () => map.getCanvas().style.cursor = '')
         }
