@@ -211,8 +211,8 @@ const layers = {
         paint: {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
-                1, 1,
-                7, 3,
+                1, 0.5,
+                8, 0.75,
                 11, 4
             ],
             'circle-color': ['match',
@@ -235,8 +235,8 @@ const layers = {
         paint: {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
-                1, 1,
-                7, 3,
+                1, 0.5,
+                8, 0.75,
                 11, 4
             ],
             'circle-color': '#498434',
@@ -252,8 +252,8 @@ const layers = {
         paint: {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
-                1, 1,
-                7, 3,
+                1, 0.5,
+                8, 0.75,
                 11, 4
             ],
             'circle-color': ['match',
@@ -274,8 +274,8 @@ const layers = {
         paint: {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
-                1, 1,
-                7, 3,
+                1, 0.5,
+                8, 0.75,
                 11, 4
             ],
             'circle-color': ['match',
@@ -296,8 +296,8 @@ const layers = {
         paint: {
             'circle-radius': ['interpolate',
                 ['linear'], ['zoom'],
-                1, 1,
-                7, 3,
+                1, 0.5,
+                8, 0.75,
                 11, 4
             ],
             'circle-color': ['match',
