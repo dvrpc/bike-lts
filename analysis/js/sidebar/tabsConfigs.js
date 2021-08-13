@@ -76,10 +76,6 @@ const analysisFormContent = `
         <option data-layer-type="toggle" data-legend-type="trails" value="trails">trails</option>
         <option data-layer-type="toggle" data-legend-type="transit" value="transit">transit</option>
     </select>
-
-    <div class="flex-row flex-between">
-        <button type="submit" class="btn-submit btn-action" id="get-analysis-btn">get results</button>
-    </div>
 `
 const analysisReferenceFormContent = `
     <label class="sidebar-form-label stacked-inputs">
@@ -145,6 +141,10 @@ const analysisTabForms = map => {
     analysisForm.insertAdjacentHTML('afterbegin', analysisFormContent)
     referenceForm.insertAdjacentHTML('afterbegin', analysisReferenceFormContent)
 
+    // add custom formType before handleForms gets assigned
+    analysisForm.dataset.formType = 'toggle-select'
+    referenceForm.dataset.formType = 'toggle'
+
     // set attributes and assign event handlers
     forms.forEach(form => {
         form.autocomplete = 'off'
@@ -153,9 +153,7 @@ const analysisTabForms = map => {
         handleForms(form, map)
     })
 
-    // add custom attributes
-    analysisForm.dataset.formType = 'submit'
-    referenceForm.dataset.formType = 'toggle'
+    // add labels
     analysisForm.ariaLabel = 'Connectivity analysis form'
     referenceForm.ariaLabel = 'Connectivity analysis reference form'
 
