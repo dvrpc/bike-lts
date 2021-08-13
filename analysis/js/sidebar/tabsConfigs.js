@@ -141,6 +141,10 @@ const analysisTabForms = map => {
     analysisForm.insertAdjacentHTML('afterbegin', analysisFormContent)
     referenceForm.insertAdjacentHTML('afterbegin', analysisReferenceFormContent)
 
+    // add custom formType before handleForms gets assigned
+    analysisForm.dataset.formType = 'toggle-select'
+    referenceForm.dataset.formType = 'toggle'
+
     // set attributes and assign event handlers
     forms.forEach(form => {
         form.autocomplete = 'off'
@@ -149,9 +153,7 @@ const analysisTabForms = map => {
         handleForms(form, map)
     })
 
-    // add custom attributes
-    analysisForm.dataset.formType = 'toggle-select'
-    referenceForm.dataset.formType = 'toggle'
+    // add labels
     analysisForm.ariaLabel = 'Connectivity analysis form'
     referenceForm.ariaLabel = 'Connectivity analysis reference form'
 

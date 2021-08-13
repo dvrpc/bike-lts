@@ -34,8 +34,6 @@ const toggleSelectForm = (e, form, map) => {
     toggle.checked = true
     toggle.value = analysisLayer
 
-    console.log('toggle is ', toggle)
-
     // determine action based on layer type
     if(type === 'toggle') toggleLayers(toggle, map)
     else filterLayers(form, toggle, map)
@@ -47,9 +45,7 @@ const toggleForm = (e, form, map) => {
     const layerType = toggle.dataset.layerType
 
     spinner.classList.add('lds-ring-active')
-    
-    console.log('toggle at toggleForm ', toggle)
-    
+        
     // determine action based on layer type
     if(layerType === 'toggle') toggleLayers(toggle, map)
     else filterLayers(form, toggle, map)
@@ -80,7 +76,6 @@ const toggleLayers = (toggle, map) => {
         
         // handle layers that have non-popup click events (highlights)
         if(highlightLayers.includes(layer)) {
-            console.log('wut ', layer)
             map.on('click', layer, e => highlightLowStress(map, e))
 
             map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')
