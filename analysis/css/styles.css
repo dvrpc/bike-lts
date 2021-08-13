@@ -486,9 +486,9 @@ nav {
 }
 .popup-header {
 	text-align: center;
-	background: var(--theme-green);
+	background: var(--theme-white);
 	padding: var(--wrapper-padding);
-	color: var(--theme-white);
+	color: var(--theme-black-dark);
 	border-top-right-radius: var(--border-radius);
 	border-top-left-radius: var(--border-radius);
 }
