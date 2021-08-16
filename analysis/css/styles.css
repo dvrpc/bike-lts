@@ -421,11 +421,12 @@ nav {
 	box-shadow: var(--box-shadow);
 	font-size: 0.9rem;
 }
+/* save for legend positioning */
+/* left: calc(30vw + 10px); */
+
 .mapboxgl-ctrl-geocoder {
-    left: calc(30vw + 10px);
-    background-color: var(--theme-white);
+    left: calc(80vw + 10px);
     color: var(--theme-black);
-    border-radius: var(--border-radius);
 }
 .popup-ul {
     padding: var(--wrapper-padding);
