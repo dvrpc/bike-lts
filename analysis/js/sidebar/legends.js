@@ -67,4 +67,9 @@ const makeLegend = (type, acca) => {
     `
 }
 
-export { handleLegend }
+const toggleLegend = e => {
+    const content = e.target.nextElementSibling
+    content.classList.toggle('legend-content-hide')
+}
+
+export { handleLegend, toggleLegend }

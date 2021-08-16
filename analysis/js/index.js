@@ -7,12 +7,14 @@ import handleForms from './sidebar/forms.js'
 import handleTabs from './sidebar/tabs.js'
 import { tabsLayersToSet } from './sidebar/tabsConfigs.js'
 import { makePopup, makePopupContent } from './map/popup.js'
+import { toggleLegend } from './sidebar/legends.js'
 // import { resetLTSLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
 
 const sidebar = document.getElementById('sidebar')
 const forms = sidebar.querySelectorAll('.sidebar-form')
 const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
+const legendBtn = document.getElementById('legendBtn')
 // const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
 // map
@@ -44,6 +46,8 @@ map.on('idle', () => {
     spinner.classList.remove('lds-ring-active')
 })
 
+legendBtn.onclick = e => toggleLegend(e)
+
 // sidebar
 tabs.forEach(tab => {
     tab.onclick = () => {
@@ -67,12 +71,6 @@ tabs.forEach(tab => {
             }
             
             map.setLayoutProperty(layer, 'visibility', 'visible')
-
-        // @NOTE for connectivity
-            // everywhere - no reference points
-            // special destinations (school, trails, transit) automatically display the reference poitns for their respective reference layers
-            // reference layers
-                // add LTS (full network only, no need to add individual toggles)
         })
 
         // reset special filter cases (LTS & low-stress-click)

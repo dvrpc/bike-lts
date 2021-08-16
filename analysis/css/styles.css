@@ -414,7 +414,7 @@ nav {
     margin-top: 10px;
 }
 .legend-content-hide {
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 .legend-section {
     color: var(--theme-black-dark);
@@ -426,7 +426,7 @@ nav {
     margin-bottom: var(--wrapper-padding);
 }
 .legend-icon-line {
-    height: 20px;
+    height: 25px;
     width: 5px;
     transform: rotate(45deg);
 }
