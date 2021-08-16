@@ -421,9 +421,12 @@ nav {
 	box-shadow: var(--box-shadow);
 	font-size: 0.9rem;
 }
-/* save for legend positioning */
-/* left: calc(30vw + 10px); */
-
+.dropdown-legend {
+    position: absolute;
+    z-index: 2;
+    left: calc(30vw + 20px);
+    margin-top: 10px;
+}
 .mapboxgl-ctrl-geocoder {
     color: var(--theme-black);
 }
