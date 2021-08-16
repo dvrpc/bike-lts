@@ -427,6 +427,20 @@ nav {
     left: calc(30vw + 20px);
     margin-top: 10px;
 }
+.dropdown-toggle {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 6px 25px;
+    line-height: 1.5;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    will-change: box-shadow,transform;
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: var(--box-shadow);
+}
 .mapboxgl-ctrl-geocoder {
     color: var(--theme-black);
 }
