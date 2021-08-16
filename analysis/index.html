@@ -49,38 +49,6 @@
             <article id="sidebar" class="sidebar">
                 <div id="sidebar-content" class="sidebar-content">
                     <p class="sidebar-lead-p">Explore and analyze LTS and bicycle network connectivity priorities by toggling the layers below. Learn more about the analysis  and how these layers were created <a href="/review/bike-lts/" target="_blank" rel="noreferrer noopener">here</a>.</p>
-                    
-                    <!-- <hr class="sidebar-hr"/> -->
-
-                    <!-- <section class="sidebar-container" id="sidebar-legends-container">
-                        <h2 class="sidebar-h2">legend(s)</h2>
-
-                        <article class="sidebar-legend-section" data-filter-type="lts" data-legend-reps="4">
-                            <h3 class="sidebar-legend-subheader">Levels of Traffic Stress</h3>
-
-                            <div class="sidebar-legend-content-container flex-row">
-                                <div class="sidebar-legend-content flex-column flex-align-center">
-                                    <span class="legend-icon-line lts-legend-1"></span>
-                                    <span class="legend-text">LTS 1</span>
-                                </div>
-
-                                <div class="sidebar-legend-content flex-column flex-align-center">
-                                    <span class="legend-icon-line lts-legend-2"></span>
-                                    <span class="legend-text">LTS 2</span>
-                                </div>
-
-                                <div class="sidebar-legend-content flex-column flex-align-center">                                    
-                                    <span class="legend-icon-line lts-legend-3"></span>
-                                    <span class="legend-text">LTS 3</span>
-                                </div>
-
-                                <div class="sidebar-legend-content flex-column flex-align-center">
-                                    <span class="legend-icon-line lts-legend-4"></span>
-                                    <span class="legend-text">LTS 4</span>
-                                </div>
-                            </div>
-                        </article>
-                    </section> -->
 
                     <div class="flex-row flex-between" id="sidebar-tabs">
                         <button type="button" class="sidebar-tab sidebar-tab-active" id="lts-tab">
@@ -170,7 +138,34 @@
             <div id="map">
                 <div class="dropdown-legend">
                     <button class="dropdown-toggle" type="button" id="legendMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Legend</button>
-                    <div class="dropdown-menu dropdown-menu-hide" id="legend"></div>
+
+                    <div class="legend-content legend-content-hide" id="legend-content">
+                        <article class="legend-section" data-filter-type="lts" data-legend-reps="4">
+                            <h3 class="legend-subheader">Levels of Traffic Stress</h3>
+
+                            <div class="legend-content-container flex-row flex-around">
+                                <div class="flex-column flex-align-center">
+                                    <span class="legend-icon-line lts-legend-1"></span>
+                                    <span class="legend-text">LTS 1</span>
+                                </div>
+
+                                <div class="flex-column flex-align-center">
+                                    <span class="legend-icon-line lts-legend-2"></span>
+                                    <span class="legend-text">LTS 2</span>
+                                </div>
+
+                                <div class="flex-column flex-align-center">                                    
+                                    <span class="legend-icon-line lts-legend-3"></span>
+                                    <span class="legend-text">LTS 3</span>
+                                </div>
+
+                                <div class="flex-column flex-align-center">
+                                    <span class="legend-icon-line lts-legend-4"></span>
+                                    <span class="legend-text">LTS 4</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
 
                 <div class="lds-ring lds-ring-active"><div></div><div></div><div></div><div></div></div>
