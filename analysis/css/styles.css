@@ -425,7 +425,6 @@ nav {
 /* left: calc(30vw + 10px); */
 
 .mapboxgl-ctrl-geocoder {
-    left: calc(80vw + 10px);
     color: var(--theme-black);
 }
 .popup-ul {
