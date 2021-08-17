@@ -18,6 +18,10 @@ const handleForms = (form, map) => {
     }
 }
 
+// @UPDATE this function doesn't work with the legend fncs
+    // toggles work fine, this loses dataset context among other things (acca, which doesn't matter as much)
+// @UPDATE 2: selects needs to remove the previous legend as well as adding a new one
+    // toggles can append no problem
 const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
 
@@ -39,7 +43,10 @@ const toggleSelectForm = (e, form, map) => {
                 if(layer !== analysisIgnoreLayer) {
                     const toggle = {
                         value: layer,
-                        checked: true
+                        checked: true,
+                        dataset: {
+                            legendType: layer
+                        }
                     }
     
                     toggleLayers(toggle, map)
@@ -73,8 +80,8 @@ const toggleLayers = (toggle, map) => {
     const layer = toggle.value
     const visibility = toggle.checked ? 'visible' : 'none'
 
-    // @UPDATE getting legend no longer needed for new legend fnc
-    // const legend = toggle.dataset.legendType
+    // @UPDATE new select fnc drops the toggle entirely, 
+    const legend = toggle.dataset.legendType
     const newLayer = secondaryMapLayers[layer]
     
     if(!map.getLayer(layer)) {
@@ -105,7 +112,7 @@ const toggleLayers = (toggle, map) => {
     map.setLayoutProperty(layer, 'visibility', visibility)
 
     // @UPDATE comment out for now until legend overlay is added and hooked into
-    // handleLegend(legend, toggle.checked, 1)
+    handleLegend(legend, toggle.checked, 1)
 }
 
 const filterLayers = (form, toggle, map) => { 

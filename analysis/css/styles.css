@@ -436,6 +436,8 @@ nav {
     border-radius: 50%;
     border: 1px solid white;
 }
+
+/* @UPDATE: consider filter: drop-shadow(var(--box-shadow)) for contrast */
 .legend-icon-circle,
 .legend-icon-line {
     display: inline-block;

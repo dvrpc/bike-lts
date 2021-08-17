@@ -49,6 +49,7 @@ map.on('idle', () => {
 legendBtn.onclick = e => toggleLegend(e)
 
 // sidebar
+// @UPDATE replace legends on tab switch (LTS to Priority connections)
 tabs.forEach(tab => {
     tab.onclick = () => {
         // update content
