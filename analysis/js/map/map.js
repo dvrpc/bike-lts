@@ -66,7 +66,7 @@ const makeControls = map => {
     })
 
     // plug into mapbox fncs
-    map.addControl(geocoder, 'top-left')
+    map.addControl(geocoder, 'top-right')
     navigationControl._extent = extentControl
     navigationControl._container.appendChild(extentControl)
 

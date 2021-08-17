@@ -6,13 +6,13 @@ const legendConfigs = {
         iconType: 'line',
         text: ['LTS 1', 'LTS 2', 'LTS 3', 'LTS 4']
     },
-    priorities: {
+    priority: {
         title: 'Regional Connectivity Priorities',
         icons: ['#993404', '#d95f0e', '#fe9929', '#fed98e', '#ffffd4'],
         iconType: 'line',
         text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
     },
-    schools: {
+    school: {
         title: 'Priority Connections to Schools',
         icons: ['#984ea3'],
         iconType: 'line',
@@ -36,13 +36,13 @@ const legendConfigs = {
         iconType: 'line',
         text: ['Bike Lane','Bike Route','Buffered Bike Lane','Off-road Trail/Path','Protected Bike Lane','Sharrows']
     },
-    access: {
+    ['trail-access']: {
         title: 'Trail Access Locations',
         icons: ['#498434'],
         iconType: 'circle',
         text: ['Trailheads']
     },
-    rail: {
+    ['passenger-rail']: {
         title: 'Passenger Rail Stations',
         icons: ['#004d6e','#f18541','#ed164b','#487997'],
         iconType: 'circle',

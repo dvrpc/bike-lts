@@ -71,8 +71,8 @@ const analysisFormContent = `
     </label>
 
     <select class="sidebar-select" id="analysis-results-select">
-        <option data-layer-type="toggle" data-legend-type="priorities" value="priority">everywhere</option>
-        <option data-layer-type="toggle" data-legend-type="schools" value="school">schools</option>
+        <option data-layer-type="toggle" data-legend-type="priority" value="priority">everywhere</option>
+        <option data-layer-type="toggle" data-legend-type="school" value="school">schools</option>
         <option data-layer-type="toggle" data-legend-type="trails" value="trails">trails</option>
         <option data-layer-type="toggle" data-legend-type="transit" value="transit">transit</option>
     </select>

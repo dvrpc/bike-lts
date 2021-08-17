@@ -1,7 +1,7 @@
 import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { highlightLowStress, highlightLayers } from '../map/highlights.js'
-import { handleLegend } from './legends.js'
+import { handleLegend, removeLegend } from './legends.js'
 import { ltsFilters, specialDestinationLayers } from './formsConfigs.js'
 // @UPDATE keep resetLTSLayers, it's unused because it only exists in contentUpdate as of now
 import { resetLTSLayers } from './formsUtils.js'
@@ -21,38 +21,56 @@ const handleForms = (form, map) => {
 const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
 
-    const spinner = map['_container'].querySelector('.lds-ring')
+    const mapContainer = map['_container']
+    const spinner = mapContainer.querySelector('.lds-ring')
+    const analysisLayerSelect = form.querySelector('#analysis-results-select')
     const isIPD = form.querySelector('#analysis-type-select').value
-    const analysisLayerSelect = form.querySelector('#analysis-results-select').value
 
-    const analysisIgnoreLayer = isIPD ? analysisLayerSelect : analysisLayerSelect + '-ipd'
+    const legendContainer = mapContainer.firstElementChild
+    const selectedAnalysis = analysisLayerSelect.value
+    const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
+    const analysisIgnoreLayer = isIPD ? selectedAnalysis : selectedAnalysis + '-ipd'
     let destination;
 
     spinner.classList.add('lds-ring-active')
 
     for(destination in specialDestinationLayers) {
+        const destinationArray = specialDestinationLayers[destination]
 
         // toggle on special + associated reference layers
-        if(destination === analysisLayerSelect) {
-            specialDestinationLayers[destination].forEach(layer => {
-
-                if(layer !== analysisIgnoreLayer) {
-                    const toggle = {
-                        value: layer,
-                        checked: true
-                    }
-    
-                    toggleLayers(toggle, map)
-                } else {
-                    if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+        if(destination === selectedAnalysis) {
+            destinationArray.forEach(layer => {
+                
+                // handle destination lyaers, references and their associated legends + ignore inactive destination layer
+                switch(layer) {
+                    case analysisIgnoreLayer:
+                        if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+                        break
+                    case selectedAnalysis:
+                        toggle.checked = true
+                        toggle.value = layer
+                        toggleLayers(toggle, map)
+                        break
+                    default:
+                        const referenceToggle = {
+                            checked: true,
+                            value: layer,
+                            dataset: {
+                                legendType: layer,
+                                legendReps: ''
+                            }
+                        }
+                        toggleLayers(referenceToggle, map)
                 }
             })
 
-        // hide all others
+        // hide all others & purge legends
         } else {
-            specialDestinationLayers[destination].forEach(layer => {
+            destinationArray.forEach(layer => {
                 if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
             })
+
+            removeLegend(destinationArray, legendContainer)
         }
     }
 }
@@ -73,8 +91,8 @@ const toggleLayers = (toggle, map) => {
     const layer = toggle.value
     const visibility = toggle.checked ? 'visible' : 'none'
 
-    // @UPDATE getting legend no longer needed for new legend fnc
-    // const legend = toggle.dataset.legendType
+    // @UPDATE new select fnc drops the toggle entirely, 
+    const legend = toggle.dataset.legendType
     const newLayer = secondaryMapLayers[layer]
     
     if(!map.getLayer(layer)) {
@@ -105,7 +123,7 @@ const toggleLayers = (toggle, map) => {
     map.setLayoutProperty(layer, 'visibility', visibility)
 
     // @UPDATE comment out for now until legend overlay is added and hooked into
-    // handleLegend(legend, toggle.checked, 1)
+    handleLegend(legend, toggle.checked, 1)
 }
 
 const filterLayers = (form, toggle, map) => { 
