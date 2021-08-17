@@ -18,18 +18,20 @@ const handleForms = (form, map) => {
     }
 }
 
-// @UPDATE this function doesn't work with the legend fncs
-    // toggles work fine, this loses dataset context among other things (acca, which doesn't matter as much)
 // @UPDATE 2: selects needs to remove the previous legend as well as adding a new one
-    // toggles can append no problem
+    // toggles can append no problem, they're binary (except for LTS)
+    // this can go in the for(destination in specialDestinationLayers loop)
+        // in the else statement where layout gets set to visible, remove legends (probably need new fnc)
 const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
 
     const spinner = map['_container'].querySelector('.lds-ring')
     const isIPD = form.querySelector('#analysis-type-select').value
-    const analysisLayerSelect = form.querySelector('#analysis-results-select').value
+    const analysisLayerSelect = form.querySelector('#analysis-results-select')
 
-    const analysisIgnoreLayer = isIPD ? analysisLayerSelect : analysisLayerSelect + '-ipd'
+    const selectedAnalysis = analysisLayerSelect.value
+    const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
+    const analysisIgnoreLayer = isIPD ? selectedAnalysis : selectedAnalysis + '-ipd'
     let destination;
 
     spinner.classList.add('lds-ring-active')
@@ -37,17 +39,12 @@ const toggleSelectForm = (e, form, map) => {
     for(destination in specialDestinationLayers) {
 
         // toggle on special + associated reference layers
-        if(destination === analysisLayerSelect) {
+        if(destination === selectedAnalysis) {
             specialDestinationLayers[destination].forEach(layer => {
 
                 if(layer !== analysisIgnoreLayer) {
-                    const toggle = {
-                        value: layer,
-                        checked: true,
-                        dataset: {
-                            legendType: layer
-                        }
-                    }
+                    toggle.checked = true
+                    toggle.value = layer
     
                     toggleLayers(toggle, map)
                 } else {
