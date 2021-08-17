@@ -63,6 +63,7 @@ const toggleLegend = e => {
     content.classList.toggle('legend-content-hide')
 }
 
+// remove specific legends
 const removeLegend = (destinationArray, container) => {
     const legendGroup = container.lastElementChild
 
@@ -72,4 +73,9 @@ const removeLegend = (destinationArray, container) => {
     })
 }
 
-export { handleLegend, toggleLegend, removeLegend }
+// wholesale clear of legend
+const clearLegend = container => {
+    while(container.firstChild) container.removeChild(container.firstChild)
+}
+
+export { handleLegend, toggleLegend, removeLegend, clearLegend }

@@ -7,7 +7,7 @@ import handleForms from './sidebar/forms.js'
 import handleTabs from './sidebar/tabs.js'
 import { tabsLayersToSet } from './sidebar/tabsConfigs.js'
 import { makePopup, makePopupContent } from './map/popup.js'
-import { toggleLegend } from './sidebar/legends.js'
+import { toggleLegend, clearLegend, handleLegend } from './sidebar/legends.js'
 // import { resetLTSLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
 
@@ -15,6 +15,7 @@ const sidebar = document.getElementById('sidebar')
 const forms = sidebar.querySelectorAll('.sidebar-form')
 const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 const legendBtn = document.getElementById('legendBtn')
+const legendContainer = legendBtn.nextElementSibling
 // const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
 // map
@@ -49,7 +50,6 @@ map.on('idle', () => {
 legendBtn.onclick = e => toggleLegend(e)
 
 // sidebar
-// @UPDATE replace legends on tab switch (LTS to Priority connections)
 tabs.forEach(tab => {
     tab.onclick = () => {
         // update content
@@ -77,6 +77,9 @@ tabs.forEach(tab => {
         // reset special filter cases (LTS & low-stress-click)
         if(tabID === 'lts-tab') map.setFilter('existing-conditions', null)
         map.setFilter('lowstress-click', ['==','island_num', 0])
+
+        // update legends
+        clearLegend(legendContainer)
     }
 })
 

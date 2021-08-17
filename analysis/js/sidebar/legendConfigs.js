@@ -6,7 +6,7 @@ const legendConfigs = {
         iconType: 'line',
         text: ['LTS 1', 'LTS 2', 'LTS 3', 'LTS 4']
     },
-    priorities: {
+    priority: {
         title: 'Regional Connectivity Priorities',
         icons: ['#993404', '#d95f0e', '#fe9929', '#fed98e', '#ffffd4'],
         iconType: 'line',

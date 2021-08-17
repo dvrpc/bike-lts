@@ -63,7 +63,6 @@ const toggleSelectForm = (e, form, map) => {
                         }
                         toggleLayers(referenceToggle, map)
                 }
-            
             })
 
         // hide all others & purge legends
