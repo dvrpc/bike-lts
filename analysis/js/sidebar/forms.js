@@ -23,11 +23,10 @@ const toggleSelectForm = (e, form, map) => {
 
     const mapContainer = map['_container']
     const spinner = mapContainer.querySelector('.lds-ring')
-    const legendContainer = mapContainer.firstElementChild
-    console.log(legendContainer)
-    const isIPD = form.querySelector('#analysis-type-select').value
     const analysisLayerSelect = form.querySelector('#analysis-results-select')
+    const isIPD = form.querySelector('#analysis-type-select').value
 
+    const legendContainer = mapContainer.firstElementChild
     const selectedAnalysis = analysisLayerSelect.value
     const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
     const analysisIgnoreLayer = isIPD ? selectedAnalysis : selectedAnalysis + '-ipd'

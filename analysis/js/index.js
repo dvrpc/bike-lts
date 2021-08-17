@@ -80,6 +80,7 @@ tabs.forEach(tab => {
 
         // update legends
         clearLegend(legendContainer)
+        tabID === 'lts-tab' ? handleLegend('lts', true, 4) : handleLegend('priority', true, 1)
     }
 })
 
