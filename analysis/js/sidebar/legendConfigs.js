@@ -12,7 +12,7 @@ const legendConfigs = {
         iconType: 'line',
         text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
     },
-    schools: {
+    school: {
         title: 'Priority Connections to Schools',
         icons: ['#984ea3'],
         iconType: 'line',
@@ -24,7 +24,7 @@ const legendConfigs = {
         iconType: 'line',
         text: ['LTS 3 road segments that would enable low-stress connections to trails within 2.5 miles']
     },
-    ['passenger-rail']: {
+    transit: {
         title: 'Priority Connections to Transit',
         icons: ['#bebada'],
         iconType: 'line',
@@ -42,7 +42,7 @@ const legendConfigs = {
         iconType: 'circle',
         text: ['Trailheads']
     },
-    rail: {
+    ['passenger-rail']: {
         title: 'Passenger Rail Stations',
         icons: ['#004d6e','#f18541','#ed164b','#487997'],
         iconType: 'circle',

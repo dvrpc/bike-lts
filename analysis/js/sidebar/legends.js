@@ -1,14 +1,5 @@
 import legends from './legendConfigs.js'
 
-// @UPDATE: change handleLegend to replacing content within map overlay
-    // legend sets instead of individuals
-        // legends for LTS view & legends for Connectivity view
-        // show all for each view
-    // no longer need to track state for adding/removing legends (acca and checked state irrelevant)
-    // legend param update to ID - which section is active and iterate over makeLegend to create appropriate legnds
-    // put legend container dropdown where the zoomTo jawn currently is
-        // move zoomTo next to the other map controls to create a grouped area of map panning/interactive controls
-    
 const handleLegend = (legend, checked, acca) => {
     // get legend container (obviously not this way)
     const container = document.getElementById('legend-content')
@@ -72,4 +63,13 @@ const toggleLegend = e => {
     content.classList.toggle('legend-content-hide')
 }
 
-export { handleLegend, toggleLegend }
+const removeLegend = (destinationArray, container) => {
+    const legendGroup = container.lastElementChild
+
+    destinationArray.forEach(layer => {
+        const toRemove = legendGroup.querySelector(`[data-filter-type="${layer}"]`)
+        if(toRemove) legendGroup.removeChild(toRemove)
+    })
+}
+
+export { handleLegend, toggleLegend, removeLegend }

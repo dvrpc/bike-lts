@@ -1,7 +1,7 @@
 import secondaryMapLayers from '../map/secondaryMapLayers.js'
 import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { highlightLowStress, highlightLayers } from '../map/highlights.js'
-import { handleLegend } from './legends.js'
+import { handleLegend, removeLegend } from './legends.js'
 import { ltsFilters, specialDestinationLayers } from './formsConfigs.js'
 // @UPDATE keep resetLTSLayers, it's unused because it only exists in contentUpdate as of now
 import { resetLTSLayers } from './formsUtils.js'
@@ -18,14 +18,13 @@ const handleForms = (form, map) => {
     }
 }
 
-// @UPDATE 2: selects needs to remove the previous legend as well as adding a new one
-    // toggles can append no problem, they're binary (except for LTS)
-    // this can go in the for(destination in specialDestinationLayers loop)
-        // in the else statement where layout gets set to visible, remove legends (probably need new fnc)
 const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
 
-    const spinner = map['_container'].querySelector('.lds-ring')
+    const mapContainer = map['_container']
+    const spinner = mapContainer.querySelector('.lds-ring')
+    const legendContainer = mapContainer.firstElementChild
+    console.log(legendContainer)
     const isIPD = form.querySelector('#analysis-type-select').value
     const analysisLayerSelect = form.querySelector('#analysis-results-select')
 
@@ -37,10 +36,11 @@ const toggleSelectForm = (e, form, map) => {
     spinner.classList.add('lds-ring-active')
 
     for(destination in specialDestinationLayers) {
+        const destinationArray = specialDestinationLayers[destination]
 
         // toggle on special + associated reference layers
         if(destination === selectedAnalysis) {
-            specialDestinationLayers[destination].forEach(layer => {
+            destinationArray.forEach(layer => {
                 
                 // handle destination lyaers, references and their associated legends + ignore inactive destination layer
                 switch(layer) {
@@ -63,15 +63,16 @@ const toggleSelectForm = (e, form, map) => {
                         }
                         toggleLayers(referenceToggle, map)
                 }
+            
             })
 
-        // hide all others
+        // hide all others & purge legends
         } else {
-            specialDestinationLayers[destination].forEach(layer => {
+            destinationArray.forEach(layer => {
                 if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
-                // write removeLegend fnc that accepts an id, layer name, whatever, and iterates over the 
-                // legend container and .remove() it.
             })
+
+            removeLegend(destinationArray, legendContainer)
         }
     }
 }
