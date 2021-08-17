@@ -24,7 +24,7 @@ const legendConfigs = {
         iconType: 'line',
         text: ['LTS 3 road segments that would enable low-stress connections to trails within 2.5 miles']
     },
-    transit: {
+    ['passenger-rail']: {
         title: 'Priority Connections to Transit',
         icons: ['#bebada'],
         iconType: 'line',
@@ -36,7 +36,7 @@ const legendConfigs = {
         iconType: 'line',
         text: ['Bike Lane','Bike Route','Buffered Bike Lane','Off-road Trail/Path','Protected Bike Lane','Sharrows']
     },
-    access: {
+    ['trail-access']: {
         title: 'Trail Access Locations',
         icons: ['#498434'],
         iconType: 'circle',

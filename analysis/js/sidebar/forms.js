@@ -41,14 +41,27 @@ const toggleSelectForm = (e, form, map) => {
         // toggle on special + associated reference layers
         if(destination === selectedAnalysis) {
             specialDestinationLayers[destination].forEach(layer => {
-
-                if(layer !== analysisIgnoreLayer) {
-                    toggle.checked = true
-                    toggle.value = layer
-    
-                    toggleLayers(toggle, map)
-                } else {
-                    if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+                
+                // handle destination lyaers, references and their associated legends + ignore inactive destination layer
+                switch(layer) {
+                    case analysisIgnoreLayer:
+                        if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+                        break
+                    case selectedAnalysis:
+                        toggle.checked = true
+                        toggle.value = layer
+                        toggleLayers(toggle, map)
+                        break
+                    default:
+                        const referenceToggle = {
+                            checked: true,
+                            value: layer,
+                            dataset: {
+                                legendType: layer,
+                                legendReps: ''
+                            }
+                        }
+                        toggleLayers(referenceToggle, map)
                 }
             })
 
@@ -56,6 +69,8 @@ const toggleSelectForm = (e, form, map) => {
         } else {
             specialDestinationLayers[destination].forEach(layer => {
                 if(map.getLayer(layer)) map.setLayoutProperty(layer, 'visibility', 'none')
+                // write removeLegend fnc that accepts an id, layer name, whatever, and iterates over the 
+                // legend container and .remove() it.
             })
         }
     }
