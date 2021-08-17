@@ -406,18 +406,25 @@ nav {
 	border-left: .3em solid transparent;
 }
 .legend-content {
+    /* force bike facilities text onto 2 lines */
     min-width: 275px;
-    padding: var(--wrapper-padding);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-    background-color: var(--theme-white);
+    max-width: 385px;
+    padding: 0;
     margin-top: 10px;
 }
 .legend-content-hide {
     visibility: hidden;
 }
 .legend-section {
-    color: var(--theme-black-dark);
+    color: var(--theme-white);
+    background-color: var(--theme-black);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--wrapper-padding-half);
+    padding: var(--wrapper-padding-half);
+}
+.legend-section:last-of-type {
+    margin-bottom: 0;
 }
 .legend-subheader {
     font-size: 0.9rem;
