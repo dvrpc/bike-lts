@@ -409,10 +409,8 @@ nav {
 }
 .legend-content {
     /* force bike facilities text onto 2 lines */
-    min-width: 275px;
-    max-width: 385px;
+    width: 385px;
     padding: 0;
-    margin-top: 10px;
 }
 .legend-content-hide {
     visibility: hidden;

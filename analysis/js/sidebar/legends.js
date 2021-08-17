@@ -6,6 +6,8 @@ const handleLegend = (legend, checked, acca) => {
     const children = container.children
     let hasLegend = false
     let legendReps = 0
+    const checkIPD = legend.split('-')
+    legend = checkIPD[1] === 'ipd' ? checkIPD[0] : legend
 
     // if legend already exists, get it
     for(var i = 0; i < children.length; i++) {
