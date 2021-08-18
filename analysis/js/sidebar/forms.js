@@ -155,6 +155,7 @@ const filterLayers = (form, toggle, map) => {
             baseFilter = null
             ltsToggles.forEach(toggle => toggle.checked = true)
         } else {
+            baseFilter = ['<', 'lts_score', 0]
             ltsToggles.forEach(toggle => toggle.checked = false)
         }
     } else {
@@ -168,8 +169,9 @@ const filterLayers = (form, toggle, map) => {
             baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
         })
     }
-
-    // map.setFilter(layer, baseFilter)
+    console.log('layer ', layer)
+    console.log('filter ', baseFilter)
+    map.setFilter(layer, baseFilter)
 
     // @UPDATE comment out for now until legend overlay is added and hooked into
     //handleLegend(legend, toggle.checked, 1)
