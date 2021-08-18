@@ -146,12 +146,16 @@ const filterLayers = (form, toggle, map) => {
             // edge case: allChecked.length = 4
                 // check lts-all
             // ^ all the above ONLY APPLY to lts tab
+        // bonus edge case: need to know if user is on connectivity tab for allChecked case
     
     if(value === 'lts-all') {
+        const ltsToggles = form.querySelectorAll('input[type="checkbox"]')
+        
         if(isChecked) {
             baseFilter = null
+            ltsToggles.forEach(toggle => toggle.checked = true)
         } else {
-            
+            ltsToggles.forEach(toggle => toggle.checked = false)
         }
     } else {
         // get all checked boxes
