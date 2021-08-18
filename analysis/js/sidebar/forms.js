@@ -126,23 +126,46 @@ const toggleLayers = (toggle, map) => {
     handleLegend(legend, toggle.checked, 1)
 }
 
-const filterLayers = (form, toggle, map) => { 
+const filterLayers = (form, toggle, map) => {
     const layer = toggle.name
+    const value = toggle.value
+    const isChecked = toggle.checked
+    let baseFilter;
 
     // @UPDATE getting legend no longer needed for new legend fnc
     // const legend = toggle.dataset.legendType
 
-    // get all checked boxes
-    const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
-    let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', 0]
+    // conditions:
+        // user selects lts-all
+            // remove filter from existing-conditions layer
+            // IF lts tab, uncheck the four nested tabs
+        // user selects specific LTS layer
+            // keep allChecked logic as below
+            // edge case: allChecked.length = 0
+                // uncheck lts-all
+            // edge case: allChecked.length = 4
+                // check lts-all
+            // ^ all the above ONLY APPLY to lts tab
+    
+    if(value === 'lts-all') {
+        if(isChecked) {
+            baseFilter = null
+        } else {
+            
+        }
+    } else {
+        // get all checked boxes
+        const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
+        let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', 0]
+    
+        // loop checked inputs & append each to filter obj
+        allChecked.forEach(input => {
+            const layerFilter = ltsFilters[input.value]
+            baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
+        })
+    }
 
-    // loop checked inputs & append each to filter obj
-    allChecked.forEach(input => {
-        const layerFilter = ltsFilters[input.value]
-        baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
-    })
-
-    map.setFilter(layer, baseFilter)
+    // map.setFilter(layer, baseFilter)
 
     // @UPDATE comment out for now until legend overlay is added and hooked into
     //handleLegend(legend, toggle.checked, 1)
