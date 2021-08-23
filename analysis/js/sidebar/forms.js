@@ -130,6 +130,7 @@ const filterLayers = (form, toggle, map) => {
     const layer = toggle.name
     const value = toggle.value
     const isChecked = toggle.checked
+    const filterToggles = form.querySelectorAll('[data-layer-type="filter"]')
     let baseFilter;
 
     // @UPDATE getting legend no longer needed for new legend fnc
@@ -139,6 +140,7 @@ const filterLayers = (form, toggle, map) => {
         // user selects lts-all
             // remove filter from existing-conditions layer
             // IF lts tab, uncheck the four nested tabs
+                // ^ possibly not needed b/c of line that checks for existence within ltsFilters
         // user selects specific LTS layer
             // keep allChecked logic as below
             // edge case: allChecked.length = 0
@@ -149,28 +151,30 @@ const filterLayers = (form, toggle, map) => {
         // bonus edge case: need to know if user is on connectivity tab for allChecked case
     
     if(value === 'lts-all') {
-        const ltsToggles = form.querySelectorAll('input[type="checkbox"]')
-        
         if(isChecked) {
             baseFilter = null
-            ltsToggles.forEach(toggle => toggle.checked = true)
+            filterToggles.forEach(toggle => toggle.checked = true)
         } else {
             baseFilter = ['<', 'lts_score', 0]
-            ltsToggles.forEach(toggle => toggle.checked = false)
+            filterToggles.forEach(toggle => toggle.checked = false)
         }
     } else {
+        // loop thru toggles
+        // get a handle on lts-all toggle in case it needs to be manipulated
+
         // get all checked boxes
-        const allChecked = form.querySelectorAll('input[type="checkbox"]:checked')
-        let baseFilter = allChecked.length ? ['any'] : ['<', 'lts_score', 0]
+        // const allChecked = form.querySelectorAll('[data-layer-type="filter"]:checked')
+        // let scopedFilter = allChecked.length ? ['any'] : ['<', 'lts_score', 0]
     
-        // loop checked inputs & append each to filter obj
-        allChecked.forEach(input => {
-            const layerFilter = ltsFilters[input.value]
-            baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
-        })
+        // // loop checked inputs & append each to filter obj
+        // allChecked.forEach(input => {
+        //     const layerFilter = ltsFilters[input.value]
+        //     scopedFilter = layerFilter ? scopedFilter.concat(layerFilter) : scopedFilter
+        // })
+
+        // baseFilter = scopedFilter
     }
-    console.log('layer ', layer)
-    console.log('filter ', baseFilter)
+    console.log('baseFilter ', baseFilter)
     map.setFilter(layer, baseFilter)
 
     // @UPDATE comment out for now until legend overlay is added and hooked into
