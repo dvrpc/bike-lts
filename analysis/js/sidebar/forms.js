@@ -3,8 +3,6 @@ import { clickLayers, makePopup, makePopupContent } from '../map/popup.js'
 import { highlightLowStress, highlightLayers } from '../map/highlights.js'
 import { handleLegend, removeLegend } from './legends.js'
 import { ltsFilters, specialDestinationLayers } from './formsConfigs.js'
-// @UPDATE keep resetLTSLayers, it's unused because it only exists in contentUpdate as of now
-import { resetLTSLayers } from './formsUtils.js'
 
 const handleForms = (form, map) => {
     const formType = form.dataset.formType
