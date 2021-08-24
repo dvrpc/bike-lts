@@ -329,10 +329,10 @@ nav {
 }
 .sidebar-nested-inputs-wrapper {
     margin-left: 40px;
-    margin-top: var(--wrapper-padding-half);
+    margin-top: var(--wrapper-padding);
 }
 .stacked-inputs {
-    margin-bottom: var(--wrapper-padding-half);
+    margin-bottom: var(--wrapper-padding);
 }
 .sidebar-form-hr {
     margin: var(--wrapper-padding) 0;

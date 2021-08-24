@@ -30,7 +30,7 @@ const ltsFormContent = `
     </div>
 `
 const ltsReferenceFormContent = `
-    <label class="sidebar-form-label side-form-label-lts">
+    <label class="sidebar-form-label">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
         low-stress areas
     </label>
@@ -83,12 +83,10 @@ const analysisReferenceFormContent = `
         full LTS network
     </label>
 
-    <label class="sidebar-form-label side-form-label-lts">
+    <label class="sidebar-form-label stacked-inputs">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lowstress" name="lowstress-islands" value="lowstress-islands">
         low-stress areas
     </label>
-
-    <hr class="sidebar-hr" />
 
     <label class="sidebar-form-label">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="facilities" name="layer" value="facilities">
