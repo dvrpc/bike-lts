@@ -130,27 +130,12 @@ const filterLayers = (form, toggle, map) => {
     const layer = toggle.name
     const value = toggle.value
     const isChecked = toggle.checked
-    const filterToggles = form.querySelectorAll('[data-layer-type="filter"]')
     let baseFilter;
-
-    // @UPDATE getting legend no longer needed for new legend fnc
-    // const legend = toggle.dataset.legendType
-
-    // conditions:
-        // user selects lts-all
-            // remove filter from existing-conditions layer
-            // IF lts tab, uncheck the four nested tabs
-                // ^ possibly not needed b/c of line that checks for existence within ltsFilters
-        // user selects specific LTS layer
-            // keep allChecked logic as below
-            // edge case: allChecked.length = 0
-                // uncheck lts-all
-            // edge case: allChecked.length = 4
-                // check lts-all
-            // ^ all the above ONLY APPLY to lts tab
-        // bonus edge case: need to know if user is on connectivity tab for allChecked case
     
+    // handle toggling of meta full network toggle
     if(value === 'lts-all') {
+        const filterToggles = form.querySelectorAll('[data-layer-type="filter"]')
+
         if(isChecked) {
             baseFilter = null
             filterToggles.forEach(toggle => toggle.checked = true)
@@ -158,27 +143,33 @@ const filterLayers = (form, toggle, map) => {
             baseFilter = ['<', 'lts_score', 0]
             filterToggles.forEach(toggle => toggle.checked = false)
         }
-    } else {
-        // loop thru toggles
-        // get a handle on lts-all toggle in case it needs to be manipulated
-
-        // get all checked boxes
-        // const allChecked = form.querySelectorAll('[data-layer-type="filter"]:checked')
-        // let scopedFilter = allChecked.length ? ['any'] : ['<', 'lts_score', 0]
     
-        // // loop checked inputs & append each to filter obj
-        // allChecked.forEach(input => {
-        //     const layerFilter = ltsFilters[input.value]
-        //     scopedFilter = layerFilter ? scopedFilter.concat(layerFilter) : scopedFilter
-        // })
+    // handle toggling of individual filter toggles
+    } else {
+        const allChecked = form.querySelectorAll('[data-layer-type="filter"]:checked')
+        const metaToggle = form.querySelector('[data-layer-type="meta"]')
 
-        // baseFilter = scopedFilter
+        switch(allChecked.length) {
+            case 4:                
+                metaToggle.checked = true
+                baseFilter = null
+                break
+            case 0:                
+                metaToggle.checked = false
+                baseFilter = ['<', 'lts_score', 0]
+                break
+            default:
+                metaToggle.checked = false
+                baseFilter = ['any']
+
+                allChecked.forEach(input => {
+                    const layerFilter = ltsFilters[input.value]
+                    baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
+                })        
+        }
     }
-    console.log('baseFilter ', baseFilter)
-    map.setFilter(layer, baseFilter)
 
-    // @UPDATE comment out for now until legend overlay is added and hooked into
-    //handleLegend(legend, toggle.checked, 1)
+    map.setFilter(layer, baseFilter)
 }
 
 export default handleForms
