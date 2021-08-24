@@ -193,14 +193,15 @@ const layers = {
             ],
             'line-color': ['match',
                 ['get', 'bikefacili'],
-                'Bike Lane', '#8dd3c7',
+                'Bike Lane', '#123899',
                 'Bike Route', '#ffffb3',
-                'Buffered Bike Lane', '#bebada',
-                'Off-road Trail/Path', '#fb8072',
-                'Protected Bike Lane', '#80b1d3',
-                'Sharrows', '#fdb462',
+                'Buffered Bike Lane', '#29c2eb',
+                'Off-road Trail/Path', '#56bd49',
+                'Protected Bike Lane', '#bebada',
+                'Sharrows', '#ff872c',
                 'rgba(0,0,0,0)'
-            ]
+            ],
+            'line-dasharray': [2, 4]
         }
     },
     'passenger-rail': {
