@@ -3,7 +3,7 @@ import handleForms from "./forms.js"
 // LTS Form content
 const ltsFormContent = `
     <label class="sidebar-form-label">
-        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="meta" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
         full LTS network
     </label>
 
@@ -79,7 +79,7 @@ const analysisFormContent = `
 `
 const analysisReferenceFormContent = `
     <label class="sidebar-form-label stacked-inputs">
-        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-all">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="toggle" data-legend-type="lts" name="existing-conditions" value="existing-conditions">
         full LTS network
     </label>
 

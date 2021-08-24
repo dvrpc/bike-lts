@@ -1,6 +1,5 @@
 // LTS filters
 const ltsFilters = {
-    'existing-conditions': false,
     'lts-1': [
         ['==', 'lts_score', 1]
     ],

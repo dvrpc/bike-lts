@@ -8,7 +8,6 @@ import handleTabs from './sidebar/tabs.js'
 import { tabsLayersToSet } from './sidebar/tabsConfigs.js'
 import { makePopup, makePopupContent } from './map/popup.js'
 import { toggleLegend, clearLegend, handleLegend } from './sidebar/legends.js'
-// import { resetLTSLayers } from './sidebar/formsUtils.js'
 // import createFeedbackForm from './sidebar/feedback.js'
 
 const sidebar = document.getElementById('sidebar')
