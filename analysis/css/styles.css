@@ -216,18 +216,11 @@ nav {
 .sidebar-tab-inactive:hover {
     text-decoration: underline;
 }
-
-.sidebar-details {
+.sidebar-details-margin {
     margin-bottom: var(--wrapper-padding);
-}
-.sidebar-details-no-margin {
-    margin: 0;
 }
 .sidebar-summary{
     cursor: pointer;
-}
-.sidebar-details[open] {
-    margin-bottom: var(--wrapper-padding-double);
 }
 .sidebar-details[open] summary {
     font-weight: 700;
