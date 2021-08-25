@@ -1,6 +1,6 @@
 {
   "name": "analysis",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "improved bike lts analysis webmap",
   "main": "index.js",
   "scripts": {
