@@ -411,6 +411,7 @@ nav {
     /* force bike facilities text onto 2 lines */
     width: 385px;
     padding: 0;
+    background-color: var(--theme-black-dark);
 }
 .legend-content-hide {
     visibility: hidden;
@@ -421,7 +422,7 @@ nav {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     margin-bottom: var(--wrapper-padding-half);
-    padding: var(--wrapper-padding-half);
+    padding: var(--wrapper-padding);
 }
 .legend-section:last-of-type {
     margin-bottom: 0;
