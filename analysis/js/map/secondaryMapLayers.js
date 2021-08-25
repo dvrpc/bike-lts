@@ -184,7 +184,7 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 3,
+            'line-width': 5,
             'line-color': ['match',
                 ['get', 'bikefacili'],
                 'Bike Lane', '#123899',
@@ -195,7 +195,7 @@ const layers = {
                 'Sharrows', '#ff872c',
                 'rgba(0,0,0,0)'
             ],
-            'line-dasharray': [2, 4]
+            'line-dasharray': [0.75, 3]
         }
     },
     'passenger-rail': {
