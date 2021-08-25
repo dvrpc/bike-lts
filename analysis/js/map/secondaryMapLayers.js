@@ -90,9 +90,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 2.5,
+                17, 3,
+                20, 4
             ],
             'line-color':'#984ea3'
         }
@@ -106,9 +106,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 2.5,
+                17, 3,
+                20, 4
             ],
             'line-color':'#984ea3'
         }
@@ -122,9 +122,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 2.5,
+                17, 3,
+                20, 4
             ],
             'line-color': '#498434'
         }
@@ -138,9 +138,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 2.5,
+                17, 3,
+                20, 4
             ],
             'line-color': '#498434'
         }
@@ -195,7 +195,8 @@ const layers = {
                 'Sharrows', '#ff872c',
                 'rgba(0,0,0,0)'
             ],
-            'line-dasharray': [0.75, 3]
+            // comment out until we figure out how to handle facilities
+            // 'line-dasharray': [0.75, 3]
         }
     },
     'passenger-rail': {

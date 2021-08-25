@@ -22,30 +22,30 @@ const layers = {
             'line-color': '#242424'
         }
     },
-    // existingConditions: {
-    //     id: 'existing-conditions',
-    //     type: 'line',
-    //     source: 'lts',
-    //     'source-layer': 'existing_conditions_lts',
-    //     'paint': {
-    //         'line-width': ['interpolate', 
-    //             ['linear'], ['zoom'],
-    //             8.35, 0.33,
-    //             10, 0.99,
-    //             11, 2.5,
-    //             17, 3,
-    //             20, 4
-    //         ],
-    //         'line-color': ['match',
-    //             ['get', 'lts_score'],
-    //             1, '#498434',
-    //             2, '#72bc58',
-    //             3, '#fcd842',
-    //             4, '#a50a0a',
-    //             '#fff'
-    //         ]
-    //     }
-    // },
+    existingConditions: {
+        id: 'existing-conditions',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'existing_conditions_lts',
+        'paint': {
+            'line-width': ['interpolate', 
+                ['linear'], ['zoom'],
+                8.35, 0.33,
+                10, 0.99,
+                11, 2.5,
+                17, 3,
+                20, 4
+            ],
+            'line-color': ['match',
+                ['get', 'lts_score'],
+                1, '#498434',
+                2, '#72bc58',
+                3, '#fcd842',
+                4, '#a50a0a',
+                '#fff'
+            ]
+        }
+    },
     'lowstress-click': {
         id: 'lowstress-click',
         type: 'line',
