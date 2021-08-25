@@ -126,7 +126,7 @@ const layers = {
                 17, 2.5,
                 20, 3.5
             ],
-            'line-color': '#377eb8'
+            'line-color': '#498434'
         }
     },
     'trails-ipd': {
@@ -142,7 +142,7 @@ const layers = {
                 17, 2.5,
                 20, 3.5
             ],
-            'line-color': '#377eb8'
+            'line-color': '#498434'
         }
     },
     transit: {
@@ -236,7 +236,7 @@ const layers = {
                 11, 3,
                 19, 4
             ],
-            'circle-color': '#498434',
+            'circle-color': '#377eb8',
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }

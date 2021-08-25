@@ -20,7 +20,7 @@ const legendConfigs = {
     },
     trails: {
         title: 'Priority Connections to Trails',
-        icons: ['#377eb8'],
+        icons: ['#498434'],
         iconType: 'line',
         text: ['LTS 3 road segments that would enable low-stress connections to trails within 2.5 miles']
     },
@@ -38,7 +38,7 @@ const legendConfigs = {
     },
     ['trail-access']: {
         title: 'Trail Access Locations',
-        icons: ['#498434'],
+        icons: ['#377eb8'],
         iconType: 'circle',
         text: ['Trailheads']
     },
