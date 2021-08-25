@@ -156,8 +156,10 @@ const filterLayers = (form, toggle, map) => {
                 metaToggle.checked = false
                 baseFilter = ['<', 'lts_score', 0]
                 break
+            case 1:
+                // take advantage of switch pass thru to add edge case to default behavior
+                metaToggle.checked = true
             default:
-                metaToggle.checked = false
                 baseFilter = ['any']
 
                 allChecked.forEach(input => {
