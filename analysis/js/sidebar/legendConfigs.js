@@ -20,25 +20,25 @@ const legendConfigs = {
     },
     trails: {
         title: 'Priority Connections to Trails',
-        icons: ['#377eb8'],
+        icons: ['#498434'],
         iconType: 'line',
         text: ['LTS 3 road segments that would enable low-stress connections to trails within 2.5 miles']
     },
     transit: {
         title: 'Priority Connections to Transit',
-        icons: ['#bebada'],
+        icons: ['#F49FBC'],
         iconType: 'line',
         text: ['LTS 3 road segments that would enable low-stress connections to transit stops within 3 miles']
     },
     facilities: {
         title: 'Bicycle Facilities',
-        icons: ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462'],
+        icons: ['#123899','#ffffb3','#29c2eb','#56bd49','#bebada','#ff872c'],
         iconType: 'line',
         text: ['Bike Lane','Bike Route','Buffered Bike Lane','Off-road Trail/Path','Protected Bike Lane','Sharrows']
     },
     ['trail-access']: {
         title: 'Trail Access Locations',
-        icons: ['#498434'],
+        icons: ['#377eb8'],
         iconType: 'circle',
         text: ['Trailheads']
     },

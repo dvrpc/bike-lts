@@ -42,9 +42,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
             'line-color': ['match',
                 ['get', 'main_priority'],
@@ -66,9 +66,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
             'line-color': ['match',
                 ['get', 'main_priority_ipd'],
@@ -90,9 +90,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
             'line-color':'#984ea3'
         }
@@ -106,9 +106,9 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
             'line-color':'#984ea3'
         }
@@ -122,11 +122,11 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
-            'line-color': '#377eb8'
+            'line-color': '#498434'
         }
     },
     'trails-ipd': {
@@ -138,11 +138,11 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
-            'line-color': '#377eb8'
+            'line-color': '#498434'
         }
     },
     transit: {
@@ -154,11 +154,11 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
-            'line-color': '#bebada'
+            'line-color': '#F49FBC'
         }
     },
     'transit-ipd': {
@@ -170,11 +170,11 @@ const layers = {
             'line-width': ['interpolate',
                 ['linear'], ['zoom'],
                 8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
+                11, 3.25,
+                17, 3.5,
+                20, 4
             ],
-            'line-color': '#bebada'
+            'line-color': '#F49FBC'
         }
     },
     // Resource Layers
@@ -184,23 +184,19 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': ['interpolate',
-                ['linear'], ['zoom'],
-                8.35, 3,
-                11, 1.5,
-                17, 2.5,
-                20, 3.5
-            ],
+            'line-width': 5,
             'line-color': ['match',
                 ['get', 'bikefacili'],
-                'Bike Lane', '#8dd3c7',
+                'Bike Lane', '#123899',
                 'Bike Route', '#ffffb3',
-                'Buffered Bike Lane', '#bebada',
-                'Off-road Trail/Path', '#fb8072',
-                'Protected Bike Lane', '#80b1d3',
-                'Sharrows', '#fdb462',
+                'Buffered Bike Lane', '#29c2eb',
+                'Off-road Trail/Path', '#56bd49',
+                'Protected Bike Lane', '#bebada',
+                'Sharrows', '#ff872c',
                 'rgba(0,0,0,0)'
-            ]
+            ],
+            // comment out until we figure out how to handle facilities
+            // 'line-dasharray': [0.75, 3]
         }
     },
     'passenger-rail': {
@@ -241,7 +237,7 @@ const layers = {
                 11, 3,
                 19, 4
             ],
-            'circle-color': '#498434',
+            'circle-color': '#377eb8',
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }

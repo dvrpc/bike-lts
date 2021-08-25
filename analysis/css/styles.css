@@ -296,7 +296,7 @@ nav {
     width: 40px;
     height: 20px;
     border-radius: 12px;
-    border: 2px solid var(--theme-black);
+    border: none;
     background: #eee;
     transition: all 0.4s;
     cursor: pointer;
@@ -310,7 +310,7 @@ nav {
     background-color: var(--theme-black);
     content: '';
     position: absolute;
-    top: 2.5px;
+    top: 3px;
     left: 3px;
     transition: all 0.4s;
 }
@@ -329,10 +329,10 @@ nav {
 }
 .sidebar-nested-inputs-wrapper {
     margin-left: 40px;
-    margin-top: var(--wrapper-padding-half);
+    margin-top: var(--wrapper-padding);
 }
 .stacked-inputs {
-    margin-bottom: var(--wrapper-padding-half);
+    margin-bottom: var(--wrapper-padding);
 }
 .sidebar-form-hr {
     margin: var(--wrapper-padding) 0;
@@ -411,6 +411,7 @@ nav {
     /* force bike facilities text onto 2 lines */
     width: 385px;
     padding: 0;
+    background-color: var(--theme-black-dark);
 }
 .legend-content-hide {
     visibility: hidden;
@@ -421,7 +422,7 @@ nav {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     margin-bottom: var(--wrapper-padding-half);
-    padding: var(--wrapper-padding-half);
+    padding: var(--wrapper-padding);
 }
 .legend-section:last-of-type {
     margin-bottom: 0;

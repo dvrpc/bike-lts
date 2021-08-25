@@ -18,7 +18,7 @@ const ltsFilters = {
 const specialDestinationLayers = {
     school: ['schools-combined', 'school', 'school-ipd'],
     trails: ['trail-access', 'trails', 'trails-ipd'],
-    transit: ['trolley', 'passenger-rail', 'bus', 'transit', 'transit-ipd'],
+    transit: ['trolley', 'bus', 'passenger-rail', 'transit', 'transit-ipd'],
     priority: ['priority', 'priority-ipd']
 }
 
