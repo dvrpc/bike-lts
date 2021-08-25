@@ -32,7 +32,7 @@ const legendConfigs = {
     },
     facilities: {
         title: 'Bicycle Facilities',
-        icons: ['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462'],
+        icons: ['#123899','#ffffb3','#29c2eb','#56bd49','#bebada','#ff872c'],
         iconType: 'line',
         text: ['Bike Lane','Bike Route','Buffered Bike Lane','Off-road Trail/Path','Protected Bike Lane','Sharrows']
     },
