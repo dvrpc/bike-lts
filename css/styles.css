@@ -30,7 +30,7 @@ body {
         
     --border-radius: 15px;
 
-    --map-height: 550px;
+    --map-height: 90vh;
 }
 a {
     color: var(--theme-black);
@@ -365,7 +365,7 @@ strong {
     width: 50%;
     height: var(--map-height);
     position: sticky;
-    top: 105px;
+    top: 5vh;
     left: 80px;
 }
 /* END Map */
