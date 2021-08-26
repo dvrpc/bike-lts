@@ -30,7 +30,7 @@ body {
         
     --border-radius: 15px;
 
-    --map-height: 90vh;
+    --map-height: 95vh;
 }
 a {
     color: var(--theme-black);
@@ -40,7 +40,6 @@ a:hover {
     color: var(--theme-green);
 }
 p, em {
-    max-width: 70ch;
     margin: 10px 0;
 }
 nav {
@@ -225,9 +224,11 @@ strong {
     background-color: initial;
     border-radius: var(--border-radius);
     position: sticky;
-    top: 25%;
+    top: 28%;
     width: 10px;
     z-index: 5;
+    padding: 0;
+    margin-left: -12px;
 }
 .scroll-story-nav-li {
     background-color: var(--theme-red);
@@ -263,10 +264,11 @@ strong {
     font-weight: 700;
 }
 .scene-section {
-    width: 90%;
+    /* 42 px is 3x nav width */
+    width: calc(100% - 42px);
     margin: 0 auto;
-    padding: 30px 0;
     min-height: 85vh;
+    padding: 30px 0;
 }
 .scene-buffer {
     height: 92.5vh;
@@ -283,11 +285,11 @@ strong {
     font-size: 1.15rem;
 }
 .scene-text {
-    max-width: 60ch;
+    width: 50ch;
     opacity: 0;
 }
 .scene-media {
-    max-width: 50%;
+    width: 60%;
     filter: var(--drop-shadow);
     border-radius: var(--border-radius);
 }
@@ -362,11 +364,11 @@ strong {
 /*******/
 /* Map */
 .map {
-    width: 50%;
     height: var(--map-height);
     position: sticky;
-    top: 5vh;
-    left: 80px;
+    top: 2.5vh;
+    /* offset scene-section margin */
+    left: 42px;
 }
 /* END Map */
 /********/
