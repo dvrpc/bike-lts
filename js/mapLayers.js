@@ -57,6 +57,9 @@ const municipalityOutline = {
     // the nature of scrolling means layers will be added sequentially
         // kind of a dicey gamble but in theory, adding the layer config to the
         // first instance of a layer could be enough to have following layers reference it
+
+
+// lts scenes
 const regionalScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
@@ -84,7 +87,7 @@ const regionalScene = {
             source: 'lts',
             'source-layer': 'existing_conditions_lts',
             paint: {
-                'line-width': 5,
+                'line-width': 4,
                 'line-color': ['match',
                     ['get', 'bikefacili'],
                     'Bike Lane', '#123899',
@@ -127,6 +130,8 @@ const lowStressTwoScene = {
         }
     ],
 }
+
+// connectivity analysis scenes
 const connectivityOneScene = {
     zoom: 11.5,
     center: [-75.703, 40.006],
@@ -135,7 +140,6 @@ const connectivityOneScene = {
             id: 'lts-scene'
         }
     ],
-    filter: null
 }
 const connectivityTwoScene = {
     zoom: 11.5,
@@ -147,7 +151,7 @@ const connectivityTwoScene = {
             source: 'lts',
             'source-layer': 'priorities_all',
             paint: {
-                'line-width': 5,
+                'line-width': 4,
                 'line-color': ['match',
                     ['get', 'main_priority'],
                     10, '#993404',
@@ -163,39 +167,45 @@ const connectivityTwoScene = {
             id: 'lts-scene'
         }
     ],
-    filter: null
+}
+const equityFocusedConnectivityScene = {
+    zoom: 8.5,
+    center: [-75.2273, 40.071],
+    layers: [
+        {
+            id: 'priority'
+        }
+    ]
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
 
-    ],
-    filter: null
+    ]
 }
+
+// special destinations
 const trailsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
 
-    ],
-    filter: null
+    ]
 }
 const transitScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
 
-    ],
-    filter: null
+    ]
 }
 const schoolsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
 
-    ],
-    filter: null
+    ]
 }
 
 const sceneLayers = {
@@ -208,6 +218,7 @@ const sceneLayers = {
     connectivity: {
         connectivityOneScene,
         connectivityTwoScene,
+        equityFocusedConnectivityScene,
         connectivityPrioritiesScene,
     },
     special: {
