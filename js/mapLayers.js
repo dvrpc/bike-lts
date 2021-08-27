@@ -44,16 +44,6 @@ const municipalityOutline = {
 }
 
 
-////
-// Scene layers
-////
-const regionalLayers = {
-    id: 'regional-scene',
-    type: 'line',
-    source: ''
-}
-
-
 
 ////
 // Scene objects
@@ -66,7 +56,24 @@ const regionalLayers = {
         // filters
 const regionalScene = {
     zoom: 8.5,
-    center: [-75.2273, 40.071]
+    center: [-75.2273, 40.071],
+    layers: {
+        id: 'regional-scene',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'existing_conditions_lts',
+        'paint': {
+            'line-width': 0.5,
+            'line-color': ['match',
+                ['get', 'lts_score'],
+                1, '#498434',
+                2, '#72bc58',
+                3, '#fcd842',
+                4, '#a50a0a',
+                '#fff'
+            ]
+        }
+    }
 }
 const usingDataScene = {
     zoom: 10.5,

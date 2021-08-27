@@ -78,6 +78,16 @@ const toggleMapView = (mapCat, sceneId) => {
 
     const zoom = mapSceneLayer.zoom
     const center = mapSceneLayer.center
+    const layer = mapSceneLayer.layers
+    const layerID = layer.id
+
+    // @TODO remove previous scene layer
+
+    // add new layer
+    if(!mapInstance.getLayer(layerID)) {
+        mapInstance.addLayer(layer)
+    } else {
+    }
 
     mapInstance.flyTo({
         center: center,
@@ -85,8 +95,6 @@ const toggleMapView = (mapCat, sceneId) => {
         speed: 0.4,
         curve: 2
     })
-
-    // @TODO handle layers/filters
 }
 
 export default sceneObjs
