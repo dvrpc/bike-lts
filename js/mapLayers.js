@@ -128,51 +128,73 @@ const lowStressTwoScene = {
     ],
 }
 const connectivityOneScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
-    layers: {
-
-    },
+    zoom: 11.5,
+    center: [-75.703, 40.006],
+    layers: [
+        {
+            id: 'lts-scene'
+        }
+    ],
     filter: null
 }
 const connectivityTwoScene = {
-    zoom: 9.6,
-    center: [-75.0173, 40.171],
-    layers: {
-
-    },
+    zoom: 11.5,
+    center: [-75.703, 40.006],
+    layers: [
+        {
+            id: 'priority',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'priorities_all',
+            paint: {
+                'line-width': 5,
+                'line-color': ['match',
+                    ['get', 'main_priority'],
+                    10, '#993404',
+                    20, '#d95f0e',
+                    30, '#fe9929',
+                    40, '#fed98e',
+                    50, '#ffffd4',
+                    'rgba(0,0,0,0)'
+                ]
+            }
+        },
+        {
+            id: 'lts-scene'
+        }
+    ],
     filter: null
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
-    layers: {
+    layers: [
 
-    },
+    ],
     filter: null
 }
 const trailsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
-    layers: {
+    layers: [
 
-    },
+    ],
     filter: null
 }
 const transitScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
-    layers: {
+    layers: [
 
-    },
+    ],
     filter: null
 }
 const schoolsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
-    layers: {
+    layers: [
 
-    },
+    ],
     filter: null
 }
 
