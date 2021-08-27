@@ -54,11 +54,14 @@ const municipalityOutline = {
     // line layers 
         // new layers
         // filters
+    // the nature of scrolling means layers will be added sequentially
+        // kind of a dicey gamble but in theory, adding the layer config to the
+        // first instance of a layer could be enough to have following layers reference it
 const regionalScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: {
-        id: 'regional-scene',
+        id: 'lts-scene',
         type: 'line',
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
@@ -73,70 +76,80 @@ const regionalScene = {
                 '#fff'
             ]
         }
-    }
+    },
+    filter: null
 }
 const usingDataScene = {
     zoom: 11.5,
     center: [-75.703, 40.006],
     layers: {
-        id: 'regional-scene'
-    }
+        id: 'lts-scene'
+    },
+    filter: null
 }
 const lowStressOneScene = {
-    zoom: 10.5,
-    center: [-75.3836, 40.101],
+    zoom: 11.5,
+    center: [-75.703, 40.006],
     layers: {
-
-    }
+        id: 'lts-scene'
+    },
+    filter: ['<', 'lts_score', 3]
 }
 const lowStressTwoScene = {
     zoom: 10.5,
     center: [-75.3836, 40.101],
     layers: {
 
-    }
+    },
+    filter: null
 }
 const connectivityOneScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: {
 
-    }
+    },
+    filter: null
 }
 const connectivityTwoScene = {
     zoom: 9.6,
     center: [-75.0173, 40.171],
     layers: {
 
-    }
+    },
+    filter: null
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: {
 
-    }
+    },
+    filter: null
 }
 const trailsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: {
 
-    }
+    },
+    filter: null
 }
 const transitScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: {
 
-    }
+    },
+    filter: null
 }
 const schoolsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: {
 
-    }
+    },
+    filter: null
 }
 
 const sceneLayers = {

@@ -80,6 +80,7 @@ const toggleMapView = (mapCat, sceneId) => {
     const center = mapSceneLayer.center
     const layer = mapSceneLayer.layers
     const layerID = layer.id
+    const filter = mapSceneLayer.filter
 
     // @TODO remove previous scene layer
         // b/c it's 3 instances per analysis, removing might not even be needed.
@@ -88,8 +89,9 @@ const toggleMapView = (mapCat, sceneId) => {
     // add new layer or toggle existing layer visibility
     if(!mapInstance.getLayer(layerID)) {
         mapInstance.addLayer(layer)
-    } else {
     }
+
+    mapInstance.setFilter(layerID, filter)
 
     mapInstance.flyTo({
         center: center,
