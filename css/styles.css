@@ -9,7 +9,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    line-height: 145%;
+    line-height: 1.45;
 }
 :root {
     --theme-green: #498434;
@@ -154,7 +154,6 @@ strong {
 .header {
     font-size: 1.75rem;
     text-transform: uppercase;
-    line-height: 145%;
     margin-top: 0.33rem;
     margin-right: var(--wrapper-padding);
 }
@@ -168,7 +167,7 @@ strong {
     border-left: 3px solid var(--theme-black);
 }
 .story-intro-p {
-    line-height: 150%;
+    line-height: 1.50;
     font-size: 1.35rem;
     margin: 0;
     font-weight: 300;
@@ -275,7 +274,6 @@ strong {
 }
 .scene-header {
     font-size: 1.9rem;
-    line-height: 145%;
     color: var(--theme-green);
 }
 .scene-buffer-header {
@@ -285,7 +283,8 @@ strong {
     font-size: 1.15rem;
 }
 .scene-text {
-    width: 50ch;
+    font-size: 1.2rem;
+    width: 45ch;
     opacity: 0;
 }
 .scene-media {
@@ -309,9 +308,8 @@ strong {
 #regional-lts-table {
     background-color: white;
     text-align: center;
-    max-width: 850px;
-    /* margin: 0 auto; */
-    margin-left: var(--wrapper-padding-quad);
+    max-width: 835px;
+    margin: 0 auto;
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
