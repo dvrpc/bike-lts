@@ -309,6 +309,8 @@ strong {
 #regional-lts-table {
     background-color: white;
     text-align: center;
+    max-width: 750px;
+    margin-left: var(--wrapper-padding-quad);
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
