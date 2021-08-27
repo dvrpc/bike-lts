@@ -96,8 +96,7 @@ const regionalScene = {
                 ],
             }
         }
-    ],
-    filter: null
+    ]
 }
 const usingDataScene = {
     zoom: 11.5,
@@ -106,28 +105,27 @@ const usingDataScene = {
         {
             id: 'lts-scene'
         }
-    ],
-    filter: null
+    ]
 }
 const lowStressOneScene = {
     zoom: 11.5,
     center: [-75.703, 40.006],
     layers: [
         {
-            id: 'lts-scene'
+            id: 'lts-scene',
+            filter: ['<', 'lts_score', 3]
         }
     ],
-    filter: ['<', 'lts_score', 3]
 }
 const lowStressTwoScene = {
     zoom: 11.5,
     center: [-75.703, 40.006],
     layers: [
         {
-            id: 'lts-scene'
+            id: 'lts-scene',
+            filter: ['<', 'lts_score', 4]
         }
     ],
-    filter: ['<', 'lts_score', 4]
 }
 const connectivityOneScene = {
     zoom: 8.5,
