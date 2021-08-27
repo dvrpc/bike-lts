@@ -44,9 +44,19 @@ const municipalityOutline = {
 }
 
 
-
 ////
 // Scene layers
+////
+const regionalLayers = {
+    id: 'regional-scene',
+    type: 'line',
+    source: ''
+}
+
+
+
+////
+// Scene objects
 ////
 // attributes that could update per scene
     // zoom level
@@ -55,7 +65,7 @@ const municipalityOutline = {
         // new layers
         // filters
 const regionalScene = {
-    zoom: 8.1,
+    zoom: 8.5,
     center: [-75.2273, 40.071]
 }
 const usingDataScene = {
@@ -71,7 +81,7 @@ const lowStressTwoScene = {
     center: [-75.3836, 40.101]
 }
 const connectivityOneScene = {
-    zoom: 8.1,
+    zoom: 8.5,
     center: [-75.2273, 40.071]
 }
 const connectivityTwoScene = {
@@ -79,19 +89,19 @@ const connectivityTwoScene = {
     center: [-75.0173, 40.171]
 }
 const connectivityPrioritiesScene = {
-    zoom: 8.1,
+    zoom: 8.5,
     center: [-75.2273, 40.071]
 }
 const trailsScene = {
-    zoom: 8.1,
+    zoom: 8.5,
     center: [-75.2273, 40.071]
 }
 const transitScene = {
-    zoom: 8.1,
+    zoom: 8.5,
     center: [-75.2273, 40.071]
 }
 const schoolsScene = {
-    zoom: 8.1,
+    zoom: 8.5,
     center: [-75.2273, 40.071]
 }
 

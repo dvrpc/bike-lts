@@ -51,7 +51,7 @@ table {
     border-collapse: collapse;
 }
 th, td {
-    padding: var(--wrapper-padding-half);
+    padding: var(--wrapper-padding);
 }
 strong {
     color: var(--theme-purple);
@@ -309,8 +309,8 @@ strong {
 #regional-lts-table {
     background-color: white;
     text-align: center;
-    max-width: 750px;
-    margin-left: var(--wrapper-padding-quad);
+    max-width: 850px;
+    margin: 0 auto;
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
