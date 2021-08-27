@@ -228,7 +228,7 @@ strong {
     width: 10px;
     z-index: 5;
     padding: 0;
-    margin-left: -12px;
+    margin-left: -6px;
 }
 .scroll-story-nav-li {
     background-color: var(--theme-red);
@@ -267,7 +267,7 @@ strong {
     /* 42 px is 3x nav width */
     width: calc(100% - 42px);
     margin: 0 auto;
-    min-height: 85vh;
+    min-height: 90vh;
     padding: 30px 0;
 }
 .scene-buffer {
@@ -310,7 +310,8 @@ strong {
     background-color: white;
     text-align: center;
     max-width: 850px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: var(--wrapper-padding-quad);
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;

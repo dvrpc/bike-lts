@@ -82,8 +82,10 @@ const toggleMapView = (mapCat, sceneId) => {
     const layerID = layer.id
 
     // @TODO remove previous scene layer
+        // b/c it's 3 instances per analysis, removing might not even be needed.
+        // just a matter of applying existing filters etc
 
-    // add new layer
+    // add new layer or toggle existing layer visibility
     if(!mapInstance.getLayer(layerID)) {
         mapInstance.addLayer(layer)
     } else {

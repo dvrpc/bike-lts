@@ -23,7 +23,7 @@ const countyFill = {
     'source-layer': 'county',
     layout: {},
     paint: {
-        'fill-color': 'rgb(136, 137, 140)',
+        'fill-color': '#383838',
         'fill-opacity': 1 
     },
     filter: [
@@ -76,40 +76,67 @@ const regionalScene = {
     }
 }
 const usingDataScene = {
-    zoom: 10.5,
-    center: [-75.3836, 40.101]
+    zoom: 11.5,
+    center: [-75.703, 40.006],
+    layers: {
+        id: 'regional-scene'
+    }
 }
 const lowStressOneScene = {
     zoom: 10.5,
-    center: [-75.3836, 40.101]
+    center: [-75.3836, 40.101],
+    layers: {
+
+    }
 }
 const lowStressTwoScene = {
     zoom: 10.5,
-    center: [-75.3836, 40.101]
+    center: [-75.3836, 40.101],
+    layers: {
+
+    }
 }
 const connectivityOneScene = {
     zoom: 8.5,
-    center: [-75.2273, 40.071]
+    center: [-75.2273, 40.071],
+    layers: {
+
+    }
 }
 const connectivityTwoScene = {
     zoom: 9.6,
-    center: [-75.0173, 40.171]
+    center: [-75.0173, 40.171],
+    layers: {
+
+    }
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
-    center: [-75.2273, 40.071]
+    center: [-75.2273, 40.071],
+    layers: {
+
+    }
 }
 const trailsScene = {
     zoom: 8.5,
-    center: [-75.2273, 40.071]
+    center: [-75.2273, 40.071],
+    layers: {
+
+    }
 }
 const transitScene = {
     zoom: 8.5,
-    center: [-75.2273, 40.071]
+    center: [-75.2273, 40.071],
+    layers: {
+
+    }
 }
 const schoolsScene = {
     zoom: 8.5,
-    center: [-75.2273, 40.071]
+    center: [-75.2273, 40.071],
+    layers: {
+
+    }
 }
 
 const sceneLayers = {
