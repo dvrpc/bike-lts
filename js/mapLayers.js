@@ -60,48 +60,74 @@ const municipalityOutline = {
 const regionalScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
-    layers: {
-        id: 'lts-scene',
-        type: 'line',
-        source: 'lts',
-        'source-layer': 'existing_conditions_lts',
-        'paint': {
-            'line-width': 0.5,
-            'line-color': ['match',
-                ['get', 'lts_score'],
-                1, '#498434',
-                2, '#72bc58',
-                3, '#fcd842',
-                4, '#a50a0a',
-                '#fff'
-            ]
+    layers: [
+        {
+            id: 'lts-scene',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'existing_conditions_lts',
+            'paint': {
+                'line-width': 0.5,
+                'line-color': ['match',
+                    ['get', 'lts_score'],
+                    1, '#498434',
+                    2, '#72bc58',
+                    3, '#fcd842',
+                    4, '#a50a0a',
+                    '#fff'
+                ]
+            }
+        },
+        {
+            id: 'lts-facilities',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'existing_conditions_lts',
+            paint: {
+                'line-width': 5,
+                'line-color': ['match',
+                    ['get', 'bikefacili'],
+                    'Bike Lane', '#123899',
+                    'Bike Route', '#ffffb3',
+                    'Buffered Bike Lane', '#29c2eb',
+                    'Protected Bike Lane', '#bebada',
+                    'Sharrows', '#ff872c',
+                    'rgba(0,0,0,0)'
+                ],
+            }
         }
-    },
+    ],
     filter: null
 }
 const usingDataScene = {
     zoom: 11.5,
     center: [-75.703, 40.006],
-    layers: {
-        id: 'lts-scene'
-    },
+    layers: [
+        {
+            id: 'lts-scene'
+        }
+    ],
     filter: null
 }
 const lowStressOneScene = {
     zoom: 11.5,
     center: [-75.703, 40.006],
-    layers: {
-        id: 'lts-scene'
-    },
+    layers: [
+        {
+            id: 'lts-scene'
+        }
+    ],
     filter: ['<', 'lts_score', 3]
 }
 const lowStressTwoScene = {
-    zoom: 10.5,
-    center: [-75.3836, 40.101],
-    layers: {
-
-    },
-    filter: null
+    zoom: 11.5,
+    center: [-75.703, 40.006],
+    layers: [
+        {
+            id: 'lts-scene'
+        }
+    ],
+    filter: ['<', 'lts_score', 4]
 }
 const connectivityOneScene = {
     zoom: 8.5,

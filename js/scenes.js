@@ -78,8 +78,7 @@ const toggleMapView = (mapCat, sceneId) => {
 
     const zoom = mapSceneLayer.zoom
     const center = mapSceneLayer.center
-    const layer = mapSceneLayer.layers
-    const layerID = layer.id
+    const layers = mapSceneLayer.layers
     const filter = mapSceneLayer.filter
 
     // @TODO remove previous scene layer
@@ -87,11 +86,16 @@ const toggleMapView = (mapCat, sceneId) => {
         // just a matter of applying existing filters etc
 
     // add new layer or toggle existing layer visibility
-    if(!mapInstance.getLayer(layerID)) {
-        mapInstance.addLayer(layer)
-    }
+    layers.forEach(layer => {
+        const layerID = layer.id
+        
+        if(!mapInstance.getLayer(layerID)) {
+            mapInstance.addLayer(layer)
+        }
+        
+        mapInstance.setFilter(layerID, filter)
+    })
 
-    mapInstance.setFilter(layerID, filter)
 
     mapInstance.flyTo({
         center: center,
