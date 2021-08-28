@@ -89,7 +89,7 @@ const usingDataScene = {
     center: [-75.703, 40.006],
     layers: [
         {
-            id: ''
+            id: 'lts-facilities'
         }
     ]
 }
@@ -98,7 +98,7 @@ const lowStressOneScene = {
     center: [-75.703, 40.006],
     layers: [
         {
-            id: '',
+            id: 'lts-scene',
             filter: ['<', 'lts_score', 3]
         }
     ],
@@ -108,7 +108,7 @@ const lowStressTwoScene = {
     center: [-75.703, 40.006],
     layers: [
         {
-            id: '',
+            id: 'lts-scene',
             filter: ['<', 'lts_score', 4]
         }
     ],
@@ -119,9 +119,9 @@ const connectivityOneScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
-        {
-            id: ''
-        }
+        // {
+        //     id: ''
+        // }
     ],
 }
 const connectivityTwoScene = {
@@ -145,9 +145,6 @@ const connectivityTwoScene = {
                     'rgba(0,0,0,0)'
                 ]
             }
-        },
-        {
-            id: ''
         }
     ],
 }
@@ -165,7 +162,7 @@ const connectivityPrioritiesScene = {
     center: [-75.2273, 40.071],
     layers: [
         {
-            id: ''
+            id: 'priority'
         }
     ]
 }
@@ -175,7 +172,9 @@ const trailsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
-
+        {
+            id: ''
+        }
     ]
 }
 const transitScene = {
