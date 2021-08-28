@@ -4,7 +4,7 @@
 const countyOutline = {
     id: 'county-outline',
     type: 'line',
-    source: 'Boundaries',
+    source: 'boundaries',
     'source-layer': 'county',
     paint: {
         'line-width': 2.5,
@@ -16,33 +16,16 @@ const countyOutline = {
         'Yes'
     ]
 }
-const countyFill = {
-    id: 'county-fill',
-    type: 'fill',
-    source: 'Boundaries',
-    'source-layer': 'county',
-    layout: {},
-    paint: {
-        'fill-color': '#383838',
-        'fill-opacity': 1 
-    },
-    filter: [
-        '==',
-        'dvrpc',
-        'Yes'
-      ],
-}
 const municipalityOutline = {
     id: 'municipality-outline',
     type: 'line',
-    source: 'Boundaries',
+    source: 'boundaries',
     'source-layer': 'municipalities',
     paint: {
         'line-width': 0.5,
         'line-color': '#f7f7f7'
     }
 }
-
 
 
 ////
@@ -102,30 +85,30 @@ const regionalScene = {
     ]
 }
 const usingDataScene = {
-    zoom: 11.5,
+    zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
         {
-            id: 'lts-scene'
+            id: ''
         }
     ]
 }
 const lowStressOneScene = {
-    zoom: 11.5,
+    zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
         {
-            id: 'lts-scene',
+            id: '',
             filter: ['<', 'lts_score', 3]
         }
     ],
 }
 const lowStressTwoScene = {
-    zoom: 11.5,
+    zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
         {
-            id: 'lts-scene',
+            id: '',
             filter: ['<', 'lts_score', 4]
         }
     ],
@@ -133,16 +116,16 @@ const lowStressTwoScene = {
 
 // connectivity analysis scenes
 const connectivityOneScene = {
-    zoom: 11.5,
+    zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
         {
-            id: 'lts-scene'
+            id: ''
         }
     ],
 }
 const connectivityTwoScene = {
-    zoom: 11.5,
+    zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
         {
@@ -164,7 +147,7 @@ const connectivityTwoScene = {
             }
         },
         {
-            id: 'lts-scene'
+            id: ''
         }
     ],
 }
@@ -181,7 +164,9 @@ const connectivityPrioritiesScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
-
+        {
+            id: ''
+        }
     ]
 }
 
@@ -197,14 +182,18 @@ const transitScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
-
+        {
+            id: ''
+        }
     ]
 }
 const schoolsScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
-
+        {
+            id: ''
+        }
     ]
 }
 
@@ -228,4 +217,9 @@ const sceneLayers = {
     }
 }
 
-export { countyOutline, countyFill, municipalityOutline, sceneLayers }
+const baseLayers = {
+    countyOutline,
+    municipalityOutline
+}
+
+export { baseLayers, sceneLayers }

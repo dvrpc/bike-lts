@@ -370,6 +370,7 @@ strong {
     top: 2.5vh;
     /* offset scene-section margin */
     left: 42px;
+    /* filter: none; */
 }
 /* END Map */
 /********/
