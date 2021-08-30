@@ -62,12 +62,12 @@ for(let i = 0; i < l; i++) {
             const mapDiv = utils.getMapCategory(scene)
             const mapCategory = mapDiv.dataset.mapCategory
             
-            const interval = setInterval(() => {
+            let interval = setInterval(() => {
                 if(maps[mapCategory].loaded) {
                     toggleMapView(mapCategory, mapId)
                     clearInterval(interval)
                 }
-            }, 400)
+            }, 300)
         }
     }))
 }
