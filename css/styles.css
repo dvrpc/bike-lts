@@ -214,7 +214,7 @@ strong {
 /* Scroll Story General */
 #scroll-story-main {
     padding: var(--wrapper-padding);
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
 }
 #scroll-story-main a {
     color: initial;
@@ -263,10 +263,10 @@ strong {
     font-weight: 700;
 }
 .scene-section {
-    /* 42 px is 3x nav width */
-    width: calc(100% - 42px);
+    /* 56 px is 4x nav width */
+    width: calc(100% - 56px);
     margin: 0 auto;
-    min-height: 90vh;
+    min-height: 95vh;
     padding: 30px 0;
 }
 .scene-buffer {
@@ -283,13 +283,14 @@ strong {
     font-size: 1.15rem;
 }
 .scene-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 45ch;
     opacity: 0;
 }
 .scene-media {
-    width: 60%;
-    filter: var(--drop-shadow);
+    width: 60vw;
+    box-shadow: var(--box-shadow);
+    max-width: calc(100% - 50ch);
     border-radius: var(--border-radius);
 }
 /* END Scroll Story General */
@@ -308,17 +309,16 @@ strong {
 #regional-lts-table {
     background-color: white;
     text-align: center;
-    max-width: 835px;
-    margin: 0 auto;
+    font-size: 1rem;
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
 }
 #regional-lts-table tr:not(:last-child) {
-    border-bottom: 4px solid #f6f6f6;
+    border-bottom: 4px solid #e9e9e9;
 }
 .regional-lts-table-th {
-    background-color: #f6f6f6;
+    background-color: #e9e9e9;
     color: var(--theme-purple);
     font-size: 1rem;
     padding-top: 1.15rem;
@@ -369,8 +369,7 @@ strong {
     position: sticky;
     top: 2.5vh;
     /* offset scene-section margin */
-    left: 42px;
-    /* filter: none; */
+    left: 56px;
 }
 /* END Map */
 /********/
