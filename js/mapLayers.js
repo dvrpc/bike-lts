@@ -8,7 +8,7 @@ const countyOutline = {
     'source-layer': 'county',
     paint: {
         'line-width': 2.5,
-        'line-color': '#c7c7c7'
+        'line-color': '#838383'
     },
     filter: [
         '==',
@@ -23,7 +23,7 @@ const municipalityOutline = {
     'source-layer': 'municipalities',
     paint: {
         'line-width': 0.5,
-        'line-color': '#c7c7c7'
+        'line-color': '#838383'
     }
 }
 

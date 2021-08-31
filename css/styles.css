@@ -154,7 +154,6 @@ strong {
 .header {
     font-size: 1.75rem;
     text-transform: uppercase;
-    margin-top: 0.33rem;
     margin-right: var(--wrapper-padding);
 }
 .h1-special {
@@ -305,11 +304,17 @@ strong {
 #what-is-LTS-scene {
     /* height of story-nav*/
     margin-top: -350px;
+    margin-bottom: 100px;
 }
 #regional-lts-table {
+    position: sticky;
+    top: 135px;
+    max-width: 825px;
     background-color: white;
     text-align: center;
     font-size: 1rem;
+    margin-right: var(--wrapper-padding-double);
+    margin-left: var(--wrapper-padding-quad);
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
