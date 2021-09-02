@@ -129,7 +129,7 @@ const connectivityOneScene = {
     center: [-75.703, 40.006],
     layers: [
     ],
-    hideLayers: []
+    hideLayers: ['priority']
 }
 const connectivityTwoScene = {
     zoom: 12.5,
@@ -165,7 +165,7 @@ const connectivityEquityScene = {
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
-    center: [-75.2873, 40.051],
+    center: [-75.2273, 40.071],
     layers: [
     ],
     hideLayers: []
