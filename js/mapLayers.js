@@ -192,6 +192,14 @@ const trailsScene = {
                 ],
                 'line-color': '#498434'
             }
+        },
+        {
+            id: 'transit',
+            visibility: 'none'
+        },
+        {
+            id: 'schools',
+            visibility: 'none'
         }
     ]
 }
@@ -214,6 +222,14 @@ const transitScene = {
                 ],
                 'line-color': '#F49FBC'
             }
+        },
+        {
+            id: 'schools',
+            visibility: 'none'
+        },
+        {
+            id: 'trails',
+            visibility: 'none'
         }
     ]
 }
@@ -222,7 +238,7 @@ const schoolsScene = {
     center: [-75.2273, 40.071],
     layers: [
         {
-            id: 'school',
+            id: 'schools',
             type: 'line',
             source: 'lts',
             'source-layer': 'priorities_school',
@@ -236,6 +252,14 @@ const schoolsScene = {
                 ],
                 'line-color':'#984ea3'
             }
+        },
+        {
+            id: 'transit',
+            visibility: 'none'
+        },
+        {
+            id: 'trails',
+            visibility: 'none'
         }
     ]
 }

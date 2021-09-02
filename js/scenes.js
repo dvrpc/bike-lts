@@ -99,13 +99,18 @@ const toggleMapView = (mapCat, sceneId) => {
     // add layers & apply filters
     layers.forEach(layer => {
         const layerID = layer.id
-        const filter = layer.filter
+        const filter = layer.filter || null
+        const visibility = layer.visibility || 'visible'
+        const mapHasLayer = mapInstance.getLayer(layerID)
         
-        if(!mapInstance.getLayer(layerID)) {
+        if(!mapHasLayer) {
             mapInstance.addLayer(layer)
         }
 
-        filter ? mapInstance.setFilter(layerID, filter) : mapInstance.setFilter(layerID, null)
+        if(mapHasLayer) {
+            mapInstance.setFilter(layerID, filter)
+            mapInstance.setLayoutProperty(layerID, 'visibility', visibility)
+        }
     })
 
     mapInstance.flyTo({
