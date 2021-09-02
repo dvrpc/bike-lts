@@ -156,7 +156,7 @@ const connectivityTwoScene = {
     ],
     hideLayers: []
 }
-const equityFocusedConnectivityScene = {
+const connectivityEquityScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
@@ -252,7 +252,7 @@ const sceneLayers = {
     connectivity: {
         connectivityOneScene,
         connectivityTwoScene,
-        equityFocusedConnectivityScene,
+        connectivityEquityScene,
         connectivityPrioritiesScene,
     },
     special: {

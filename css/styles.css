@@ -222,11 +222,10 @@ strong {
     background-color: initial;
     border-radius: var(--border-radius);
     position: sticky;
-    top: 28%;
+    top: 22.5%;
     width: 10px;
     z-index: 5;
     padding: 0;
-    margin-left: -6px;
 }
 .scroll-story-nav-li {
     background-color: var(--theme-red);
@@ -243,9 +242,8 @@ strong {
     background-color: var(--theme-green);
 }
 .scroll-story-nav-hr {
-    margin-top: -5px;
-    margin-bottom: 5px;
-    width: 10px;
+    margin-bottom: 11px;
+    width: 14px;
 }
 .scroll-story-nav-tooltip-wrapper {
     filter: var(--drop-shadow);
@@ -308,7 +306,7 @@ strong {
 }
 #regional-lts-table {
     position: sticky;
-    top: 135px;
+    top: 110px;
     max-width: 825px;
     background-color: white;
     text-align: center;
