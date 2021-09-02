@@ -67,7 +67,7 @@ for(let i = 0; i < l; i++) {
                     toggleMapView(mapCategory, mapId)
                     clearInterval(interval)
                 }
-            }, 300)
+            }, 250)
         }
     }))
 }
