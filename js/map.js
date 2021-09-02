@@ -1,22 +1,4 @@
-import * as layers from './mapLayers.js'
-
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
-
-const customStyles = {
-    'version': 8,
-    'glyphs': 'mapbox://fonts/mapbox/{fontstack}/{range}.pbf',
-    'sources': {
-        'Boundaries': {
-            type: 'vector',
-            url: 'https://tiles.dvrpc.org/data/dvrpc-municipal.json'
-        }
-    },
-    'layers': [
-        layers.countyFill,
-        layers.countyOutline,
-        layers.municipalityOutline
-    ],
-}
 
 const customMap = container => {
     const center = container.center || [-75.2273, 40.071]
@@ -24,7 +6,7 @@ const customMap = container => {
 
     const map = new mapboxgl.Map({
         container: container,
-        style: customStyles,
+        style: 'mapbox://styles/mapbox/dark-v10',
         attributionsControl: false,
         center: center,
         bounds: bounds,
