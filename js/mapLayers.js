@@ -178,7 +178,20 @@ const trailsScene = {
     center: [-75.2273, 40.071],
     layers: [
         {
-            id: ''
+            id: 'trails',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'priorities_trail',
+            paint: {
+                'line-width': ['interpolate',
+                    ['linear'], ['zoom'],
+                    8.35, 3,
+                    11, 3.25,
+                    17, 3.5,
+                    20, 4
+                ],
+                'line-color': '#498434'
+            }
         }
     ]
 }
@@ -187,7 +200,20 @@ const transitScene = {
     center: [-75.2273, 40.071],
     layers: [
         {
-            id: ''
+            id: 'transit',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'priorities_alltransit',
+            paint: {
+                'line-width': ['interpolate',
+                    ['linear'], ['zoom'],
+                    8.35, 3,
+                    11, 3.25,
+                    17, 3.5,
+                    20, 4
+                ],
+                'line-color': '#F49FBC'
+            }
         }
     ]
 }
@@ -196,7 +222,20 @@ const schoolsScene = {
     center: [-75.2273, 40.071],
     layers: [
         {
-            id: ''
+            id: 'school',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'priorities_school',
+            paint: {
+                'line-width': ['interpolate',
+                    ['linear'], ['zoom'],
+                    8.35, 3,
+                    11, 3.25,
+                    17, 3.5,
+                    20, 4
+                ],
+                'line-color':'#984ea3'
+            }
         }
     ]
 }
