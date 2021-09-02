@@ -82,16 +82,18 @@ const regionalScene = {
                 ],
             }
         }
-    ]
+    ],
+    hideLayers: []
 }
 const usingDataScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
         {
-            id: 'lts-facilities'
+            id: 'lts-scene',
         }
-    ]
+    ],
+    hideLayers: []
 }
 const lowStressOneScene = {
     zoom: 12.5,
@@ -102,6 +104,7 @@ const lowStressOneScene = {
             filter: ['<', 'lts_score', 3]
         }
     ],
+    hideLayers: []
 }
 const lowStressTwoScene = {
     zoom: 12.5,
@@ -112,6 +115,7 @@ const lowStressTwoScene = {
             filter: ['<', 'lts_score', 4]
         }
     ],
+    hideLayers: []
 }
 
 // connectivity analysis scenes
@@ -124,10 +128,8 @@ const connectivityOneScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
-        // {
-        //     id: ''
-        // }
     ],
+    hideLayers: []
 }
 const connectivityTwoScene = {
     zoom: 12.5,
@@ -152,24 +154,21 @@ const connectivityTwoScene = {
             }
         }
     ],
+    hideLayers: []
 }
 const equityFocusedConnectivityScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
-        {
-            id: 'priority'
-        }
-    ]
+    ],
+    hideLayers: []
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
-    center: [-75.2273, 40.071],
+    center: [-75.2873, 40.051],
     layers: [
-        {
-            id: 'priority'
-        }
-    ]
+    ],
+    hideLayers: []
 }
 
 // special destinations
@@ -192,16 +191,9 @@ const trailsScene = {
                 ],
                 'line-color': '#498434'
             }
-        },
-        {
-            id: 'transit',
-            visibility: 'none'
-        },
-        {
-            id: 'schools',
-            visibility: 'none'
         }
-    ]
+    ],
+    hideLayers: ['transit', 'schools']
 }
 const transitScene = {
     zoom: 8.5,
@@ -222,16 +214,9 @@ const transitScene = {
                 ],
                 'line-color': '#F49FBC'
             }
-        },
-        {
-            id: 'schools',
-            visibility: 'none'
-        },
-        {
-            id: 'trails',
-            visibility: 'none'
         }
-    ]
+    ],
+    hideLayers: ['trails', 'schools']
 }
 const schoolsScene = {
     zoom: 8.5,
@@ -252,16 +237,9 @@ const schoolsScene = {
                 ],
                 'line-color':'#984ea3'
             }
-        },
-        {
-            id: 'transit',
-            visibility: 'none'
-        },
-        {
-            id: 'trails',
-            visibility: 'none'
         }
-    ]
+    ],
+    hideLayers: ['transit', 'trails']
 }
 
 const sceneLayers = {

@@ -91,6 +91,7 @@ const toggleMapView = (mapCat, sceneId) => {
     const zoom = mapSceneLayer.zoom
     const center = mapSceneLayer.center
     const layers = mapSceneLayer.layers
+    const hideLayers = mapSceneLayer.hideLayers
     
     // @TODO remove previous scene layer
     // b/c it's 3 instances per analysis, removing might not even be needed.
@@ -100,16 +101,19 @@ const toggleMapView = (mapCat, sceneId) => {
     layers.forEach(layer => {
         const layerID = layer.id
         const filter = layer.filter || null
-        const visibility = layer.visibility || 'visible'
-        const mapHasLayer = mapInstance.getLayer(layerID)
         
-        if(!mapHasLayer) {
+        if(!mapInstance.getLayer(layerID)) {
             mapInstance.addLayer(layer)
         }
 
-        if(mapHasLayer) {
-            mapInstance.setFilter(layerID, filter)
-            mapInstance.setLayoutProperty(layerID, 'visibility', visibility)
+        mapInstance.setFilter(layerID, filter)
+        mapInstance.setLayoutProperty(layerID, 'visibility', 'visible')
+    })
+
+    // hide extra layers
+    hideLayers.forEach(layer => {
+        if(mapInstance.getLayer(layer)) {
+            mapInstance.setLayoutProperty(layer, 'visibility', 'none')
         }
     })
 
