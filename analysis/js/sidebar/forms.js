@@ -126,35 +126,39 @@ const toggleLayers = (toggle, map) => {
     handleLegend(legend, toggle.checked, 1)
 }
 
-// 1 prevent default
-// 2 flip all four toggles according to btn
-// call filterLayers()
 const submitLTS = (e, form, map) => {
     e.preventDefault()
 
-    console.log('e ', e.target)
-
-    const btn = e.target.id
+    const btn = e.target.submitted
     const ltsToggleForm = form.previousElementSibling
     const ltsToggles = ltsToggleForm.querySelectorAll('[data-layer-type="filter"]')
     const toggle ={name: 'existing-conditions'}
 
-    console.log(btn)
-
     btn === 'clear-lts' ? ltsToggles.forEach(toggle => toggle.checked = false) : ltsToggles.forEach(toggle => toggle.checked = true)
 
-    // filterLayers(ltsToggleForm, toggle, map)
+    filterLayers(ltsToggleForm, toggle, map)
 }
 
 const filterLayers = (form, toggle, map) => {
     const allChecked = form.querySelectorAll('[data-layer-type="filter"]:checked')
     const layer = toggle.name
-    let baseFilter = []
+    let baseFilter;
 
-    allChecked.forEach(input => {
-        const layerFilter = ltsFilters[input.value]
-        baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
-    })
+    switch(allChecked.length) {
+        case 4:                
+        baseFilter = null
+        break
+    case 0:                
+        baseFilter = ['<', 'lts_score', 0]
+        break
+    default:
+        baseFilter = ['any']
+
+        allChecked.forEach(input => {
+            const layerFilter = ltsFilters[input.value]
+            baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
+        })  
+    }
 
     map.setFilter(layer, baseFilter)
 }

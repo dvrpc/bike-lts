@@ -263,10 +263,10 @@ nav {
     border: 2px inset;
     background-color: initial;
 }
-#show-lts {
+.show-lts {
     border-color: var(--theme-green);
 }
-#clear-lts {
+.clear-lts {
     border-color: var(--theme-red);
 }
 
