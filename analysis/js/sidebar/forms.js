@@ -91,7 +91,6 @@ const toggleLayers = (toggle, map) => {
     const layer = toggle.value
     const visibility = toggle.checked ? 'visible' : 'none'
 
-    // @UPDATE new select fnc drops the toggle entirely, 
     const legend = toggle.dataset.legendType
     const newLayer = secondaryMapLayers[layer]
     

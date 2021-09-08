@@ -74,7 +74,7 @@ tabs.forEach(tab => {
         })
 
         // reset special filter cases (LTS & low-stress-click)
-        if(tabID === 'lts-tab') map.setFilter('existing-conditions', null)
+        map.setFilter('existing-conditions', null)
         map.setFilter('lowstress-click', ['==','island_num', 0])
 
         // update legends
