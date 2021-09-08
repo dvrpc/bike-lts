@@ -2,31 +2,29 @@ import handleForms from "./forms.js"
 
 // LTS Form content
 const ltsFormContent = `
-    <label class="sidebar-form-label">
-        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="meta" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
-        full LTS network
+    <label class="sidebar-form-label stacked-inputs">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+        LTS 1
+    </label>
+    
+    <label class="sidebar-form-label stacked-inputs">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+        LTS 2
     </label>
 
-    <div class="sidebar-nested-inputs-wrapper">
-        <label class="sidebar-form-label stacked-inputs">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-            LTS 1
-        </label>
-        
-        <label class="sidebar-form-label stacked-inputs">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-            LTS 2
-        </label>
+    <label class="sidebar-form-label stacked-inputs">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+        LTS 3
+    </label>
+    
+    <label class="sidebar-form-label lts-layer-4">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+        LTS 4
+    </label>
 
-        <label class="sidebar-form-label stacked-inputs">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-            LTS 3
-        </label>
-        
-        <label class="sidebar-form-label lts-layer-4">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-            LTS 4
-        </label>
+    <div class="flex-row flex-between" id="lts-btns-wrapper">
+        <button type="submit" id="show-lts" class="lts-btns" data-layer-type="lts-submit">show all LTS layers</button>
+        <button type="submit" id="clear-lts" class="lts-btns" data-layer-type="lts-submit">clear LTS layers</button>
     </div>
 `
 const ltsReferenceFormContent = `
