@@ -51,6 +51,8 @@ legendBtn.onclick = e => toggleLegend(e)
 // sidebar
 tabs.forEach(tab => {
     tab.onclick = () => {
+        map['_container'].querySelector('.lds-ring').classList.add('lds-ring-active')
+
         // update content
         const tabID = handleTabs(tab, map)
         

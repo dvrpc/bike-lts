@@ -21,9 +21,9 @@ const handleForms = (form, map) => {
 
 const toggleSelectForm = (e, form, map) => {
     e.preventDefault()
-
+    
     const mapContainer = map['_container']
-    const spinner = mapContainer.querySelector('.lds-ring')
+    mapContainer.querySelector('.lds-ring').classList.add('lds-ring-active')
     const analysisLayerSelect = form.querySelector('#analysis-results-select')
     const isIPD = form.querySelector('#analysis-type-select').value
 
@@ -32,8 +32,6 @@ const toggleSelectForm = (e, form, map) => {
     const toggle = analysisLayerSelect.options[analysisLayerSelect.selectedIndex]
     const analysisIgnoreLayer = isIPD ? selectedAnalysis : selectedAnalysis + '-ipd'
     let destination;
-
-    spinner.classList.add('lds-ring-active')
 
     for(destination in specialDestinationLayers) {
         const destinationArray = specialDestinationLayers[destination]
@@ -77,11 +75,10 @@ const toggleSelectForm = (e, form, map) => {
 }
 
 const toggleForm = (e, form, map) => {
-    const spinner = map['_container'].querySelector('.lds-ring')
+    map['_container'].querySelector('.lds-ring').classList.add('lds-ring-active')
+
     const toggle = e.target
     const layerType = toggle.dataset.layerType
-
-    spinner.classList.add('lds-ring-active')
 
     if(layerType === 'toggle') toggleLayers(toggle, map)
     else filterLayers(form, toggle, map)
@@ -127,6 +124,7 @@ const toggleLayers = (toggle, map) => {
 
 const submitLTS = (e, form, map) => {
     e.preventDefault()
+    map['_container'].querySelector('.lds-ring').classList.add('lds-ring-active')
 
     const btn = e.target.submitted
     const ltsToggleForm = form.previousElementSibling
