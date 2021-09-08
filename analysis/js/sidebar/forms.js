@@ -11,6 +11,9 @@ const handleForms = (form, map) => {
         case 'toggle-select':
             form.onchange = e => toggleSelectForm(e, form, map)
             break
+        case 'submit':
+            form.onsubmit = e => submitLTS(e, form, map)
+            break
         default:
             form.onchange = e => toggleForm(e, form, map)
     }
@@ -79,8 +82,7 @@ const toggleForm = (e, form, map) => {
     const layerType = toggle.dataset.layerType
 
     spinner.classList.add('lds-ring-active')
-        
-    // determine action based on layer type
+
     if(layerType === 'toggle') toggleLayers(toggle, map)
     else filterLayers(form, toggle, map)
 }
@@ -89,7 +91,6 @@ const toggleLayers = (toggle, map) => {
     const layer = toggle.value
     const visibility = toggle.checked ? 'visible' : 'none'
 
-    // @UPDATE new select fnc drops the toggle entirely, 
     const legend = toggle.dataset.legendType
     const newLayer = secondaryMapLayers[layer]
     
@@ -124,49 +125,38 @@ const toggleLayers = (toggle, map) => {
     handleLegend(legend, toggle.checked, 1)
 }
 
+const submitLTS = (e, form, map) => {
+    e.preventDefault()
+
+    const btn = e.target.submitted
+    const ltsToggleForm = form.previousElementSibling
+    const ltsToggles = ltsToggleForm.querySelectorAll('[data-layer-type="filter"]')
+    const toggle ={name: 'existing-conditions'}
+
+    btn === 'clear-lts' ? ltsToggles.forEach(toggle => toggle.checked = false) : ltsToggles.forEach(toggle => toggle.checked = true)
+
+    filterLayers(ltsToggleForm, toggle, map)
+}
+
 const filterLayers = (form, toggle, map) => {
+    const allChecked = form.querySelectorAll('[data-layer-type="filter"]:checked')
     const layer = toggle.name
-    const value = toggle.value
-    const isChecked = toggle.checked
     let baseFilter;
-    
-    // handle toggling of meta full network toggle
-    if(value === 'lts-all') {
-        const filterToggles = form.querySelectorAll('[data-layer-type="filter"]')
 
-        if(isChecked) {
-            baseFilter = null
-            filterToggles.forEach(toggle => toggle.checked = true)
-        } else {
-            baseFilter = ['<', 'lts_score', 0]
-            filterToggles.forEach(toggle => toggle.checked = false)
-        }
-    
-    // handle toggling of individual filter toggles
-    } else {
-        const allChecked = form.querySelectorAll('[data-layer-type="filter"]:checked')
-        const metaToggle = form.querySelector('[data-layer-type="meta"]')
+    switch(allChecked.length) {
+        case 4:                
+        baseFilter = null
+        break
+    case 0:                
+        baseFilter = ['<', 'lts_score', 0]
+        break
+    default:
+        baseFilter = ['any']
 
-        switch(allChecked.length) {
-            case 4:                
-                metaToggle.checked = true
-                baseFilter = null
-                break
-            case 0:                
-                metaToggle.checked = false
-                baseFilter = ['<', 'lts_score', 0]
-                break
-            case 1:
-                // take advantage of switch pass thru to add edge case to default behavior
-                metaToggle.checked = true
-            default:
-                baseFilter = ['any']
-
-                allChecked.forEach(input => {
-                    const layerFilter = ltsFilters[input.value]
-                    baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
-                })        
-        }
+        allChecked.forEach(input => {
+            const layerFilter = ltsFilters[input.value]
+            baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
+        })  
     }
 
     map.setFilter(layer, baseFilter)

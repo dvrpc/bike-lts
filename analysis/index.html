@@ -61,32 +61,30 @@
 
                     <section class="sidebar-container" id="toggles-container">
                         <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="toggle">
-                            <label class="sidebar-form-label">
-                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="meta" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
-                                full LTS network
+                            <label class="sidebar-form-label stacked-inputs">
+                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+                                LTS 1
                             </label>
+                            
+                            <label class="sidebar-form-label stacked-inputs">
+                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+                                LTS 2
+                            </label>
+            
+                            <label class="sidebar-form-label stacked-inputs">
+                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+                                LTS 3
+                            </label>
+                            
+                            <label class="sidebar-form-label lts-layer-4">
+                                <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+                                LTS 4
+                            </label>
+                        </form>
 
-                            <div class="sidebar-nested-inputs-wrapper">
-                                <label class="sidebar-form-label stacked-inputs">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-                                    LTS 1
-                                </label>
-                                
-                                <label class="sidebar-form-label stacked-inputs">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-                                    LTS 2
-                                </label>
-                
-                                <label class="sidebar-form-label stacked-inputs">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-                                    LTS 3
-                                </label>
-                                
-                                <label class="sidebar-form-label lts-layer-4">
-                                    <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-                                    LTS 4
-                                </label>
-                            </div>
+                        <form autocomplete="off" class="sidebar-form flex-row flex-between" aria-label="core LTS reset and apply buttons" data-form-type="submit">
+                            <button type="submit" value="show-lts" class="lts-btns show-lts" data-layer-type="submit" onclick="this.form.submitted=this.value">show all LTS layers</button>
+                            <button type="submit" value="clear-lts" class="lts-btns clear-lts" data-layer-type="submit" onclick="this.form.submitted=this.value">clear LTS layers</button>
                         </form>
 
                         <hr class="sidebar-hr" />

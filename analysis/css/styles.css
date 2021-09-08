@@ -178,13 +178,6 @@ nav {
 .sidebar-hr-slim {
     margin: var(--wrapper-padding-half) 0;
 }
-.sidebar-img {
-    display: block;
-    margin: 5px auto;
-    max-width: 100%;
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-}
 .sidebar-h2 {
     font-size: inherit;
     margin-top: var(--wrapper-padding-double);
@@ -230,8 +223,6 @@ nav {
     border: 0.15rem solid var(--theme-green);
     margin-bottom: var(--wrapper-padding-half);
 }
-/* @UPDATE end */
-
 .sidebar-select {
     margin-bottom: var(--wrapper-padding);
     background-color: var(--theme-white);
@@ -240,38 +231,43 @@ nav {
     width: 35ch;
     max-width: 100%;
 }
-.sidebar-select, .btn-submit {
+.sidebar-select {
     padding: var(--wrapper-padding-half);
     border-radius: var(--border-radius);
     border: none;
 }
-.btn-submit {
-    margin-top: var(--wrapper-padding-half);
-    /* same width as sidebar-select */
-    width: 35ch;
-    cursor: pointer;
-    border: 2px outset;
-    color: var(--theme-white);
-}
-.sidebar-select:hover, .btn-submit:hover {
+.sidebar-select:hover {
     box-shadow: var(--box-shadow);
 }
 .sidebar-form-helper-text {
     margin-bottom: var(--wrapper-padding);
 }
-.btn-submit:hover {
+.lts-btns {
+    background: none;
+    margin-top: var(--wrapper-padding-double);
+    padding: var(--wrapper-padding-half) 0;
+    border-radius: var(--border-radius);
+    width: 48%;
+    cursor: pointer;
+    border: 2px outset;
+    color: var(--theme-white);
+    font-size: inherit;
+}
+.lts-btns:hover {
     filter: brightness(110%);
+    box-shadow: var(--box-shadow);
 }
-.btn-submit:active {
+.lts-btns:active {
     box-shadow: none;
-    border: 2px inset;
-    /* filter: none; */
+    background-color: var(--theme-black-dark);
+    margin-bottom: -1px;
+    border: 2px inset inherit;
 }
-.btn-action {
-    background-color: var(--theme-green);
+.show-lts {
+    border-color: var(--theme-green);
 }
-.btn-cancel {
-    background-color: var(--theme-red);
+.clear-lts {
+    border-color: var(--theme-red);
 }
 
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
@@ -319,10 +315,6 @@ nav {
 
 .sidebar-form-checkbox:hover {
     box-shadow: var(--box-shadow);
-}
-.sidebar-nested-inputs-wrapper {
-    margin-left: 40px;
-    margin-top: var(--wrapper-padding);
 }
 .stacked-inputs {
     margin-bottom: var(--wrapper-padding);

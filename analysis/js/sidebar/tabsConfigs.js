@@ -2,32 +2,29 @@ import handleForms from "./forms.js"
 
 // LTS Form content
 const ltsFormContent = `
-    <label class="sidebar-form-label">
-        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="meta" data-legend-type="lts" name="existing-conditions" value="lts-all" checked>
-        full LTS network
+    <label class="sidebar-form-label stacked-inputs">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
+        LTS 1
+    </label>
+    
+    <label class="sidebar-form-label stacked-inputs">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
+        LTS 2
     </label>
 
-    <div class="sidebar-nested-inputs-wrapper">
-        <label class="sidebar-form-label stacked-inputs">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-            LTS 1
-        </label>
-        
-        <label class="sidebar-form-label stacked-inputs">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-            LTS 2
-        </label>
-
-        <label class="sidebar-form-label stacked-inputs">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-            LTS 3
-        </label>
-        
-        <label class="sidebar-form-label lts-layer-4">
-            <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-            LTS 4
-        </label>
-    </div>
+    <label class="sidebar-form-label stacked-inputs">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
+        LTS 3
+    </label>
+    
+    <label class="sidebar-form-label lts-layer-4">
+        <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
+        LTS 4
+    </label>
+`
+const ltsBtnFormContent = `
+    <button type="submit" value="show-lts" class="lts-btns show-lts" data-layer-type="submit" onclick="this.form.submitted=this.value">show all LTS layers</button>
+    <button type="submit" value="clear-lts" class="lts-btns clear-lts" data-layer-type="submit" onclick="this.form.submitted=this.value">clear LTS layers</button>
 `
 const ltsReferenceFormContent = `
     <label class="sidebar-form-label">
@@ -98,12 +95,14 @@ const analysisReferenceFormContent = `
 const ltsTabForms = map => {
     const frag = document.createDocumentFragment()
     const ltsForm = document.createElement('form')
+    const ltsBtnsForm = document.createElement('form')
     const hr = document.createElement('hr')
     const referenceForm = document.createElement('form')
     const forms = [ltsForm, referenceForm]
 
     // insert content
     ltsForm.insertAdjacentHTML('afterbegin', ltsFormContent)
+    ltsBtnsForm.insertAdjacentHTML('afterbegin', ltsBtnFormContent)
     referenceForm.insertAdjacentHTML('afterbegin', ltsReferenceFormContent)
 
     // set attributes and assign event handlers
@@ -115,13 +114,21 @@ const ltsTabForms = map => {
         handleForms(form, map)
     })
 
+    // handle special form case
+    ltsBtnsForm.autocomplete = 'off'
+    ltsBtnsForm.classList.add('sidebar-form', 'flex-row', 'flex-between')
+    ltsBtnsForm.dataset.formType = 'submit'
+    handleForms(ltsBtnsForm, map)
+
     // add custom attributes
     ltsForm.ariaLabel = 'core LTS layers form'
     referenceForm.ariaLabel = 'LTS layers reference form'
+    ltsBtnsForm.ariaLabel = 'core LTS reset and apply buttons'
 
     hr.classList.add('sidebar-hr')
 
     frag.appendChild(ltsForm)
+    frag.appendChild(ltsBtnsForm)
     frag.appendChild(hr)
     frag.appendChild(referenceForm)
 
