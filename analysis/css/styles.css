@@ -256,12 +256,12 @@ nav {
 .lts-btns:hover {
     filter: brightness(110%);
     box-shadow: var(--box-shadow);
-    background-color: var(--theme-black-dark);
 }
 .lts-btns:active {
     box-shadow: none;
-    border: 2px inset;
-    background-color: initial;
+    background-color: var(--theme-black-dark);
+    margin-bottom: -1px;
+    border: 2px inset inherit;
 }
 .show-lts {
     border-color: var(--theme-green);
