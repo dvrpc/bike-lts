@@ -320,10 +320,6 @@ nav {
 .sidebar-form-checkbox:hover {
     box-shadow: var(--box-shadow);
 }
-.sidebar-nested-inputs-wrapper {
-    margin-left: 40px;
-    margin-top: var(--wrapper-padding);
-}
 .stacked-inputs {
     margin-bottom: var(--wrapper-padding);
 }
