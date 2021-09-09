@@ -250,7 +250,7 @@ nav {
     border-radius: var(--border-radius);
     width: 48%;
     cursor: pointer;
-    border: 2px outset;
+    border: 2px solid;
     color: var(--theme-white);
 }
 .lts-btns:hover {
