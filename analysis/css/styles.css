@@ -3,9 +3,9 @@
     margin: 0;
 }
 body {
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
-    line-height: 140%;
+    line-height: 1.4;
     text-rendering: optimizeLegibility;
 }
 h1 {
@@ -135,7 +135,7 @@ nav {
     position: absolute;
     top: calc(6vh + 10px);
     left: var(--wrapper-padding);
-    width: 30vw;
+    width: 25vw;
     height: calc(94vh - 20px);
     z-index: 3;
     overflow-y: hidden;
@@ -146,17 +146,17 @@ nav {
     box-shadow: var(--box-shadow);
 }
 .sidebar-content {
-    padding: var(--wrapper-padding-double) var(--wrapper-padding);
+    padding: var(--wrapper-padding-double);
     padding-top: 0;
     height: calc(94% - var(--wrapper-padding)*2);
     overflow-y: auto;
 }
 .sidebar-header {
     width: 100%;
-    font-size: inherit;
+    font-size: 0.9rem;
     text-align: center;
-    padding: var(--wrapper-padding-double) var(--wrapper-padding);
-    margin-left: calc(var(--wrapper-padding) * -1);
+    padding: var(--wrapper-padding-double);
+    margin-left: calc(var(--wrapper-padding) * -2);
     margin-bottom: var(--wrapper-padding-double);
     box-shadow: var(--box-shadow);
     background-color: var(--theme-black-dark);
@@ -192,7 +192,6 @@ nav {
     border: none;
     padding: var(--wrapper-padding-double) 0;
     background-color: transparent;
-    font-size: 1rem;
 }
 .sidebar-tab-active {
     color: var(--theme-yellow);
@@ -253,7 +252,6 @@ nav {
     cursor: pointer;
     border: 2px outset;
     color: var(--theme-white);
-    font-size: inherit;
 }
 .lts-btns:hover {
     filter: brightness(110%);
@@ -363,7 +361,7 @@ nav {
 .dropdown-legend {
     position: absolute;
     z-index: 2;
-    left: calc(30vw + 20px);
+    left: calc(25vw + 20px);
     margin-top: 10px;
 }
 .dropdown-toggle {
