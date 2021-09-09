@@ -151,17 +151,19 @@ nav {
     height: calc(94% - var(--wrapper-padding)*2);
     overflow-y: auto;
 }
-.sidebar strong {
-    color: var(--theme-red);
-}
-.sidebar-lead-p {
+.sidebar-header {
     width: 100%;
-    font-size: 1rem;
+    font-size: inherit;
+    text-align: center;
     padding: var(--wrapper-padding-double) var(--wrapper-padding);
     margin-left: calc(var(--wrapper-padding) * -1);
     margin-bottom: var(--wrapper-padding-double);
     box-shadow: var(--box-shadow);
     background-color: var(--theme-black-dark);
+}
+.sidebar-learn-more {
+    display: block;
+    margin-bottom: var(--wrapper-padding-double);
 }
 .sidebar-hr {
     margin: var(--wrapper-padding-double) 0;
