@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
 const initMap = () => {
-    const longitudeOffset = window.innerWidth > 800 ? -75.65 : -75.2273
+    const longitudeOffset = window.innerWidth > 800 ? -75.6 : -75.2273
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.45
 
     return new mapboxgl.Map({
@@ -14,7 +14,7 @@ const initMap = () => {
 
 // create custom extent btn
 const makeRegionalExtentEls = map => {
-    const longitudeOffset = window.innerWidth > 800 ? -75.65 : -75.2273
+    const longitudeOffset = window.innerWidth > 800 ? -75.6 : -75.2273
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.45
 
     const dvrpcExtent = {
@@ -42,15 +42,6 @@ const makeRegionalExtentEls = map => {
     return button
 }
 
-const offsetGeocoder = (e, map) => {
-    const bbox = e.result.bbox
-    const leftPad = Math.round(window.innerWidth * 0.3)
-
-    map.fitBounds(bbox, {
-        padding: {left: leftPad}
-    })
-}
-
 const makeControls = map => {
     const geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
@@ -60,10 +51,6 @@ const makeControls = map => {
     })
     const navigationControl = new mapboxgl.NavigationControl();
     const extentControl = makeRegionalExtentEls(map)
-
-    geocoder.on('result', e => {
-        if(window.innerWidth > 800) offsetGeocoder(e, map)
-    })
 
     // plug into mapbox fncs
     map.addControl(geocoder, 'top-right')
