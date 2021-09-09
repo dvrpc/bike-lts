@@ -8,7 +8,7 @@ html {
 }
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.45;
 }
 :root {
@@ -51,7 +51,7 @@ table {
     border-collapse: collapse;
 }
 th, td {
-    padding: var(--wrapper-padding);
+    padding: var(--wrapper-padding-half);
 }
 strong {
     color: var(--theme-purple);
