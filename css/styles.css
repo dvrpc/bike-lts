@@ -218,7 +218,6 @@ strong {
 }
 #scroll-story-nav {
     background-color: initial;
-    border-radius: var(--border-radius);
     position: sticky;
     top: 22.5%;
     width: 10px;
@@ -279,13 +278,13 @@ strong {
 }
 .scene-text {
     font-size: 1rem;
-    max-width: 45ch;
+    width: 25%;
+    max-width: 40ch;
     opacity: 0;
 }
 .scene-media {
-    width: 60%;
+    width: 65%;
     box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
 }
 /* END Scroll Story General */
 /****************************/
@@ -294,7 +293,8 @@ strong {
 
 /* Individua Scenes */
 .first-map-scene {
-    margin-top: calc(var(--map-height) * -1);
+    /* account for sticky map */
+    margin-top: -100vh;
 }
 #what-is-LTS-scene {
     /* height of story-nav*/
@@ -304,11 +304,11 @@ strong {
 #regional-lts-table {
     position: sticky;
     top: 25%;
-    max-width: 825px;
+    max-width: 690px;
     background-color: white;
+    box-shadow: var(--box-shadow);
     text-align: center;
-    margin-right: var(--wrapper-padding-double);
-    margin-left: var(--wrapper-padding-quad);
+    margin: 0 auto;
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
@@ -322,12 +322,6 @@ strong {
     font-size: 1rem;
     padding-top: 1.15rem;
     padding-bottom: 1.15rem;
-}
-.regional-lts-table-th:first-child {
-    border-top-left-radius: var(--border-radius);
-}
-.regional-lts-table-th:last-child {
-    border-top-right-radius: var(--border-radius);
 }
 #cyclist-type-icon {
     margin-left: 5px;
@@ -349,7 +343,6 @@ strong {
 }
 #regional-lts-table-4 {
     background-color: var(--theme-red);
-    border-bottom-left-radius: var(--border-radius);
 }
 .lts-table-ul li {
     margin-bottom: 5px;
@@ -366,7 +359,6 @@ strong {
     top: 0;
     /* offset scene-section margin */
     left: 56px;
-    border-radius: 0;
 }
 /* END Map */
 /********/
