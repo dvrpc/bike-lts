@@ -42,24 +42,6 @@ const makeRegionalExtentEls = map => {
     return button
 }
 
-const offsetGeocoder = (e, map) => {
-    // bbox doesn't exist wut?
-    console.log('e ', e)
-    // const bbox = e.result.bbox
-    const center = e.result.center
-    center[0] -= 0.015
-    // const leftPad = Math.round(window.innerWidth * 0.25)
-
-    // map.fitBounds(bbox, {
-    //     padding: {left: leftPad}
-    // })
-
-    map.flyTo({
-        center,
-        zoom: 16
-    })
-}
-
 const makeControls = map => {
     const geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
@@ -69,10 +51,6 @@ const makeControls = map => {
     })
     const navigationControl = new mapboxgl.NavigationControl();
     const extentControl = makeRegionalExtentEls(map)
-
-    geocoder.on('result', e => {
-        if(window.innerWidth > 800) offsetGeocoder(e, map)
-    })
 
     // plug into mapbox fncs
     map.addControl(geocoder, 'top-right')
