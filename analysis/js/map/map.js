@@ -1,7 +1,7 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
 const initMap = () => {
-    const longitudeOffset = window.innerWidth > 800 ? -75.65 : -75.2273
+    const longitudeOffset = window.innerWidth > 800 ? -75.6 : -75.2273
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.45
 
     return new mapboxgl.Map({
@@ -14,7 +14,7 @@ const initMap = () => {
 
 // create custom extent btn
 const makeRegionalExtentEls = map => {
-    const longitudeOffset = window.innerWidth > 800 ? -75.65 : -75.2273
+    const longitudeOffset = window.innerWidth > 800 ? -75.6 : -75.2273
     const zoom = window.innerWidth <= 420 ? 7.3 : 8.45
 
     const dvrpcExtent = {
@@ -43,11 +43,20 @@ const makeRegionalExtentEls = map => {
 }
 
 const offsetGeocoder = (e, map) => {
-    const bbox = e.result.bbox
-    const leftPad = Math.round(window.innerWidth * 0.3)
+    // bbox doesn't exist wut?
+    console.log('e ', e)
+    // const bbox = e.result.bbox
+    const center = e.result.center
+    center[0] -= 0.015
+    // const leftPad = Math.round(window.innerWidth * 0.25)
 
-    map.fitBounds(bbox, {
-        padding: {left: leftPad}
+    // map.fitBounds(bbox, {
+    //     padding: {left: leftPad}
+    // })
+
+    map.flyTo({
+        center,
+        zoom: 16
     })
 }
 
