@@ -280,14 +280,13 @@ strong {
     font-size: 1.15rem;
 }
 .scene-text {
-    font-size: 1.1rem;
-    width: 45ch;
+    font-size: 1rem;
+    max-width: 45ch;
     opacity: 0;
 }
 .scene-media {
-    width: 60vw;
+    width: 60%;
     box-shadow: var(--box-shadow);
-    max-width: calc(100% - 50ch);
     border-radius: var(--border-radius);
 }
 /* END Scroll Story General */
@@ -306,7 +305,7 @@ strong {
 }
 #regional-lts-table {
     position: sticky;
-    top: 110px;
+    top: 25%;
     max-width: 825px;
     background-color: white;
     text-align: center;
