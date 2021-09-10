@@ -152,7 +152,7 @@ nav {
 }
 .sidebar-header {
     width: 100%;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: var(--wrapper-padding-double);
     margin-left: calc(var(--wrapper-padding) * -2);
     margin-bottom: var(--wrapper-padding-double);
