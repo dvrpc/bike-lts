@@ -21,9 +21,12 @@ h1, .mapboxgl-ctrl-geocoder, .dropdown-toggle {
     left: 6px;
 }
 .legend-content {
-    height: 40vh;
+    max-height: 40vh;
     overflow-y: auto;
-    z-index: 5;
+    width: calc(100vw - 55px);
+}
+.legend-section {
+    padding: var(--wrapper-padding-half);
 }
 .sidebar {
     font-size: 0.9rem;
