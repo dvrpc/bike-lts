@@ -117,6 +117,9 @@ nav {
     display: block;
     width: 75px;
 }
+.nav-story-link {
+    text-align: right;
+}
 /* END Navbar */
 
 
@@ -152,8 +155,7 @@ nav {
 }
 .sidebar-header {
     width: 100%;
-    font-size: 0.9rem;
-    text-align: center;
+    font-size: 1rem;
     padding: var(--wrapper-padding-double);
     margin-left: calc(var(--wrapper-padding) * -2);
     margin-bottom: var(--wrapper-padding-double);
@@ -218,11 +220,6 @@ nav {
 }
 .sidebar-details[open] summary {
     font-weight: 700;
-}
-.sidebar-fieldset {
-    border-radius: var(--border-radius);
-    border: 0.15rem solid var(--theme-green);
-    margin-bottom: var(--wrapper-padding-half);
 }
 .sidebar-select {
     margin-bottom: var(--wrapper-padding);
