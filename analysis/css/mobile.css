@@ -10,11 +10,12 @@ h1, .mapboxgl-ctrl-geocoder, .dropdown-toggle {
 }
 .mapboxgl-ctrl-geocoder {
     min-width: unset;
-    width: 85%;
+    width: 75%;
 }
 .mapboxgl-ctrl-geocoder--input {
     height: 30px;
     padding: 6px 35px;
+    padding-right: 0;
 }
 .mapboxgl-ctrl-geocoder--icon-search {
     top: 3px;

@@ -117,6 +117,9 @@ nav {
     display: block;
     width: 75px;
 }
+.nav-story-link {
+    text-align: right;
+}
 /* END Navbar */
 
 
