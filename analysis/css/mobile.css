@@ -1,21 +1,33 @@
-h1 {
+h1, .mapboxgl-ctrl-geocoder, .dropdown-toggle {
     font-size: 0.8rem;
 }
 .nav-header-vr {
     margin: 0 0.5rem;
 }
+.dropdown-toggle {
+    height: 30px;
+    padding: 6px 12px;
+}
 .mapboxgl-ctrl-geocoder {
+    min-width: unset;
     width: 85%;
-    font-size: 1rem;
 }
 .mapboxgl-ctrl-geocoder--input {
-    height: 35px;
+    height: 30px;
     padding: 6px 35px;
 }
 .mapboxgl-ctrl-geocoder--icon-search {
-    top: 6px;
+    top: 3px;
     left: 6px;
 }
-.sidebar-fieldset {
+.legend-content {
+    height: 40vh;
+    overflow-y: auto;
+    z-index: 5;
+}
+.sidebar {
     font-size: 0.9rem;
+}
+.sidebar-header {
+    font-size: 0.95rem;
 }

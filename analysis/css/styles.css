@@ -218,11 +218,6 @@ nav {
 .sidebar-details[open] summary {
     font-weight: 700;
 }
-.sidebar-fieldset {
-    border-radius: var(--border-radius);
-    border: 0.15rem solid var(--theme-green);
-    margin-bottom: var(--wrapper-padding-half);
-}
 .sidebar-select {
     margin-bottom: var(--wrapper-padding);
     background-color: var(--theme-white);
