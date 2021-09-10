@@ -1,3 +1,6 @@
+h1 {
+    width: 31ch;
+}
 h1, .mapboxgl-ctrl-geocoder, .dropdown-toggle {
     font-size: 0.8rem;
 }
