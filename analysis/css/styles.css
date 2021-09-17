@@ -242,29 +242,27 @@ nav {
 }
 .lts-btns {
     background: none;
+    width: max-content;
     margin-top: var(--wrapper-padding-double);
     padding: var(--wrapper-padding-half) 0;
-    border-radius: var(--border-radius);
-    width: 48%;
     cursor: pointer;
-    border: 2px solid;
+    border: none;
+    border-bottom: 2px solid;
     color: var(--theme-white);
 }
 .lts-btns:hover {
-    filter: brightness(110%);
-    box-shadow: var(--box-shadow);
+    /* filter: drop-shadow(var(--box-shadow)); */
+    filter: brightness(145%);
 }
-.lts-btns:active {
-    box-shadow: none;
-    background-color: var(--theme-black-dark);
-    margin-bottom: -1px;
-    border: 2px inset inherit;
+.lts-btns-disabled {
+    pointer-events: none;
+    filter: brightness(85%);
 }
 .show-lts {
-    border-color: var(--theme-green);
+    border-bottom-color: var(--theme-green);
 }
 .clear-lts {
-    border-color: var(--theme-red);
+    border-bottom-color: var(--theme-red);
 }
 
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
@@ -311,16 +309,13 @@ nav {
 /* end adopted code */
 
 .sidebar-form-checkbox:hover {
-    box-shadow: var(--box-shadow);
+    filter: brightness(125%);
 }
 .stacked-inputs {
     margin-bottom: var(--wrapper-padding);
 }
 .sidebar-form-label-lts {
     margin-right: 0;
-}
-.lts-layer-wrapper {
-    width: 100%;
 }
 /* END Sidebar */
 
