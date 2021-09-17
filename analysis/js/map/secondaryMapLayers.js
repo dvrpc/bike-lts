@@ -15,11 +15,11 @@ const layers = {
             ],
             'line-color': ['match',
                 ['get', 'bin'],
-                1, '#f2f0f7',
-                2, '#cbc9e2',
-                3, '#9e9ac8',
-                4, '#756bb1',
-                5, '#54278f',
+                1, '#feebe2',
+                2, '#fbb4b9',
+                3, '#f768a1',
+                4, '#c51b8a',
+                5, '#7a0177',
                 '#fff'
             ]
         }

@@ -46,27 +46,27 @@ const layers = {
     //         ]
     //     }
     // },
-    // 'lowstress-click': {
-    //     id: 'lowstress-click',
-    //     type: 'line',
-    //     source: 'lts',
-    //     'source-layer': 'lowstress_islands',
-    //     paint: {
-    //         'line-width': ['interpolate', 
-    //             ['linear'], ['zoom'],
-    //             8.35, 1.2,
-    //             10, 1.8,
-    //             11, 3,
-    //             17, 5,
-    //             20, 7
-    //         ],
-    //         'line-color': '#fff',
-    //         'line-dasharray': [2, 0.5]
-    //     },
-    //     filter: ['==',
-    //         'island_num', 0
-    //     ]
-    // }
+    'lowstress-click': {
+        id: 'lowstress-click',
+        type: 'line',
+        source: 'lts',
+        'source-layer': 'lowstress_islands',
+        paint: {
+            'line-width': ['interpolate', 
+                ['linear'], ['zoom'],
+                8.35, 1.2,
+                10, 1.8,
+                11, 3,
+                17, 5,
+                20, 7
+            ],
+            'line-color': '#fff',
+            'line-dasharray': [2, 0.5]
+        },
+        filter: ['==',
+            'island_num', 0
+        ]
+    }
 }
 
 export default layers
