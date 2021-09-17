@@ -242,23 +242,16 @@ nav {
 }
 .lts-btns {
     background: none;
+    width: 48%;
     margin-top: var(--wrapper-padding-double);
     padding: var(--wrapper-padding-half) 0;
-    border-radius: var(--border-radius);
-    width: 48%;
     cursor: pointer;
-    border: 2px solid;
+    border: 1px solid;
+    border-radius: var(--border-radius);
     color: var(--theme-white);
 }
 .lts-btns:hover {
-    filter: brightness(110%);
-    box-shadow: var(--box-shadow);
-}
-.lts-btns:active {
-    box-shadow: none;
-    background-color: var(--theme-black-dark);
-    margin-bottom: -1px;
-    border: 2px inset inherit;
+    filter: brightness(145%);
 }
 .show-lts {
     border-color: var(--theme-green);
@@ -311,16 +304,13 @@ nav {
 /* end adopted code */
 
 .sidebar-form-checkbox:hover {
-    box-shadow: var(--box-shadow);
+    filter: brightness(130%);
 }
 .stacked-inputs {
     margin-bottom: var(--wrapper-padding);
 }
 .sidebar-form-label-lts {
     margin-right: 0;
-}
-.lts-layer-wrapper {
-    width: 100%;
 }
 /* END Sidebar */
 
