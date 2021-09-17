@@ -242,27 +242,22 @@ nav {
 }
 .lts-btns {
     background: none;
-    width: max-content;
+    width: 48%;
     margin-top: var(--wrapper-padding-double);
     padding: var(--wrapper-padding-half) 0;
     cursor: pointer;
-    border: none;
-    border-bottom: 2px solid;
+    border: 1px solid;
+    border-radius: var(--border-radius);
     color: var(--theme-white);
 }
 .lts-btns:hover {
-    /* filter: drop-shadow(var(--box-shadow)); */
     filter: brightness(145%);
 }
-.lts-btns-disabled {
-    pointer-events: none;
-    filter: brightness(85%);
-}
 .show-lts {
-    border-bottom-color: var(--theme-green);
+    border-color: var(--theme-green);
 }
 .clear-lts {
-    border-bottom-color: var(--theme-red);
+    border-color: var(--theme-red);
 }
 
 /* Adopted from: https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html */
@@ -309,7 +304,7 @@ nav {
 /* end adopted code */
 
 .sidebar-form-checkbox:hover {
-    filter: brightness(125%);
+    filter: brightness(130%);
 }
 .stacked-inputs {
     margin-bottom: var(--wrapper-padding);
