@@ -1,5 +1,6 @@
 h1 {
     width: 31ch;
+    line-height: initial;
 }
 h1, .mapboxgl-ctrl-geocoder, .dropdown-toggle {
     font-size: 0.8rem;

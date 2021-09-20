@@ -116,9 +116,11 @@ const toggleLayers = (toggle, map) => {
 
     }
 
+    // handle low-stress click
+    if (layer === 'lowstress-islands' && !toggle.checked) map.setFilter('lowstress-click', ['==', 'island_num', 0])
+
     map.setLayoutProperty(layer, 'visibility', visibility)
 
-    // @UPDATE comment out for now until legend overlay is added and hooked into
     handleLegend(legend, toggle.checked, 1)
 }
 
