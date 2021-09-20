@@ -52,7 +52,7 @@ const legendConfigs = {
         title: 'Low-stress Areas',
         icons: ['#feebe2','#fbb4b9','#f768a1','#c51b8a','#7a0177'],
         iconType: 'line',
-        text: ['tiny', 'smol', 'average', 'large', 'chonk']
+        text: ['smallest', '.', '.', '.', 'largest']
     },
     trolley: {
         title: 'Trolley Stops',
