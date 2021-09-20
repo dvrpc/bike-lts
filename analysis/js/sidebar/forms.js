@@ -116,7 +116,7 @@ const toggleLayers = (toggle, map) => {
 
     }
 
-    // hack to handle low-stress click
+    // handle low-stress click
     if (layer === 'lowstress-islands' && !toggle.checked) map.setFilter('lowstress-click', ['==', 'island_num', 0])
 
     map.setLayoutProperty(layer, 'visibility', visibility)
