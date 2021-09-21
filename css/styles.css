@@ -143,7 +143,7 @@ strong {
     left: 0;
     content: '';
     background-color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%);
+    clip-path: polygon(-100px 0, 100% 0, 100% 100%, 50% 100%);
 }
 #story-intro-text {
     position: relative;
@@ -265,11 +265,24 @@ strong {
     padding: 30px 0;
 }
 .scene-buffer {
+    position: relative;
     height: 100vh;
     width: calc(100% + var(--wrapper-padding) * 2);
     margin-left: calc(var(--wrapper-padding) * -1);
-    background-color: var(--theme-green-light);
+    background-color: var(--theme-black);
     color: var(--theme-white);
+}
+.scene-buffer:before {
+    overflow-x: hidden;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: var(--theme-green);
+    clip-path: polygon(-100px 0, 100% 0, 100% 100%, 50% 100%);
 }
 .scene-header {
     font-size: 1.9rem;
