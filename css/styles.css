@@ -264,6 +264,20 @@ strong {
     min-height: 95vh;
     padding: 30px 0;
 }
+.scene-header {
+    font-size: 1.9rem;
+    color: var(--theme-green);
+}
+.scene-text {
+    font-size: 1rem;
+    width: 25%;
+    max-width: 40ch;
+    opacity: 0;
+}
+.scene-media {
+    width: 65%;
+    box-shadow: var(--box-shadow);
+}
 .scene-buffer {
     position: relative;
     height: 100vh;
@@ -284,25 +298,28 @@ strong {
     background-color: var(--theme-green);
     clip-path: polygon(-100px 0, 100% 0, 100% 100%, 50% 100%);
 }
-.scene-header {
-    font-size: 1.9rem;
-    color: var(--theme-green);
-}
 .scene-buffer-header {
-    font-size: 2.25rem;
+    position: absolute;
+    top: calc(50% - 6rem);
+    right: 5%;
+    font-size: 3.5rem;
+    font-weight: 400;
 }
-.scene-buffer-header + p {
-    font-size: 1.15rem;
-}
-.scene-text {
-    font-size: 1rem;
+.buffer-bike {
+    position: absolute;
     width: 25%;
-    max-width: 40ch;
-    opacity: 0;
 }
-.scene-media {
-    width: 65%;
-    box-shadow: var(--box-shadow);
+.buffer-bike-red {
+    left: 30%;
+    top: 5%;
+}
+.buffer-bike-yellow {
+    top: 35%;
+    left: 5%;
+}
+.buffer-bike-white {
+    left: 24%;
+    top: 65%;
 }
 /* END Scroll Story General */
 /****************************/
