@@ -160,7 +160,7 @@ strong {
     color: var(--theme-green-light);
 }
 #story-intro-text-content {
-    width: 75ch;
+    width: 65ch;
     padding-left: var(--wrapper-padding);
     border-left: 3px solid var(--theme-black);
 }
@@ -202,6 +202,14 @@ strong {
 }
 .story-intro-icon-figure:hover {
     text-decoration: underline;
+}
+.intro-bike-yellow {
+    top: 25%;
+    left: -3%;
+}
+.intro-bike-green {
+    top: 55%;
+    left: 30%;
 }
 /* END Homepage */
 /****************/
@@ -327,8 +335,8 @@ strong {
     left: 5%;
 }
 .buffer-bike-white {
-    left: 24%;
     top: 68%;
+    left: 24%;
 }
 /* END Scroll Story General */
 /****************************/
