@@ -301,13 +301,14 @@ strong {
 .scene-buffer-header {
     position: absolute;
     top: calc(50% - 6rem);
-    right: 5%;
-    font-size: 3.5rem;
+    right: var(--wrapper-padding-quad);
+    font-size: 3rem;
     font-weight: 400;
 }
 .buffer-bike {
     position: absolute;
     width: 25%;
+    max-width: 350px;
 }
 .buffer-bike-red {
     left: 30%;
