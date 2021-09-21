@@ -143,7 +143,7 @@ strong {
     left: 0;
     content: '';
     background-color: white;
-    clip-path: polygon(-100px 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(-60px 0, 100% 0, 100% 100%, 50% 100%);
 }
 #story-intro-text {
     position: relative;
@@ -167,7 +167,7 @@ strong {
 #story-intro-text-content {
     width: 62ch;
     padding-left: var(--wrapper-padding);
-    border-left: 3px solid var(--theme-black);
+    border-left: 2px solid var(--theme-black);
 }
 .story-intro-p {
     line-height: 1.50;
@@ -319,7 +319,7 @@ strong {
     left: 0;
     content: '';
     background-color: var(--theme-green);
-    clip-path: polygon(-100px 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
 }
 .buffer-header-wrapper {
     position: absolute;
@@ -345,11 +345,11 @@ strong {
 }
 .buffer-bike-yellow {
     top: 35%;
-    left: 5%;
+    left: 6%;
 }
 .buffer-bike-white {
     top: 68%;
-    left: 24%;
+    left: 26%;
 }
 /* END Scroll Story General */
 /****************************/
