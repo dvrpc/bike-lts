@@ -18,6 +18,7 @@ body {
     --theme-red: #a50a0a;
     --theme-purple: #3F3047;
     --theme-black: #383838;
+    --theme-white: #f9f9f9;
 
     --wrapper-padding: 20px;
     --wrapper-padding-half: 10px;
@@ -264,7 +265,11 @@ strong {
     padding: 30px 0;
 }
 .scene-buffer {
-    height: 92.5vh;
+    height: 100vh;
+    width: calc(100% + var(--wrapper-padding) * 2);
+    margin-left: calc(var(--wrapper-padding) * -1);
+    background-color: var(--theme-green-light);
+    color: var(--theme-white);
 }
 .scene-header {
     font-size: 1.9rem;
@@ -302,8 +307,6 @@ strong {
     margin-bottom: 100px;
 }
 #regional-lts-table {
-    position: sticky;
-    top: 25%;
     max-width: 690px;
     background-color: white;
     box-shadow: var(--box-shadow);
