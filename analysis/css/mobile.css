@@ -1,21 +1,41 @@
 h1 {
+    width: 31ch;
+    line-height: initial;
+}
+h1, .mapboxgl-ctrl-geocoder, .dropdown-toggle {
     font-size: 0.8rem;
 }
 .nav-header-vr {
     margin: 0 0.5rem;
 }
+.dropdown-toggle {
+    height: 30px;
+    padding: 6px 12px;
+}
 .mapboxgl-ctrl-geocoder {
-    width: 85%;
-    font-size: 1rem;
+    min-width: unset;
+    width: 75%;
 }
 .mapboxgl-ctrl-geocoder--input {
-    height: 35px;
+    height: 30px;
     padding: 6px 35px;
+    padding-right: 0;
 }
 .mapboxgl-ctrl-geocoder--icon-search {
-    top: 6px;
+    top: 3px;
     left: 6px;
 }
-.sidebar-fieldset {
+.legend-content {
+    max-height: 40vh;
+    overflow-y: auto;
+    width: calc(100vw - 55px);
+}
+.legend-section {
+    padding: var(--wrapper-padding-half);
+}
+.sidebar {
     font-size: 0.9rem;
+}
+.sidebar-header {
+    font-size: 0.95rem;
 }

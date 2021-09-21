@@ -13,22 +13,14 @@ const layers = {
                 17, 2.5,
                 20, 3.5
             ],
-            'line-color': ['step',
-                ['get', 'island_num'],
-                '#fff',
-                // large concentration of islands in the 18000 range. These steps have no inherent value, they're about visual distinction
-                18561, '#8dd3c7',
-                18571, '#ffffb3',
-                18581, '#bebada',
-                18600, '#fb8072',
-                18700, '#80b1d3',
-                20000, '#fdb462',
-                22000, '#b3de69',
-                24000, '#fccde5',
-                26000, '#d9d9d9',
-                28000, '#bc80bd',
-                32000, '#ccebc5',
-                33505, '#ffed6f'
+            'line-color': ['match',
+                ['get', 'bin'],
+                1, '#feebe2',
+                2, '#fbb4b9',
+                3, '#f768a1',
+                4, '#c51b8a',
+                5, '#7a0177',
+                '#fff'
             ]
         }
     },

@@ -79,6 +79,10 @@ tabs.forEach(tab => {
         map.setFilter('existing-conditions', null)
         map.setFilter('lowstress-click', ['==','island_num', 0])
 
+        // handle popups
+        const popup = map['_container'].querySelector('.mapboxgl-popup')
+        if(popup) popup.remove()
+
         // update legends
         clearLegend(legendContainer)
         tabID === 'lts-tab' ? handleLegend('lts', true, 4) : handleLegend('priority', true, 1)

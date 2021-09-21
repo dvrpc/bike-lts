@@ -5,14 +5,15 @@ body {
 h1 {
     font-size: 1rem;
 }
-nav {
-    padding: 2px var(--wrapper-padding);
-}
 /* END General */
 
 
 
 /* Navbar */
+nav {
+    padding: 2px var(--wrapper-padding);
+    height: 4vh;
+}
 #dvrpc-logo {
     width: 55px;
 }
@@ -20,10 +21,10 @@ nav {
 
 
 
-/* Main Webmap Area */
+/* Main App Area */
 #main-content-wrapper {
     flex-direction: column-reverse;
-    height: calc(94vh - 4px);
+    height: calc(96vh - 4px);
 }
 .lds-ring {
     /* half of map area */
@@ -45,6 +46,9 @@ nav {
     border-radius: 0;
     font-size: 1rem;
 }
+.sidebar-header {
+    padding: var(--wrapper-padding) var(--wrapper-padding-double);
+}
 /* END Sidebar */
 
 
@@ -53,4 +57,17 @@ nav {
 #map {
     width: 100%;
 }
+.dropdown-legend {
+    left: 10px;
+}
 /* END Map */
+
+
+
+/* Footer */
+footer {
+    height: unset;
+    /* compensate for nav 4px padding? */
+    bottom: 4px;
+}
+/* END Footer */

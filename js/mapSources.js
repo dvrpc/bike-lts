@@ -5,7 +5,7 @@ const sources = {
     },
     lts: {
         type: 'vector',
-        url: 'https://tiles.dvrpc.org/data/lts-layertest.json'
+        url: 'https://tiles.dvrpc.org/data/lts.json'
     }
 }
 

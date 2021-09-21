@@ -50,9 +50,9 @@ const legendConfigs = {
     },
     lowstress: {
         title: 'Low-stress Areas',
-        icons: [''],
-        iconType: '',
-        text: ['Different colors represent distinct low-stress (LTS 1 & 2) areas']
+        icons: ['#feebe2','#fbb4b9','#f768a1','#c51b8a','#7a0177'],
+        iconType: 'line',
+        text: ['smallest', '.', '.', '.', 'largest']
     },
     trolley: {
         title: 'Trolley Stops',
