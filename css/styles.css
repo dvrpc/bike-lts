@@ -155,12 +155,17 @@ strong {
     text-transform: uppercase;
     margin-right: var(--wrapper-padding);
 }
+.h1-group {
+    display: block;
+    line-height: 2rem;
+}
 .h1-special {
     font-size: 4.25rem;
     color: var(--theme-green-light);
+    line-height: initial;
 }
 #story-intro-text-content {
-    width: 65ch;
+    width: 62ch;
     padding-left: var(--wrapper-padding);
     border-left: 3px solid var(--theme-black);
 }
@@ -176,7 +181,7 @@ strong {
     margin-bottom: var(--wrapper-padding);
 }
 .story-intro-btns-wrapper {
-    width: 40%;
+    width: 30%;
     padding: var(--wrapper-padding);
     margin-top: calc(var(--wrapper-padding-double)* -1);
     position: absolute;
@@ -193,15 +198,23 @@ strong {
 #read-story-btn {
     border-color: var(--theme-green);
 }
+#read-story-btn:hover {
+    color: var(--theme-green);
+}
 #view-map-btn {
     border-color: var(--theme-yellow);
 }
+#view-map-btn:hover {
+    color: var(--theme-yellow);
+}
 .story-intro-icon-figure {
     cursor: pointer;
-    padding: var(--wrapper-padding)
+    padding: var(--wrapper-padding);
+    padding-bottom: 0;
+    font-weight: 400;
 }
-.story-intro-icon-figure:hover {
-    text-decoration: underline;
+.mini-bike {
+    width: 25%;
 }
 .intro-bike-yellow {
     top: 25%;
