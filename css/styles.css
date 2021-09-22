@@ -170,7 +170,6 @@ strong {
     border-left: 2px solid var(--theme-black);
 }
 .story-intro-p {
-    line-height: 1.50;
     font-size: 1.35rem;
     margin: 0;
     font-weight: 300;
