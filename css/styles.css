@@ -149,6 +149,7 @@ strong {
 #story-intro-text {
     position: relative;
     padding: var(--wrapper-padding);
+    padding-top: var(--wrapper-padding-double);
     z-index: 2;
 }
 .header {
@@ -202,7 +203,7 @@ strong {
     max-width: 75ch;
 }
 .story-intro-p-large {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     margin-bottom: var(--wrapper-padding);
 }
 .story-intro-btns-wrapper {
@@ -388,8 +389,8 @@ strong {
     margin-top: -100vh;
 }
 #what-is-LTS-scene {
-    /* height of story-nav*/
-    margin-top: -350px;
+    /* approximate height of story-nav*/
+    margin-top: -75vh;
     margin-bottom: 100px;
 }
 #regional-lts-table {
