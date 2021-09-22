@@ -164,6 +164,10 @@ strong {
     color: var(--theme-green-light);
     line-height: initial;
 }
+.header-logo {
+    margin-top: var(--wrapper-padding);
+    width: 30%;
+}
 #story-intro-text-content {
     width: 62ch;
     padding-left: var(--wrapper-padding);
