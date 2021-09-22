@@ -143,11 +143,11 @@ strong {
     left: 0;
     content: '';
     background-color: white;
-    clip-path: polygon(-100px 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(-40px 0, 100% 0, 100% 100%, 50% 100%);
 }
 #story-intro-text {
     position: relative;
-    padding: var(--wrapper-padding-quad) var(--wrapper-padding) var(--wrapper-padding);
+    padding: var(--wrapper-padding);
     z-index: 2;
 }
 .header {
@@ -155,17 +155,46 @@ strong {
     text-transform: uppercase;
     margin-right: var(--wrapper-padding);
 }
+.header-bike-span {
+    /* set to main bicycle lts font size & character count */
+    font-size: 4.25rem;
+    width: 10.5ch;
+    line-height: 0;
+    display: block;
+    border-bottom: 4px solid;
+}
+.header-bike {
+    width: 15%;
+}
+.header-bike-red {
+    border-color: var(--theme-red);
+}
+.header-bike-yellow {
+    text-align: right;
+    border-color: var(--theme-yellow);
+}
+.header-bike-yellow-svg {
+    margin-right: var(--wrapper-padding-double);
+}
+.header-logo {
+    margin-top: var(--wrapper-padding);
+    width: 30%;
+}
+.h1-group {
+    display: block;
+    line-height: 2.5rem;
+}
 .h1-special {
     font-size: 4.25rem;
     color: var(--theme-green-light);
+    line-height: initial;
 }
 #story-intro-text-content {
-    width: 75ch;
+    width: 62ch;
     padding-left: var(--wrapper-padding);
-    border-left: 3px solid var(--theme-black);
+    border-left: 2px solid var(--theme-black);
 }
 .story-intro-p {
-    line-height: 1.50;
     font-size: 1.35rem;
     margin: 0;
     font-weight: 300;
@@ -176,7 +205,7 @@ strong {
     margin-bottom: var(--wrapper-padding);
 }
 .story-intro-btns-wrapper {
-    width: 40%;
+    width: 30%;
     padding: var(--wrapper-padding);
     margin-top: calc(var(--wrapper-padding-double)* -1);
     position: absolute;
@@ -185,7 +214,7 @@ strong {
 }
 .story-intro-icon-btns-link {
     width: 25ch;
-    color: white;
+    color: var(--theme-white);
     font-size: 1.5rem;
     border-bottom: 4px solid;
     text-decoration: none;
@@ -193,15 +222,31 @@ strong {
 #read-story-btn {
     border-color: var(--theme-green);
 }
+#read-story-btn:hover {
+    color: var(--theme-green);
+}
 #view-map-btn {
     border-color: var(--theme-yellow);
 }
+#view-map-btn:hover {
+    color: var(--theme-yellow);
+}
 .story-intro-icon-figure {
     cursor: pointer;
-    padding: var(--wrapper-padding)
+    padding: var(--wrapper-padding);
+    padding-bottom: 0;
+    font-weight: 400;
 }
-.story-intro-icon-figure:hover {
-    text-decoration: underline;
+.mini-bike {
+    width: 25%;
+}
+.intro-bike-yellow {
+    top: 25%;
+    left: -3%;
+}
+.intro-bike-green {
+    top: 55%;
+    left: 30%;
 }
 /* END Homepage */
 /****************/
@@ -276,7 +321,6 @@ strong {
 }
 .scene-media {
     width: 65%;
-    box-shadow: var(--box-shadow);
 }
 .scene-buffer {
     position: relative;
@@ -298,7 +342,7 @@ strong {
     left: 0;
     content: '';
     background-color: var(--theme-green);
-    clip-path: polygon(-100px 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
 }
 .buffer-header-wrapper {
     position: absolute;
@@ -311,7 +355,6 @@ strong {
 }
 .scene-buffer-header {
     font-size: 3.5rem;
-    font-weight: 400;
 }
 .buffer-bike {
     position: absolute;
@@ -324,11 +367,11 @@ strong {
 }
 .buffer-bike-yellow {
     top: 35%;
-    left: 5%;
+    left: 6%;
 }
 .buffer-bike-white {
-    left: 24%;
     top: 68%;
+    left: 26%;
 }
 /* END Scroll Story General */
 /****************************/
@@ -346,11 +389,13 @@ strong {
     margin-bottom: 100px;
 }
 #regional-lts-table {
-    max-width: 690px;
+    max-width: 750px;
+    font-size: 1rem;
     background-color: white;
     box-shadow: var(--box-shadow);
     text-align: center;
     margin: 0 auto;
+    border-radius: var(--border-radius);
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
@@ -365,14 +410,20 @@ strong {
     padding-top: 1.15rem;
     padding-bottom: 1.15rem;
 }
-#cyclist-type-icon {
+.top-left-corner-cell {
+    border-top-left-radius: var(--border-radius);
+}
+.top-right-corner-cell {
+    border-top-right-radius: var(--border-radius);
+}
+.table-bike {
     margin-left: 5px;
-    filter: var(--drop-shadow);
+    width: 15%;
 }
 .regional-lts-table-cat {
     color: white;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 #regional-lts-table-1 {
     background-color: var(--theme-green);
@@ -385,6 +436,7 @@ strong {
 }
 #regional-lts-table-4 {
     background-color: var(--theme-red);
+    border-bottom-left-radius: var(--border-radius);
 }
 .lts-table-ul li {
     margin-bottom: 5px;
