@@ -155,6 +155,31 @@ strong {
     text-transform: uppercase;
     margin-right: var(--wrapper-padding);
 }
+.header-bike-span {
+    /* set to main bicycle lts font size & character count */
+    font-size: 4.25rem;
+    width: 10ch;
+    line-height: 0;
+    display: block;
+    border-bottom: 4px solid;
+}
+.header-bike {
+    width: 15%;
+}
+.header-bike-red {
+    border-color: var(--theme-red);
+}
+.header-bike-yellow {
+    text-align: right;
+    border-color: var(--theme-yellow);
+}
+.header-bike-yellow-svg {
+    margin-right: var(--wrapper-padding-double);
+}
+.header-logo {
+    margin-top: var(--wrapper-padding);
+    width: 30%;
+}
 .h1-group {
     display: block;
     line-height: 2rem;
@@ -163,10 +188,6 @@ strong {
     font-size: 4.25rem;
     color: var(--theme-green-light);
     line-height: initial;
-}
-.header-logo {
-    margin-top: var(--wrapper-padding);
-    width: 30%;
 }
 #story-intro-text-content {
     width: 62ch;
