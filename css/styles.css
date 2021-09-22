@@ -158,7 +158,7 @@ strong {
 .header-bike-span {
     /* set to main bicycle lts font size & character count */
     font-size: 4.25rem;
-    width: 10ch;
+    width: 10.5ch;
     line-height: 0;
     display: block;
     border-bottom: 4px solid;
@@ -182,7 +182,7 @@ strong {
 }
 .h1-group {
     display: block;
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 .h1-special {
     font-size: 4.25rem;
