@@ -193,7 +193,7 @@ strong {
 }
 .story-intro-icon-btns-link {
     width: 25ch;
-    color: white;
+    color: var(--theme-white);
     font-size: 1.5rem;
     border-bottom: 4px solid;
     text-decoration: none;
