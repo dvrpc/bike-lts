@@ -265,8 +265,8 @@ strong {
 #scroll-story-nav {
     background-color: initial;
     position: sticky;
-    top: 22.5%;
-    width: 10px;
+    top: 15%;
+    /* width: 10px; */
     z-index: 5;
     padding: 0;
 }
@@ -277,8 +277,8 @@ strong {
     border-radius: 50%;
     margin-bottom: 11px;
     display: block;
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
     filter: var(--drop-shadow);
 }
 .scroll-story-nav-link-active, .scroll-story-nav-link:hover {
@@ -286,7 +286,7 @@ strong {
 }
 .scroll-story-nav-hr {
     margin-bottom: 11px;
-    width: 14px;
+    width: 20px;
 }
 .scroll-story-nav-tooltip-wrapper {
     filter: var(--drop-shadow);
