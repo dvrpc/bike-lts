@@ -282,11 +282,11 @@ strong {
     display: block;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 .scroll-story-nav-link-active, .scroll-story-nav-link:hover {
     background-color: var(--theme-green-light);
     filter: var(--drop-shadow);
-
 }
 .scroll-story-nav-hr {
     margin-bottom: 11px;

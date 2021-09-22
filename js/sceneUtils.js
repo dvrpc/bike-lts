@@ -19,12 +19,14 @@ const toggleNavLink = (btns, i) => {
 }
 
 const makeNavTooltip = e => {
-    let hrefToText = e.target.href.split('#')[1].split('-')
-    hrefToText.pop()
-    hrefToText = hrefToText.join(' ')
-    
     const tooltipWrapper = document.createElement('span')
     const tooltip = document.createElement('span')
+    const el = e.target.nodeName === 'LI' ? e.target.firstElementChild : e.target
+    
+    let hrefToText = el.href.split('#')[1].split('-')
+
+    hrefToText.pop()
+    hrefToText = hrefToText.join(' ')
     
     tooltipWrapper.classList.add('scroll-story-nav-tooltip-wrapper')
     tooltip.classList.add('scroll-story-nav-tooltip')
