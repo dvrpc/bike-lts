@@ -300,7 +300,6 @@ strong {
 }
 .scene-media {
     width: 65%;
-    box-shadow: var(--box-shadow);
 }
 .scene-buffer {
     position: relative;
@@ -369,11 +368,13 @@ strong {
     margin-bottom: 100px;
 }
 #regional-lts-table {
-    max-width: 690px;
+    max-width: 750px;
+    font-size: 1rem;
     background-color: white;
     box-shadow: var(--box-shadow);
     text-align: center;
     margin: 0 auto;
+    border-radius: var(--border-radius);
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;
@@ -388,14 +389,20 @@ strong {
     padding-top: 1.15rem;
     padding-bottom: 1.15rem;
 }
-#cyclist-type-icon {
+.top-left-corner-cell {
+    border-top-left-radius: var(--border-radius);
+}
+.top-right-corner-cell {
+    border-top-right-radius: var(--border-radius);
+}
+.table-bike {
     margin-left: 5px;
-    filter: var(--drop-shadow);
+    width: 15%;
 }
 .regional-lts-table-cat {
     color: white;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 #regional-lts-table-1 {
     background-color: var(--theme-green);
@@ -408,6 +415,7 @@ strong {
 }
 #regional-lts-table-4 {
     background-color: var(--theme-red);
+    border-bottom-left-radius: var(--border-radius);
 }
 .lts-table-ul li {
     margin-bottom: 5px;
