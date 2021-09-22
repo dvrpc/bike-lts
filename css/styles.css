@@ -143,11 +143,11 @@ strong {
     left: 0;
     content: '';
     background-color: white;
-    clip-path: polygon(-60px 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(-40px 0, 100% 0, 100% 100%, 50% 100%);
 }
 #story-intro-text {
     position: relative;
-    padding: var(--wrapper-padding-quad) var(--wrapper-padding) var(--wrapper-padding);
+    padding: var(--wrapper-padding);
     z-index: 2;
 }
 .header {
