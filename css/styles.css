@@ -158,12 +158,32 @@ strong {
     margin-right: var(--wrapper-padding);
 }
 .header-bike-span {
+    position: relative;
     /* set to main bicycle lts font size & character count */
     font-size: 4.25rem;
     width: 10.5ch;
     line-height: 0;
     display: block;
     border-bottom: 4px solid;
+}
+.wheel {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: -12.5px;
+    right: -1px;
+    border: 4px solid var(--theme-white);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+.wheel-red {
+    background-color: var(--theme-red);
+}
+.wheel-yellow {
+    background-color: var(--theme-yellow);
+}
+.wheel-green {
+    background-color: var(--theme-green);
 }
 .header-bike {
     width: 15%;
@@ -174,6 +194,7 @@ strong {
 .header-bike-yellow {
     text-align: right;
     border-color: var(--theme-yellow);
+    margin-top: -1rem;
 }
 .header-bike-yellow-svg {
     margin-right: var(--wrapper-padding-double);
@@ -234,6 +255,7 @@ strong {
     color: var(--theme-yellow);
 }
 .story-intro-icon-figure {
+    position: relative;
     cursor: pointer;
     padding: var(--wrapper-padding);
     padding-bottom: 0;
@@ -320,8 +342,7 @@ strong {
 }
 .scene-text {
     font-size: 1rem;
-    width: 25%;
-    max-width: 40ch;
+    width: 45ch;
     opacity: 0;
 }
 .scene-media {
