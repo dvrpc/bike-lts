@@ -342,8 +342,7 @@ strong {
 }
 .scene-text {
     font-size: 1rem;
-    width: 25%;
-    max-width: 40ch;
+    width: 45ch;
     opacity: 0;
 }
 .scene-media {
