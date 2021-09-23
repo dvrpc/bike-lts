@@ -194,6 +194,7 @@ strong {
 .header-bike-yellow {
     text-align: right;
     border-color: var(--theme-yellow);
+    margin-top: -1rem;
 }
 .header-bike-yellow-svg {
     margin-right: var(--wrapper-padding-double);
