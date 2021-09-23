@@ -108,6 +108,8 @@ strong {
     top: 0;
     z-index: 6;
     background-color: var(--theme-black);
+    transition: all 1s;
+    transform: translateY(-100%);
 }
 .top-nav a {
     color: var(--theme-white);
