@@ -179,6 +179,9 @@ strong {
 .wheel-red {
     background-color: var(--theme-red);
 }
+.wheel-yellow {
+    background-color: var(--theme-yellow);
+}
 .header-bike {
     width: 15%;
 }
