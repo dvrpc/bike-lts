@@ -170,7 +170,7 @@ strong {
     position: absolute;
     width: 15px;
     height: 15px;
-    bottom: -10px;
+    bottom: -12.5px;
     right: -1px;
     border: 4px solid var(--theme-white);
     border-radius: 50%;
@@ -181,6 +181,9 @@ strong {
 }
 .wheel-yellow {
     background-color: var(--theme-yellow);
+}
+.wheel-green {
+    background-color: var(--theme-green);
 }
 .header-bike {
     width: 15%;
@@ -251,6 +254,7 @@ strong {
     color: var(--theme-yellow);
 }
 .story-intro-icon-figure {
+    position: relative;
     cursor: pointer;
     padding: var(--wrapper-padding);
     padding-bottom: 0;
