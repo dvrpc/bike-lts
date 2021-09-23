@@ -104,18 +104,17 @@ strong {
     height: 3vh;
     top: 0;
     z-index: 6;
-    /* background-color: var(--theme-green); */
-    background-color: transparent;
+    background-color: var(--theme-black);
 }
-.nav-link-icon {
-    margin-right: 5px;
+.top-nav a {
+    color: var(--theme-white);
 }
-#nav-logo {
+.nav-logo {
     display: block;
     width: 90%;
 }
-#nav-link-analysis {
-    margin-right: 15px;
+.nav-bike {
+    width: 50px
 }
 /************/
 /* END Nav */
