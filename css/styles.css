@@ -73,6 +73,9 @@ strong {
 .flex-align-center {
     align-items: center;
 }
+.flex-justify-center {
+    justify-content: center;
+}
 .flex-justify-between {
     justify-content: space-between;
 }
@@ -108,13 +111,34 @@ strong {
 }
 .top-nav a {
     color: var(--theme-white);
+    text-decoration: none;
 }
 .nav-logo {
     display: block;
-    width: 90%;
+    width: 70%;
+}
+.nav-link {
+    position: relative;
+    border-bottom: 3px solid var(--theme-yellow);
+    width: 180px;
+    font-weight: initial;
+}
+.nav-link:hover {
+    color: var(--theme-yellow);
 }
 .nav-bike {
-    width: 50px
+    width: 35px;
+    margin-left: var(--wrapper-padding);
+}
+.wheel-nav {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom: -8px;
+    right: -1px;
+    border: 4px solid var(--theme-white);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
 }
 /************/
 /* END Nav */
