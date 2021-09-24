@@ -103,18 +103,17 @@ strong {
 /********/
 /* Nav */
 .top-nav {
-    position: sticky;
-    height: 3vh;
-    top: 0;
+    position: fixed;
+    width: calc(100% - var(--wrapper-padding));
     z-index: 6;
     background-color: var(--theme-black);
     transition: all 1s;
-    transform: translateY(-100%);
-    display: none;
+    transform: translateY(-90%);
+    opacity: 0;
 }
 .top-nav-visible {
     transform: translateY(0);
-    display: flex;
+    opacity: 1;
 }
 .top-nav a {
     color: var(--theme-white);
@@ -134,7 +133,7 @@ strong {
     color: var(--theme-yellow);
 }
 .nav-bike {
-    width: 35px;
+    width: 36px;
     margin-left: var(--wrapper-padding);
 }
 .wheel-nav {
