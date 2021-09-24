@@ -318,8 +318,6 @@ strong {
 #scroll-story-nav {
     background-color: initial;
     position: sticky;
-    top: 12.5%;
-    /* width: 10px; */
     z-index: 5;
     padding: 0;
 }
