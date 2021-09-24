@@ -379,7 +379,7 @@ strong {
 }
 .scene-buffer {
     position: relative;
-    height: 100vh;
+    height: 106vh;
     width: calc(100% + var(--wrapper-padding) * 2);
     margin-left: calc(var(--wrapper-padding) * -1);
     margin-top: var(--wrapper-padding);
@@ -401,9 +401,9 @@ strong {
 }
 .buffer-header-wrapper {
     position: absolute;
-    height: 90%;
+    height: 80%;
     width: 35%;
-    top: 5%;
+    top: 10%;
     right: 0;
     border-left: 2px solid var(--theme-white);
     justify-content: center;

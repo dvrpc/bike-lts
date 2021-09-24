@@ -6,8 +6,7 @@ const topNav = document.querySelector('.top-nav');
 const controller = new ScrollMagic.Controller();
 sceneObjs.forEach(scene => scene.addTo(controller))
 
-// @TODO: proper way to do this w/entry.target instead of topNav variable
-  // target of intro and root of top-nav doesn't work that way I'd expect..
+// set up top nav scroll observer
 const callback = entries => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > 0) {
