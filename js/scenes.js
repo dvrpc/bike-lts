@@ -93,10 +93,6 @@ const toggleMapView = (mapCat, sceneId) => {
     const layers = mapSceneLayer.layers
     const hideLayers = mapSceneLayer.hideLayers
     
-    // @TODO remove previous scene layer
-    // b/c it's 3 instances per analysis, removing might not even be needed.
-    // just a matter of applying existing filters etc
-    
     // add layers & apply filters
     layers.forEach(layer => {
         const layerID = layer.id
