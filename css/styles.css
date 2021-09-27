@@ -318,6 +318,7 @@ strong {
     position: sticky;
     z-index: 5;
     padding: 0;
+    margin-left: calc(var(--wrapper-padding-half) * -1);
 }
 .scroll-story-nav-li {
     background-color: transparent;
