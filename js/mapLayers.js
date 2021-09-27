@@ -119,24 +119,30 @@ const lowStressTwoScene = {
 }
 
 // connectivity analysis scenes
-// @TODO: shortest path jawn
-    // sarah will provide geometry
 // @TODO: LTS lines
     // try keeping the 3 separate base maps and constraining the LTS layers on connectivity + priority
     // to a max zoom level (12.5) so that it only renders that specific segment, never the full network
 const connectivityOneScene = {
-    zoom: 12.5,
+    zoom: 13.5,
     center: [-75.703, 40.006],
     layers: [
         {
             id: 'path',
             type: 'line',
-            source: 'path'
+            source: 'path',
+            paint: {
+                'line-width': 4,
+                'line-color': '#498434'
+            }
         },
         {
             id: 'blocks',
             type: 'line',
-            source: 'blocks'
+            source: 'blocks',
+            paint: {
+                'line-width': 4,
+                'line-color': 'blue'
+            }
         }
     ],
     hideLayers: ['priority']
@@ -164,7 +170,7 @@ const connectivityTwoScene = {
             }
         }
     ],
-    hideLayers: []
+    hideLayers: ['path', 'blocks']
 }
 const connectivityEquityScene = {
     zoom: 8.5,
