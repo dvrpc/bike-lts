@@ -150,7 +150,7 @@ const connectivityOneScene = {
             source: 'blocks',
             paint: {
                 'fill-color': 'orange',
-                'fill-opacity': 0.6
+                'fill-opacity': 0.5
             }
         }
     ],
