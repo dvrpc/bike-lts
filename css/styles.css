@@ -511,24 +511,18 @@ strong {
 
 
 
-/*****************/
-/* Final Graphic */
-#final-graphic {
-    display: block;
-    height: 400px;
-    background: #f7f7f7;
-}
-/*********************/
-/* END Final Graphic */
-
-
-
 /**********/
 /* Footer */
 footer {
     color: #fff;
-    background-color: var(--theme-red);
-    padding: var(--wrapper-padding);
+    height: 100vh;
+}
+.footer-img {
+    height: 70%;
+}
+.footer-connect {
+    height: 30%;
+    background-color: var(--theme-green);
 }
 /* END Footer */
 /**************/
