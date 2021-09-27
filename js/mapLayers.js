@@ -132,7 +132,7 @@ const connectivityOneScene = {
             source: 'path',
             paint: {
                 'line-width': 4,
-                'line-color': '#498434'
+                'line-color': 'purple'
             }
         },
         {
@@ -141,7 +141,7 @@ const connectivityOneScene = {
             source: 'blocks',
             paint: {
                 'line-width': 4,
-                'line-color': 'blue'
+                'line-color': 'orange'
             }
         }
     ],
