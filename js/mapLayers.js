@@ -132,6 +132,11 @@ const connectivityOneScene = {
             id: 'path',
             type: 'line',
             source: 'path'
+        },
+        {
+            id: 'blocks',
+            type: 'line',
+            source: 'blocks'
         }
     ],
     hideLayers: ['priority']
