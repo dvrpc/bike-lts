@@ -128,6 +128,11 @@ const connectivityOneScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
+        {
+            id: 'path',
+            type: 'line',
+            source: 'path'
+        }
     ],
     hideLayers: ['priority']
 }
