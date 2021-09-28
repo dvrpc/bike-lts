@@ -4,7 +4,7 @@ import customMap from './map.js'
 import * as utils from './sceneUtils.js'
 
 // get elements
-const scenes = document.querySelectorAll('.scene-section')
+const scenes = document.querySelectorAll('.scene')
 const scrollNav = document.getElementById('scroll-story-nav-ul').children
 const mapContainer = document.getElementById('map')
 const mapTwoContainer = document.getElementById('map-2')
