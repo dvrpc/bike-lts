@@ -550,7 +550,7 @@ footer {
 }
 .footer-bike-red {
     border-color: var(--theme-red);
-    width: 60%;
+    width: 40%;
 }
 .footer-bike-yellow {
     text-align: right;
@@ -558,8 +558,12 @@ footer {
     margin-top: -2rem;
     width: 70%;
 }
-.footer-bike-yellow-svg {
+.footer-bike-yellow-svg, .footer-bike-green-svg {
     margin-right: 2rem;
+}
+.footer-bike-green {
+    text-align: right;
+    border-color: var(--theme-green);
 }
 .footer-h2-group {
     display: block;
