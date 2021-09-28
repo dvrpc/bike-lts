@@ -511,24 +511,111 @@ strong {
 
 
 
-/*****************/
-/* Final Graphic */
-#final-graphic {
-    display: block;
-    height: 400px;
-    background: #f7f7f7;
-}
-/*********************/
-/* END Final Graphic */
-
-
-
 /**********/
 /* Footer */
 footer {
-    color: #fff;
-    background-color: var(--theme-red);
-    padding: var(--wrapper-padding);
+    position: relative;
+    background-color: var(--theme-black);
+    height: 100vh;
+    width: 100%;
+    padding-bottom: var(--wrapper-padding);
+    color: var(--theme-white);
+}
+.footer-bg {
+    width: 100%;
+    height: 100%;
+}
+.footer-logo {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    background-color: var(--theme-black);
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 20%, 0% 100%, 55% 100%);
+}
+.footer-logo-content {
+    position: absolute;
+    bottom: var(--wrapper-padding-quad);
+    left: var(--wrapper-padding-double);
+    text-transform: uppercase;
+}
+.footer-bike-span {
+    position: relative;
+    display: block;
+    border-bottom: 4px solid;
+}
+.footer-bike {
+    width: 7ch;
+}
+.footer-bike-red {
+    border-color: var(--theme-red);
+    width: 40%;
+}
+.footer-bike-yellow {
+    text-align: right;
+    border-color: var(--theme-yellow);
+    margin-top: -2rem;
+    width: 70%;
+}
+.footer-bike-yellow-svg, .footer-bike-green-svg {
+    margin-right: 2rem;
+}
+.footer-bike-green {
+    text-align: right;
+    border-color: var(--theme-green);
+}
+.footer-h2-group {
+    display: block;
+    line-height: 1.5rem;
+}
+.footer-h2-special {
+    font-size: 4.25rem;
+    color: var(--theme-green-light);
+    line-height: initial;
+}
+.footer-connect {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    height: 25%;
+    width: 100%;
+    background-color: var(--theme-green-light);
+}
+.footer-connect-header {
+    font-size: 1.75rem;
+}
+.footer-connect-us {
+    margin-right: 10%;
+    height: calc(50% + .75rem);
+}
+.footer-icons-wrapper {
+    height: 50%;
+}
+.footer-connect-link {
+    padding: 0 var(--wrapper-padding-half);
+    border-right: 2px solid var(--theme-white);
+    color: var(--theme-white);
+}
+.footer-connect-link:first-of-type {
+    padding-left: 0;
+}
+.footer-connect-link:last-of-type {
+    padding-right: 0;
+    border: none;
+}
+.footer-logo-dvrpc {
+    height: 50%;
+}
+.footer-vr {
+    display: block;
+    width: 2px;
+    height: 50%;
+    background: var(--theme-white);
+    margin: 0 var(--wrapper-padding-double);
+}
+.footer-icon-vr {
+    margin: 0 var(--wrapper-padding-half);
 }
 /* END Footer */
 /**************/
@@ -550,6 +637,5 @@ footer {
         opacity: 100%;
     }
 }
-/* @TODO animate scene-media by adding filter drop-shadow from 0 */
 /* END Animations */
 /******************/
