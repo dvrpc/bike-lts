@@ -5,8 +5,8 @@ const topNav = document.querySelector('.top-nav');
 const sideNav = document.getElementById('scroll-story-nav')
 
 // init controller & add scenes
-const controller = new ScrollMagic.Controller();
-sceneObjs.forEach(scene => scene.addTo(controller))
+// const controller = new ScrollMagic.Controller();
+// sceneObjs.forEach(scene => scene.addTo(controller))
 
 // set up top nav scroll observer
 const callback = entries => {

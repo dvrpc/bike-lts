@@ -513,12 +513,13 @@ strong {
 
 /**********/
 /* Footer */
-/* foos */
 footer {
     position: relative;
     background-color: var(--theme-black);
     height: 100vh;
     width: 100%;
+    padding-bottom: var(--wrapper-padding);
+    color: var(--theme-white);
 }
 .footer-bg {
     width: 100%;
@@ -531,7 +532,43 @@ footer {
     background-color: var(--theme-black);
     height: 100%;
     width: 100%;
-    clip-path: polygon(0 20%, 0% 100%, 50% 100%);
+    clip-path: polygon(0 20%, 0% 100%, 55% 100%);
+}
+.footer-logo-content {
+    position: absolute;
+    bottom: var(--wrapper-padding-quad);
+    left: var(--wrapper-padding-double);
+    text-transform: uppercase;
+}
+.footer-bike-span {
+    position: relative;
+    display: block;
+    border-bottom: 4px solid;
+}
+.footer-bike {
+    width: 7ch;
+}
+.footer-bike-red {
+    border-color: var(--theme-red);
+    width: 60%;
+}
+.footer-bike-yellow {
+    text-align: right;
+    border-color: var(--theme-yellow);
+    margin-top: -2rem;
+    width: 70%;
+}
+.footer-bike-yellow-svg {
+    margin-right: 2rem;
+}
+.footer-h2-group {
+    display: block;
+    line-height: 1.5rem;
+}
+.footer-h2-special {
+    font-size: 4.25rem;
+    color: var(--theme-green-light);
+    line-height: initial;
 }
 .footer-connect {
     position: absolute;
@@ -561,6 +598,5 @@ footer {
         opacity: 100%;
     }
 }
-/* @TODO animate scene-media by adding filter drop-shadow from 0 */
 /* END Animations */
 /******************/
