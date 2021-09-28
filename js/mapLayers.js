@@ -179,21 +179,39 @@ const connectivityTwoScene = {
             }
         }
     ],
-    hideLayers: ['path', 'blocks']
+    hideLayers: ['path', 'blocks', 'blocks-fill']
 }
 const connectivityEquityScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
+        {
+            id: 'priority-ipd',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'priorities_all_ipd',
+            paint: {
+                'line-width': 4,
+                'line-color': ['match',
+                    ['get', 'main_priority_ipd'],
+                    10, '#f0fac0',
+                    20, '#7bdd85',
+                    30, '#41b7c4',
+                    40, '#3169a8',
+                    50, '#253494',
+                    'rgba(0,0,0,0)'
+                ]
+            }
+        }
     ],
-    hideLayers: []
+    hideLayers: ['priority']
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
     ],
-    hideLayers: []
+    hideLayers: ['priority-ipd']
 }
 
 // special destinations
