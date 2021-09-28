@@ -582,6 +582,16 @@ footer {
     width: 100%;
     background-color: var(--theme-green-light);
 }
+.footer-logo-dvrpc {
+    height: 50%;
+}
+.footer-vr {
+    display: block;
+    width: 2px;
+    height: 50%;
+    background: var(--theme-white);
+    margin: 0 var(--wrapper-padding-double);
+}
 /* END Footer */
 /**************/
 
