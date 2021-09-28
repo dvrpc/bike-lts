@@ -582,6 +582,28 @@ footer {
     width: 100%;
     background-color: var(--theme-green-light);
 }
+.footer-connect-header {
+    font-size: 1.75rem;
+}
+.footer-connect-us {
+    margin-right: 10%;
+    height: calc(50% + .75rem);
+}
+.footer-icons-wrapper {
+    height: 50%;
+}
+.footer-connect-link {
+    padding: 0 var(--wrapper-padding-half);
+    border-right: 2px solid var(--theme-white);
+    color: var(--theme-white);
+}
+.footer-connect-link:first-of-type {
+    padding-left: 0;
+}
+.footer-connect-link:last-of-type {
+    padding-right: 0;
+    border: none;
+}
 .footer-logo-dvrpc {
     height: 50%;
 }
@@ -591,6 +613,9 @@ footer {
     height: 50%;
     background: var(--theme-white);
     margin: 0 var(--wrapper-padding-double);
+}
+.footer-icon-vr {
+    margin: 0 var(--wrapper-padding-half);
 }
 /* END Footer */
 /**************/
