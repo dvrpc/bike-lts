@@ -1,7 +1,7 @@
 import sceneObjs from './scenes.js'
 import { calculateSideNavSticky } from './indexUtils.js';
 
-const topNav = document.querySelector('.top-nav');
+const topNav = document.getElementById('top-nav');
 const sideNav = document.getElementById('scroll-story-nav')
 
 // init controller & add scenes
@@ -18,6 +18,7 @@ const callback = entries => {
     }
   })
 }
+
 const observer = new IntersectionObserver(callback);
 observer.observe(document.getElementById('story-intro'))
 

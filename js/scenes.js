@@ -6,18 +6,28 @@ import * as utils from './sceneUtils.js'
 // get elements
 const scenes = document.querySelectorAll('.scene')
 const scrollNav = document.getElementById('scroll-story-nav-ul').children
+const topNav = document.getElementById('top-nav')
 const mapContainer = document.getElementById('map')
 const mapTwoContainer = document.getElementById('map-2')
 const mapThreeContainer = document.getElementById('map-3')
 
-// set up scene variables
-const l = scenes.length
-const sceneObjs = []
-
 // get navigable nav els
 const scrollNavBtns = Array.from(scrollNav).filter(el => el.nodeName != 'HR')
 
-// create and store map instances    
+// set up scene variables
+const l = scenes.length
+const sceneObjs = []
+const mapOffset = topNav.offsetHeight
+const mapDivs = [mapContainer, mapTwoContainer, mapThreeContainer]
+
+// handle maps
+mapDivs.forEach(map => {
+    const gap = `calc(100vh - ${mapOffset}px)`
+    
+    map.style.height = gap
+    map.style.top = mapOffset + 'px'
+})
+
 const maps = {
     stress: {
         map: customMap(mapContainer),

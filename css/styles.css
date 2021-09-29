@@ -500,9 +500,8 @@ strong {
 /*******/
 /* Map */
 .map {
-    height: 100vh;
+    /* height: 96vh; */
     position: sticky;
-    top: 0;
     /* offset scene-section margin */
     left: 56px;
 }
