@@ -63,24 +63,6 @@ const regionalScene = {
                     '#fff'
                 ]
             }
-        },
-        {
-            id: 'lts-facilities',
-            type: 'line',
-            source: 'lts',
-            'source-layer': 'existing_conditions_lts',
-            paint: {
-                'line-width': 4,
-                'line-color': ['match',
-                    ['get', 'bikefacili'],
-                    'Bike Lane', '#123899',
-                    'Bike Route', '#ffffb3',
-                    'Buffered Bike Lane', '#29c2eb',
-                    'Protected Bike Lane', '#bebada',
-                    'Sharrows', '#ff872c',
-                    'rgba(0,0,0,0)'
-                ],
-            }
         }
     ],
     hideLayers: []
@@ -154,21 +136,71 @@ const connectivityOneScene = {
             }
         }
     ],
-    hideLayers: ['priority']
+    hideLayers: ['priority-top', 'results-all']
 }
 const connectivityTwoScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
+        // @TODO: style by thickness once results attributes are added to tileset
         {
-            id: 'priority',
+            id: 'results-all',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'results_all',
+            paint: {
+                'line-color': 'magenta'
+            },
+            minzoom: 12
+        },
+        {
+            id: 'priority-top',
             type: 'line',
             source: 'lts',
             'source-layer': 'priorities_all',
             paint: {
                 'line-width': 4,
+                'line-color': '#993404',
+            },
+            filter: ['==', 'main_priority', 10]
+        }
+    ],
+    hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill']
+}
+const connectivityEquityScene = {
+    zoom: 8.5,
+    center: [-75.2273, 40.071],
+    layers: [
+        {
+            id: 'ipd-fill',
+            type: 'fill',
+            source: 'ipd',
+            paint: {
+                'fill-color': ['interpolate',
+                    ['linear'],
+                    ['get', 'ipd_score'],
+                        9, '#ffffd9',
+                        13, '#edf8b1',
+                        15, '#c7e9b4',
+                        17, '#7fcdbb',
+                        19, '#41b6c4',
+                        21, '#1d91c0',
+                        24, '#225ea8',
+                        27, '#253494',
+                        30, '#081d58',
+                    ],
+                'fill-opacity': 0.4
+            }
+        },
+        {
+            id: 'priority-ipd',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'priorities_all_ipd',
+            paint: {
+                'line-width': 4,
                 'line-color': ['match',
-                    ['get', 'main_priority'],
+                    ['get', 'main_priority_ipd'],
                     10, '#993404',
                     20, '#d95f0e',
                     30, '#fe9929',
@@ -179,19 +211,35 @@ const connectivityTwoScene = {
             }
         }
     ],
-    hideLayers: ['path', 'blocks']
-}
-const connectivityEquityScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
-    layers: [
-    ],
-    hideLayers: []
+    hideLayers: ['priority-top', 'results-all']
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
+        {
+            id: 'priority-top',
+            filter: ['==', 'main_priority', 10]
+        }
+    ],
+    hideLayers: ['priority-ipd', 'priority-top-ipd', 'ipd-fill']
+}
+const connectivityPrioritiesEquityScene = {
+    zoom: 8.5,
+    center: [-75.2273, 40.071],
+    layers: [
+        {
+            id: 'priority-top-ipd',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'priorities_all_ipd',
+            paint: {
+                'line-width': 4,
+                'line-color': '#253494',
+                'line-opacity': 0.5
+            },
+            filter: ['==', 'main_priority_ipd', 10]
+        }
     ],
     hideLayers: []
 }
@@ -279,6 +327,7 @@ const sceneLayers = {
         connectivityTwoScene,
         connectivityEquityScene,
         connectivityPrioritiesScene,
+        connectivityPrioritiesEquityScene
     },
     special: {
         trailsScene,

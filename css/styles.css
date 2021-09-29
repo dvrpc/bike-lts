@@ -245,13 +245,13 @@ strong {
     border-left: 2px solid var(--theme-black);
 }
 .story-intro-p {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     margin: 0;
     font-weight: 300;
     max-width: 75ch;
 }
 .story-intro-p-large {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: var(--wrapper-padding);
 }
 .story-intro-btns-wrapper {
@@ -500,9 +500,8 @@ strong {
 /*******/
 /* Map */
 .map {
-    height: 100vh;
+    /* height: 96vh; */
     position: sticky;
-    top: 0;
     /* offset scene-section margin */
     left: 56px;
 }
