@@ -149,7 +149,16 @@ const connectivityTwoScene = {
             source: 'lts',
             'source-layer': 'results_all',
             paint: {
-                'line-color': 'magenta'
+                'line-color': 'magenta',
+                'line-width': ['interpolate',
+                    ['linear'],
+                    ['get', 'total'],
+                    1000, .25,
+                    10000, 2.5,
+                    100000, 4,
+                    1000000, 6,
+                    10000000, 8,
+                ]
             },
             minzoom: 12
         },
