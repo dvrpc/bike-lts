@@ -32,7 +32,7 @@ const sources = {
     },
     ipd: {
         type: 'geojson',
-        data: 'https://arcgis.dvrpc.org/portal/rest/services/Demographics/IPD_2018/FeatureServer/0/query?where=geoid10+like+%2742%25%27&outFields=IPD_SCORE&outSR=4326&f=geojson'
+        data: 'https://arcgis.dvrpc.org/portal/rest/services/Demographics/IPD_2019/FeatureServer/0/query?where=1=1&outFields=IPD_SCORE&outSR=4326&f=geojson'
     }
 }
 

@@ -189,7 +189,7 @@ const connectivityEquityScene = {
                         27, '#253494',
                         30, '#081d58',
                     ],
-                'fill-opacity': 0.5
+                'fill-opacity': 0.4
             }
         },
         {
