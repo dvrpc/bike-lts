@@ -63,24 +63,6 @@ const regionalScene = {
                     '#fff'
                 ]
             }
-        },
-        {
-            id: 'lts-facilities',
-            type: 'line',
-            source: 'lts',
-            'source-layer': 'existing_conditions_lts',
-            paint: {
-                'line-width': 4,
-                'line-color': ['match',
-                    ['get', 'bikefacili'],
-                    'Bike Lane', '#123899',
-                    'Bike Route', '#ffffb3',
-                    'Buffered Bike Lane', '#29c2eb',
-                    'Protected Bike Lane', '#bebada',
-                    'Sharrows', '#ff872c',
-                    'rgba(0,0,0,0)'
-                ],
-            }
         }
     ],
     hideLayers: []
@@ -160,6 +142,8 @@ const connectivityTwoScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
+        // @TODO: add results_all puprple layer styled magenta --> purple by thickness
+        // filter priority down to top 10%
         {
             id: 'priority',
             type: 'line',
@@ -185,6 +169,7 @@ const connectivityEquityScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
+        // @TODO add semi-transparent IPD fills
         {
             id: 'priority-ipd',
             type: 'line',
@@ -194,11 +179,11 @@ const connectivityEquityScene = {
                 'line-width': 4,
                 'line-color': ['match',
                     ['get', 'main_priority_ipd'],
-                    10, '#253494',
-                    20, '#3169a8',
-                    30, '#41b7c4',
-                    40, '#7bdd85',
-                    50, '#f0fac0',
+                    10, '#993404',
+                    20, '#d95f0e',
+                    30, '#fe9929',
+                    40, '#fed98e',
+                    50, '#ffffd4',
                     'rgba(0,0,0,0)'
                 ]
             }
@@ -236,6 +221,7 @@ const connectivityPrioritiesEquityScene = {
             paint: {
                 'line-width': 4,
                 'line-color': '#253494',
+                'line-opacity': 0.5
             },
             filter: ['==', 'main_priority_ipd', 10]
         }
