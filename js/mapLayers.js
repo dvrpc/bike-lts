@@ -165,13 +165,33 @@ const connectivityTwoScene = {
             filter: ['==', 'main_priority', 10]
         }
     ],
-    hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd']
+    hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill']
 }
 const connectivityEquityScene = {
     zoom: 8.5,
     center: [-75.2273, 40.071],
     layers: [
-        // @TODO add semi-transparent IPD fills
+        {
+            id: 'ipd-fill',
+            type: 'fill',
+            source: 'ipd',
+            paint: {
+                'fill-color': ['interpolate',
+                    ['linear'],
+                    ['get', 'ipd_score'],
+                        9, '#ffffd9',
+                        13, '#edf8b1',
+                        15, '#c7e9b4',
+                        17, '#7fcdbb',
+                        19, '#41b6c4',
+                        21, '#1d91c0',
+                        24, '#225ea8',
+                        27, '#253494',
+                        30, '#081d58',
+                    ],
+                'fill-opacity': 0.5
+            }
+        },
         {
             id: 'priority-ipd',
             type: 'line',
@@ -202,7 +222,7 @@ const connectivityPrioritiesScene = {
             filter: ['==', 'main_priority', 10]
         }
     ],
-    hideLayers: ['priority-ipd', 'priority-top-ipd']
+    hideLayers: ['priority-ipd', 'priority-top-ipd', 'ipd-fill']
 }
 const connectivityPrioritiesEquityScene = {
     zoom: 8.5,
