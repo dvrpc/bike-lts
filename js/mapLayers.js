@@ -31,17 +31,6 @@ const municipalityOutline = {
 ////
 // Scene objects
 ////
-// attributes that could update per scene
-    // zoom level
-    // center
-    // line layers 
-        // new layers
-        // filters
-    // the nature of scrolling means layers will be added sequentially
-        // kind of a dicey gamble but in theory, adding the layer config to the
-        // first instance of a layer could be enough to have following layers reference it
-
-
 // lts scenes
 const regionalScene = {
     zoom: 8.5,
@@ -101,9 +90,6 @@ const lowStressTwoScene = {
 }
 
 // connectivity analysis scenes
-// @TODO: LTS lines
-    // try keeping the 3 separate base maps and constraining the LTS layers on connectivity + priority
-    // to a max zoom level (12.5) so that it only renders that specific segment, never the full network
 const connectivityOneScene = {
     zoom: 13.5,
     center: [-75.703, 40.006],
@@ -142,14 +128,22 @@ const connectivityTwoScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
-        // @TODO: style by thickness once results attributes are added to tileset
         {
             id: 'results-all',
             type: 'line',
             source: 'lts',
             'source-layer': 'results_all',
             paint: {
-                'line-color': 'magenta'
+                'line-color': 'magenta',
+                'line-width': ['interpolate',
+                    ['linear'],
+                    ['get', 'total'],
+                    1000, .25,
+                    10000, 2.5,
+                    100000, 4,
+                    1000000, 6,
+                    10000000, 8,
+                ]
             },
             minzoom: 12
         },
