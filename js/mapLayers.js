@@ -136,31 +136,33 @@ const connectivityOneScene = {
             }
         }
     ],
-    hideLayers: ['priority', 'priority-ipd']
+    hideLayers: ['priority-top', 'results-all']
 }
 const connectivityTwoScene = {
     zoom: 12.5,
     center: [-75.703, 40.006],
     layers: [
-        // @TODO: add results_all puprple layer styled magenta --> purple by thickness
-        // filter priority down to top 10%
+        // @TODO: style by thickness once results attributes are added to tileset
         {
-            id: 'priority',
+            id: 'results-all',
+            type: 'line',
+            source: 'lts',
+            'source-layer': 'results_all',
+            paint: {
+                'line-color': 'magenta'
+            },
+            minzoom: 12
+        },
+        {
+            id: 'priority-top',
             type: 'line',
             source: 'lts',
             'source-layer': 'priorities_all',
             paint: {
                 'line-width': 4,
-                'line-color': ['match',
-                    ['get', 'main_priority'],
-                    10, '#993404',
-                    20, '#d95f0e',
-                    30, '#fe9929',
-                    40, '#fed98e',
-                    50, '#ffffd4',
-                    'rgba(0,0,0,0)'
-                ]
-            }
+                'line-color': '#993404',
+            },
+            filter: ['==', 'main_priority', 10]
         }
     ],
     hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd']
@@ -189,7 +191,7 @@ const connectivityEquityScene = {
             }
         }
     ],
-    hideLayers: ['priority', 'priority-top']
+    hideLayers: ['priority-top', 'results-all']
 }
 const connectivityPrioritiesScene = {
     zoom: 8.5,
@@ -197,13 +199,6 @@ const connectivityPrioritiesScene = {
     layers: [
         {
             id: 'priority-top',
-            type: 'line',
-            source: 'lts',
-            'source-layer': 'priorities_all',
-            paint: {
-                'line-width': 4,
-                'line-color': '#993404',
-            },
             filter: ['==', 'main_priority', 10]
         }
     ],
