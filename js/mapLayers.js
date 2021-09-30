@@ -33,8 +33,8 @@ const municipalityOutline = {
 ////
 // lts scenes
 const regionalScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'lts-scene',
@@ -58,7 +58,7 @@ const regionalScene = {
 }
 const usingDataScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'lts-scene',
@@ -68,7 +68,7 @@ const usingDataScene = {
 }
 const lowStressOneScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'lts-scene',
@@ -79,7 +79,7 @@ const lowStressOneScene = {
 }
 const lowStressTwoScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'lts-scene',
@@ -92,7 +92,7 @@ const lowStressTwoScene = {
 // connectivity analysis scenes
 const connectivityOneScene = {
     zoom: 13.5,
-    center: [-75.703, 40.006],
+    center: [-75.69, 40.006],
     layers: [
         {
             id: 'path',
@@ -126,7 +126,7 @@ const connectivityOneScene = {
 }
 const connectivityTwoScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'results-all',
@@ -162,8 +162,8 @@ const connectivityTwoScene = {
     hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill']
 }
 const connectivityEquityScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'ipd-fill',
@@ -208,8 +208,8 @@ const connectivityEquityScene = {
     hideLayers: ['priority-top', 'results-all']
 }
 const connectivityPrioritiesScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'priority-top',
@@ -219,8 +219,8 @@ const connectivityPrioritiesScene = {
     hideLayers: ['priority-ipd', 'priority-top-ipd', 'ipd-fill']
 }
 const connectivityPrioritiesEquityScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'priority-top-ipd',
@@ -240,8 +240,8 @@ const connectivityPrioritiesEquityScene = {
 
 // special destinations
 const trailsScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'trails',
@@ -263,8 +263,8 @@ const trailsScene = {
     hideLayers: ['transit', 'schools']
 }
 const transitScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'transit',
@@ -286,8 +286,8 @@ const transitScene = {
     hideLayers: ['trails', 'schools']
 }
 const schoolsScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'schools',
