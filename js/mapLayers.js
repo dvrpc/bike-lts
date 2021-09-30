@@ -58,7 +58,7 @@ const regionalScene = {
 }
 const usingDataScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'lts-scene',
@@ -68,7 +68,7 @@ const usingDataScene = {
 }
 const lowStressOneScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'lts-scene',
@@ -79,7 +79,7 @@ const lowStressOneScene = {
 }
 const lowStressTwoScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'lts-scene',
@@ -92,7 +92,7 @@ const lowStressTwoScene = {
 // connectivity analysis scenes
 const connectivityOneScene = {
     zoom: 13.5,
-    center: [-75.703, 40.006],
+    center: [-75.69, 40.006],
     layers: [
         {
             id: 'path',
@@ -126,7 +126,7 @@ const connectivityOneScene = {
 }
 const connectivityTwoScene = {
     zoom: 12.5,
-    center: [-75.703, 40.006],
+    center: [-75.685, 40.006],
     layers: [
         {
             id: 'results-all',
