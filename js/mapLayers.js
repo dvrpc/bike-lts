@@ -33,8 +33,8 @@ const municipalityOutline = {
 ////
 // lts scenes
 const regionalScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'lts-scene',
@@ -162,8 +162,8 @@ const connectivityTwoScene = {
     hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill']
 }
 const connectivityEquityScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'ipd-fill',
@@ -208,8 +208,8 @@ const connectivityEquityScene = {
     hideLayers: ['priority-top', 'results-all']
 }
 const connectivityPrioritiesScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'priority-top',
@@ -219,8 +219,8 @@ const connectivityPrioritiesScene = {
     hideLayers: ['priority-ipd', 'priority-top-ipd', 'ipd-fill']
 }
 const connectivityPrioritiesEquityScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'priority-top-ipd',
@@ -240,8 +240,8 @@ const connectivityPrioritiesEquityScene = {
 
 // special destinations
 const trailsScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'trails',
@@ -263,8 +263,8 @@ const trailsScene = {
     hideLayers: ['transit', 'schools']
 }
 const transitScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'transit',
@@ -286,8 +286,8 @@ const transitScene = {
     hideLayers: ['trails', 'schools']
 }
 const schoolsScene = {
-    zoom: 8.5,
-    center: [-75.2273, 40.071],
+    zoom: 8.4,
+    center: [-74.85, 40.071],
     layers: [
         {
             id: 'schools',
