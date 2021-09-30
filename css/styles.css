@@ -307,7 +307,7 @@ strong {
 /************************/
 /* Scroll Story General */
 #scroll-story-main {
-    padding: 0;
+    padding: 0 0 var(--wrapper-padding-quad) 0;
     background-color: #f9f9f9;
 }
 #scroll-story-main a {
@@ -318,7 +318,7 @@ strong {
     position: sticky;
     z-index: 5;
     padding: 0;
-    margin-left: calc(var(--wrapper-padding-half) * -1);
+    margin-left: var(--wrapper-padding-half);
 }
 .scroll-story-nav-li {
     background-color: transparent;
@@ -337,6 +337,7 @@ strong {
     filter: var(--drop-shadow);
 }
 .scroll-story-nav-hr {
+    color: var(--theme-white);
     margin-bottom: 11px;
     width: 30px;
 }
@@ -363,7 +364,7 @@ strong {
     padding: 30px 0;
 }
 .scene-header {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     color: var(--theme-green);
 }
 .scene-text {
@@ -373,8 +374,14 @@ strong {
     border-radius: var(--border-radius);
     font-size: 1rem;
     width: 45ch;
-    margin-right: var(--wrapper-padding-quad);
+    margin-right: var(--wrapper-padding);
     opacity: 0;
+}
+.scene-text-flat {
+    box-shadow: none;
+}
+.limitations-text {
+    width: 65ch;
 }
 .scene-media {
     width: 65%;
@@ -501,6 +508,16 @@ strong {
 
 /*******/
 /* Map */
+.map-wrapper {
+    background-color: var(--theme-black);
+    padding: var(--wrapper-padding-quad) 0;
+}
+.map-wrapper:first-of-type {
+    padding-top: 0;
+}
+.map-wrapper:last-of-type {
+    padding-bottom: 0;
+}
 .map {
     width: 100%;
     position: sticky;
