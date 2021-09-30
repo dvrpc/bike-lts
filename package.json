@@ -1,6 +1,6 @@
 {
   "name": "bike-lts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "scroll story to contextualize bike lts analysis",
   "main": "index.js",
   "scripts": {
