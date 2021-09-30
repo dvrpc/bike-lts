@@ -1,0 +1,41 @@
+{
+  "name": "bike-lts",
+  "version": "1.0.0",
+  "description": "scroll story to contextualize bike lts analysis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack && npm version patch",
+    "build:prod": "webpack -p && npm version minor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvrpc/bike-lts.git"
+  },
+  "keywords": [
+    "bike",
+    "lts",
+    "connectivity",
+    "bike",
+    "network",
+    "analysis"
+  ],
+  "author": "Marc Molta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvrpc/bike-lts/issues"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.1.5",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.3",
+    "path": "^0.12.7",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.10.3",
+    "webpack-cli": "^4.2.0"
+  },
+  "homepage": "https://github.com/dvrpc/bike-lts#readme"
+}
