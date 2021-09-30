@@ -4,3 +4,8 @@
 .env.development.local
 .env.test.local
 .env.production.local
+
+# files/folders
+/node_modules/*
+/build/*
+package-lock.json
