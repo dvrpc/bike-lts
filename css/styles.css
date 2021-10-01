@@ -365,7 +365,14 @@ strong {
 }
 .scene-header {
     font-size: 1.5rem;
-    color: var(--theme-green);
+    color: var(--theme-white);
+    background-color: var(--theme-black);
+    padding: var(--wrapper-padding-half) var(--wrapper-padding);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    margin-left: -20px;
+    margin-top: -11px;
 }
 .scene-text {
     background-color: var(--theme-white);
