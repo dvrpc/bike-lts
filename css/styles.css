@@ -124,10 +124,21 @@ strong {
 .nav-link {
     position: relative;
     border-bottom: 3px solid var(--theme-yellow);
-    width: 180px;
+    width: 150px;
     font-weight: initial;
 }
-.nav-link:hover {
+.nav-link-home {
+    color: var(--theme-white);
+    cursor: pointer;
+    border-color: var(--theme-green);
+}
+.nav-link-home:hover {
+    color: var(--theme-green);
+}
+.nav-link-map {
+    margin-left: var(--wrapper-padding);
+}
+.nav-link-map:hover {
     color: var(--theme-yellow);
 }
 .nav-bike {
@@ -156,7 +167,7 @@ strong {
 }
 #story-intro {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--theme-black);
 }
 #story-intro:before {
@@ -364,6 +375,17 @@ strong {
     padding: 30px 0;
 }
 .scene-header {
+    font-size: 1.5rem;
+    color: var(--theme-white);
+    background-color: var(--theme-black);
+    padding: var(--wrapper-padding-half) var(--wrapper-padding);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    margin-left: -20px;
+    margin-top: -11px;
+}
+.flat-scene-header {
     font-size: 1.5rem;
     color: var(--theme-green);
 }
