@@ -124,10 +124,21 @@ strong {
 .nav-link {
     position: relative;
     border-bottom: 3px solid var(--theme-yellow);
-    width: 180px;
+    width: 150px;
     font-weight: initial;
 }
-.nav-link:hover {
+.nav-link-home {
+    color: var(--theme-white);
+    cursor: pointer;
+    border-color: var(--theme-green);
+}
+.nav-link-home:hover {
+    color: var(--theme-green);
+}
+.nav-link-map {
+    margin-left: var(--wrapper-padding);
+}
+.nav-link-map:hover {
     color: var(--theme-yellow);
 }
 .nav-bike {
