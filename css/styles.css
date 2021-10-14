@@ -107,12 +107,10 @@ strong {
     width: calc(100% - var(--wrapper-padding));
     z-index: 7;
     background-color: var(--theme-black);
-    visibility: hidden;
     transition: transform 1s;
     transform: translateY(-110%);
 }
 .top-nav-visible {
-    visibility: visible;
     transform: translateY(0);
 }
 .top-nav a {
@@ -276,7 +274,7 @@ strong {
     z-index: 2;
 }
 .story-intro-icon-btns-link {
-    width: 32ch;
+    width: 30ch;
     color: var(--theme-white);
     font-size: 1.5rem;
     border-bottom: 4px solid;
