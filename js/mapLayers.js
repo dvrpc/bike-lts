@@ -134,7 +134,7 @@ const connectivityTwoScene = {
             source: 'lts',
             'source-layer': 'results_all',
             paint: {
-                'line-color': 'magenta',
+                'line-color': 'purple',
                 'line-width': ['interpolate',
                     ['linear'],
                     ['get', 'total'],

@@ -12,6 +12,5 @@ An update to the [existing](https://www.dvrpc.org/webmaps/BikeStress/) LTS map t
 
 
 ## Review Notes
-- change magenta on the connectivity magenta jawn to a color that works better w/brown (magenta makes brown look red)
 - change last connectivity scene zoom to Camden County bounds
 - try some kind of downward arrow on splash page to indicate scrolling
