@@ -124,7 +124,7 @@ strong {
 .nav-link {
     position: relative;
     border-bottom: 3px solid var(--theme-yellow);
-    width: 150px;
+    width: 185px;
     font-weight: initial;
 }
 .nav-link-home {
@@ -274,7 +274,7 @@ strong {
     z-index: 2;
 }
 .story-intro-icon-btns-link {
-    width: 25ch;
+    width: 30ch;
     color: var(--theme-white);
     font-size: 1.5rem;
     border-bottom: 4px solid;

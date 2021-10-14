@@ -134,7 +134,7 @@ const connectivityTwoScene = {
             source: 'lts',
             'source-layer': 'results_all',
             paint: {
-                'line-color': 'magenta',
+                'line-color': 'purple',
                 'line-width': ['interpolate',
                     ['linear'],
                     ['get', 'total'],
@@ -219,8 +219,8 @@ const connectivityPrioritiesScene = {
     hideLayers: ['priority-ipd', 'priority-top-ipd', 'ipd-fill']
 }
 const connectivityPrioritiesEquityScene = {
-    zoom: 8.4,
-    center: [-74.85, 40.071],
+    zoom: 9.9,
+    center: [-74.81, 39.80],
     layers: [
         {
             id: 'priority-top-ipd',
