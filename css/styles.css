@@ -274,9 +274,9 @@ strong {
     z-index: 2;
 }
 .story-intro-icon-btns-link {
-    width: 30ch;
+    width: 31ch;
     color: var(--theme-white);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-bottom: 4px solid;
     text-decoration: none;
 }
