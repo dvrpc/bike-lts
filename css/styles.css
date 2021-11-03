@@ -499,15 +499,15 @@ strong {
 }
 .top-right-corner-cell {
     border-top-right-radius: var(--border-radius);
-}
-.table-bike {
-    margin-left: 5px;
-    width: 15%;
+    text-align: left;
 }
 .regional-lts-table-cat {
     color: white;
     font-weight: 700;
     font-size: 2.5rem;
+}
+.table-pad-right {
+    padding-right: 60px;
 }
 #regional-lts-table-1 {
     background-color: var(--theme-green);
