@@ -20,7 +20,7 @@ a {
 }
 :root {
     --theme-green: #396829;
-    --theme-green-2: #a4bc58;
+    --theme-green-light: #a4bc58;
     --theme-yellow: #fcd842;
     --theme-red: #a50a0a;
     --theme-black: #383838;
@@ -119,14 +119,14 @@ nav {
 }
 .nav-link {
     position: relative;
-    border-bottom: 3px solid var(--theme-yellow);
+    border-bottom: 3px solid var(--theme-green-light);
     padding-left: 10px;
     width: 135px;
     font-weight: initial;
     text-decoration: none;
 }
 .nav-link:hover {
-    color: var(--theme-yellow);
+    color: var(--theme-green-light);
 }
 .nav-bike {
     width: 36px;
@@ -140,7 +140,7 @@ nav {
     right: -1px;
     border: 4px solid var(--theme-white);
     border-radius: 50%;
-    background-color: var(--theme-yellow);
+    background-color: var(--theme-green-light);
 }
 /* END Navbar */
 
@@ -451,7 +451,7 @@ nav {
     background-color: var(--theme-green);
 }
 .lts-legend-2 {
-    background:  var(--theme-green-2);
+    background:  var(--theme-green-light);
 }
 .lts-legend-3 {
     background-color: var(--theme-yellow);

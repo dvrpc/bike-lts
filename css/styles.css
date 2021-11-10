@@ -130,10 +130,10 @@ strong {
 .nav-link-home {
     color: var(--theme-white);
     cursor: pointer;
-    border-color: var(--theme-green);
+    border-color: var(--theme-green-light);
 }
 .nav-link-home:hover {
-    color: var(--theme-green);
+    color: var(--theme-green-light);
 }
 .nav-link-map {
     margin-left: var(--wrapper-padding);
@@ -221,7 +221,7 @@ strong {
     background-color: var(--theme-yellow);
 }
 .wheel-green {
-    background-color: var(--theme-green);
+    background-color: var(--theme-green-light);
 }
 .header-bike {
     width: 15%;
