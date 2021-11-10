@@ -247,7 +247,7 @@ strong {
 }
 .h1-special {
     font-size: 4.25rem;
-    color: var(--theme-green-light);
+    color: var(--theme-green);
     line-height: initial;
 }
 #story-intro-text-content {
@@ -344,7 +344,7 @@ strong {
     cursor: pointer;
 }
 .scroll-story-nav-link-active, .scroll-story-nav-link:hover {
-    background-color: var(--theme-green-light);
+    background-color: var(--theme-green);
     filter: var(--drop-shadow);
 }
 .scroll-story-nav-hr {
@@ -609,7 +609,7 @@ footer {
 }
 .footer-h2-special {
     font-size: 4.25rem;
-    color: var(--theme-green-light);
+    color: var(--theme-green);
     line-height: initial;
 }
 .footer-connect {
@@ -618,7 +618,7 @@ footer {
     bottom: 0;
     height: 25%;
     width: 100%;
-    background-color: var(--theme-green-light);
+    background-color: var(--theme-green);
 }
 .footer-connect-header {
     font-size: 1.75rem;

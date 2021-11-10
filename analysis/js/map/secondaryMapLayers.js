@@ -191,6 +191,8 @@ const layers = {
             // 'line-dasharray': [0.75, 3]
         }
     },
+    // @TODO consolidate rail, trolley and bus into single circles each. Popups will give specific details
+    // @TODO update legend accordingly - instead of 3, just have one "transit stops" legend that identifies bus, rail, trolley
     'passenger-rail': {
         id: 'passenger-rail',
         type: 'circle',
