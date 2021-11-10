@@ -1,13 +1,21 @@
 import legends from './legendConfigs.js'
 
 const handleLegend = (legend, checked, acca) => {
-    // get legend container (obviously not this way)
     const container = document.getElementById('legend-content')
     const children = container.children
     let hasLegend = false
     let legendReps = 0
     const checkIPD = legend.split('-')
     legend = checkIPD[1] === 'ipd' ? checkIPD[0] : legend
+
+    // @REVIEW NOTE:
+        // adding "equity-focused" to connecivity legends is more complicated than it needs to be
+        // need to handle updating those while preserving 
+        // nuclear option: create duplicate entries in legendConfig, update filterType and handle them as their own legend
+            // use -ipd or not to handle
+                // will be complicated with toggling on/off within same jawn 
+        // easy to get the legend to update title when switching between e.g. priority to transit
+            // but switching within e.g priority to equity-priority is difficult
 
     // if legend already exists, get it
     for(var i = 0; i < children.length; i++) {

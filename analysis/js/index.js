@@ -83,7 +83,8 @@ tabs.forEach(tab => {
         const popup = map['_container'].querySelector('.mapboxgl-popup')
         if(popup) popup.remove()
 
-        // update legends
+        // update legends 
+        // @TODO update arrow state (down closed, up open)
         clearLegend(legendContainer)
         tabID === 'lts-tab' ? handleLegend('lts', true, 4) : handleLegend('priority', true, 1)
     }
