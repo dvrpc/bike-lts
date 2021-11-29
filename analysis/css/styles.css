@@ -417,6 +417,11 @@ nav {
 .legend-section:last-of-type {
     margin-bottom: 0;
 }
+/* handle transit special case */
+.legend-section[data-filter-type="bus"], .legend-section[data-filter-type="trolley"] {
+    display: none;
+    visibility: collapse;
+} 
 .legend-subheader {
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -434,8 +439,6 @@ nav {
     border-radius: 50%;
     border: 1px solid white;
 }
-
-/* @UPDATE: consider filter: drop-shadow(var(--box-shadow)) for contrast */
 .legend-icon-circle,
 .legend-icon-line {
     display: inline-block;

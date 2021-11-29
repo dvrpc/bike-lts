@@ -37,6 +37,9 @@ const toggleSelectForm = (e, form, map) => {
         const destinationArray = specialDestinationLayers[destination]
 
         // toggle on special + associated reference layers
+        // @TRANSIT update:
+            // this fnc was built assuming a 1:1 association between layer & legend
+                // now transit wants to keep all the layers but consolidate them into one legend
         if(destination === selectedAnalysis) {
             destinationArray.forEach(layer => {
                 

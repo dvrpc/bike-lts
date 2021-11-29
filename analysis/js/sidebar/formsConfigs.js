@@ -19,6 +19,7 @@ const specialDestinationLayers = {
     school: ['schools-combined', 'school', 'school-ipd'],
     trails: ['trail-access', 'trails', 'trails-ipd'],
     transit: ['trolley', 'bus', 'passenger-rail', 'transit', 'transit-ipd'],
+    // transit: ['transit', 'transit-ipd'],
     priority: ['priority', 'priority-ipd']
 }
 

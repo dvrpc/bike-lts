@@ -42,29 +42,32 @@ const legendConfigs = {
         iconType: 'circle',
         text: ['Trailheads']
     },
-    ['passenger-rail']: {
-        title: 'Passenger Rail Stations',
-        icons: ['#004d6e','#f18541','#ed164b','#487997'],
-        iconType: 'circle',
-        text: ['Amtrak','NJ Transit','PATCO','SEPTA']
-    },
     lowstress: {
         title: 'Low-stress Areas',
         icons: ['#feebe2','#fbb4b9','#f768a1','#c51b8a','#7a0177'],
         iconType: 'line',
         text: ['smallest', '.', '.', '.', 'largest']
     },
-    trolley: {
-        title: 'Trolley Stops',
-        icons: ['#984ea3', '#4e2853'],
+    // // @UPDATE handle transit special case - consolidate into here
+    ['passenger-rail']: {
+        title: 'Transit Stops',
+        icons: ['#004d6e','#f18541','#ed164b'],
         iconType: 'circle',
-        text: ['Eastbound', 'Westbound']
+        text: ['Bus','Passenger Rail','Trolley']
     },
+    // @UPDATE handle transit special case
+    trolley: {
+        title: '',
+        icons: [],
+        iconType: '',
+        text: ['']
+    },
+    // @UPDATE handle transit special case
     bus: {
-        title: 'Bus Stops',
-        icons: ['#f18541', '#487997'],
-        iconType: 'circle',
-        text: ['NJT Bus', 'SEPTA Bus']
+        title: '',
+        icons: [],
+        iconType: '',
+        text: ['']
     },
     'schools-combined': {
         title: 'Schools',
