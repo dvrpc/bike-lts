@@ -206,14 +206,7 @@ const layers = {
                 11, 3,
                 19, 4
             ],
-            'circle-color': ['match',
-                ['get', 'operator'],
-                'Amtrak', '#004d6e',
-                'NJ Transit', '#f18541',
-                'PATCO', '#ed164b',
-                'SEPTA', '#487997',
-                '#fff'
-            ],
+            'circle-color': '#f18541',
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
@@ -249,12 +242,7 @@ const layers = {
                 11, 3,
                 19, 4
             ],
-            'circle-color': ['match',
-                ['get', 'direction'],
-                'Eastbound', '#984ea3',
-                'Westbound', '#4e2853',
-                '#fff'
-            ],
+            'circle-color': '#ed164b',
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
@@ -272,12 +260,7 @@ const layers = {
                 11, 3,
                 19, 4
             ],
-            'circle-color': ['match',
-                ['get', 'layer'],
-                'NJTBus', '#f18541',
-                'SEPTABus', '#487997',
-                '#fff'
-            ],
+            'circle-color': '#004d6e',
             'circle-stroke-color': '#fff',
             'circle-stroke-width': 1
         }
