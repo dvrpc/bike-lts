@@ -421,7 +421,7 @@ nav {
 .legend-section[data-filter-type="bus"], .legend-section[data-filter-type="trolley"] {
     display: none;
     visibility: collapse;
-} 
+}
 .legend-subheader {
     font-size: 0.9rem;
     text-transform: uppercase;
