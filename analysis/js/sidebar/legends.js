@@ -69,8 +69,11 @@ const makeLegend = (type, acca) => {
 }
 
 const toggleLegend = e => {
-    const content = e.target.nextElementSibling
+    const legend = e.target
+    const content = legend.nextElementSibling
     content.classList.toggle('legend-content-hide')
+    // toggle arrow state
+    legend.classList.toggle('dropdown-toggle-open')
 }
 
 // remove specific legends
