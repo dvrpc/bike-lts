@@ -13,80 +13,67 @@
         <meta name="robots" content="index, follow">
         <meta name="copyright" content="1995-2020 all rights reserved">
         <!--  DVRPC Website VERSION #7.0 Copyright (c) 1995-2020 Delaware Valley Regional Planning Commission. All rights reserved.   -->
-        <meta property="og:title" content="Bicycle LTS & Connectivity Analysis">
+        
+        <meta property="og:title" content="Bicycle Level of Traffic Stress (LTS) and Connectivity Analysis Story Map">
         <meta propery="og:type" content="website">
-
-        <!-- OG content - fill out later
-            <meta property="og:url" content="">
-            <meta property="og:description" content="">
-            <meta property="og:image" content="">
-         -->
-
+        <!-- <meta property="og:url" content="https://www.dvrpc.org/review/bike-lts/"> -->
+        <meta property="og:description" content="Learn about bicycle Level of Traffic Stress (LTS) and connectivity analysis by scrolling through these visualizations.">
+        <meta property="og:image" content="https://www.dvrpc.org/review/bike-lts/img/story-og-img.png">
+        
          <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&display=swap">
          <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
-         <link rel="stylesheet" href="css/styles.css">
+         
+         <link rel="stylesheet" href="./css/styles.css">
+         <link rel="stylesheet" href="./css/narrow.css" media="(max-width: 1300px)">
+         <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 725px)">
          
          <script defer type="module" src="./js/index.js"></script>
     </head>
     
     <body>
         <nav aria-labelledby="intersite navigation" class="flex-row flex-justify-between top-nav" id="top-nav">
-            <a href="/" target="_blank" rel="noreferrer noopener">
+            <a href="/transportation/bicycle/" target="_blank" rel="noreferrer noopener">
                 <img src="./img/logo.png" alt="DVRPC logo" class="nav-logo" />
             </a>
 
-            <a href="/review/bike-lts/analysis/" target="_blank" rel="noreferrer noopener" class="nav-link flex-row flex-justify-center">
-                view map
-                <svg class="nav-bike" id="bike_yellow_homepage" data-name="bike yellow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#fcd842"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#fcd842"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="136.12" y="113.03" width="10" height="27" fill="#fcd842"/><rect x="132.12" y="135.03" width="18" height="10" fill="#fcd842"/></g></g></svg>
-                <div class="wheel-yellow wheel-nav"></div>
-            </a>
+            
+            <div class="flex-row flex-align-center">
+                <span class="nav-link-home nav-link flex-row flex-justify-center" onclick="window.scrollTo(0,0);">
+                    home
+                    <svg class="nav-bike " id="bike_green_header" data-name="bike green" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#a4bc58"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#a4bc58"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#a4bc58"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#a4bc58"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#a4bc58"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#a4bc58"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#a4bc58"/><rect x="136.12" y="113.03" width="10" height="27" fill="#a4bc58"/><rect x="132.12" y="135.03" width="18" height="10" fill="#a4bc58"/></g></g></svg>
+                    <div class="wheel-green wheel-nav"></div>
+                </span>
+                
+                <a href="/review/bike-lts/analysis/" target="_blank" rel="noreferrer noopener" class="nav-link nav-link-map flex-row flex-justify-center">
+                    interactive map
+                    <svg class="nav-bike" id="bike_yellow_homepage" data-name="bike yellow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#fcd842"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#fcd842"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="136.12" y="113.03" width="10" height="27" fill="#fcd842"/><rect x="132.12" y="135.03" width="18" height="10" fill="#fcd842"/></g></g></svg>
+                    <div class="wheel-yellow wheel-nav"></div>
+                </a>
+            </div>
         </nav>
         
         <div id="story-intro-overflow">
             <section id="story-intro">
                 <div id="story-intro-text" class="flex-row flex-justify-end flex-align-start">                    
                     <header class="header">
-                        <span class="header-bike-span header-bike-red">
-                            <svg class="header-bike" id="bike_red_header" data-name="bike red" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#a50a0a"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#a50a0a"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#a50a0a"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#a50a0a"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#a50a0a"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#a50a0a"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#a50a0a"/><rect x="136.12" y="113.03" width="10" height="27" fill="#a50a0a"/><rect x="132.12" y="135.03" width="18" height="10" fill="#a50a0a"/></g></g></svg>
-                            <div class="wheel wheel-red"></div>
-                        </span>
-
-                        <h1>
-                            <span class="h1-special">bicycle lts</span>
-                            <span class="h1-group">& connectivity</span>
-                            <span class="h1-group">analysis</span>
-
-                        </h1>
-                        
-                        <span class="header-bike-span header-bike-yellow">
-                            <svg class="header-bike header-bike-yellow-svg" id="bike_yellow_header" data-name="bike yellow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#fcd842"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#fcd842"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="136.12" y="113.03" width="10" height="27" fill="#fcd842"/><rect x="132.12" y="135.03" width="18" height="10" fill="#fcd842"/></g></g></svg>
-                            <div class="wheel wheel-yellow"></div>
-                        </span>
-
-                        <img src="./img/logo-grey.png" alt="dvrpc logo" class="header-logo" />
-
-                        <!-- @TODO incorporate or not -->
-                        <!-- <span class="header-bike-span header-bike-green">
-                            <svg class="header-bike header-bike-green-svg" id="bike_green_header" data-name="bike green" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#72bc58"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#72bc58"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#72bc58"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#72bc58"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#72bc58"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#72bc58"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#72bc58"/><rect x="136.12" y="113.03" width="10" height="27" fill="#72bc58"/><rect x="132.12" y="135.03" width="18" height="10" fill="#72bc58"/></g></g></svg>
-                            <div class="wheel wheel-green"></div>
-                        </span> -->
+                        <img src="./img/logo-main.png" alt="main LTs project logo" class="header-logo" />
                     </header>
 
                     <div id="story-intro-text-content">
                         <p class="story-intro-p story-intro-p-large">
-                            Welcome to DVRPC’s Bike LTS and Connectivity Analysis! This regional screening tool was developed to help identify and rank roads where bicycle facility improvements would have the greatest local and regional connectivity benefit to the low-stress bicycle network. Learn about Level of Traffic Stress (LTS) and the connectivity analysis by scrolling through these visualizations.
+                            Welcome to DVRPC’s Bike LTS and Connectivity Analysis! This regional screening tool was developed to help identify and rank roads where bicycle facility improvements would have the greatest local and regional connectivity benefit to the low-stress bicycle network. Learn about Level of Traffic Stress (LTS) and the connectivity analysis by scrolling through the story below.
                             Explore and analyze the data in this <a href="/review/bike-lts/analysis/" target="_blank" rel="noopener noreferrer">webmap</a>.
                         </p>
                         
                         <p class="story-intro-p">
                             Additional information about LTS, connectivity analysis, and methodology behind the results displayed in the map can be found in the 
-                            <a href="/webmaps/BikeStress/documentation.pdf" target="_blank" rel="noopener noreferrer" >documentation</a>. 
+                            <a href="./pdf/BikeStressDocumentation_phase3.pdf" target="_blank" rel="noopener noreferrer" >documentation</a>. 
                             The layers and corresponding tables displayed in this map are available for download via 
-                            <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noopener noreferrer">DVRPC's Open Data Portal</a>. 
+                            <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noopener noreferrer">DVRPC's GIS Portal</a>. 
                             DVRPC continues to refine the tools and analysis approach - if you have ideas, questions, or comments, please contact Sarah Moran at 
                             <a href="mailto:smoran@dvrpc.org">smoran@dvrpc.org</a>. Road network errors are being collected 
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsOTpDgUOHFdzAzeJmvRHr77P_OhZtWZN0RxdfxHViSDSERA/viewform" target="_blank" rel="noopener noreferrer">here</a>.
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVtEyRV6w7QA8gwjTrvzpgIGVT4zx5C3u2pebqkaA9leTMmw/viewform" target="_blank" rel="noopener noreferrer">here</a>.
                         </p>
                     </div>
                 </div>
@@ -94,7 +81,7 @@
                 <div class="flex-column flex-align-center story-intro-btns-wrapper">
                     <a href="/review/bike-lts/analysis/" target="_blank" rel="noopener noreferrer" class="story-intro-icon-btns-link" id="view-map-btn">
                         <figure class="flex-row flex-align-center flex-justify-around story-intro-icon-figure">
-                            <figcaption>view map</figcaption>
+                            <figcaption>view interactive map</figcaption>
                             <svg class="mini-bike" id="bike_yellow_homepage" data-name="bike yellow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#fcd842"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#fcd842"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="136.12" y="113.03" width="10" height="27" fill="#fcd842"/><rect x="132.12" y="135.03" width="18" height="10" fill="#fcd842"/></g></g></svg>
                             <div class="wheel wheel-yellow"></div>
                         </figure>
@@ -102,7 +89,7 @@
 
                     <a href="#what-is-LTS-scene" class="story-intro-icon-btns-link" id="read-story-btn">
                         <figure class="flex-row flex-align-center flex-justify-around story-intro-icon-figure">
-                            <figcaption>view story</figcaption>
+                            <figcaption>begin story</figcaption>
                             <svg class="mini-bike" id="bike_green_homepage" data-name="bike green" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#498434"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#498434"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#498434"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#498434"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#498434"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#498434"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#498434"/><rect x="136.12" y="113.03" width="10" height="27" fill="#498434"/><rect x="132.12" y="135.03" width="18" height="10" fill="#498434"/></g></g></svg>
                             <div class="wheel wheel-green"></div>
                         </figure>
@@ -168,12 +155,6 @@
                     <li class="scroll-story-nav-link scroll-story-nav-li">
                         <a href="#schools-scene" class="scroll-story-nav-link"></a>
                     </li>
-
-                    <hr class="scroll-story-nav-hr" />
-
-                    <li class="scroll-story-nav-link scroll-story-nav-li">
-                        <a href="#limitations-scene" class="scroll-story-nav-link"></a>
-                    </li>
                 </ul>
             </nav>
 
@@ -182,9 +163,8 @@
                     <thead>
                         <tr>
                             <th class="regional-lts-table-th top-left-corner-cell">LTS</th>
-                            <th class="regional-lts-table-th">
+                            <th class="regional-lts-table-th text-right table-pad-right">
                                 Comfortable Enough
-                                <svg class="table-bike" id="bike_black_table" data-name="bike black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#383838"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#383838"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#383838"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#383838"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#383838"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#383838"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#383838"/><rect x="136.12" y="113.03" width="10" height="27" fill="#383838"/><rect x="132.12" y="135.03" width="18" height="10" fill="#383838"/></g></g></svg>
                             </th>
                             <th class="regional-lts-table-th top-right-corner-cell">Characteristics</th>
                         </tr>
@@ -192,7 +172,7 @@
                     <tbody>
                         <tr>
                             <td id="regional-lts-table-1" class="regional-lts-table-cat">1</td>
-                            <td>Most People</td>
+                            <td class="text-right table-pad-right">Most People</td>
                             <td class="text-left">
                                 <ul class="list-unstyled lts-table-ul">
                                     <li>Lowest Stress</li>
@@ -202,7 +182,7 @@
                         </tr>
                         <tr>
                             <td id="regional-lts-table-2" class="regional-lts-table-cat">2</td>
-                            <td>Interested, but Concerned</td>
+                            <td class="text-right table-pad-right">Interested, but Concerned</td>
                             <td class="text-left">
                                 <ul class="list-unstyled lts-table-ul">
                                     <li>Suitable for most adults</li>
@@ -212,7 +192,7 @@
                         </tr>
                         <tr>
                             <td id="regional-lts-table-3" class="regional-lts-table-cat">3</td>
-                            <td>Enthused and Confident</td>
+                            <td class="text-right table-pad-right">Enthused and Confident</td>
                             <td class="text-left">
                                 <ul class="list-unstyled lts-table-ul">
                                     <li>Moderate traffic stress</li>
@@ -222,7 +202,7 @@
                         </tr>
                         <tr>
                             <td id="regional-lts-table-4" class="regional-lts-table-cat">4</td>
-                            <td>Strong and Fearless</td>
+                            <td class="text-right table-pad-right">Strong and Fearless</td>
                             <td class="text-left">
                                 <ul class="list-unstyled lts-table-ul">
                                     <li>High traffic stress</li>
@@ -234,7 +214,7 @@
                 </table>
 
                 <article class="scene-text scene-text-flat">
-                    <h2 class="scene-header">What is Level of Traffic Stress (LTS)?</h2>
+                    <h2 class="flat-scene-header">What is Level of Traffic Stress (LTS)?</h2>
                     <p>LTS is a road classification scheme based on the estimated comfort of bicyclists in the traffic stream. DVRPC's LTS assignment is based on the <strong>number of lanes</strong>, effective <strong>vehicle speed</strong>, and the presence and type of <strong>bicycle facility</strong> on the road segment.</p>
                     <p>This table summarizes LTS in terms of the cyclist type that would be comfortable on certain levels and the characteristics of those levels. Generally, as the colors indicate, the higher the LTS, the more dangerous or the greater the perceived danger, and the more confident the cyclist needs to feel on their bike to consider riding on that type of road.</p>
                     <p>A few surveys have shown that the Interested but Concerned group is the largest, and therefore, a lot of bicycle infrastructure planning is done with them in mind.</p>
@@ -249,7 +229,7 @@
                     <article class="scene-text">
                         <h2 class="scene-header">Regional LTS</h2>
                         <p>The map shows the DVRPC Region's road segments colored by their LTS assignment. As indicated by the colors on the map, divided highways and major arterials are often higher stress, while local, residential streets often present the lowest stress. Trails and off-road paths are considered non-stressful in this analysis.</p>
-                        <em class="em-block">This is a regional screening tool built on the most accurate representation of the road network attributes available. Since it is impossible for DVRPC staff to verify the attributes of every road in the region, there is always room for improvement. Road attribute errors resulting in inaccurate LTS values are being collected <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsOTpDgUOHFdzAzeJmvRHr77P_OhZtWZN0RxdfxHViSDSERA/viewform" target="_blank" rel="noreferrer nooopener">here.</a></em>
+                        <em class="em-block">This is a regional screening tool built on the most accurate representation of the road network attributes available. Since it is impossible for DVRPC staff to verify the attributes of every road in the region, there is always room for improvement. Road attribute errors resulting in inaccurate LTS values are being collected <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVtEyRV6w7QA8gwjTrvzpgIGVT4zx5C3u2pebqkaA9leTMmw/viewform" target="_blank" rel="noreferrer nooopener">here.</a></em>
                     </article>
                 </section>
     
@@ -263,15 +243,15 @@
                 <section class="scene scene-section flex-row flex-justify-end" id="low-stress-areas-scene" data-map-id="lowStressOneScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Areas</h2>
-                        <p>If we look at just the LTS 1 and 2 roads, those that are comfortable for most cyclists, you start to see gaps in the network, creating low-stress islands. If an interested but concerned cyclist starts their trip on one of these islands, and they are uncomfortable using the higher LTS roads that connect them, this person is limited to their island. If they want to travel off their island, they are unlikely to ride their bike.</p>
+                        <p>If we look at just the LTS <span class="lts-1-color bold lts-highlights">1</span> and <span class="lts-2-color bold lts-highlights">2</span> roads, those that are comfortable for most cyclists, you start to see gaps in the network, creating low-stress islands. If an interested but concerned cyclist starts their trip on one of these islands, and they are uncomfortable using the higher LTS roads that connect them, this person is limited to their island. If they want to travel off their island, they are unlikely to ride their bike.</p>
                     </article>
                 </section>
     
                 <section class="scene scene-section flex-row flex-justify-end" id="connecting-low-stress-areas-scene" data-map-id="lowStressTwoScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Connecting Low-Stress Areas</h2>
-                        <p>What if we made LTS 3 roads more comfortable by making changes to them to lower their stress level to the point that they become LTS 1 or 2 roads? You can see that the islands are larger and much more connected.</p>
-                        <p>We know that in reality, there is no way to make improvements to all the LTS 3 roads in the region at the same time. Thus, the point of our connectivity analysis was to be able to rank the LTS 3 roads and compare them to each other, to see which would enable the most low stress connections; essentially give us the most bang for our buck.</p>
+                        <p>What if we made LTS <span class="lts-3-color bold lts-highlights">3</span> roads more comfortable by making changes to them to lower their stress level to the point that they become LTS <span class="lts-1-color bold lts-highlights">1</span> or <span class="lts-2-color bold lts-highlights">2</span> roads? You can see that the islands are larger and much more connected.</p>
+                        <p>We know that in reality, there is no way to make improvements to all the LTS <span class="lts-3-color bold lts-highlights">3</span> roads in the region at the same time. Thus, the point of our connectivity analysis was to be able to rank the LTS <span class="lts-3-color bold lts-highlights">3</span> roads and compare them to each other, to see which would enable the most low stress connections; essentially give us the most bang for our buck.</p>
                     </article>
                 </section>
             </div>
@@ -282,7 +262,7 @@
                 <svg class="buffer-bike buffer-bike-white" id="bike_white" data-name="bike white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="0.3"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#f9f9f9"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#f9f9f9"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#f9f9f9"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#f9f9f9"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#f9f9f9"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#f9f9f9"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#f9f9f9"/><rect x="136.12" y="113.03" width="10" height="27" fill="#f9f9f9"/><rect x="132.12" y="135.03" width="18" height="10" fill="#f9f9f9"/></g></g></svg>
                 
                 <div class="flex-row buffer-header-wrapper">
-                    <h2 class="scene-buffer-header">Connectivity<br /> Analysis</h2>
+                    <h2 class="scene-buffer-header">Connectivity Analysis</h2>
                 </div>
             </section>
 
@@ -292,7 +272,8 @@
                 <section class="scene scene-section first-map-scene flex-row flex-justify-end" id="connectivity-analysis-scene" data-map-id="connectivityOneScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Bike Network Connectivity Analysis</h2>
-                        <p>The goal was to compare the connectivity benefit of each of the LTS 3 roads. Using a shortest path algorithm, we identified the shortest path from every census block in the region, to every other census block within five miles. Since we were focused on interested but concerned cyclists, we only let our paths use LTS 1, 2, and 3 roads.</p>
+                        <p>The goal was to compare the connectivity benefit of each of the LTS <span class="lts-3-color bold lts-highlights">3</span> roads. Using a shortest path algorithm, we identified the shortest path from every census block in the region, to every other census block within five miles. Since we were focused on interested but concerned cyclists, we only let our paths use LTS <span class="lts-1-color bold lts-highlights">1</span>, <span class="lts-2-color bold lts-highlights">2</span>, and <span class="lts-3-color bold lts-highlights">3</span> roads.</p>
+                        <p>For example, the <span class="lts-purple bold lts-highlights">purple</span> line shows the shortest path between the two census blocks highlighted in <span class="lts-orange bold lts-highlights">orange</span>.</p>
                     </article>
                 </section>
 
@@ -300,17 +281,17 @@
                     <article class="scene-text">
                         <h2 class="scene-header">Connectivity Analysis Results</h2>
                         <p>We tallied the number of shortest paths that use each road segment.</p>
-                        <p>The thicker the <em>magenta</em> line, the more shortest paths use that road segment. Using these results, we can identify the LTS 3 road segments that would be used to enable the most low-stress connections if made more comfortable. The segments highlighted in <em>brown</em> are the LTS 3 roads used by the most shortest paths. These results are relative to the rest of the LTS 3 roads. Since shortest paths were calculated on a network including all LTS 3 roads, the number of connections enabled by each segment is based on every LTS 3 road being part of the low-stress network.</p>
-                        <p>Since we know this is impossible, these results serve to rank the LTS 3 roads by their relative potential impact and serve as a pipeline of realistic beneficial projects. Essentially, <strong>the results are a screening tool that can help us narrow down where to look to make improvements</strong>.</p>
+                        <p>The thicker the <span class="lts-purple bold lts-highlights">purple</span> line, the more shortest paths use that road segment. Using these results, we can identify the LTS <span class="lts-3-color bold lts-highlights">3</span> road segments that would be used to enable the most low-stress connections if made more comfortable. The segments highlighted in <span class="lts-brown bold lts-highlights">brown</span> are the LTS <span class="lts-3-color bold lts-highlights">3</span> roads used by the most shortest paths. These results are relative to the rest of the LTS <span class="lts-3-color bold lts-highlights">3</span> roads. Since shortest paths were calculated on a network including all LTS <span class="lts-3-color bold lts-highlights">3</span> roads, the number of connections enabled by each segment is based on every LTS <span class="lts-3-color bold lts-highlights">3</span> road being part of the low-stress network.</p>
+                        <p>Since we know this is impossible, these results serve to rank the LTS <span class="lts-3-color bold lts-highlights">3</span> roads by their relative potential impact and serve as a pipeline of realistic beneficial projects. Essentially, <strong>the results are a screening tool that can help us narrow down where to look to make improvements</strong>.</p>
                     </article>
                 </section>
 
                 <section class="scene scene-section flex-row flex-justify-end" id="connectivity-equity-scene" data-map-id="connectivityEquityScene">
                     <article class="scene-text">
-                        <h2 class="scene-header">Equity-focused Connectivity Analysis</h2>
+                        <h2 class="scene-header">Equity-Focused Connectivity Analysis</h2>
                         <p>In an effort to be more intentional about considering equity in our work, we also created a version of the results incorporating information about the populations that live near the origin or destination.</p>
-                        <p>DVRPC maintains an <a href="/webmaps/ipd/">Indicators of Potential Disadvantage (IPD)</a> analysis that identifies populations of interest under Title VI and Environmental Justice (youth, older adults, female, racial minority, ethnic minority, foreign-born, limited english proficiency, disabled, low-income). The IPD score classifies the concentration of the population groups of interest on a scale from “well below average” (yellow areas) to “well above average” (blue areas) in every census tract in the region.</p>
-                        <p>To allow us to view the connectivity results through an equity lens, IPD scores were converted to a numerical scale and origins and destinations were weighted by their corresponding numerical IPD score.  Paths connecting two places with above average concentrations of populations of interest were worth more than those connecting places with below average concentrations. <strong>Thus, these results can help identify the road segments that would have the greatest potential community impact if made more comfortable for bicyclists.</strong></p>
+                        <p>DVRPC maintains an <a href="/webmaps/ipd/" target="_blank" rel="noreferrer noopener">Indicators of Potential Disadvantage (IPD)</a> analysis that identifies populations of interest under Title VI and Environmental Justice (youth, older adults, female, racial minority, ethnic minority, foreign-born, limited english proficiency, disabled, low-income). The IPD score classifies the concentration of the population groups of interest on a scale from “well below average” (<span class="ipd-yellow bold lts-highlights">yellow</span> areas) to “well above average” (<span class="ipd-blue bold lts-highlights">blue</span> areas) in every census tract in the region.</p>
+                        <p>To allow us to view the connectivity results through an equity lens, IPD scores were converted to a numerical scale and origins and destinations were weighted by their corresponding numerical IPD score.  Paths connecting two places with above average concentrations of IPD populations were worth more than those connecting places with below average concentrations. Thus, <strong>these results can help identify the road segments that would have the greatest potential impact on potentially disadvantaged communities if made more comfortable for bicyclists.</strong></p>
                     </article>
                 </section>
     
@@ -323,8 +304,8 @@
 
                 <section class="scene scene-section flex-row flex-justify-end" id="equity-connectivity-priorities-scene" data-map-id="connectivityPrioritiesEquityScene">
                     <article class="scene-text">
-                        <h2 class="scene-header">Equity-focused Low-Stress Network Connectivity Priorities</h2>
-                        <p>The IPD weighted analysis is still primarily a connectivity analysis, so the results are similar to the original results. The IPD weighted top 10% is shown in blue, while the original results are shown in brown. Segments that fall in the top 10% for both analyses appear purple. Looking closely reveals more “priority” segments in areas with higher concentrations of populations of interest (IPD Score), as shown with the darker red background, and less in areas with lower concentrations of these populations.</p>
+                        <h2 class="scene-header">Equity-Focused Low-Stress Network Connectivity Priorities</h2>
+                        <p>The IPD weighted analysis is still primarily a connectivity analysis, so the results are similar to the original results. The IPD weighted top 10% is shown in <span class="ipd-blue bold lts-highlights">blue</span>, while the original results are shown in <span class="lts-brown bold lts-highlights">brown</span>. Segments that fall in the top 10% for both analyses appear <span class="lts-purple bold lts-highlights">purple</span>. Looking closely reveals more “priority” segments in areas with higher concentrations of populations of interest (IPD Score).</p>
                     </article>
                 </section>
             </div>
@@ -335,7 +316,7 @@
                 <svg class="buffer-bike buffer-bike-white" id="bike_white_dest" data-name="bike white" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="0.3"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#f9f9f9"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#f9f9f9"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#f9f9f9"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#f9f9f9"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#f9f9f9"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#f9f9f9"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#f9f9f9"/><rect x="136.12" y="113.03" width="10" height="27" fill="#f9f9f9"/><rect x="132.12" y="135.03" width="18" height="10" fill="#f9f9f9"/></g></g></svg>
                 
                 <div class="flex-row buffer-header-wrapper">
-                    <h2 class="scene-buffer-header">Special<br /> Destinations</h2>
+                    <h2 class="scene-buffer-header">Special Destinations</h2>
                 </div>
             </section>
 
@@ -345,7 +326,7 @@
                 <section class="scene scene-section flex-row flex-justify-end first-map-scene" id="trails-scene" data-map-id="trailsScene">                
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Trails</h2>
-                        <p>Using the same method explained above, we calculated paths from trail access points to census blocks within 2.5 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination.  The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to trails.</p>
+                        <p>Using the shortest path method, we calculated paths from trail access points to census blocks within 2.5 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination.  The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to trails.</p>
                     </article>
                 </section>
 
@@ -359,27 +340,16 @@
                 <section class="scene scene-section flex-row flex-justify-end" id="schools-scene" data-map-id="schoolsScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Connections to Schools</h2>
-                        <p>To support Safe Routes to School efforts, we calculated paths from schools (up to high school) to census blocks within 2 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination. The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to schools.</p>
+                        <p>To support <a href="/saferoutes" target="_blank" rel="noreferrer noopener">Safe Routes to School</a> efforts, we calculated paths from schools (up to high school) to census blocks within 2 miles. We tallied the number of paths using each road segment and weighted them by the IPD score of the origin and destination. The results highlight the LTS 3 segments with the greatest potential to enhance low-stress connectivity to schools.</p>
                     </article>
                 </section>
             </div>
-
-            <section class="scene scene-section flex-row flex-justify-around" id="limitations-scene">
-                <article class="scene-text limitations-text scene-text-flat">
-                    <h2 class="scene-header">Technical Limitations/Assumptions</h2>
-                    <h3 class="scene-subheader">Density</h3>
-                    <p>The connectivity analysis tallies the number of calculated paths that use each road segment. Similar to the census block to census block analysis, more shortest paths traveled through areas with a high density of special destinations (schools, trails, and transit stops), therefore increasing the number of highly traveled segments in these areas.</p>
-                    <h3 class="scene-subheader">LTS 4 Segments</h3>
-                    <p>Road segments are prioritized based on the assumption that the LTS 3 segments used the most would enable the most low-stress connections if improvements were made to them to make them more comfortable for cyclists. LTS 3 segments were chosen for prioritization because it is assumed that they would be easier to make comfortable than LTS 4 segments. Computationally, it is also significantly more efficient to calculate paths without LTS 4 segments included.</p>
-                    <p>However, there are many LTS 4 segments that have the potential to provide substantial low-stress network connectivity benefits. Future versions of this analysis will aim to incorporate all bike-able roads in the connectivity analysis.</p>
-                </article>
-            </section>
         </main>
 
         </div>
         <footer>
             <img src="./img/footer-bg.jpg" alt="road image" class="footer-bg">
-
+            <p class="footer-action-p">Explore the results of these analyses in more detail in the <a href="./analysis/">interactive map</a>!</p>
             <div class="footer-logo">
                 <div class="footer-logo-content">
                     <span class="footer-bike-span footer-bike-red">
@@ -391,7 +361,6 @@
                         <span class="footer-h2-special">bicycle lts</span>
                         <span class="footer-h2-group">& connectivity</span>
                         <span class="footer-h2-group">analysis</span>
-
                     </h2>
                     
                     <span class="footer-bike-span footer-bike-yellow">

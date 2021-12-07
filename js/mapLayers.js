@@ -2,28 +2,26 @@
 // Basemap layers
 ////
 const countyOutline = {
-    id: 'county-outline',
-    type: 'line',
-    source: 'boundaries',
+    'id': 'county-outline',
+    'type': 'line',
+    'source': 'boundaries',
     'source-layer': 'county',
-    paint: {
+    'paint': {
         'line-width': 2.5,
-        'line-color': '#838383'
+        'line-color': '#242424'
     },
-    filter: [
-        '==',
-        'dvrpc',
-        'Yes'
+    'filter': ['==',
+        'dvrpc', 'Yes'
     ]
 }
 const municipalityOutline = {
-    id: 'municipality-outline',
-    type: 'line',
-    source: 'boundaries',
+    'id': 'municipality-outline',
+    'type': 'line',
+    'source': 'boundaries',
     'source-layer': 'municipalities',
-    paint: {
-        'line-width': 0.5,
-        'line-color': '#838383'
+    'paint': {
+        'line-width': 0.75,
+        'line-color': '#a4a4a4'
     }
 }
 
@@ -42,11 +40,18 @@ const regionalScene = {
             source: 'lts',
             'source-layer': 'existing_conditions_lts',
             'paint': {
-                'line-width': 0.5,
+                'line-width': ['interpolate', 
+                    ['linear'], ['zoom'],
+                    8.35, 0.33,
+                    10, 0.99,
+                    11, 2.5,
+                    17, 3,
+                    20, 4
+                ],
                 'line-color': ['match',
                     ['get', 'lts_score'],
-                    1, '#498434',
-                    2, '#72bc58',
+                    1, '#396829',
+                    2, '#a4bc58',
                     3, '#fcd842',
                     4, '#a50a0a',
                     '#fff'
@@ -134,7 +139,7 @@ const connectivityTwoScene = {
             source: 'lts',
             'source-layer': 'results_all',
             paint: {
-                'line-color': 'magenta',
+                'line-color': 'purple',
                 'line-width': ['interpolate',
                     ['linear'],
                     ['get', 'total'],
@@ -219,8 +224,8 @@ const connectivityPrioritiesScene = {
     hideLayers: ['priority-ipd', 'priority-top-ipd', 'ipd-fill']
 }
 const connectivityPrioritiesEquityScene = {
-    zoom: 8.4,
-    center: [-74.85, 40.071],
+    zoom: 10.1,
+    center: [-74.86, 39.80],
     layers: [
         {
             id: 'priority-top-ipd',
@@ -331,8 +336,8 @@ const sceneLayers = {
 }
 
 const baseLayers = {
-    countyOutline,
-    municipalityOutline
+    municipalityOutline,
+    countyOutline
 }
 
 export { baseLayers, sceneLayers }

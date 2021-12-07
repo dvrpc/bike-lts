@@ -14,12 +14,11 @@
         <meta name="copyright" content="1995-2021 all rights reserved">
         <!--  DVRPC Website VERSION #7.0 Copyright (c) 1995-2021 Delaware Valley Regional Planning Commission. All rights reserved.   -->
         
-        <!-- social media -->
-        <meta property="og:title" content="Bicycle Level of Traffic Stress (LTS) and Connectivity Analysis">
+        <meta property="og:title" content="Bicycle Level of Traffic Stress (LTS) and Connectivity Analysis Web Map">
         <meta propery="og:type" content="website">
-        <meta property="og:url" content="https://dvrpc.org/review/bike-lts/analysis/">
-        <meta property="og:description" content="Explore and analyze LTS and bicycle network connectivity priorities by interacting with this web map's toggles and various clickable layers.">
-        <meta property="og:image" content="https://dvrpc.org/review/bike-lts/analysis/img/og-img.png">
+        <!-- <meta property="og:url" content="https://dvrpc.org/review/bike-lts/analysis/"> -->
+        <meta property="og:description" content="Explore and analyze Level of Traffic Stress (LTS) and bicycle network connectivity priorities by interacting with this web map's toggles and various clickable layers.">
+        <meta property="og:image" content="https://dvrpc.org/review/bike-lts/analysis/img/analysis-og-img.png">
 
         <link rel="preconnect" href="https://api.mapbox.com/mapbox-gl-js/" crossorigin="">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -27,6 +26,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&amp;display=swap">
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css">
+        
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/narrow.css" media="(max-width: 1020px)">
         <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 725px)">
@@ -42,7 +42,11 @@
                 <h1><b class="font-ultra-heavy">Bicycle Level</b> of <b class="font-ultra-heavy">Traffic Stress (LTS)</b> and <b class="font-ultra-heavy">Connectivity Analysis</b></h1>
             </div>
             
-            <a href="/review/bike-lts/" class="nav-story-link">View Story</a>
+            <a href="/review/bike-lts/" target="_blank" rel="noreferrer noopener" class="nav-link nav-link-map flex-row flex-justify-center">
+                view story
+                <svg class="nav-bike" id="bike_green_homepage" data-name="bike green" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#a4bc58"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#a4bc58"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#a4bc58"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#a4bc58"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#a4bc58"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#a4bc58"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#a4bc58"/><rect x="136.12" y="113.03" width="10" height="27" fill="#a4bc58"/><rect x="132.12" y="135.03" width="18" height="10" fill="#a4bc58"/></g></g></svg>
+                <div class="wheel-green wheel-nav"></div>
+            </a>
         </nav>
 
         <main id="main-content-wrapper" class="flex-row flex-between">
@@ -63,22 +67,22 @@
                         <form autocomplete="off" class="sidebar-form" aria-label="core LTS layers form" data-form-type="toggle">
                             <label class="sidebar-form-label stacked-inputs">
                                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-                                LTS 1
+                                LTS 1 <small>(lowest stress)</small>
                             </label>
                             
                             <label class="sidebar-form-label stacked-inputs">
                                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-                                LTS 2
+                                LTS 2 <small>(suitable for most adults)</small>
                             </label>
             
                             <label class="sidebar-form-label stacked-inputs">
                                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-                                LTS 3
+                                LTS 3 <small>(moderate traffic stress)</small>
                             </label>
                             
                             <label class="sidebar-form-label lts-layer-4">
                                 <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-                                LTS 4
+                                LTS 4 <small>(high traffic stress)</small>
                             </label>
                         </form>
 
@@ -124,13 +128,13 @@
                             <span class="nav-vr"></span>
 
                             <li class="footer-nav-li">
-                                <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">download data</a>
+                                <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">download LTS data</a>
                             </li>
 
                             <span class="nav-vr"></span>
 
                             <li class="footer-nav-li">
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsOTpDgUOHFdzAzeJmvRHr77P_OhZtWZN0RxdfxHViSDSERA/viewform" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">feedback</a>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVtEyRV6w7QA8gwjTrvzpgIGVT4zx5C3u2pebqkaA9leTMmw/viewform" target="_blank" rel="noreferrer noopener" class="nav-btn nav-links">report errors</a>
                             </li>
                         </ul>
                     </nav>

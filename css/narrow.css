@@ -1,0 +1,45 @@
+/* General */
+body {
+    font-size: 12px;
+}
+/* END General */
+
+
+
+/* Intro */
+.header-logo {
+    max-width: 300px;
+}
+.story-intro-p {
+    font-size: 1.1rem;
+}
+.story-intro-p-large {
+    font-size: 1.45rem;
+}
+.story-intro-btns-wrapper {
+    width: 35%;
+}
+.story-intro-icon-btns-link {
+    font-size: 1.2rem;
+}
+.mini-bike {
+    width: 20%;
+}
+/* END Intro */
+
+
+
+/* Scenes General */
+.scene-text {
+    width: 40ch;
+    margin-right: var(--wrapper-padding-half);
+}
+/* END Scenes General */
+
+
+
+/* Individual Scenes */
+#regional-lts-table {
+    width: 550px;
+}
+/* END Individual Scenes */

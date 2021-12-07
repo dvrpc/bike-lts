@@ -44,7 +44,7 @@ const ltsReferenceFormContent = `
 const analysisFormContent = `
     <details class="sidebar-details sidebar-details-margin">
         <summary class="sidebar-summary">What is Low-stress Network Connectivity?</summary>
-        The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
+        The <em>Low-stress Network Connectivity </em> analysis is based on the calculation of shortest paths between census blocks across the region using only LTS 1, 2, or 3 roads. LTS 3 segments are prioritized based on the number of low-stress connections they would enable.
     </details>
 
     <details class="sidebar-details">

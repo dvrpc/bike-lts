@@ -12,13 +12,14 @@ body {
     line-height: 1.45;
 }
 :root {
-    --theme-green: #498434;
-    --theme-green-light: #72bc58;
+    --theme-green: #396829;
+    --theme-green-light: #a4bc58;
     --theme-yellow: #fcd842;
     --theme-red: #a50a0a;
     --theme-purple: #3F3047;
     --theme-black: #383838;
     --theme-white: #f9f9f9;
+    --theme-brown: #993404;
 
     --wrapper-padding: 20px;
     --wrapper-padding-half: 10px;
@@ -95,6 +96,37 @@ strong {
 .text-left {
     text-align: left;
 }
+.bold {
+    font-weight: 700;
+}
+.lts-highlights {
+    /* help with contrast */
+    filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.2));
+}
+.lts-1-color {
+    color: var(--theme-green);
+}
+.lts-2-color {
+    color: var(--theme-green-light);
+}
+.lts-3-color {
+    color: var(--theme-yellow);
+}
+.lts-purple {
+    color: var(--theme-purple);
+}
+.lts-orange {
+    color: orange;
+}
+.lts-brown {
+    color: var(--theme-brown);
+}
+.ipd-blue {
+    color: #081d58;
+}
+.ipd-yellow {
+    color: #edf8b1;
+}
 /* END General */
 /***************/
 
@@ -124,10 +156,21 @@ strong {
 .nav-link {
     position: relative;
     border-bottom: 3px solid var(--theme-yellow);
-    width: 180px;
+    width: 185px;
     font-weight: initial;
 }
-.nav-link:hover {
+.nav-link-home {
+    color: var(--theme-white);
+    cursor: pointer;
+    border-color: var(--theme-green-light);
+}
+.nav-link-home:hover {
+    color: var(--theme-green-light);
+}
+.nav-link-map {
+    margin-left: var(--wrapper-padding);
+}
+.nav-link-map:hover {
     color: var(--theme-yellow);
 }
 .nav-bike {
@@ -156,7 +199,7 @@ strong {
 }
 #story-intro {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--theme-black);
 }
 #story-intro:before {
@@ -179,19 +222,9 @@ strong {
     padding-top: var(--wrapper-padding-double);
     z-index: 2;
 }
-.header {
-    font-size: 1.75rem;
-    text-transform: uppercase;
-    margin-right: var(--wrapper-padding);
-}
-.header-bike-span {
-    position: relative;
-    /* set to main bicycle lts font size & character count */
-    font-size: 4.25rem;
-    width: 10.5ch;
-    line-height: 0;
-    display: block;
-    border-bottom: 4px solid;
+.header-logo {
+    width: 90%;
+    max-width: 475px;
 }
 .wheel {
     position: absolute;
@@ -210,34 +243,7 @@ strong {
     background-color: var(--theme-yellow);
 }
 .wheel-green {
-    background-color: var(--theme-green);
-}
-.header-bike {
-    width: 15%;
-}
-.header-bike-red {
-    border-color: var(--theme-red);
-}
-.header-bike-yellow {
-    text-align: right;
-    border-color: var(--theme-yellow);
-    margin-top: -1rem;
-}
-.header-bike-yellow-svg {
-    margin-right: var(--wrapper-padding-double);
-}
-.header-logo {
-    margin-top: var(--wrapper-padding);
-    width: 30%;
-}
-.h1-group {
-    display: block;
-    line-height: 2.5rem;
-}
-.h1-special {
-    font-size: 4.25rem;
-    color: var(--theme-green-light);
-    line-height: initial;
+    background-color: var(--theme-green-light);
 }
 #story-intro-text-content {
     width: 62ch;
@@ -263,9 +269,9 @@ strong {
     z-index: 2;
 }
 .story-intro-icon-btns-link {
-    width: 25ch;
+    width: 31ch;
     color: var(--theme-white);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-bottom: 4px solid;
     text-decoration: none;
 }
@@ -296,7 +302,7 @@ strong {
     left: -3%;
 }
 .intro-bike-green {
-    top: 55%;
+    top: 63%;
     left: 30%;
 }
 /* END Homepage */
@@ -307,7 +313,7 @@ strong {
 /************************/
 /* Scroll Story General */
 #scroll-story-main {
-    padding: 0 0 var(--wrapper-padding-quad) 0;
+    padding: 0;
     background-color: #f9f9f9;
 }
 #scroll-story-main a {
@@ -333,7 +339,7 @@ strong {
     cursor: pointer;
 }
 .scroll-story-nav-link-active, .scroll-story-nav-link:hover {
-    background-color: var(--theme-green-light);
+    background-color: var(--theme-green);
     filter: var(--drop-shadow);
 }
 .scroll-story-nav-hr {
@@ -365,6 +371,18 @@ strong {
 }
 .scene-header {
     font-size: 1.5rem;
+    color: var(--theme-white);
+    background-color: var(--theme-black);
+    padding: var(--wrapper-padding-half) var(--wrapper-padding);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    margin-left: -20px;
+    margin-top: -11px;
+    line-height: initial;
+}
+.flat-scene-header {
+    font-size: 1.5rem;
     color: var(--theme-green);
 }
 .scene-text {
@@ -380,9 +398,6 @@ strong {
 }
 .scene-text-flat {
     box-shadow: none;
-}
-.limitations-text {
-    width: 65ch;
 }
 .scene-media {
     width: 65%;
@@ -409,10 +424,8 @@ strong {
 .buffer-header-wrapper {
     position: absolute;
     height: 80%;
-    width: 35%;
     top: 10%;
-    right: 0;
-    border-left: 2px solid var(--theme-white);
+    right: 5%;
     justify-content: center;
 }
 .scene-buffer-header {
@@ -477,15 +490,15 @@ strong {
 }
 .top-right-corner-cell {
     border-top-right-radius: var(--border-radius);
-}
-.table-bike {
-    margin-left: 5px;
-    width: 15%;
+    text-align: left;
 }
 .regional-lts-table-cat {
     color: white;
     font-weight: 700;
     font-size: 2.5rem;
+}
+.table-pad-right {
+    padding-right: 60px;
 }
 #regional-lts-table-1 {
     background-color: var(--theme-green);
@@ -542,6 +555,17 @@ footer {
     width: 100%;
     height: 100%;
 }
+.footer-action-p {
+    position: absolute;
+    top: 200px;
+    left: calc(50% - 14ch);
+    width: 30ch;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: var(--border-radius);
+    padding: var(--wrapper-padding-half);
+}
 .footer-logo {
     position: absolute;
     z-index: 1;
@@ -588,7 +612,7 @@ footer {
 }
 .footer-h2-special {
     font-size: 4.25rem;
-    color: var(--theme-green-light);
+    color: var(--theme-green);
     line-height: initial;
 }
 .footer-connect {
@@ -597,7 +621,7 @@ footer {
     bottom: 0;
     height: 25%;
     width: 100%;
-    background-color: var(--theme-green-light);
+    background-color: var(--theme-green);
 }
 .footer-connect-header {
     font-size: 1.75rem;

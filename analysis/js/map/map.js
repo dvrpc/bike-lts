@@ -2,7 +2,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5e
 
 const initMap = () => {
     const longitudeOffset = window.innerWidth > 800 ? -75.6 : -75.2273
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.45
+    const zoom = window.innerWidth <= 420 ? 7.3 : 8.42
 
     return new mapboxgl.Map({
         container: 'map',
@@ -15,7 +15,7 @@ const initMap = () => {
 // create custom extent btn
 const makeRegionalExtentEls = map => {
     const longitudeOffset = window.innerWidth > 800 ? -75.6 : -75.2273
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.45
+    const zoom = window.innerWidth <= 420 ? 7.3 : 8.42
 
     const dvrpcExtent = {
         center: [longitudeOffset, 40.071],
