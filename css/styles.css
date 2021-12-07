@@ -313,7 +313,7 @@ strong {
 /************************/
 /* Scroll Story General */
 #scroll-story-main {
-    padding: 0 0 var(--wrapper-padding-quad) 0;
+    padding: 0;
     background-color: #f9f9f9;
 }
 #scroll-story-main a {
@@ -398,9 +398,6 @@ strong {
 }
 .scene-text-flat {
     box-shadow: none;
-}
-.limitations-text {
-    width: 65ch;
 }
 .scene-media {
     width: 65%;
