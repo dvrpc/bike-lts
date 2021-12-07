@@ -7,6 +7,9 @@ body {
 
 
 /* Intro */
+.header-logo {
+    max-width: 300px;
+}
 .story-intro-p {
     font-size: 1.1rem;
 }
