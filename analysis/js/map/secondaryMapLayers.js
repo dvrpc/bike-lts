@@ -191,8 +191,6 @@ const layers = {
             // 'line-dasharray': [0.75, 3]
         }
     },
-    // @TODO consolidate rail, trolley and bus into single circles each. Popups will give specific details
-    // @TODO update legend accordingly - instead of 3, just have one "transit stops" legend that identifies bus, rail, trolley
     'passenger-rail': {
         id: 'passenger-rail',
         type: 'circle',
@@ -203,8 +201,8 @@ const layers = {
                 ['linear'], ['zoom'],
                 1, 0.5,
                 8, 0.7,
-                11, 3,
-                19, 4
+                11, 3.5,
+                19, 5
             ],
             'circle-color': '#f18541',
             'circle-stroke-color': '#fff',
@@ -221,8 +219,8 @@ const layers = {
                 ['linear'], ['zoom'],
                 1, 0.5,
                 8, 0.7,
-                11, 3,
-                19, 4
+                11, 3.5,
+                19, 5
             ],
             'circle-color': '#377eb8',
             'circle-stroke-color': '#fff',
@@ -239,8 +237,8 @@ const layers = {
                 ['linear'], ['zoom'],
                 1, 0.5,
                 8, 0.7,
-                11, 3,
-                19, 4
+                11, 3.5,
+                19, 5
             ],
             'circle-color': '#ed164b',
             'circle-stroke-color': '#fff',
@@ -257,8 +255,8 @@ const layers = {
                 ['linear'], ['zoom'],
                 1, 0.5,
                 8, 0.7,
-                11, 3,
-                19, 4
+                11, 3.5,
+                19, 5
             ],
             'circle-color': '#004d6e',
             'circle-stroke-color': '#fff',
@@ -275,8 +273,8 @@ const layers = {
                 ['linear'], ['zoom'],
                 1, 0.5,
                 8, 0.7,
-                11, 3,
-                19, 4
+                11, 3.5,
+                19, 5
             ],
             'circle-color': ['match',
                 ['get', 'layer'],
