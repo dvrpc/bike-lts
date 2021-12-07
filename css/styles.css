@@ -19,6 +19,7 @@ body {
     --theme-purple: #3F3047;
     --theme-black: #383838;
     --theme-white: #f9f9f9;
+    --theme-brown: #993404;
 
     --wrapper-padding: 20px;
     --wrapper-padding-half: 10px;
@@ -94,6 +95,37 @@ strong {
 }
 .text-left {
     text-align: left;
+}
+.bold {
+    font-weight: 700;
+}
+.lts-highlights {
+    /* help with contrast */
+    filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.2));
+}
+.lts-1-color {
+    color: var(--theme-green);
+}
+.lts-2-color {
+    color: var(--theme-green-light);
+}
+.lts-3-color {
+    color: var(--theme-yellow);
+}
+.lts-purple {
+    color: var(--theme-purple);
+}
+.lts-orange {
+    color: orange;
+}
+.lts-brown {
+    color: var(--theme-brown);
+}
+.ipd-blue {
+    color: #081d58;
+}
+.ipd-yellow {
+    color: #edf8b1;
 }
 /* END General */
 /***************/
