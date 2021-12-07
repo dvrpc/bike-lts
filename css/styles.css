@@ -190,19 +190,8 @@ strong {
     padding-top: var(--wrapper-padding-double);
     z-index: 2;
 }
-.header {
-    font-size: 1.75rem;
-    text-transform: uppercase;
-    margin-right: var(--wrapper-padding);
-}
-.header-bike-span {
-    position: relative;
-    /* set to main bicycle lts font size & character count */
-    font-size: 4.25rem;
-    width: 10.5ch;
-    line-height: 0;
-    display: block;
-    border-bottom: 4px solid;
+.header-logo {
+    max-width: 475px;
 }
 .wheel {
     position: absolute;
@@ -222,33 +211,6 @@ strong {
 }
 .wheel-green {
     background-color: var(--theme-green-light);
-}
-.header-bike {
-    width: 15%;
-}
-.header-bike-red {
-    border-color: var(--theme-red);
-}
-.header-bike-yellow {
-    text-align: right;
-    border-color: var(--theme-yellow);
-    margin-top: -1rem;
-}
-.header-bike-yellow-svg {
-    margin-right: var(--wrapper-padding-double);
-}
-.header-logo {
-    margin-top: var(--wrapper-padding);
-    width: 30%;
-}
-.h1-group {
-    display: block;
-    line-height: 2.5rem;
-}
-.h1-special {
-    font-size: 4.25rem;
-    color: var(--theme-green);
-    line-height: initial;
 }
 #story-intro-text-content {
     width: 62ch;
@@ -307,7 +269,7 @@ strong {
     left: -3%;
 }
 .intro-bike-green {
-    top: 55%;
+    top: 63%;
     left: 30%;
 }
 /* END Homepage */
