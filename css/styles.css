@@ -557,7 +557,7 @@ footer {
     width: 75%;
     top: 12.5%;
     left: 12.5%;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.5);
     border-radius: var(--border-radius);
 }
 .footer-text, .footer-connect {
@@ -604,6 +604,9 @@ footer {
 .footer-policies-link {
     color: var(--theme-white);
     padding-right: var(--wrapper-padding-half);
+}
+.footer-policies-link:hover {
+    color: var(--theme-white);
 }
 /* END Footer */
 /**************/
