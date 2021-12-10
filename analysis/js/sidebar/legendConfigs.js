@@ -34,7 +34,7 @@ const legendConfigs = {
         title: 'Bicycle Facilities',
         icons: ['#123899','#ffffb3','#29c2eb','#56bd49','#bebada','#ff872c'],
         iconType: 'line',
-        text: ['Bike Lane','Bike Route','Buffered Bike Lane','Off-road Trail/Path','Protected Bike Lane','Sharrow']
+        text: ['Bike Lane','Bike Route','Buffered Bike Lane','Off-road Trail/Path','Protected Bike Lane','Sharrow &nbsp;']
     },
     ['trail-access']: {
         title: 'Trail Access Locations',
