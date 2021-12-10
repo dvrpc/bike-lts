@@ -561,7 +561,7 @@ footer {
     border-radius: var(--border-radius);
 }
 .footer-text, .footer-connect {
-    padding: var(--wrapper-padding) 0;
+    padding: var(--wrapper-padding-half) 0;
 }
 .footer-lts-logo {
     width: 375px;
