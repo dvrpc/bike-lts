@@ -92,7 +92,6 @@ const makeBusPopupHTML = props => {
         <h3 class="popup-header">Route: ${props.route}</h3>
         <ul class="list-unstyled popup-ul">
             <li class="popup-li"><strong>Stop Name:</strong> ${props.stop_name}</li>
-            <li class="popup-li"><strong>Line:</strong> ${props.line}</li>
             <li class="popup-li"><strong>Direction:</strong> ${props.direction}</li>
         </ul>
     `
