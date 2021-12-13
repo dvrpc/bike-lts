@@ -89,9 +89,9 @@ const makeTrolleyPopupHTML = props => {
 
 const makeBusPopupHTML = props => {
     return `
-        <h3 class="popup-header">Route: ${props.route}</h3>
+        <h3 class="popup-header">${props.stop_name}</h3>
         <ul class="list-unstyled popup-ul">
-            <li class="popup-li"><strong>Stop Name:</strong> ${props.stop_name}</li>
+            <li class="popup-li"><strong>Route:</strong> ${props.route}</li>
             <li class="popup-li"><strong>Direction:</strong> ${props.direction}</li>
         </ul>
     `
