@@ -261,7 +261,7 @@ strong {
     margin-bottom: var(--wrapper-padding);
 }
 .story-intro-btns-wrapper {
-    width: 30%;
+    width: 28%;
     padding: var(--wrapper-padding);
     margin-top: calc(var(--wrapper-padding-double)* -1);
     position: absolute;
@@ -269,7 +269,7 @@ strong {
     z-index: 2;
 }
 .story-intro-icon-btns-link {
-    width: 31ch;
+    width: 30ch;
     color: var(--theme-white);
     font-size: 1.4rem;
     border-bottom: 4px solid;
@@ -293,9 +293,10 @@ strong {
     padding: var(--wrapper-padding);
     padding-bottom: 0;
     font-weight: 400;
+    font-size: 1.25rem;
 }
 .mini-bike {
-    width: 25%;
+    width: 22.5%;
 }
 .intro-bike-yellow {
     top: 25%;
@@ -554,28 +555,31 @@ footer {
 }
 .footer-text {
     position: absolute;
-    width: 75%;
+    width: 70%;
     top: 11%;
-    left: 12.5%;
-    background-color: rgba(255,255,255,0.5);
+    left: calc(15% - var(--wrapper-padding));
+    background-color: rgba(255,255,255,0.75);
     border-radius: var(--border-radius);
-}
-.footer-text, .footer-connect {
-    padding: var(--wrapper-padding-half) 0;
+    padding: var(--wrapper-padding-double) var(--wrapper-padding-half);   
+    font-family: inherit;
 }
 .footer-lts-logo {
     width: 375px;
 }
-.footer-action-p {
-    width: 30ch;
-    font-size: 2rem;
-    font-weight: 700;
+.footer-list-main {
+    font-size: 1.25rem;
+    width: 50ch;
+}
+.footer-list-h2 {
+    font-size: inherit;
+    margin-top: var(--wrapper-padding);
 }
 .footer-logo-dvrpc {
-    width: 175px;
+    width: 150px;
     margin-right: 10%;
 }
 .footer-connect {
+    padding: var(--wrapper-padding-half) 0;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -583,7 +587,7 @@ footer {
     color: var(--theme-white);
 }
 .footer-connect-us {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 .footer-connect-icon-wrapper {
     margin: var(--wrapper-padding-half) 0;
@@ -604,6 +608,7 @@ footer {
 .footer-policies-link {
     color: var(--theme-white);
     padding-right: var(--wrapper-padding-half);
+    font-size: 0.75rem;
 }
 .footer-policies-link:hover {
     color: var(--theme-white);
