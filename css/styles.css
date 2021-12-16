@@ -17,7 +17,7 @@ body {
     --theme-yellow: #fcd842;
     --theme-red: #a50a0a;
     --theme-purple: #3F3047;
-    --theme-black: #383838;
+    --theme-black: #2e2e2e;
     --theme-white: #f9f9f9;
     --theme-brown: #993404;
 
@@ -560,7 +560,6 @@ footer {
     background-color: rgba(255,255,255,0.75);
     border-radius: var(--border-radius);
     padding: var(--wrapper-padding-double) var(--wrapper-padding-half);   
-    font-family: inherit;
 }
 .footer-lts-logo {
     width: 375px;

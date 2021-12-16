@@ -176,7 +176,13 @@ const layers = {
         source: 'lts',
         'source-layer': 'existing_conditions_lts',
         paint: {
-            'line-width': 5,
+            'line-width': ['interpolate',
+                ['linear'], ['zoom'],
+                8.35, 3,
+                11, 3.25,
+                17, 3.5,
+                20, 4
+            ],
             'line-color': ['match',
                 ['get', 'bikefacili'],
                 'Bike Lane', '#123899',

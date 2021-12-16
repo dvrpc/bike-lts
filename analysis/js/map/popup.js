@@ -88,13 +88,22 @@ const makeTrolleyPopupHTML = props => {
 }
 
 const makeBusPopupHTML = props => {
-    return `
-        <h3 class="popup-header">${props.stop_name}</h3>
-        <ul class="list-unstyled popup-ul">
-            <li class="popup-li"><strong>Route:</strong> ${props.route}</li>
-            <li class="popup-li"><strong>Direction:</strong> ${props.direction}</li>
-        </ul>
-    `
+    if (props.layer === 'NJTBus') {
+        return `
+            <h3 class="popup-header">${props.bsl}</h3>
+            <ul class="list-unstyled popup-ul">
+                <li class="popup-li"><strong>Route:</strong> ${props.line}</li>
+            </ul>
+        `
+    }else {
+        return `
+            <h3 class="popup-header">${props.stop_name}</h3>
+            <ul class="list-unstyled popup-ul">
+                <li class="popup-li"><strong>Route:</strong> ${props.route}</li>
+                <li class="popup-li"><strong>Direction:</strong> ${props.direction}</li>
+            </ul>
+        `
+    }
 }
 
 const makeSchoolsCombinedHTML = props => {
