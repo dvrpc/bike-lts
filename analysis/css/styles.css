@@ -446,10 +446,9 @@ nav {
     transform: rotate(45deg);
 }
 .legend-icon-circle {
-    height: 12.5px;
-    width: 12.5px;
+    height: 13.5px;
+    width: 13.5px;
     border-radius: 50%;
-    border: 1px solid white;
 }
 .legend-icon-circle,
 .legend-icon-line {
