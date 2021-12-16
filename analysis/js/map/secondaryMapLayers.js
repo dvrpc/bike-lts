@@ -211,8 +211,8 @@ const layers = {
                 19, 5
             ],
             'circle-color': '#f18541',
-            'circle-stroke-color': '#fff',
-            'circle-stroke-width': 1
+            'circle-stroke-color': '#9d440c',
+            'circle-stroke-width': 1.5
         }
     },
     'trail-access': {
@@ -229,8 +229,8 @@ const layers = {
                 19, 5
             ],
             'circle-color': '#377eb8',
-            'circle-stroke-color': '#fff',
-            'circle-stroke-width': 1
+            'circle-stroke-color': '#132b3f',
+            'circle-stroke-width': 1.5
         }
     },
     trolley: {
@@ -247,8 +247,8 @@ const layers = {
                 19, 5
             ],
             'circle-color': '#ed164b',
-            'circle-stroke-color': '#fff',
-            'circle-stroke-width': 1
+            'circle-stroke-color': '#4d0617',
+            'circle-stroke-width': 1.5
         }
     },
     bus: {
@@ -265,8 +265,8 @@ const layers = {
                 19, 5
             ],
             'circle-color': '#004d6e',
-            'circle-stroke-color': '#fff',
-            'circle-stroke-width': 1
+            'circle-stroke-color': '#002433',
+            'circle-stroke-width': 1.5
         }
     },
     'schools-combined': {
@@ -288,8 +288,13 @@ const layers = {
                 'pub_schools_2013', '#fc8d62',
                 '#fff'
             ],
-            'circle-stroke-color': '#fff',
-            'circle-stroke-width': 1
+            'circle-stroke-color': ['match',
+                ['get', 'layer'],
+                'priv_schools_2012', '#17392e',
+                'pub_schools_2013', '#5d1b02',
+                '#fff'
+            ],
+            'circle-stroke-width': 1.5
         }
     }
 }
