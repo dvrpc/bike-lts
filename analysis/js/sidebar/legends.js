@@ -75,7 +75,7 @@ const toggleLegend = e => {
     const content = legend.nextElementSibling
     content.classList.toggle('legend-content-hide')
     // toggle arrow state
-    legend.classList.toggle('dropdown-toggle-open')
+    legend.classList.toggle('dropdown-toggle-close')
 }
 
 // remove specific legends
