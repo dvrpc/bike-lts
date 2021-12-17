@@ -6,22 +6,18 @@ const handleLegend = (legend, checked, acca) => {
     let hasLegend = false
     let legendReps = 0
     const checkIPD = legend.split('-')
-    legend = checkIPD[1] === 'ipd' ? checkIPD[0] : legend
-
-    // @REVIEW NOTE:
-        // adding "equity-focused" to connecivity legends is more complicated than it needs to be
-        // need to handle updating those while preserving 
-        // nuclear option: create duplicate entries in legendConfig, update filterType and handle them as their own legend
-            // use -ipd or not to handle
-                // will be complicated with toggling on/off within same jawn 
-        // easy to get the legend to update title when switching between e.g. priority to transit
-            // but switching within e.g priority to equity-priority is difficult
-
+    let isIPD = false
+    
+    // track ipd state
+    if(checkIPD[1] === 'ipd') {
+        isIPD = true
+        legend = checkIPD[0]
+    }
+    
     // if legend already exists, get it
     for(var i = 0; i < children.length; i++) {
         const legendType = children[i].dataset.filterType
 
-        // acca the rest
         if(legendType === legend) {
             hasLegend = children[i]
             legendReps = parseInt(hasLegend.dataset.legendReps)
@@ -33,9 +29,24 @@ const handleLegend = (legend, checked, acca) => {
             // hack to handle existing conditions edge cases
             const increment = legendReps + acca > 4 ? 4 : legendReps + acca
             hasLegend.dataset.legendReps = increment
+
+            // hack to add equity focused to certain subheaders
+            if(legend === 'priority' || legend === 'schools' || legend === 'trails' || legend === 'transit') {
+                const subheader = hasLegend.querySelector('.legend-subheader')
+                const subheaderText = subheader.textContent
+
+                if(isIPD) {
+                    subheader.textContent = 'Equity-focused ' + subheaderText
+                } else {
+                    if(subheaderText.includes('Equity-focused ')) {
+                        const newSubheaderText = subheaderText.substring(14)
+                        subheader.textContent = newSubheaderText
+                    }
+                }
+            }
         
         } else {
-            const newLegend = makeLegend(legend, acca)
+            const newLegend = makeLegend(legend, acca, isIPD)
             container.insertAdjacentHTML('beforeend', newLegend)
         }
 
@@ -48,14 +59,15 @@ const handleLegend = (legend, checked, acca) => {
     else hasLegend.dataset.legendReps = decrement
 }
 
-const makeLegend = (type, acca) => {
+const makeLegend = (type, acca, isIPD) => {
     const legend = legends[type]
     const text = legend.text
     const source = legend.source ?  `<h4 class="legend-source">source: ${legend.source}</h4>` : ''
+    const ipdTitle = isIPD ? 'Equity-focused ' : ''
  
     return `
         <article class="legend-section" data-filter-type=${type} data-legend-reps=${acca}>
-            <h3 class="legend-subheader">${legend.title}</h3>
+            <h3 class="legend-subheader">${ipdTitle} ${legend.title}</h3>
             ${source}
             
             <div class="legend-content-container flex-row flex-around">
