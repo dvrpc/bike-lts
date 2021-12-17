@@ -415,6 +415,9 @@ nav {
     padding: 0;
     background-color: var(--theme-black-dark);
 }
+.legend-content-container {
+    margin-top: var(--wrapper-padding);
+}
 .legend-content-hide {
     visibility: hidden;
 }
@@ -438,7 +441,12 @@ nav {
     font-size: 0.9rem;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: var(--wrapper-padding);
+}
+.legend-source {
+    font-size: 0.75rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
 }
 .legend-icon-line {
     height: 25px;

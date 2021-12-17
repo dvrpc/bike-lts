@@ -51,10 +51,12 @@ const handleLegend = (legend, checked, acca) => {
 const makeLegend = (type, acca) => {
     const legend = legends[type]
     const text = legend.text
+    const source = legend.source ?  `<h4 class="legend-source">source: ${legend.source}</h4>` : ''
  
     return `
         <article class="legend-section" data-filter-type=${type} data-legend-reps=${acca}>
             <h3 class="legend-subheader">${legend.title}</h3>
+            ${source}
             
             <div class="legend-content-container flex-row flex-around">
                 ${legend.icons.map((icon, i) => `
