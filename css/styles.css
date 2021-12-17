@@ -465,6 +465,8 @@ strong {
     margin-bottom: 100px;
 }
 #regional-lts-table {
+    position: sticky;
+    top: 175px;
     max-width: 750px;
     font-size: 1rem;
     background-color: white;
