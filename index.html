@@ -68,7 +68,7 @@
                         
                         <p class="story-intro-p">
                             Additional information about LTS, connectivity analysis, and methodology behind the results displayed in the map can be found in the 
-                            <a href="./pdf/BikeStressDocumentation_phase3.pdf" target="_blank" rel="noopener noreferrer" >documentation</a>. 
+                            <a href="./pdf/BikeStressDocumentation_phase3_11-10-21.pdf" target="_blank" rel="noopener noreferrer" >documentation</a>. 
                             The layers and corresponding tables displayed in this map are available for download via 
                             <a href="https://dvrpc-dvrpcgis.opendata.arcgis.com/search?groupIds=bc7d15d84d9e450bb08eb9a664b29879&q=lts" target="_blank" rel="noopener noreferrer">DVRPC's GIS Portal</a>. 
                             DVRPC continues to refine the tools and analysis approach - if you have ideas, questions, or comments, please contact Sarah Moran at 
@@ -298,7 +298,7 @@
                 <section class="scene scene-section flex-row flex-justify-end" id="connectivity-priorities-scene" data-map-id="connectivityPrioritiesScene">
                     <article class="scene-text">
                         <h2 class="scene-header">Low-Stress Network Connectivity Priorities</h2>
-                        <p>These lines represent the LTS 3 roads that would allow for the most connections - the top 10% in each county. Since the shortest paths were calculated between census blocks, more shortest paths started and ended in more dense places, therefore inflating the number of paths in urban areas. We chose to prioritize the top 10% in each county to ensure the urban counties did not dominate the results.</p>
+                        <p>These lines represent the LTS 3 roads that would allow for the most connections - the top 10% in each county. Since the shortest paths were calculated between census blocks, more shortest paths started and ended in more dense places, therefore inflating the number of paths in urban areas. We chose to prioritize the top 10% in each county to ensure there would be a mix of candidate locations throughout the region.</p>
                     </article>
                 </section>
 
@@ -346,42 +346,48 @@
             </div>
         </main>
 
-        </div>
-        <footer>
-            <img src="./img/footer-bg.jpg" alt="road image" class="footer-bg">
-            <p class="footer-action-p">Explore the results of these analyses in more detail in the <a href="./analysis/">interactive map</a>!</p>
-            <div class="footer-logo">
-                <div class="footer-logo-content">
-                    <span class="footer-bike-span footer-bike-red">
-                        <svg class="footer-bike" id="bike_red_header" data-name="bike red" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#a50a0a"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#a50a0a"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#a50a0a"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#a50a0a"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#a50a0a"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#a50a0a"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#a50a0a"/><rect x="136.12" y="113.03" width="10" height="27" fill="#a50a0a"/><rect x="132.12" y="135.03" width="18" height="10" fill="#a50a0a"/></g></g></svg>
-                        <div class="wheel wheel-red"></div>
-                    </span>
+        <!-- </div> -->
+        <footer >            
+            <div class="footer-text flex-row flex-justify-around flex-align-center">
+                <img src="./img/logo-main.png" alt="LTS logo - footer" class="footer-lts-logo" />
+                <ul class="list-unstyled footer-list-main">
+                    <li>
+                        <h2 class="footer-list-h2 footer-list-h2-first">Just getting started with thinking about bicycle facilities?</h2>
+                        
+                        <ul>
+                            <li><a href="./analysis/" target="_blank" rel="noreferrer noopener">Explore the analysis results</a></li>
+                            <li>Contact your municipality</li>
+                            <li>Contact your county planning commission or department</li>
+                        </ul>
+                    </li>
 
-                    <h2 class="footer-h2">
-                        <span class="footer-h2-special">bicycle lts</span>
-                        <span class="footer-h2-group">& connectivity</span>
-                        <span class="footer-h2-group">analysis</span>
-                    </h2>
-                    
-                    <span class="footer-bike-span footer-bike-yellow">
-                        <svg class="footer-bike footer-bike-yellow-svg" id="bike_yellow_header" data-name="bike yellow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#fcd842"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#fcd842"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#fcd842"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#fcd842"/><rect x="136.12" y="113.03" width="10" height="27" fill="#fcd842"/><rect x="132.12" y="135.03" width="18" height="10" fill="#fcd842"/></g></g></svg>
-                        <div class="wheel wheel-yellow"></div>
-                    </span>
+                    <li>
+                        <h2 class="footer-list-h2">Looking for more technical analysis or to test out a bicycle facility in your municipality?</h2>
+                        
+                        <ul>
+                            <li><a href="/saferoutestotransit" target="_blank" rel="noreferrer noopener">Safe Routes to Transit (SRTT)</a></li>
+                            <li><a href="/transportation/bicycle/bikefriendlyresurfacing" target="_blank" rel="noreferrer noopener">Bike-Friendly Resurfacing</a></li>
+                            <li><a href="/expo" target="_blank" rel="noreferrer noopener">ExPo: Experimental Pop-ups</a></li>
+                        </ul>
+                    </li>
 
-                    <span class="footer-bike-span footer-bike-green">
-                        <svg class="footer-bike footer-bike-green-svg" id="bike_green_header" data-name="bike green" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 291.94 172.31"><defs><clipPath id="clip-path" transform="translate(0.12 0.03)"><rect width="292" height="172" fill="none"/></clipPath></defs><title>lts-bike-icon</title><g opacity="1"><g clip-path="url(#clip-path)"><path d="M232.38,172.28a59.45,59.45,0,1,1,59.44-59.44,59.51,59.51,0,0,1-59.44,59.44m0-109.3a49.86,49.86,0,1,0,49.85,49.86A49.92,49.92,0,0,0,232.38,63" transform="translate(0.12 0.03)" fill="#72bc58"/><path d="M59.32,172.28a59.45,59.45,0,1,1,59.45-59.44,59.51,59.51,0,0,1-59.45,59.44m0-109.3a49.86,49.86,0,1,0,49.86,49.86A49.92,49.92,0,0,0,59.32,63" transform="translate(0.12 0.03)" fill="#72bc58"/><path d="M228.17,115.13,169.66,8H218.2a18.73,18.73,0,0,1,18.66,15.74A18.51,18.51,0,0,1,218.57,45H214V35h4a8.72,8.72,0,0,0,8.82-8,8.51,8.51,0,0,0-8.48-9H185.8l50.79,92.54Z" transform="translate(0.12 0.03)" fill="#72bc58"/><path d="M149.36,118H51l50.74-87.44ZM67.65,108h65.58L101.48,49.71Z" transform="translate(0.12 0.03)" fill="#72bc58"/><rect x="88.33" y="8.72" width="9.59" height="31.15" transform="translate(-0.11 47.74) rotate(-28.71)" fill="#72bc58"/><polygon points="105.12 18.03 74.56 18.03 63.6 7.06 70.67 0 78.7 8.03 105.12 8.03 105.12 18.03" fill="#72bc58"/><path d="M140.78,121.73,93.54,35H201.88ZM109.68,45l32.14,59L183.4,45Z" transform="translate(0.12 0.03)" fill="#72bc58"/><rect x="136.12" y="113.03" width="10" height="27" fill="#72bc58"/><rect x="132.12" y="135.03" width="18" height="10" fill="#72bc58"/></g></g></svg>
-                        <div class="wheel wheel-green"></div>
-                    </span>
-                </div>
+                    <li>
+                        <h2 class="footer-list-h2">Need funds for capital improvements?</h2>
+                        
+                        <ul>
+                            <li><a href="/funding" target="_blank" rel="noreferrer noopener">Check out DVRPC's Funding Opportunities web page</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-
-            <div class="footer-connect flex-row flex-justify-end flex-align-center">
+            
+            <div class="footer-connect flex-row flex-justify-center flex-align-center">
                 <img src="./img/footer-logo.png" alt="dvrpc logo" class="footer-logo-dvrpc" />
-                <span class="footer-vr"></span>
+
                 <div class="footer-connect-us flex-column flex-justify-between">
                     <h3 class="footer-connect-header">Connect with us!</h3>
 
-                    <div class="flex-row footer-icons-wrapper">
+                    <div class="flex-row footer-connect-icon-wrapper">
                         <a href="https://www.facebook.com/DVRPC" target="_blank" rel="noreferrer noopener" class="footer-connect-link">
                             <img src="./img/fb_icon.png" alt="facebook icon" class="footer-connect-icons" />
                         </a>
@@ -400,8 +406,8 @@
                     </div>
 
                     <span class="flex-row flex-align-center">
-                        <a href="/policies/" target="_blank" rel="noreferrer noopener" class="footer-connect-link">Policies</a>
-                        <a href="" target="_blank" rel="noreferrer noopener" class="footer-connect-link">Abstract</a>
+                        <a href="/policies/" target="_blank" rel="noreferrer noopener" class="footer-policies-link">Policies</a>
+                        <a href="/Products/WEB20030" target="_blank" rel="noreferrer noopener" class="footer-policies-link">Abstract</a>
                     </span>
                 </div>
             </div>

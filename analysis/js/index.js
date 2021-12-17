@@ -21,6 +21,7 @@ const legendContainer = legendBtn.nextElementSibling
 const map = makeMap()
 const ltsLayersPopup = makePopup()
 
+
 // identify layers to turn off on tab switch
 // hardcode connectivity b/c looping thru default layers just to extract existing-conditions and then appending lowstress and facilities doesn't make sense
 const tabLayers = {
@@ -29,6 +30,9 @@ const tabLayers = {
 }
 
 map.on('load', () => {
+    // @improvement: get basemap ID to set text-allow-overlap and force labels above all layers by defafult
+    // map.setLayoutProperty('dark-v10', 'text-allow-overlap', true)
+
     const firstSymbolId = mapUtils.getFirstSymbolId(map)
 
     for(const source in sources) map.addSource(source, sources[source])
@@ -65,7 +69,7 @@ tabs.forEach(tab => {
             // truncated version of toggleLayers b/c we know the default layer for connectivity analysis will always JUST be priority
             if(!map.getLayer(layer)){
                 const newLayer = secondaryMapLayers[layer]
-                map.addLayer(newLayer)
+                map.addLayer(newLayer, 'road-label')
 
                 map.on('click', layer, e => makePopupContent(map, e, ltsLayersPopup))
                 map.on('mousemove', layer, () => map.getCanvas().style.cursor = 'pointer')

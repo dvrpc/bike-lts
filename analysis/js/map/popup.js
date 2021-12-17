@@ -21,7 +21,6 @@ const makeLTSPopupHTML = props => {
     return `
         <h3 class="popup-header">LTS Score: ${props.lts_score}</h3>
         <span class="popup-span">
-            <p>LTS score factors:</p>
             <ul class="list-unstyled">
                 <li class="popup-li"><strong>Bike Facilities:</strong> ${props.bikefacili}</li>
                 <li class="popup-li"><strong>Total Lanes:</strong> ${props.totnumlane}</li>
@@ -88,14 +87,22 @@ const makeTrolleyPopupHTML = props => {
 }
 
 const makeBusPopupHTML = props => {
-    return `
-        <h3 class="popup-header">Route: ${props.route}</h3>
-        <ul class="list-unstyled popup-ul">
-            <li class="popup-li"><strong>Stop Name:</strong> ${props.stop_name}</li>
-            <li class="popup-li"><strong>Line:</strong> ${props.line}</li>
-            <li class="popup-li"><strong>Direction:</strong> ${props.direction}</li>
-        </ul>
-    `
+    if (props.layer === 'NJTBus') {
+        return `
+            <h3 class="popup-header">${props.bsl}</h3>
+            <ul class="list-unstyled popup-ul">
+                <li class="popup-li"><strong>Route:</strong> ${props.line}</li>
+            </ul>
+        `
+    }else {
+        return `
+            <h3 class="popup-header">${props.stop_name}</h3>
+            <ul class="list-unstyled popup-ul">
+                <li class="popup-li"><strong>Route:</strong> ${props.route}</li>
+                <li class="popup-li"><strong>Direction:</strong> ${props.direction}</li>
+            </ul>
+        `
+    }
 }
 
 const makeSchoolsCombinedHTML = props => {

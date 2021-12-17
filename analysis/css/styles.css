@@ -388,21 +388,21 @@ nav {
 	margin-left: .255em;
 	vertical-align: .15em;
 	content: "";
-	border-top: .3em solid;
+	border-top: 0;
 	border-right: .3em solid transparent;
-	border-bottom: 0;
+	border-bottom: .3em solid;
 	border-left: .3em solid transparent;
 }
-.dropdown-toggle-open::after {
+.dropdown-toggle-close::after {
 	display: inline-block;
 	width: 0;
 	height: 0;
 	margin-left: .255em;
 	vertical-align: .15em;
 	content: "";
-	border-top: 0;
+	border-top: .3em solid;
 	border-right: .3em solid transparent;
-	border-bottom: .3em solid;
+	border-bottom: 0;
 	border-left: .3em solid transparent;
 }
 .dropdown-toggle:hover {
@@ -414,6 +414,9 @@ nav {
     width: 385px;
     padding: 0;
     background-color: var(--theme-black-dark);
+}
+.legend-content-container {
+    margin-top: var(--wrapper-padding);
 }
 .legend-content-hide {
     visibility: hidden;
@@ -438,7 +441,12 @@ nav {
     font-size: 0.9rem;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: var(--wrapper-padding);
+}
+.legend-source {
+    font-size: 0.75rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
 }
 .legend-icon-line {
     height: 25px;
@@ -446,10 +454,9 @@ nav {
     transform: rotate(45deg);
 }
 .legend-icon-circle {
-    height: 12.5px;
-    width: 12.5px;
+    height: 13.5px;
+    width: 13.5px;
     border-radius: 50%;
-    border: 1px solid white;
 }
 .legend-icon-circle,
 .legend-icon-line {

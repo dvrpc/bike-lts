@@ -1,4 +1,5 @@
 // objects with info for each legend type
+// @TODO: add "sources" field
 const legendConfigs = {
     lts: {
         title: 'Levels of Traffic Stress',
@@ -10,7 +11,7 @@ const legendConfigs = {
         title: 'Regional Connectivity Priorities',
         icons: ['#993404', '#d95f0e', '#fe9929', '#fed98e', '#ffffd4'],
         iconType: 'line',
-        text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']        
+        text: ['top 10%', 'top 20%', 'top 30%', 'top 40%', 'top 50%']     
     },
     school: {
         title: 'Priority Connections to Schools',
@@ -38,6 +39,7 @@ const legendConfigs = {
     },
     ['trail-access']: {
         title: 'Trail Access Locations',
+        source: 'DVRPC',
         icons: ['#377eb8'],
         iconType: 'circle',
         text: ['Trailheads']
@@ -51,6 +53,7 @@ const legendConfigs = {
     // // @UPDATE handle transit special case - consolidate into here
     ['passenger-rail']: {
         title: 'Transit Stops',
+        source: 'SEPTA, NJ Transit, DRPA',
         icons: ['#004d6e','#f18541','#ed164b'],
         iconType: 'circle',
         text: ['Bus','Passenger Rail','Trolley']
@@ -71,6 +74,7 @@ const legendConfigs = {
     },
     'schools-combined': {
         title: 'Schools',
+        source: 'DVRPC, 2015',
         icons: ['#fc8d62', '#66c2a5'],
         iconType: 'circle',
         text: ['public', 'private']
