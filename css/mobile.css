@@ -5,6 +5,9 @@ body {
 
 
 /* Intro */
+#story-intro:before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
 #story-intro {
     min-height: 135vh;
 }
@@ -21,3 +24,26 @@ body {
     font-size: 1rem;
 }
 /* END Intro */
+
+
+/* Scenes */
+.scroll-story-nav-link {
+    width: 12px;
+    height: 12px;
+}
+.scroll-story-nav-tooltip {
+    margin-top: -19.5px;
+}
+.scene-header, .flat-scene-header {
+    font-size: 1.5em;
+}
+.scene-header {
+    margin-left: -10px;
+}
+.scene-header, .scene-text {
+    padding: var(--wrapper-padding-half);
+}
+.scene-text {
+    font-size: 1em;
+}
+/* END Scenes */
