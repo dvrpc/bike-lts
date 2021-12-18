@@ -1,0 +1,23 @@
+body {
+    font-size: 12px;
+}
+
+
+
+/* Intro */
+#story-intro {
+    min-height: 135vh;
+}
+#story-intro-text {
+    padding-top: var(--wrapper-padding);
+}
+.header-logo {
+    width: 95%;
+}
+.story-intro-p-large {
+    font-size: 1.2rem;
+}
+.story-intro-p {
+    font-size: 1rem;
+}
+/* END Intro */
