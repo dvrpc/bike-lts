@@ -16,12 +16,19 @@ body {
 }
 .header-logo {
     width: 95%;
+    max-width: unset;
 }
 .story-intro-p-large {
     font-size: 1.2rem;
 }
 .story-intro-p {
     font-size: 1rem;
+}
+.story-intro-btns-wrapper {
+
+}
+.story-intro-icon-btns-link {
+    width: 20ch;
 }
 /* END Intro */
 
@@ -33,6 +40,22 @@ body {
 }
 .scroll-story-nav-tooltip {
     margin-top: -19.5px;
+}
+#what-is-LTS-scene {
+    flex-direction: column-reverse;
+    margin-top: -55vh;
+}
+#regional-lts-table {
+    position: initial;
+    width: 75%;
+    font-size: 1em;
+    margin-top: var(--wrapper-padding);
+}
+.regional-lts-table-th {
+    font-size: 1.2em;
+}
+.regional-lts-table-cat {
+    font-size: 2em;
 }
 .scene-header, .flat-scene-header {
     font-size: 1.5em;
