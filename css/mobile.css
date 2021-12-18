@@ -6,7 +6,7 @@ body {
 
 /* Intro */
 #story-intro:before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%);
 }
 #story-intro {
     min-height: 135vh;
@@ -18,6 +18,12 @@ body {
     width: 95%;
     max-width: unset;
 }
+.intro-bike-yellow, .intro-bike-green {
+    width: 45%;
+}
+.intro-bike-green {
+    left: 15%;
+}
 .story-intro-p-large {
     font-size: 1.2rem;
 }
@@ -25,7 +31,16 @@ body {
     font-size: 1rem;
 }
 .story-intro-btns-wrapper {
-
+    width: unset;
+    padding-left: 0;
+    bottom: 0;
+}
+.story-intro-icon-btns-link {
+    font-size: 1.4em;
+}
+.story-intro-icon-figure {
+    padding-left: var(--wrapper-padding-half);
+    font-size: unset;
 }
 .story-intro-icon-btns-link {
     width: 20ch;

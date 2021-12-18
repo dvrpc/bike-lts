@@ -314,7 +314,7 @@ strong {
 /************************/
 /* Scroll Story General */
 #scroll-story-main {
-    padding: 0;
+    padding: var(--wrapper-padding-double) 0;
     background-color: #f9f9f9;
 }
 #scroll-story-main a {
@@ -553,6 +553,8 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    /* account for main padding of wrapper-padding double (40px) */
+    margin-top: -40px;
 }
 .footer-text {
     position: absolute;
