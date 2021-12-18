@@ -48,7 +48,7 @@ for(const map in maps) {
 
     mapInstance.on('load', () => {
         for(const source in sources) mapInstance.addSource(source, sources[source])
-        for(const layer in baseLayers) mapInstance.addLayer(baseLayers[layer])
+        for(const layer in baseLayers) mapInstance.addLayer(baseLayers[layer], 'road-label')
         
         maps[map].loaded = true
     })
@@ -109,7 +109,7 @@ const toggleMapView = (mapCat, sceneId) => {
         const filter = layer.filter || null
         
         if(!mapInstance.getLayer(layerID)) {
-            mapInstance.addLayer(layer)
+            mapInstance.addLayer(layer, 'road-label')
         }
 
         mapInstance.setFilter(layerID, filter)
