@@ -3,6 +3,7 @@ import { calculateSideNavSticky } from './indexUtils.js';
 
 const topNav = document.getElementById('top-nav');
 const sideNav = document.getElementById('scroll-story-nav')
+const firstScene = document.getElementById('what-is-LTS-scene')
 
 // init controller & add scenes
 const controller = new ScrollMagic.Controller();
@@ -22,8 +23,11 @@ const callback = entries => {
 const observer = new IntersectionObserver(callback);
 observer.observe(document.getElementById('story-intro'))
 
-// calculate side-nav sticky & handle resize
+// calculate side-nav sticky & handle resize & handle first lts scen
 sideNav.style.top = calculateSideNavSticky(sideNav, topNav)
+firstScene.style.marginTop = `-${sideNav.offsetHeight}px`
+
 window.onresize = () => {
   sideNav.style.top = calculateSideNavSticky(sideNav, topNav)
+  firstScene.style.marginTop = `-${sideNav.offsetHeight}px`
 }

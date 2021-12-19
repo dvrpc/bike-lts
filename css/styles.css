@@ -327,7 +327,7 @@ strong {
 /************************/
 /* Scroll Story General */
 #scroll-story-main {
-    padding: var(--wrapper-padding-double) 0;
+    padding: 0;
     background-color: #f9f9f9;
 }
 #scroll-story-main a {
@@ -337,7 +337,7 @@ strong {
     background-color: initial;
     position: sticky;
     z-index: 5;
-    padding: 0 0 var(--wrapper-padding) 0;
+    padding: var(--wrapper-padding) 0;
     margin-left: var(--wrapper-padding-half);
 }
 .scroll-story-nav-li {
@@ -477,12 +477,9 @@ strong {
     margin-top: -100vh;
 }
 #what-is-LTS-scene {
-    /* approximate height of story-nav*/
-    /* margin-top: -75vh; */
-
     /* update - slash */
-    /*this needs to dynamically line up w/story-intro  */
-    margin-top: -92.5vh;
+    /* margin-top = (side-nav height * -1) */
+
     position: relative;
     background-color: var(--theme-black);
     overflow-x: hidden;

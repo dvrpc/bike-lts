@@ -1,9 +1,3 @@
-body {
-    font-size: 12px;
-}
-
-
-
 /* Nav */
 .nav-logo {
     width: 70%;
@@ -31,18 +25,18 @@ body {
 
 /* Intro */
 #story-intro:before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
 }
 #story-intro {
-    min-height: 135vh;
     padding-bottom: var(--wrapper-padding-quad);
+    min-height: 90vh;
 }
 #story-intro-text {
     padding-top: var(--wrapper-padding);
 }
 .header-logo {
     width: 95%;
-    max-width: unset;
+    max-width: 250px;
 }
 .intro-bike-yellow, .intro-bike-green {
     width: 45%;
@@ -51,15 +45,15 @@ body {
     left: 15%;
 }
 .story-intro-p-large {
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 .story-intro-p {
-    font-size: 1rem;
+    font-size: 1em;
 }
 .story-intro-btns-wrapper {
     width: unset;
     padding-left: 0;
-    bottom: 0;
+    bottom: 3vh;
 }
 .story-intro-icon-btns-link {
     font-size: 1.4em;
@@ -79,6 +73,9 @@ body {
     padding-left: var(--wrapper-padding-half);
     font-size: unset;
 }
+.story-intro-figcaption {
+    left: var(--wrapper-padding-half);
+}
 #read-story-btn {
     position: absolute;
     width: 16ch;
@@ -97,11 +94,10 @@ body {
     margin-top: -19.5px;
 }
 #what-is-LTS-scene:before {
-    clip-path: polygon(52% 0, 100% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 118% 100%);
 }
 #what-is-LTS-scene {
     flex-direction: column-reverse;
-    margin-top: -68.5vh;
     padding-top: var(--wrapper-padding-double);
 }
 #regional-lts-table {
