@@ -1,12 +1,29 @@
 h1 {
+    font-size: 0.8em;
     width: 31ch;
     line-height: initial;
 }
-h1, .mapboxgl-ctrl-geocoder, .dropdown-toggle {
+.mapboxgl-ctrl-geocoder, .dropdown-toggle {
     font-size: 0.8rem;
+}
+#dvrpc-logo {
+    width: 50px;
 }
 .nav-header-vr {
     margin: 0 0.5rem;
+}
+.nav-link {
+    width: 97.5px;
+    font-size: 0.8em;
+}
+.nav-bike {
+    width: 25px;
+}
+.wheel-nav {
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--theme-white);
+    bottom: -5.5px;
 }
 .dropdown-toggle {
     height: 30px;
