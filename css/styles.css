@@ -548,7 +548,7 @@ strong {
 /* Footer */
 footer {
     position: relative;
-    height: 140vh;
+    height: 145vh;
     width: 100%;
     background-image: url("../img/footer-bg.jpg");
     background-size: cover;
@@ -574,10 +574,11 @@ footer {
     width: 50ch;
 }
 .footer-list-h2 {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 400;
     font-style: italic;
     margin-top: var(--wrapper-padding-quad);
+    margin-bottom: var(--wrapper-padding-half);
 }
 .footer-list-h2-first {
     margin-top: 0;
