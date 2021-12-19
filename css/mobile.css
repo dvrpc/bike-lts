@@ -82,7 +82,7 @@ body {
 #read-story-btn {
     position: absolute;
     width: 16ch;
-    right: calc(-50vw + 10ch);
+    right: calc(-50vw + 4ch);
     color: var(--theme-black);
 }
 /* END Intro */
@@ -96,9 +96,13 @@ body {
 .scroll-story-nav-tooltip {
     margin-top: -19.5px;
 }
+#what-is-LTS-scene:before {
+    clip-path: polygon(52% 0, 100% 0, 100% 100%, 100% 100%);
+}
 #what-is-LTS-scene {
     flex-direction: column-reverse;
-    margin-top: -55vh;
+    margin-top: -68.5vh;
+    padding-top: var(--wrapper-padding-double);
 }
 #regional-lts-table {
     position: initial;
@@ -111,6 +115,9 @@ body {
 }
 .regional-lts-table-cat {
     font-size: 2em;
+}
+.table-pad-right {
+    padding-right: 30px;
 }
 .scene-header, .flat-scene-header {
     font-size: 1.5em;
