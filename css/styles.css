@@ -410,9 +410,6 @@ strong {
     opacity: 0;
     z-index: 6;
 }
-.scene-text-flat {
-    box-shadow: none;
-}
 .scene-media {
     width: 65%;
 }
