@@ -100,11 +100,16 @@
     flex-direction: column-reverse;
     padding-top: var(--wrapper-padding-double);
 }
+.first-scene-text {
+	margin-right: 0;
+	width: calc(85% - var(--wrapper-padding-half));
+	margin-left: calc(12.5% - var(--wrapper-padding-half));
+}
 #regional-lts-table {
     position: initial;
-    width: 75%;
+    width: 85%;
     font-size: 1em;
-    margin-top: var(--wrapper-padding);
+    margin: var(--wrapper-padding) auto 0 12.5%;
 }
 .regional-lts-table-th {
     font-size: 1.2em;
