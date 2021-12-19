@@ -43,9 +43,6 @@ a:hover {
 p, em {
     margin: 10px 0;
 }
-nav {
-    padding: var(--wrapper-padding-half);
-}
 table {
     table-layout: fixed;
     width: 100%;
@@ -137,6 +134,7 @@ strong {
 .top-nav {
     position: fixed;
     width: calc(100% - var(--wrapper-padding));
+    padding: var(--wrapper-padding-half) var(--wrapper-padding);
     z-index: 7;
     background-color: var(--theme-black);
     transition: transform 1s;
@@ -371,7 +369,7 @@ strong {
     padding: 30px 0;
 }
 .scene-header {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     color: var(--theme-white);
     background-color: var(--theme-black);
     padding: var(--wrapper-padding-half) var(--wrapper-padding);
@@ -383,7 +381,7 @@ strong {
     line-height: initial;
 }
 .flat-scene-header {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     color: var(--theme-green);
 }
 .scene-text {
@@ -391,7 +389,7 @@ strong {
     padding: var(--wrapper-padding-half) var(--wrapper-padding);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 1em;
     width: 45ch;
     margin-right: var(--wrapper-padding);
     opacity: 0;
@@ -547,7 +545,7 @@ strong {
 /* Footer */
 footer {
     position: relative;
-    height: 100vh;
+    height: 140vh;
     width: 100%;
     background-image: url("../img/footer-bg.jpg");
     background-size: cover;
@@ -559,7 +557,7 @@ footer {
 .footer-text {
     position: absolute;
     width: 70%;
-    top: 12.5%;
+    top: 40vh;
     left: calc(15% - var(--wrapper-padding));
     background-color: rgba(255,255,255,0.75);
     border-radius: var(--border-radius);
@@ -573,8 +571,10 @@ footer {
     width: 50ch;
 }
 .footer-list-h2 {
-    font-size: inherit;
-    margin-top: var(--wrapper-padding);
+    font-size: 1.1em;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: var(--wrapper-padding-quad);
 }
 .footer-list-h2-first {
     margin-top: 0;
@@ -584,11 +584,11 @@ footer {
     margin-right: 10%;
 }
 .footer-connect {
-    padding: var(--wrapper-padding-half) 0;
+    padding: var(--wrapper-padding) 0;
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: var(--theme-green);
+    background-color: rgba(57,104,41,0.75);
     color: var(--theme-white);
 }
 .footer-connect-us {

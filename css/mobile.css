@@ -6,10 +6,24 @@ body {
 
 /* Nav */
 .nav-logo {
-    width: 50%;
+    width: 70%;
+}
+/* keep consistent w/analysis */
+.nav-bike {
+    width: 25px;
+    margin-left: var(--wrapper-padding-half);
+}
+.wheel-nav {
+    width: 6px;
+    height: 6px;
+    border: 1px solid var(--theme-white);
+    bottom: -5px;
 }
 .nav-link {
     width: 135px;
+}
+.nav-link-map {
+    margin-left: var(--wrapper-padding-half);
 }
 /* END Nav */
 
@@ -17,10 +31,11 @@ body {
 
 /* Intro */
 #story-intro:before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 52.5% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%);
 }
 #story-intro {
     min-height: 135vh;
+    padding-bottom: var(--wrapper-padding-quad);
 }
 #story-intro-text {
     padding-top: var(--wrapper-padding);
@@ -57,9 +72,18 @@ body {
     bottom: -8px;
     border: 2px solid var(--theme-white);
 }
+.mini-bike {
+    display: none;
+}
 .story-intro-icon-figure {
     padding-left: var(--wrapper-padding-half);
     font-size: unset;
+}
+#read-story-btn {
+    position: absolute;
+    width: 16ch;
+    right: calc(-50vw + 10ch);
+    color: var(--theme-black);
 }
 /* END Intro */
 

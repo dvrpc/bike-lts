@@ -45,7 +45,7 @@ h1 {
 .legend-content {
     max-height: 40vh;
     overflow-y: auto;
-    width: calc(100vw - 55px);
+    width: 80vw;
 }
 .legend-section {
     padding: var(--wrapper-padding-half);
