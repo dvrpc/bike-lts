@@ -4,9 +4,20 @@ body {
 
 
 
+/* Nav */
+.nav-logo {
+    width: 50%;
+}
+.nav-link {
+    width: 135px;
+}
+/* END Nav */
+
+
+
 /* Intro */
 #story-intro:before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 52.5% 100%);
 }
 #story-intro {
     min-height: 135vh;
@@ -90,3 +101,36 @@ body {
     font-size: 1em;
 }
 /* END Scenes */
+
+
+
+/* Footer */
+footer {
+    height: unset;
+}
+.footer-text {
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: var(--wrapper-padding) var(--wrapper-padding-half);
+}
+.footer-text, .footer-connect {
+    position: initial;
+}
+.footer-lts-logo {
+    padding-bottom: var(--wrapper-padding);
+    margin-bottom: var(--wrapper-padding);
+    border-bottom: 1px solid var(--theme-black);
+}
+.footer-lts-logo, .footer-list-main {
+    width: 90%;
+}
+.footer-logo-dvrpc {
+    width: 105px;
+}
+.footer-connect-us {
+    font-size: 1.2em;
+}
+
+/* END Footer */
