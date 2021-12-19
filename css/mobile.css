@@ -109,7 +109,7 @@
     position: initial;
     width: 85%;
     font-size: 1em;
-    margin: var(--wrapper-padding) auto 0 12.5%;
+    margin: var(--wrapper-padding-double) auto 0 12.5%;
 }
 .regional-lts-table-th {
     font-size: 1.2em;
