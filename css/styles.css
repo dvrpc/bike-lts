@@ -446,14 +446,16 @@ th, td {
     top: 5%;
     right: 5%;
     justify-content: center;
+    text-align: right;
 }
 .scene-buffer-header {
     font-size: 3.5rem;
 }
 .scene-buffer-subtext {
     color: var(--theme-green-light);
-    font-weight: 700;
-    font-size: 1.2em;
+    /* font-weight: 700; */
+    font-size: 1.3em;
+    max-width: 40em;
 }
 .buffer-bike {
     position: absolute;
@@ -513,7 +515,6 @@ th, td {
     text-align: center;
     margin: 0 auto;
     margin-left: 6%;
-    border: 3.5px var(--theme-black) inset;
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 10%;

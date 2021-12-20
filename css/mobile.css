@@ -29,7 +29,10 @@
 }
 #story-intro {
     padding-bottom: var(--wrapper-padding-quad);
-    min-height: 90vh;
+    min-height: 100vh;
+}
+#story-intro-text-content {
+    width: 55ch;
 }
 #story-intro-text {
     padding-top: var(--wrapper-padding);
@@ -44,11 +47,11 @@
 .intro-bike-green {
     left: 15%;
 }
-.story-intro-p-large {
-    font-size: 1.2em;
-}
 .story-intro-p {
-    font-size: 1em;
+    font-size: 1.1em;
+}
+.story-intro-p-large {
+    font-size: 1.25em;
 }
 .story-intro-btns-wrapper {
     width: unset;
