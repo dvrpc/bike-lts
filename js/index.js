@@ -4,7 +4,7 @@ import { calculateSideNavSticky } from './indexUtils.js';
 const topNav = document.getElementById('top-nav');
 const sideNav = document.getElementById('scroll-story-nav')
 const firstScene = document.getElementById('what-is-LTS-scene')
-const toFirstScene = document.querySelectorAll('to-first-scene')
+const toFirstScene = document.querySelectorAll('.to-first-scene')
 
 // init controller & add scenes
 const controller = new ScrollMagic.Controller();
@@ -33,7 +33,16 @@ window.onresize = () => {
   firstScene.style.marginTop = `-${sideNav.offsetHeight}px`
 }
 
-window.scrollTo({
-  to: firstScene,
-  scrollBehavior: 'smooth'
+// compensate for first scene padding on zoom to
+toFirstScene.forEach(toFirst => {
+
+  toFirst.onclick = e => {
+    e.preventDefault()
+    window.location.hash = 'what-is-LTS-scene'
+
+    window.scrollTo({
+      top: firstScene.offsetHeight - 10,
+      scrollBehavior: 'smooth'
+    })
+  }
 })
