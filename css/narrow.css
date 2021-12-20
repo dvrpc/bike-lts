@@ -43,3 +43,37 @@ body {
     width: 550px;
 }
 /* END Individual Scenes */
+
+
+
+/* Footer */
+footer {
+    height: unset;
+}
+.footer-text {
+    width: 90%;
+    flex-direction: column;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: var(--wrapper-padding-double) var(--wrapper-padding-half);
+}
+.footer-text, .footer-connect {
+    position: initial;
+}
+.footer-lts-logo {
+    width: 50%;
+    padding-bottom: var(--wrapper-padding-double);
+    margin-bottom: var(--wrapper-padding-double);
+    border-bottom: 1px solid var(--theme-black);
+}
+.footer-list-main {
+    width: 90%;
+}
+.footer-logo-dvrpc {
+    width: 105px;
+}
+.footer-connect-us {
+    font-size: 1.2em;
+}
+
+/* END Footer */

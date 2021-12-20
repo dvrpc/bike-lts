@@ -32,7 +32,7 @@ const municipalityOutline = {
 // lts scenes
 const regionalScene = {
     zoom: 8.4,
-    center: [-74.85, 40.071],
+    center: [-74.75, 40.071],
     layers: [
         {
             id: 'lts-scene',
@@ -130,7 +130,7 @@ const connectivityOneScene = {
     hideLayers: ['priority-top', 'results-all']
 }
 const connectivityTwoScene = {
-    zoom: 12.5,
+    zoom: 11.5,
     center: [-75.685, 40.006],
     layers: [
         {
@@ -150,7 +150,7 @@ const connectivityTwoScene = {
                     10000000, 8,
                 ]
             },
-            minzoom: 12
+            minzoom: 10
         },
         {
             id: 'priority-top',
@@ -158,7 +158,7 @@ const connectivityTwoScene = {
             source: 'lts',
             'source-layer': 'priorities_all',
             paint: {
-                'line-width': 4,
+                'line-width': 6,
                 'line-color': '#993404',
             },
             filter: ['==', 'main_priority', 10]
@@ -168,7 +168,7 @@ const connectivityTwoScene = {
 }
 const connectivityEquityScene = {
     zoom: 8.4,
-    center: [-74.85, 40.071],
+    center: [-74.75, 40.071],
     layers: [
         {
             id: 'ipd-fill',
@@ -214,7 +214,7 @@ const connectivityEquityScene = {
 }
 const connectivityPrioritiesScene = {
     zoom: 8.4,
-    center: [-74.85, 40.071],
+    center: [-74.75, 40.071],
     layers: [
         {
             id: 'priority-top',
@@ -246,7 +246,7 @@ const connectivityPrioritiesEquityScene = {
 // special destinations
 const trailsScene = {
     zoom: 8.4,
-    center: [-74.85, 40.071],
+    center: [-74.75, 40.071],
     layers: [
         {
             id: 'trails',
@@ -269,7 +269,7 @@ const trailsScene = {
 }
 const transitScene = {
     zoom: 8.4,
-    center: [-74.85, 40.071],
+    center: [-74.75, 40.071],
     layers: [
         {
             id: 'transit',
@@ -292,7 +292,7 @@ const transitScene = {
 }
 const schoolsScene = {
     zoom: 8.4,
-    center: [-74.85, 40.071],
+    center: [-74.75, 40.071],
     layers: [
         {
             id: 'schools',

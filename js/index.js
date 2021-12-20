@@ -4,6 +4,7 @@ import { calculateSideNavSticky } from './indexUtils.js';
 const topNav = document.getElementById('top-nav');
 const sideNav = document.getElementById('scroll-story-nav')
 const firstScene = document.getElementById('what-is-LTS-scene')
+const toFirstScene = document.querySelectorAll('to-first-scene')
 
 // init controller & add scenes
 const controller = new ScrollMagic.Controller();
@@ -31,3 +32,8 @@ window.onresize = () => {
   sideNav.style.top = calculateSideNavSticky(sideNav, topNav)
   firstScene.style.marginTop = `-${sideNav.offsetHeight}px`
 }
+
+window.scrollTo({
+  to: firstScene,
+  scrollBehavior: 'smooth'
+})

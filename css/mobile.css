@@ -137,32 +137,11 @@
 
 
 /* Footer */
-footer {
-    height: unset;
-}
 .footer-text {
-    width: 90%;
-    flex-direction: column;
-    margin: 0 auto;
-    border-radius: 0;
     padding: var(--wrapper-padding) var(--wrapper-padding-half);
 }
-.footer-text, .footer-connect {
-    position: initial;
-}
 .footer-lts-logo {
+    width: 90%;
     padding-bottom: var(--wrapper-padding);
     margin-bottom: var(--wrapper-padding);
-    border-bottom: 1px solid var(--theme-black);
 }
-.footer-lts-logo, .footer-list-main {
-    width: 90%;
-}
-.footer-logo-dvrpc {
-    width: 105px;
-}
-.footer-connect-us {
-    font-size: 1.2em;
-}
-
-/* END Footer */
