@@ -30,9 +30,6 @@ const tabLayers = {
 }
 
 map.on('load', () => {
-    // @improvement: get basemap ID to set text-allow-overlap and force labels above all layers by defafult
-    // map.setLayoutProperty('dark-v10', 'text-allow-overlap', true)
-
     const firstSymbolId = mapUtils.getFirstSymbolId(map)
 
     for(const source in sources) map.addSource(source, sources[source])
@@ -88,7 +85,6 @@ tabs.forEach(tab => {
         if(popup) popup.remove()
 
         // update legends 
-        // @TODO update arrow state (down closed, up open)
         clearLegend(legendContainer)
         tabID === 'lts-tab' ? handleLegend('lts', true, 4) : handleLegend('priority', true, 1)
     }
