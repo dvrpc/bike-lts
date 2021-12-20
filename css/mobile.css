@@ -33,6 +33,7 @@
 }
 #story-intro-text-content {
     width: 55ch;
+    padding-left: var(--wrapper-padding-half);
 }
 #story-intro-text {
     padding-top: var(--wrapper-padding);
@@ -60,7 +61,7 @@
 }
 .story-intro-icon-btns-link {
     font-size: 1.4em;
-    width: 20ch;
+    width: 19ch;
     border-bottom: 3px solid;
 }
 .wheel {
@@ -101,7 +102,7 @@
 }
 #what-is-LTS-scene {
     flex-direction: column-reverse;
-    padding-top: var(--wrapper-padding-double);
+    padding-top: var(--wrapper-padding-quad);
 }
 .first-scene-text {
 	margin-right: 0;

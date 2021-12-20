@@ -95,11 +95,12 @@ scrollNavBtns.forEach(btn => {
 })
 
 const toggleMapView = (mapCat, sceneId) => {
+    const isMobile = window.innerWidth < 750 ? true : false
     const mapInstance = maps[mapCat].map
     const mapSceneLayer = sceneLayers[mapCat][sceneId]
 
-    const zoom = mapSceneLayer.zoom
-    const center = mapSceneLayer.center
+    const zoom = isMobile ? mapSceneLayer.zoomMobile : mapSceneLayer.zoom
+    const center = isMobile ? mapSceneLayer.centerMobile : mapSceneLayer.center
     const layers = mapSceneLayer.layers
     const hideLayers = mapSceneLayer.hideLayers
     

@@ -32,7 +32,9 @@ const municipalityOutline = {
 // lts scenes
 const regionalScene = {
     zoom: 8.4,
+    zoomMobile: 7.6,
     center: [-74.75, 40.071],
+    centerMobile: [-75.12, 40.071],
     layers: [
         {
             id: 'lts-scene',
@@ -63,7 +65,9 @@ const regionalScene = {
 }
 const usingDataScene = {
     zoom: 12.5,
-    center: [-75.685, 40.006],
+    zoomMobile: 12,
+    center: [-75.685, 40.006], 
+    centerMobile: [-75.701, 40.006],
     layers: [
         {
             id: 'lts-scene',
@@ -73,7 +77,9 @@ const usingDataScene = {
 }
 const lowStressOneScene = {
     zoom: 12.5,
+    zoomMobile: 12,
     center: [-75.685, 40.006],
+    centerMobile: [-75.701, 40.00],
     layers: [
         {
             id: 'lts-scene',
@@ -84,7 +90,9 @@ const lowStressOneScene = {
 }
 const lowStressTwoScene = {
     zoom: 12.5,
+    zoomMobile: 12,
     center: [-75.685, 40.006],
+    centerMobile: [-75.701, 40.00],
     layers: [
         {
             id: 'lts-scene',
@@ -168,7 +176,9 @@ const connectivityTwoScene = {
 }
 const connectivityEquityScene = {
     zoom: 8.4,
+    zoomMobile: 7.6,
     center: [-74.75, 40.071],
+    centerMobile: [-75.12, 40.071],
     layers: [
         {
             id: 'ipd-fill',
@@ -214,7 +224,9 @@ const connectivityEquityScene = {
 }
 const connectivityPrioritiesScene = {
     zoom: 8.4,
+    zoomMobile: 7.6,
     center: [-74.75, 40.071],
+    centerMobile: [-75.12, 40.071],
     layers: [
         {
             id: 'priority-top',
@@ -246,7 +258,9 @@ const connectivityPrioritiesEquityScene = {
 // special destinations
 const trailsScene = {
     zoom: 8.4,
+    zoomMobile: 7.6,
     center: [-74.75, 40.071],
+    centerMobile: [-75.12, 40.071],
     layers: [
         {
             id: 'trails',
@@ -269,7 +283,9 @@ const trailsScene = {
 }
 const transitScene = {
     zoom: 8.4,
+    zoomMobile: 7.6,
     center: [-74.75, 40.071],
+    centerMobile: [-75.12, 40.071],
     layers: [
         {
             id: 'transit',
@@ -292,7 +308,9 @@ const transitScene = {
 }
 const schoolsScene = {
     zoom: 8.4,
+    zoomMobile: 7.6,
     center: [-74.75, 40.071],
+    centerMobile: [-75.12, 40.071],
     layers: [
         {
             id: 'schools',
