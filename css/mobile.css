@@ -103,7 +103,13 @@ th, td {
     height: 12px;
 }
 .scroll-story-nav-tooltip {
-    margin-top: -19.5px;
+    margin-top: -32px;
+}
+@-moz-document url-prefix() {
+    .scroll-story-nav-tooltip {
+        /* this aligns on firefix */
+        margin-top: -19.5px;
+    }
 }
 #what-is-LTS-scene:before {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 118% 100%);

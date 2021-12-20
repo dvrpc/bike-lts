@@ -376,14 +376,17 @@ th, td {
     position: absolute;
     left: 35px;
 
-    /* this aligns on firefix */
-    /* margin-top: -27.5px; */
-
     /* this aligns on chrome */
-    margin-top: -35px;
+    margin-top: -38px;
 
     font-weight: 700;
     padding: 2.5px 20px;
+}
+@-moz-document url-prefix() {
+    .scroll-story-nav-tooltip {
+        /* this aligns on firefix */
+        margin-top: -27px;
+    }
 }
 .scene-section {
     width: 100%;
