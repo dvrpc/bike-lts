@@ -34,7 +34,7 @@ const regionalScene = {
     zoom: 8.4,
     zoomMobile: 7.6,
     center: [-74.75, 40.071],
-    centerMobile: [-75.12, 40.071],
+    centerMobile: [-75.12, 40.1],
     layers: [
         {
             id: 'lts-scene',
@@ -182,7 +182,7 @@ const connectivityEquityScene = {
     zoom: 8.4,
     zoomMobile: 7.6,
     center: [-74.75, 40.071],
-    centerMobile: [-75.12, 40.071],
+    centerMobile: [-75.12, 40.1],
     layers: [
         {
             id: 'ipd-fill',
@@ -230,7 +230,7 @@ const connectivityPrioritiesScene = {
     zoom: 8.4,
     zoomMobile: 7.6,
     center: [-74.75, 40.071],
-    centerMobile: [-75.12, 40.071],
+    centerMobile: [-75.12, 40.1],
     layers: [
         {
             id: 'priority-top',
@@ -266,7 +266,7 @@ const trailsScene = {
     zoom: 8.4,
     zoomMobile: 7.6,
     center: [-74.75, 40.071],
-    centerMobile: [-75.12, 40.071],
+    centerMobile: [-75.12, 40.1],
     layers: [
         {
             id: 'trails',
@@ -291,7 +291,7 @@ const transitScene = {
     zoom: 8.4,
     zoomMobile: 7.6,
     center: [-74.75, 40.071],
-    centerMobile: [-75.12, 40.071],
+    centerMobile: [-75.12, 40.1],
     layers: [
         {
             id: 'transit',
@@ -316,7 +316,7 @@ const schoolsScene = {
     zoom: 8.4,
     zoomMobile: 7.6,
     center: [-74.75, 40.071],
-    centerMobile: [-75.12, 40.071],
+    centerMobile: [-75.12, 40.1],
     layers: [
         {
             id: 'schools',

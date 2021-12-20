@@ -1,3 +1,11 @@
+/* General */
+th, td {
+    padding: var(--wrapper-padding-half);
+}
+/* END General */
+
+
+
 /* Nav */
 .nav-logo {
     width: 70%;
