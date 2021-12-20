@@ -1,5 +1,4 @@
 // objects with info for each legend type
-// @TODO: add "sources" field
 const legendConfigs = {
     lts: {
         title: 'Levels of Traffic Stress',
@@ -50,7 +49,7 @@ const legendConfigs = {
         iconType: 'line',
         text: ['smallest', '.', '.', '.', 'largest']
     },
-    // // @UPDATE handle transit special case - consolidate into here
+    // handle transit special case - consolidate into here
     ['passenger-rail']: {
         title: 'Transit Stops',
         source: 'SEPTA, NJ Transit, DRPA',
@@ -58,14 +57,14 @@ const legendConfigs = {
         iconType: 'circle',
         text: ['Bus','Passenger Rail','Trolley']
     },
-    // @UPDATE handle transit special case
+    // handle transit special case
     trolley: {
         title: '',
         icons: [],
         iconType: '',
         text: ['']
     },
-    // @UPDATE handle transit special case
+    // handle transit special case
     bus: {
         title: '',
         icons: [],
