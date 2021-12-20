@@ -150,6 +150,18 @@ th, td {
 .scene-text {
     font-size: 1em;
 }
+.buffer-header-wrapper {
+    top: 0;
+    height: 75%;
+}
+.scene-buffer-header {
+    font-size: 4.5em;
+}
+.scene-buffer-subtext {
+    max-width: 20em;
+    font-size: 1.5em;
+    margin-left: 5em;
+}
 /* END Scenes */
 
 
