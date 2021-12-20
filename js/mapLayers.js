@@ -105,7 +105,9 @@ const lowStressTwoScene = {
 // connectivity analysis scenes
 const connectivityOneScene = {
     zoom: 13.5,
+    zoomMobile: 12.9,
     center: [-75.69, 40.006],
+    centerMobile: [-75.707, 40.006],
     layers: [
         {
             id: 'path',
@@ -139,7 +141,9 @@ const connectivityOneScene = {
 }
 const connectivityTwoScene = {
     zoom: 11.5,
+    zoomMobile: 10.9,
     center: [-75.685, 40.006],
+    centerMobile: [-75.701, 40.006],
     layers: [
         {
             id: 'results-all',
@@ -237,7 +241,9 @@ const connectivityPrioritiesScene = {
 }
 const connectivityPrioritiesEquityScene = {
     zoom: 10.1,
+    zoomMobile: 9.4,
     center: [-74.86, 39.80],
+    centerMobile: [-74.86, 39.90],
     layers: [
         {
             id: 'priority-top-ipd',
