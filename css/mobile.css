@@ -33,11 +33,10 @@ th, td {
 
 /* Intro */
 #story-intro:before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(-10px 0, 100% 0, 100% 100%, 50% 100%);
 }
 #story-intro {
     padding-bottom: var(--wrapper-padding-quad);
-    min-height: unset;
 }
 #story-intro-text-content {
     width: 55ch;
@@ -69,8 +68,8 @@ th, td {
     bottom: 8%;
 }
 .story-intro-icon-btns-link {
-    font-size: 1.4em;
-    width: 19ch;
+    font-size: 1.3em;
+    width: 18ch;
     border-bottom: 3px solid;
 }
 .wheel {
@@ -87,13 +86,19 @@ th, td {
     font-size: unset;
 }
 .story-intro-figcaption {
-    left: var(--wrapper-padding-half);
+    left: 0;
+}
+#view-map-btn {
+    margin-left: var(--wrapper-padding-half);
+    margin-left: 8%;
 }
 #read-story-btn {
     position: absolute;
-    width: 16ch;
-    right: calc(-50vw + 4ch);
+    right: calc(-100% - 2ch);
     color: var(--theme-black);
+}
+#read-story-btn figcaption {
+    left: 5ch;
 }
 /* END Intro */
 
@@ -117,7 +122,7 @@ th, td {
 }
 #what-is-LTS-scene {
     flex-direction: column-reverse;
-    padding-top: var(--wrapper-padding-quad);
+    padding-top: 15%;
 }
 .first-scene-text {
 	margin-right: 0;
@@ -128,10 +133,14 @@ th, td {
     position: initial;
     width: 85%;
     font-size: 1em;
-    margin: var(--wrapper-padding-double) auto 0 12.5%;
+    margin: 15% auto 0 12.5%;
+}
+#regional-lts-table thead th:nth-child(1) {
+    width: 15%;
 }
 .regional-lts-table-th {
-    font-size: 1.2em;
+    font-size: 1em;
+    padding: 0.75em;
 }
 .regional-lts-table-cat {
     font-size: 2em;
