@@ -37,7 +37,7 @@ th, td {
 }
 #story-intro {
     padding-bottom: var(--wrapper-padding-quad);
-    min-height: 100vh;
+    min-height: unset;
 }
 #story-intro-text-content {
     width: 55ch;
@@ -45,6 +45,7 @@ th, td {
 }
 #story-intro-text {
     padding-top: var(--wrapper-padding);
+    padding-bottom: 35%;
 }
 .header-logo {
     width: 95%;
@@ -60,12 +61,12 @@ th, td {
     font-size: 1.1em;
 }
 .story-intro-p-large {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 .story-intro-btns-wrapper {
     width: unset;
     padding-left: 0;
-    bottom: 3vh;
+    bottom: 8%;
 }
 .story-intro-icon-btns-link {
     font-size: 1.4em;
@@ -112,7 +113,7 @@ th, td {
     }
 }
 #what-is-LTS-scene:before {
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 118% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 100% 100%);
 }
 #what-is-LTS-scene {
     flex-direction: column-reverse;
