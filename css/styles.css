@@ -521,7 +521,7 @@ th, td {
     /* clip-path: polygon(50% 0, 100% 0, 100% 100%, 105% 100%); */
     
     /* somehow not angled... how?? */
-    /* 40px offset * 5... */
+    /* 40px offset... * 5... */
     clip-path: polygon(50% 0, 100% 0, 100% 100%, calc(100% + 200px) 100%);
 }
 .what-is-lts-content-wrapper {
