@@ -7,8 +7,14 @@ body {
 
 
 /* Intro */
+#story-intro:before {
+    clip-path: polygon(-25px 0, 100% 0, 100% 100%, 50% 100%);
+}
+#story-intro {
+    min-height: 120vh;
+}
 .header-logo {
-    max-width: 300px;
+    max-width: 225px;
 }
 .story-intro-p {
     font-size: 1.1rem;
@@ -39,8 +45,17 @@ body {
 
 
 /* Individual Scenes */
+.what-is-lts-content-wrapper {
+    flex-direction: column;
+    width: 75%;
+}
 #regional-lts-table {
-    width: 550px;
+    margin: 0 auto;
+    margin-top: var(--wrapper-padding-double);
+    width: 95%;
+}
+.what-is-lts-text {
+    width: 95%;
 }
 /* END Individual Scenes */
 

@@ -39,9 +39,12 @@ toFirstScene.forEach(toFirst => {
   toFirst.onclick = e => {
     e.preventDefault()
     window.location.hash = 'what-is-LTS-scene'
+    
+    // account for 20vh padding
+    const vh = window.innerHeight * .2
 
     window.scrollTo({
-      top: firstScene.offsetHeight - 10,
+      top: firstScene.offsetHeight - vh,
       scrollBehavior: 'smooth'
     })
   }

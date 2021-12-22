@@ -164,7 +164,9 @@ nav {
     z-index: 3;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-color: var(--theme-black);
+    background-color: var(--theme-grey);
+    /* test */
+    
     color: var(--theme-white);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -182,7 +184,7 @@ nav {
     margin-left: calc(var(--wrapper-padding) * -2);
     margin-bottom: var(--wrapper-padding-double);
     box-shadow: var(--box-shadow);
-    background-color: var(--theme-black-dark);
+    background-color: var(--theme-black);
 }
 .sidebar-learn-more {
     display: block;
@@ -558,7 +560,7 @@ footer {
     position: absolute;
     bottom: 0;
     box-shadow: var(--box-shadow-up);
-    background-color: var(--theme-black-dark);
+    background-color: var(--theme-black);
 }
 .footer-nav {
     padding: 0;
