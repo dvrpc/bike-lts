@@ -121,19 +121,23 @@ th, td {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 100% 100%);
 }
 #what-is-LTS-scene {
-    flex-direction: column-reverse;
     padding-top: 15%;
 }
-.first-scene-text {
-	margin-right: 0;
-	width: calc(85% - var(--wrapper-padding-half));
-	margin-left: calc(12.5% - var(--wrapper-padding-half));
+.what-is-lts-content-wrapper {
+    padding: var(--wrapper-padding);
+    margin-left: calc(12px + var(--wrapper-padding) + 12px);
+}
+.what-is-lts-header {
+    font-size: 1.5em;
+}
+.what-is-lts-text, #regional-lts-table {
+    width: 100%;
+}
+.what-is-lts-text p {
+    font-size: 1em;
 }
 #regional-lts-table {
-    position: initial;
-    width: 85%;
-    font-size: 1em;
-    margin: 15% auto 0 12.5%;
+    box-shadow: none;
 }
 #regional-lts-table thead th:nth-child(1) {
     width: 15%;
