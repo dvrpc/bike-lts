@@ -18,6 +18,7 @@ body {
     --theme-red: #a50a0a;
     --theme-purple: #3F3047;
     --theme-black: #2e2e2e;
+    --theme-black-map: #343332;
     --theme-white: #f9f9f9;
     --theme-brown: #993404;
 
@@ -50,7 +51,7 @@ table {
     border-collapse: collapse;
 }
 th, td {
-    padding: var(--wrapper-padding) var(--wrapper-padding-half);
+    padding: var(--wrapper-padding-half);
 }
 .em-block {
     display: block;
@@ -206,7 +207,7 @@ th, td {
 #story-intro {
     position: relative;
     min-height: 100vh;
-    background-color: var(--theme-black);
+    background-color: var(--theme-black-map);
 }
 #story-intro:before {
     overflow-x: hidden;
@@ -434,7 +435,7 @@ th, td {
     position: relative;
     height: 125vh;
     width: 100%;
-    background-color: var(--theme-black);
+    background-color: var(--theme-black-map);
     color: var(--theme-white);
 }
 .scene-buffer:before {
@@ -498,9 +499,10 @@ th, td {
     /* margin-top = (side-nav height * -1) */
 
     position: relative;
-    background-color: var(--theme-black);
+    background-color: var(--theme-black-map);
     overflow-x: hidden;
     padding-top: 20vh;
+    padding-bottom: 20vh;
 }
 #what-is-LTS-scene:before {
     overflow-x: hidden;
@@ -514,19 +516,47 @@ th, td {
     left: 0;
     content: '';
     background-color: white;
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 105% 100%);
+
+    /* angled */
+    /* clip-path: polygon(50% 0, 100% 0, 100% 100%, 105% 100%); */
+    
+    /* somehow not angled... how?? */
+    /* 40px offset... * 5... */
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, calc(100% + 200px) 100%);
+}
+.what-is-lts-content-wrapper {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1097px;
+    background-color: var(--theme-white);
+    border-radius: var(--border-radius);
+    padding: var(--wrapper-padding-quad) var(--wrapper-padding-double);
+}
+.what-is-lts-header {
+    color: var(--theme-black);
+    font-size: 1.5rem;
+}
+.what-is-lts-text {
+    width: 30em;
+}
+.what-is-lts-text p {
+    font-size: 1rem;
 }
 #regional-lts-table {
     z-index: 3;
+    width: calc(100% - 30em);
     max-width: 750px;
     font-size: 1em;
     background-color: white;
     text-align: center;
     margin: 0 auto;
     margin-left: 6%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 #regional-lts-table thead th:nth-child(1) {
-    width: 10%;
+    width: 15%;
+    border-top-left-radius: var(--border-radius);
 }
 #regional-lts-table tr:not(:last-child) {
     border-bottom: 4px solid #e9e9e9;
@@ -540,6 +570,7 @@ th, td {
 }
 .top-right-corner-cell {
     text-align: left;
+    border-top-right-radius: var(--border-radius);
 }
 .regional-lts-table-cat {
     color: white;
@@ -554,12 +585,17 @@ th, td {
 }
 #regional-lts-table-2 {
     background-color: var(--theme-green-light);
+    padding-top: var(--wrapper-padding);
+    padding-bottom: var(--wrapper-padding)
 }
 #regional-lts-table-3 {
     background-color: var(--theme-yellow);
 }
 #regional-lts-table-4 {
     background-color: var(--theme-red);
+    border-bottom-left-radius: var(--border-radius);
+    padding-top: var(--wrapper-padding);
+    padding-bottom: var(--wrapper-padding)
 }
 .lts-table-ul li {
     margin-bottom: 5px;

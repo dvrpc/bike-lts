@@ -33,11 +33,10 @@ th, td {
 
 /* Intro */
 #story-intro:before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(-10px 0, 100% 0, 100% 100%, 50% 100%);
 }
 #story-intro {
     padding-bottom: var(--wrapper-padding-quad);
-    min-height: 100vh;
 }
 #story-intro-text-content {
     width: 55ch;
@@ -45,10 +44,11 @@ th, td {
 }
 #story-intro-text {
     padding-top: var(--wrapper-padding);
+    padding-bottom: 35%;
 }
 .header-logo {
     width: 95%;
-    max-width: 250px;
+    max-width: 200px;
 }
 .intro-bike-yellow, .intro-bike-green {
     width: 45%;
@@ -60,16 +60,16 @@ th, td {
     font-size: 1.1em;
 }
 .story-intro-p-large {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 .story-intro-btns-wrapper {
     width: unset;
     padding-left: 0;
-    bottom: 3vh;
+    bottom: 8%;
 }
 .story-intro-icon-btns-link {
-    font-size: 1.4em;
-    width: 19ch;
+    font-size: 1.3em;
+    width: 18ch;
     border-bottom: 3px solid;
 }
 .wheel {
@@ -86,13 +86,19 @@ th, td {
     font-size: unset;
 }
 .story-intro-figcaption {
-    left: var(--wrapper-padding-half);
+    left: 0;
+}
+#view-map-btn {
+    margin-left: var(--wrapper-padding-half);
+    margin-left: 8%;
 }
 #read-story-btn {
     position: absolute;
-    width: 16ch;
-    right: calc(-50vw + 4ch);
+    right: calc(-100% - 2ch);
     color: var(--theme-black);
+}
+#read-story-btn figcaption {
+    left: 5ch;
 }
 /* END Intro */
 
@@ -112,25 +118,33 @@ th, td {
     }
 }
 #what-is-LTS-scene:before {
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 118% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 100% 100%);
 }
 #what-is-LTS-scene {
-    flex-direction: column-reverse;
-    padding-top: var(--wrapper-padding-quad);
+    padding-top: 15%;
 }
-.first-scene-text {
-	margin-right: 0;
-	width: calc(85% - var(--wrapper-padding-half));
-	margin-left: calc(12.5% - var(--wrapper-padding-half));
+.what-is-lts-content-wrapper {
+    padding: var(--wrapper-padding);
+    margin-left: calc(12px + var(--wrapper-padding) + 12px);
+}
+.what-is-lts-header {
+    font-size: 1.5em;
+}
+.what-is-lts-text, #regional-lts-table {
+    width: 100%;
+}
+.what-is-lts-text p {
+    font-size: 1em;
 }
 #regional-lts-table {
-    position: initial;
-    width: 85%;
-    font-size: 1em;
-    margin: var(--wrapper-padding-double) auto 0 12.5%;
+    box-shadow: none;
+}
+#regional-lts-table thead th:nth-child(1) {
+    width: 15%;
 }
 .regional-lts-table-th {
-    font-size: 1.2em;
+    font-size: 1em;
+    padding: 0.75em;
 }
 .regional-lts-table-cat {
     font-size: 2em;
