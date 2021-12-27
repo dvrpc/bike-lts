@@ -18,6 +18,6 @@ An update to the old ESRI AGO LTS map that will improve performance, add more fe
     - from root, `cd` to /analysis
     - `npm install` (first time only)
     - `npm run build`
-    - delete <script></script> that has `index.js` at <head></head> of `index.html`
+    - delete <script></script> that has `index.js` in `index.html`
     - IF cache busting is needed, rename CSS and other files in both the `index.html` and CSS (or other) folder to force the newest file to deliver
     - copy files within build folder to staging folder at /webmaps/bike-lts/analysis
