@@ -164,9 +164,8 @@ nav {
     z-index: 3;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-color: var(--theme-grey);
-    /* test */
-    
+    /* background-color: var(--theme-grey); */
+    background-color: var(--theme-black);    
     color: var(--theme-white);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -175,16 +174,18 @@ nav {
     padding: var(--wrapper-padding-double);
     padding-top: 0;
     height: calc(94% - var(--wrapper-padding)*2);
+    font-size: 1em;
     overflow-y: auto;
 }
 .sidebar-header {
     width: 100%;
     font-size: 1rem;
-    padding: var(--wrapper-padding-double);
+    padding: var(--wrapper-padding) var(--wrapper-padding-double);
     margin-left: calc(var(--wrapper-padding) * -2);
     margin-bottom: var(--wrapper-padding-double);
     box-shadow: var(--box-shadow);
-    background-color: var(--theme-black);
+    background-color: var(--theme-black-dark);
+    font-weight: 400;
 }
 .sidebar-learn-more {
     display: block;
@@ -214,6 +215,7 @@ nav {
 }
 .sidebar-tab {
     width: 50%;
+    font-size: 1em;
     text-align: center;
     border: none;
     padding: var(--wrapper-padding-double) 0;
@@ -226,7 +228,6 @@ nav {
     border-top: var(--active-tab-border);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    font-size: 0.9rem;
 }
 .sidebar-tab-inactive {
     color: var(--theme-white);
@@ -268,7 +269,7 @@ nav {
     background: none;
     width: 48%;
     margin-top: var(--wrapper-padding-double);
-    padding: var(--wrapper-padding-half) 0;
+    padding: 7.5px 0;
     cursor: pointer;
     border: 1px solid;
     border-radius: var(--border-radius);
@@ -289,6 +290,7 @@ nav {
     position: relative;
     display: block;
     width: 100%;
+    font-size: 1.1em;
 }
 .sidebar-form-label:last-child {
     margin-right: 0;
@@ -429,7 +431,7 @@ nav {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     margin-bottom: var(--wrapper-padding-half);
-    padding: var(--wrapper-padding);
+    padding: var(--wrapper-padding-half) var(--wrapper-padding);
 }
 .legend-section:last-of-type {
     margin-bottom: 0;
@@ -560,7 +562,7 @@ footer {
     position: absolute;
     bottom: 0;
     box-shadow: var(--box-shadow-up);
-    background-color: var(--theme-black);
+    background-color: var(--theme-black-dark);
 }
 .footer-nav {
     padding: 0;

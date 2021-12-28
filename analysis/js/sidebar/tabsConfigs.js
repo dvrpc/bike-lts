@@ -4,22 +4,22 @@ import handleForms from "./forms.js"
 const ltsFormContent = `
     <label class="sidebar-form-label stacked-inputs">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-1" checked>
-        LTS 1
+        LTS 1 <small>(lowest stress)</small>
     </label>
     
     <label class="sidebar-form-label stacked-inputs">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-2" checked>
-        LTS 2
+        LTS 2 <small>(suitable for most adults)</small>
     </label>
 
     <label class="sidebar-form-label stacked-inputs">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-3" checked>
-        LTS 3
+        LTS 3 <small>(moderate traffic stress)</small>
     </label>
     
     <label class="sidebar-form-label lts-layer-4">
         <input type="checkbox" class="sidebar-form-checkbox" data-layer-type="filter" data-legend-type="lts" name="existing-conditions" value="lts-4" checked>
-        LTS 4
+        LTS 4 <small>(high traffic stress)</small>
     </label>
 `
 const ltsBtnFormContent = `
