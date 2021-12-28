@@ -2,7 +2,7 @@
 const legendConfigs = {
     lts: {
         title: 'Levels of Traffic Stress',
-        icons: ['var(--theme-green)', 'var(--theme-green-2)', 'var(--theme-yellow)', 'var(--theme-red)'],
+        icons: ['var(--theme-green)', 'var(--theme-green-light)', 'var(--theme-yellow)', 'var(--theme-red)'],
         iconType: 'line',
         text: ['LTS 1', 'LTS 2', 'LTS 3', 'LTS 4']
     },
