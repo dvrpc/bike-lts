@@ -556,11 +556,11 @@ nav {
 
 /* Footer */
 footer {
-    height: 6%;
     min-height: 1.5rem;
     width: 100%;
     position: absolute;
     bottom: 0;
+    font-size: 0.9em;
     box-shadow: var(--box-shadow-up);
     background-color: var(--theme-black-dark);
 }

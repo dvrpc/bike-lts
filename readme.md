@@ -5,10 +5,10 @@ This regional screening tool was developed to help identify and rank roads where
 This repository contains two parts:
 
 ## Scroll Story
-The default landing page for the LTS project is a scrolling story that explains what the Bike LTS analysis is for, why it exists and how it can be useful. This is meant to provide background information and serve as a launching point for the interactive analysis map. 
+The default landing page for the LTS project is a scrolling story that explains what the Bike LTS analysis is for, why it exists and how it can be useful. This is meant to provide background information and serve as a launching point for the interactive analysis map. The story uses the [scrollmagic.io/](scrollmagic) library to handle scrolling interactions, [mapboxgl js](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) for mapping and HTML, CSS and Javascript for everything else. 
 
 ## Analysis Map
-An update to the old ESRI AGO LTS map that will improve performance, add more features and streamline the user experience. We will be moving away from the existing AGO platform into a custom solution built with [mapboxgl js](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and custom vector tiles.
+An update to the old ESRI AGO LTS map that improves performance, adds more features and streamlines the user experience. We moved away from the AGO platform to a custom solution built with [mapboxgl js](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and custom vector tiles.
 
 
 ## Build Process
