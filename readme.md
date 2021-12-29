@@ -8,7 +8,7 @@ This repository contains two parts:
 The default landing page for the LTS project is a scrolling story that explains what the Bike LTS analysis is for, why it exists and how it can be useful. This is meant to provide background information and serve as a launching point for the interactive analysis map. The story uses the [scrollmagic](https://scrollmagic.io/) library to handle scrolling interactions, [mapboxgl js](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) for mapping and HTML, CSS and Javascript for everything else. 
 
 ## Analysis Map
-An update to the old ESRI AGO LTS map that improves performance, adds more features and streamlines the user experience. We moved away from the AGO platform to a custom solution built with [mapboxgl js](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and custom vector tiles.
+An update to the old ESRI AGO LTS map that improves performance, adds more features and streamlines the user experience. We moved away from the AGO platform to a custom solution built with [mapboxgl js](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and custom vector tiles. The app is bootstrapped from the [sidebar-float-template-wide](https://github.com/dvrpc/ReusableComponents/tree/master/maps/sidebar-float-template-wide) folder in resuable components. 
 
 
 ## Build Process
