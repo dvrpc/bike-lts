@@ -376,8 +376,7 @@ nav {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: 8px 16px;
-    line-height: 1.5;
+    padding: 10px 15px;
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -446,7 +445,7 @@ nav {
     text-align: center;
 }
 .legend-source {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     text-align: center;
     font-style: italic;
     font-weight: 400;
@@ -466,7 +465,6 @@ nav {
     display: inline-block;
 }
 .legend-text {
-    text-align: center;
     font-size: 0.8rem;
 }
 .lts-layer-4 {
@@ -560,8 +558,7 @@ footer {
     position: absolute;
     bottom: 0;
     font-size: 0.9em;
-    box-shadow: var(--box-shadow-up);
-    background-color: var(--theme-black-dark);
+    box-shadow: var(--box-shadow);
 }
 .footer-nav {
     padding: 0;
