@@ -15,6 +15,7 @@ const forms = sidebar.querySelectorAll('.sidebar-form')
 const tabs = Array.from(sidebar.querySelector('#sidebar-tabs').children)
 const legendBtn = document.getElementById('legendBtn')
 const legendContainer = legendBtn.nextElementSibling
+let activeTab = 'lts-tab'
 // const feedbackBtn = sidebar.querySelector('#feedback-btn')
 
 // map
@@ -52,6 +53,9 @@ legendBtn.onclick = e => toggleLegend(e)
 // sidebar
 tabs.forEach(tab => {
     tab.onclick = () => {
+        if(activeTab === tab.id) return
+        activeTab = tab.id
+
         map['_container'].querySelector('.lds-ring').classList.add('lds-ring-active')
 
         // update content
