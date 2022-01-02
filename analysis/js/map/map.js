@@ -19,7 +19,9 @@ const makeRegionalExtentEls = map => {
 
     const dvrpcExtent = {
         center: [longitudeOffset, 40.071],
-        zoom: zoom
+        zoom: zoom,
+        pitch: 0,
+        bearing: 0
     }
 
     const button = document.createElement('button')
