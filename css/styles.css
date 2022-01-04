@@ -96,11 +96,16 @@ th, td {
     font-weight: 700;
 }
 .lts-highlights {
-    /* help with contrast */
     filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.2));
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    margin: 0 1ch;
+    transform: rotate(90deg);
+    vertical-align: middle;
 }
 .lts-1-color {
-    color: var(--theme-green);
+    background-color: var(--theme-green);
 }
 .lts-2-color {
     color: var(--theme-green-light);
