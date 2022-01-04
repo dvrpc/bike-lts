@@ -105,6 +105,12 @@ th, td {
     vertical-align: middle;
     margin-top: -0.5ch;
 }
+.lts-highlights-fill {
+    width: 12.5px;
+    height: 12.5px;
+    margin: 0 0.5ch;
+    margin-top: -0.25ch;
+}
 .lts-1-color {
     background-color: var(--theme-green);
 }
@@ -115,25 +121,25 @@ th, td {
     background-color: var(--theme-yellow);
 }
 .lts-purple {
-    color: var(--theme-purple);
+    background-color: var(--theme-purple);
 }
 .lts-purple-2 {
-    color: #800080;
+    background-color: #800080;
 }
 .lts-orange {
-    color: orange;
+    background-color: orange;
 }
 .lts-brown {
-    color: var(--theme-brown);
+    background-color: var(--theme-brown);
 }
 .ipd-blue {
-    color: #081d58;
+    background-color: #081d58;
 }
 .ipd-purple {
-    color: #5f344c;
+    background-color: #5f344c;
 }
 .ipd-yellow {
-    color: #edf8b1;
+    background-color: #edf8b1;
 }
 /* END General */
 /***************/
