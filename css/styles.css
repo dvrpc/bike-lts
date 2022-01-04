@@ -98,20 +98,21 @@ th, td {
 .lts-highlights {
     filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.2));
     display: inline-block;
-    width: 4px;
-    height: 16px;
-    margin: 0 1ch;
+    width: 5px;
+    height: 20px;
+    margin: 0 1.25ch;
     transform: rotate(90deg);
     vertical-align: middle;
+    margin-top: -0.5ch;
 }
 .lts-1-color {
     background-color: var(--theme-green);
 }
 .lts-2-color {
-    color: var(--theme-green-light);
+    background-color: var(--theme-green-light);
 }
 .lts-3-color {
-    color: var(--theme-yellow);
+    background-color: var(--theme-yellow);
 }
 .lts-purple {
     color: var(--theme-purple);
