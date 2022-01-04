@@ -96,38 +96,50 @@ th, td {
     font-weight: 700;
 }
 .lts-highlights {
-    /* help with contrast */
     filter: drop-shadow(1px 1px 0px rgba(0,0,0,0.2));
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    margin: 0 1.25ch;
+    transform: rotate(90deg);
+    vertical-align: middle;
+    margin-top: -0.5ch;
+}
+.lts-highlights-fill {
+    width: 12.5px;
+    height: 12.5px;
+    margin: 0 0.5ch;
+    margin-top: -0.25ch;
 }
 .lts-1-color {
-    color: var(--theme-green);
+    background-color: var(--theme-green);
 }
 .lts-2-color {
-    color: var(--theme-green-light);
+    background-color: var(--theme-green-light);
 }
 .lts-3-color {
-    color: var(--theme-yellow);
+    background-color: var(--theme-yellow);
 }
 .lts-purple {
-    color: var(--theme-purple);
+    background-color: var(--theme-purple);
 }
 .lts-purple-2 {
-    color: #800080;
+    background-color: #800080;
 }
 .lts-orange {
-    color: orange;
+    background-color: orange;
 }
 .lts-brown {
-    color: var(--theme-brown);
+    background-color: var(--theme-brown);
 }
 .ipd-blue {
-    color: #081d58;
+    background-color: #081d58;
 }
 .ipd-purple {
-    color: #5f344c;
+    background-color: #5f344c;
 }
 .ipd-yellow {
-    color: #edf8b1;
+    background-color: #edf8b1;
 }
 /* END General */
 /***************/
