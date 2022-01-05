@@ -30,16 +30,6 @@ const municipalityOutline = {
 // Scene objects
 ////
 
-// @UPDATE:
-// Expand list of ignored layers in the hideLayers[] array to include scene sections above and below that 
-// used to belong to map-2 and map-3
-    // probably not an efficient solution, could be improved once implemented
-    // hiding scenes:
-        // the last in a set of scenes needs to hide all non-set scenes below it
-        // the first neds to hide all non-set scenes above it
-        // ^ that may depend on not having setInterval()
-            // setInterval delay may prevent call that would apply hideLayers according to first/last
-
 // lts scenes
 const regionalScene = {
     zoom: 8.4,
@@ -115,7 +105,6 @@ const lowStressTwoScene = {
 
 // buffer
 const bufferOneScene = {
-    // hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill', 'priority-top', 'results-all', 'priority-ipd', 'priority-top-ipd', 'ipd-fill']
     hideLayers: ['lts-scene', 'path', 'blocks', 'blocks-fill']
 }
 
@@ -364,29 +353,6 @@ const schoolsScene = {
     hideLayers: ['transit', 'trails']
 }
 
-// @UPDATE
-// const sceneLayers = {
-//     stress: {
-//         regionalScene,
-//         usingDataScene,
-//         lowStressOneScene,
-//         lowStressTwoScene,
-//     },
-//     connectivity: {
-//         connectivityOneScene,
-//         connectivityTwoScene,
-//         connectivityEquityScene,
-//         connectivityPrioritiesScene,
-//         connectivityPrioritiesEquityScene
-//     },
-//     special: {
-//         trailsScene,
-//         transitScene,
-//         schoolsScene
-//     }
-// }
-
-// @UPDATE one obj b/c just referencing by ID at this point
 const sceneLayers = {
     regionalScene,
     usingDataScene,
