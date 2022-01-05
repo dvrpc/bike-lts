@@ -7,13 +7,7 @@ import * as utils from './sceneUtils.js'
 const scenes = document.querySelectorAll('.scene')
 const scrollNav = document.getElementById('scroll-story-nav-ul').children
 const topNav = document.getElementById('top-nav')
-
-// @update
 const mapContainer = document.getElementById('map')
-
-// @update
-// const mapTwoContainer = document.getElementById('map-2')
-// const mapThreeContainer = document.getElementById('map-3')
 
 // get navigable nav els
 const scrollNavBtns = Array.from(scrollNav).filter(el => el.nodeName != 'HR')
@@ -22,58 +16,14 @@ const scrollNavBtns = Array.from(scrollNav).filter(el => el.nodeName != 'HR')
 const l = scenes.length
 const sceneObjs = []
 const mapOffset = topNav.offsetHeight
-
-// @update
-// const mapDivs = [mapContainer, mapTwoContainer, mapThreeContainer]
-
-// @update
-// handle maps
-// mapDivs.forEach(map => {
-//     const gap = `calc(100vh - ${mapOffset}px)`
-    
-//     map.style.height = gap
-//     map.style.top = mapOffset + 'px'
-// })
-
 const gap = `calc(100vh - ${mapOffset}px)`
-mapContainer.style.height = gap
-mapContainer.style.top = mapOffset + 'px'
-const map = customMap(mapContainer)
-
-
-// @update
-// const maps = {
-    // stress: {
-    //     map: customMap(mapContainer),
-    //     loaded: false
-    // },
-    // @update
-    // connectivity: {
-    //     map: customMap(mapTwoContainer),
-    //     loaded: false
-    // },
-    // special: {
-    //     map: customMap(mapThreeContainer),
-    //     loaded: false
-    // },
-// }
-
-// @update
 let mapLoaded = false
 
-// @update
-// for(const map in maps) {
-//     const mapInstance = maps[map].map
+mapContainer.style.height = gap
+mapContainer.style.top = mapOffset + 'px'
 
-//     mapInstance.on('load', () => {
-//         for(const source in sources) mapInstance.addSource(source, sources[source])
-//         for(const layer in baseLayers) mapInstance.addLayer(baseLayers[layer], 'road-label')
+const map = customMap(mapContainer)
 
-//         maps[map].loaded = true
-//     })
-// }
-
-// @update
 map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
     for(const layer in baseLayers) map.addLayer(baseLayers[layer], 'road-label')
@@ -91,56 +41,32 @@ for(let i = 0; i < l; i++) {
         triggerElement: scene,
         reverse: true
     })
-        .on('enter', () => {
-            utils.toggleAnimation(scene)
-            utils.toggleNavLink(scrollNavBtns, i)
-            let interval;
+    .on('enter', () => {
+        utils.toggleAnimation(scene)
+        utils.toggleNavLink(scrollNavBtns, i)
+        let interval;
 
-            switch(mapId) {
-                case 'bufferOneScene':
-                case 'bufferTwoScene':
-                    interval = setInterval(() => {
-                        if(mapLoaded) {
-                            toggleBufferView(map, mapId)
-                            clearInterval(interval)
-                        }
-                    }, 75)
-                    break
-                case 'noMap':
-                    // exit case
-                    break
-                default:
-                    interval = setInterval(() => {
-                        if(mapLoaded) {
-                            toggleMapView(map, mapId)
-                            clearInterval(interval)
-                        }
-                    }, 75)
-            }
-
-            // @update unneeded
-            // const mapDiv = utils.getMapCategory(scene)
-
-            // // @UPDATE can do away with the whole map-category set
-            // // one map just needs to reference toggleMapView() with scene id and done. layers are there
-            // // @UPDATE in mapLayers consolidate all layers into one object
-            // const mapCategory = mapDiv.dataset.mapCategory
-            
-            // // @TODO remove this interval b/c logic will go in map.on('load')
-            // let interval = setInterval(() => {
-            //     // @update: b/c just one map, all logic _could_ be moved into map.on('load', () => {})
-            //     if(mapLoaded) {
-            //         // @update invoked toggleMapView(map, mapId) after if(ma)
-            //         toggleMapView(map, mapId)
-            //         clearInterval(interval)
-            //     }
-            //     // @update
-            //     // if(maps[mapCategory].loaded) {
-            //     //     toggleMapView(mapCategory, mapId)
-            //     //     clearInterval(interval)
-            //     // }
-            // }, 250)
-        // }
+        switch(mapId) {
+            case 'bufferOneScene':
+            case 'bufferTwoScene':
+                interval = setInterval(() => {
+                    if(mapLoaded) {
+                        toggleBufferView(map, mapId)
+                        clearInterval(interval)
+                    }
+                }, 75)
+                break
+            case 'noMap':
+                // exit case
+                break
+            default:
+                interval = setInterval(() => {
+                    if(mapLoaded) {
+                        toggleMapView(map, mapId)
+                        clearInterval(interval)
+                    }
+                }, 75)
+        }
     }))
 }
 
@@ -156,15 +82,8 @@ scrollNavBtns.forEach(btn => {
     btn.onmouseout = () => utils.removeNavTooltip(tooltip)
 })
 
-// @update
-// const toggleMapView = (mapCat, sceneId) => {
 const toggleMapView = (map, sceneId) => {
     const isMobile = window.innerWidth < 750 ? true : false
-
-    // Wupdate
-    // const mapInstance = maps[mapCat].map
-    // @update
-    // const mapSceneLayer = sceneLayers[mapCat][sceneId]
     const mapSceneLayer = sceneLayers[sceneId]
 
     const zoom = isMobile ? mapSceneLayer.zoomMobile : mapSceneLayer.zoom
@@ -200,7 +119,7 @@ const toggleMapView = (map, sceneId) => {
     })
 }
 
-// buffers keep map in place but remove linework
+// buffers only remove linework
 const toggleBufferView = (map, sceneId) => {
     const mapSceneLayer = sceneLayers[sceneId]
     const hideLayers = mapSceneLayer.hideLayers
