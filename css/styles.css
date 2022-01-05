@@ -451,9 +451,6 @@ th, td {
     z-index: 4;
     height: 125vh;
     width: 100%;
-    /* @update consider keeping map context visible during buffers */
-    /* height: 70vh; */
-    /* width: 75%; */
     background-color: var(--theme-black-map);
     color: var(--theme-white);
 }
