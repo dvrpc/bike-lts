@@ -91,31 +91,43 @@ for(let i = 0; i < l; i++) {
         triggerElement: scene,
         reverse: true
     })
+
     .on('enter', () => {
         utils.toggleAnimation(scene)
         utils.toggleNavLink(scrollNavBtns, i)
 
         if(mapId) {
-            const mapDiv = utils.getMapCategory(scene)
-
-            // @UPDATE can do away with the whole map-category set
-            // one map just needs to reference toggleMapView() with scene id and done. layers are there
-            // @UPDATE in mapLayers consolidate all layers into one object
-            const mapCategory = mapDiv.dataset.mapCategory
-            
             let interval = setInterval(() => {
-                // @update: b/c just one map, all logic _could_ be moved into map.on('load', () => {})
                 if(mapLoaded) {
                     toggleMapView(map, mapId)
                     clearInterval(interval)
                 }
-                // @update
-                // if(maps[mapCategory].loaded) {
-                //     toggleMapView(mapCategory, mapId)
-                //     clearInterval(interval)
-                // }
-            }, 250)
+            }, 150)
         }
+
+            // @update unneeded
+            // const mapDiv = utils.getMapCategory(scene)
+
+            // // @UPDATE can do away with the whole map-category set
+            // // one map just needs to reference toggleMapView() with scene id and done. layers are there
+            // // @UPDATE in mapLayers consolidate all layers into one object
+            // const mapCategory = mapDiv.dataset.mapCategory
+            
+            // // @TODO remove this interval b/c logic will go in map.on('load')
+            // let interval = setInterval(() => {
+            //     // @update: b/c just one map, all logic _could_ be moved into map.on('load', () => {})
+            //     if(mapLoaded) {
+            //         // @update invoked toggleMapView(map, mapId) after if(ma)
+            //         toggleMapView(map, mapId)
+            //         clearInterval(interval)
+            //     }
+            //     // @update
+            //     // if(maps[mapCategory].loaded) {
+            //     //     toggleMapView(mapCategory, mapId)
+            //     //     clearInterval(interval)
+            //     // }
+            // }, 250)
+        // }
     }))
 }
 

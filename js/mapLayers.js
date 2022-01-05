@@ -33,7 +33,12 @@ const municipalityOutline = {
 // @UPDATE:
 // Expand list of ignored layers in the hideLayers[] array to include scene sections above and below that 
 // used to belong to map-2 and map-3
-    // possible  
+    // probably not an efficient solution, could be improved once implemented
+    // hiding scenes:
+        // the last in a set of scenes needs to hide all non-set scenes below it
+        // the first neds to hide all non-set scenes above it
+        // ^ that may depend on not having setInterval()
+            // setInterval delay may prevent call that would apply hideLayers according to first/last
 
 // lts scenes
 const regionalScene = {
@@ -105,7 +110,7 @@ const lowStressTwoScene = {
             filter: ['<', 'lts_score', 4]
         }
     ],
-    hideLayers: []
+    hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill', 'priority-top', 'results-all', 'priority-ipd', 'priority-top-ipd', 'ipd-fill']
 }
 
 // connectivity analysis scenes
@@ -143,7 +148,7 @@ const connectivityOneScene = {
             }
         }
     ],
-    hideLayers: ['priority-top', 'results-all']
+    hideLayers: ['lts-scene', 'priority-top', 'results-all']
 }
 const connectivityTwoScene = {
     zoom: 11.5,
@@ -262,9 +267,16 @@ const connectivityPrioritiesEquityScene = {
                 'line-opacity': 0.5
             },
             filter: ['==', 'main_priority_ipd', 10]
+        },
+        // @UPDATE without an ID here, scrolling up from trailsScene only shows blue lines
+        // should be 'priority-top' but the results are difference...
+        // seems like it's b/c priority-top is just a filter and not a full layer definition
+            // try fleshing out priority-top layer..
+        {
+            // id: 'priority-top'
         }
     ],
-    hideLayers: []
+    hideLayers: ['trails', 'transit', 'school']
 }
 
 // special destinations
@@ -291,7 +303,7 @@ const trailsScene = {
             }
         }
     ],
-    hideLayers: ['transit', 'schools']
+    hideLayers: ['lts-scene', 'path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill', 'priority-top', 'results-all', 'priority-ipd', 'priority-top-ipd', 'ipd-fill', 'transit', 'schools']
 }
 const transitScene = {
     zoom: 8.4,
