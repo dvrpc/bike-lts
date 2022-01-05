@@ -39,10 +39,4 @@ const makeNavTooltip = e => {
 }
 const removeNavTooltip = tooltip => tooltip.remove()
 
-const getMapCategory = el => {
-    const prev = el.previousElementSibling
-    if(prev.classList.contains('map')) return prev
-    else return getMapCategory(prev)
-}
-
-export { toggleAnimation, toggleNavLink, makeNavTooltip, removeNavTooltip, getMapCategory }
+export { toggleAnimation, toggleNavLink, makeNavTooltip, removeNavTooltip }
