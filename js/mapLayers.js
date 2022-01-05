@@ -110,6 +110,11 @@ const lowStressTwoScene = {
             filter: ['<', 'lts_score', 4]
         }
     ],
+    hideLayers: []
+}
+
+// buffer
+const bufferOneScene = {
     hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill', 'priority-top', 'results-all', 'priority-ipd', 'priority-top-ipd', 'ipd-fill']
 }
 
@@ -268,15 +273,17 @@ const connectivityPrioritiesEquityScene = {
             },
             filter: ['==', 'main_priority_ipd', 10]
         },
-        // @UPDATE without an ID here, scrolling up from trailsScene only shows blue lines
-        // should be 'priority-top' but the results are difference...
-        // seems like it's b/c priority-top is just a filter and not a full layer definition
-            // try fleshing out priority-top layer..
         {
-            // id: 'priority-top'
+            id: 'priority-top',
+            filter: ['==', 'main_priority', 10]
         }
     ],
-    hideLayers: ['trails', 'transit', 'school']
+    hideLayers: []
+}
+
+// buffer
+const bufferTwoScene = {
+    hideLayers: ['priority-top-ipd', 'priority-top', 'trails', 'transit', 'school']
 }
 
 // special destinations
@@ -303,7 +310,7 @@ const trailsScene = {
             }
         }
     ],
-    hideLayers: ['lts-scene', 'path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill', 'priority-top', 'results-all', 'priority-ipd', 'priority-top-ipd', 'ipd-fill', 'transit', 'schools']
+    hideLayers: ['transit', 'schools']
 }
 const transitScene = {
     zoom: 8.4,
@@ -384,11 +391,13 @@ const sceneLayers = {
     usingDataScene,
     lowStressOneScene,
     lowStressTwoScene,
+    bufferOneScene,
     connectivityOneScene,
     connectivityTwoScene,
     connectivityEquityScene,
     connectivityPrioritiesScene,
     connectivityPrioritiesEquityScene,
+    bufferTwoScene,
     trailsScene,
     transitScene,
     schoolsScene

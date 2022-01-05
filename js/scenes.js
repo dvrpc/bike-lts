@@ -91,19 +91,28 @@ for(let i = 0; i < l; i++) {
         triggerElement: scene,
         reverse: true
     })
+        .on('enter', () => {
+            utils.toggleAnimation(scene)
+            utils.toggleNavLink(scrollNavBtns, i)
 
-    .on('enter', () => {
-        utils.toggleAnimation(scene)
-        utils.toggleNavLink(scrollNavBtns, i)
-
-        if(mapId) {
-            let interval = setInterval(() => {
-                if(mapLoaded) {
-                    toggleMapView(map, mapId)
-                    clearInterval(interval)
-                }
-            }, 150)
-        }
+            switch(mapId) {
+                case 'bufferOneScene':
+                case 'bufferTwoScene':
+                    // toggleBufferView(map, mapId)
+                    console.log('BUFFERS for scene ', mapId)
+                    break
+                case 'noMap':
+                    console.log('EXIST CASE ', mapId)
+                    break
+                default:
+                    console.log('DEFAULT for scene ', mapId)
+                    let interval = setInterval(() => {
+                        if(mapLoaded) {
+                            // toggleMapView(map, mapId)
+                            clearInterval(interval)
+                        }
+                    }, 150)
+            }
 
             // @update unneeded
             // const mapDiv = utils.getMapCategory(scene)
@@ -184,6 +193,18 @@ const toggleMapView = (map, sceneId) => {
         zoom: zoom,
         speed: 0.4,
         curve: 2
+    })
+}
+
+// buffers keep map in place but remove linework
+const toggleBufferView = (map, sceneId) => {
+    const mapSceneLayer = sceneLayers[sceneId]
+    const hideLayers = mapSceneLayer.hideLayers
+
+    hideLayers.forEach(layer => {
+        if(map.getLayer(layer)) {
+            map.setLayoutProperty(layer, 'visibility', 'none')
+        }
     })
 }
 
