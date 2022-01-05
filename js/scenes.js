@@ -94,24 +94,28 @@ for(let i = 0; i < l; i++) {
         .on('enter', () => {
             utils.toggleAnimation(scene)
             utils.toggleNavLink(scrollNavBtns, i)
+            let interval;
 
             switch(mapId) {
                 case 'bufferOneScene':
                 case 'bufferTwoScene':
-                    // toggleBufferView(map, mapId)
-                    console.log('BUFFERS for scene ', mapId)
-                    break
-                case 'noMap':
-                    console.log('EXIST CASE ', mapId)
-                    break
-                default:
-                    console.log('DEFAULT for scene ', mapId)
-                    let interval = setInterval(() => {
+                    interval = setInterval(() => {
                         if(mapLoaded) {
-                            // toggleMapView(map, mapId)
+                            toggleBufferView(map, mapId)
                             clearInterval(interval)
                         }
-                    }, 150)
+                    }, 75)
+                    break
+                case 'noMap':
+                    // exit case
+                    break
+                default:
+                    interval = setInterval(() => {
+                        if(mapLoaded) {
+                            toggleMapView(map, mapId)
+                            clearInterval(interval)
+                        }
+                    }, 75)
             }
 
             // @update unneeded

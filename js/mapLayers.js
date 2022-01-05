@@ -115,7 +115,8 @@ const lowStressTwoScene = {
 
 // buffer
 const bufferOneScene = {
-    hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill', 'priority-top', 'results-all', 'priority-ipd', 'priority-top-ipd', 'ipd-fill']
+    // hideLayers: ['path', 'blocks', 'blocks-fill', 'priority-ipd', 'ipd-fill', 'priority-top', 'results-all', 'priority-ipd', 'priority-top-ipd', 'ipd-fill']
+    hideLayers: ['lts-scene', 'path', 'blocks', 'blocks-fill']
 }
 
 // connectivity analysis scenes
