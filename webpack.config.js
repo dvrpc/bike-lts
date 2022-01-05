@@ -1,8 +1,4 @@
-/* 
-    Steps to create production bundles for apps with traditional* architecture
-        See webpack.config.js for projects built in React etc
-        * This does still assume modular js w/a single entry point (i.e. index.js). Monorepos also work.
-    
+/*     
     The output from these steps are:
         A minified, (polyfilled) production bundle for your javascript
         Minified HTML pages 
@@ -35,12 +31,12 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 
 /***** Steps to copy and minify existing HTML files using html-webpack-plugin *****/
-// Use this for individual files (i.e. index.html)
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
-    // only use inject: 'body' if you want to copy over all of the assets into the created template (i.e. <script>, <link>, etc)
-    inject: 'body',
+    inject: 'head',
+    scriptLoading: 'defer',
+    hash: true,
     minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -56,7 +52,6 @@ let indexConfig = new HtmlWebpackPlugin({
 
 /***** JS/CSS Bundle + Static Assets creation *****/
 module.exports = {
-    // note: you can just have './js/index.js' if babel isn't needed but it must still be in an array
     entry: ['./js/index.js'],
     mode: 'production',
     module: {
@@ -108,6 +103,8 @@ module.exports = {
         path: path.resolve(__dirname, 'build')
     },
     plugins: [
+        // CopyWebpackPlugin moves assets into the build folder
+        // we use it here for the img & css folders b/c this set up assumes you aren't using 'require' or 'import' to load either asset
         new CopyWebpackPlugin({
             patterns: [
                 {

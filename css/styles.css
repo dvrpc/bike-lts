@@ -432,7 +432,7 @@ th, td {
     width: 33em;
     margin-right: var(--wrapper-padding);
     opacity: 0;
-    z-index: 6;
+    z-index: 3;
 }
 .scene-text p:last-of-type {
     margin-bottom: 0;
@@ -443,8 +443,12 @@ th, td {
 .scene-media {
     width: 65%;
 }
+.scene-buffer-wrapper {
+    padding: 0;
+}
 .scene-buffer {
     position: relative;
+    z-index: 4;
     height: 125vh;
     width: 100%;
     background-color: var(--theme-black-map);
@@ -501,11 +505,7 @@ th, td {
 
 
 
-/* Individua Scenes */
-.first-map-scene {
-    /* account for sticky map */
-    margin-top: -100vh;
-}
+/* Individual Scenes */
 #what-is-LTS-scene {
     /* update - slash */
     /* margin-top = (side-nav height * -1) */
@@ -611,6 +611,9 @@ th, td {
 }
 .lts-table-ul li {
     margin-bottom: 5px;
+}
+.first-map-scene {
+    margin-top: -100vh;
 }
 /* END Individual Scenes */
 

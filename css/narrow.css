@@ -76,8 +76,9 @@ footer {
     position: initial;
 }
 .footer-lts-logo {
-    width: 50%;
+    width: 40%;
     padding-bottom: var(--wrapper-padding-double);
+    margin-top: var(--wrapper-padding);
     margin-bottom: var(--wrapper-padding-double);
     border-bottom: 1px solid var(--theme-black);
 }

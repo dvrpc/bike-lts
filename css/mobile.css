@@ -121,7 +121,7 @@ th, td {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 100% 100%);
 }
 #what-is-LTS-scene {
-    padding-top: 15%;
+    padding-top: 40%;
 }
 .what-is-lts-content-wrapper {
     padding: var(--wrapper-padding);
@@ -185,7 +185,6 @@ th, td {
     padding: var(--wrapper-padding) var(--wrapper-padding-half);
 }
 .footer-lts-logo {
-    width: 90%;
     padding-bottom: var(--wrapper-padding);
     margin-bottom: var(--wrapper-padding);
 }

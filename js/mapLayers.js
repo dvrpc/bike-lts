@@ -29,6 +29,7 @@ const municipalityOutline = {
 ////
 // Scene objects
 ////
+
 // lts scenes
 const regionalScene = {
     zoom: 8.4,
@@ -102,6 +103,11 @@ const lowStressTwoScene = {
     hideLayers: []
 }
 
+// buffer
+const bufferOneScene = {
+    hideLayers: ['lts-scene', 'path', 'blocks', 'blocks-fill']
+}
+
 // connectivity analysis scenes
 const connectivityOneScene = {
     zoom: 13.5,
@@ -137,7 +143,7 @@ const connectivityOneScene = {
             }
         }
     ],
-    hideLayers: ['priority-top', 'results-all']
+    hideLayers: ['lts-scene', 'priority-top', 'results-all']
 }
 const connectivityTwoScene = {
     zoom: 11.5,
@@ -256,9 +262,18 @@ const connectivityPrioritiesEquityScene = {
                 'line-opacity': 0.5
             },
             filter: ['==', 'main_priority_ipd', 10]
+        },
+        {
+            id: 'priority-top',
+            filter: ['==', 'main_priority', 10]
         }
     ],
     hideLayers: []
+}
+
+// buffer
+const bufferTwoScene = {
+    hideLayers: ['priority-top-ipd', 'priority-top', 'trails', 'transit', 'school']
 }
 
 // special destinations
@@ -339,24 +354,20 @@ const schoolsScene = {
 }
 
 const sceneLayers = {
-    stress: {
-        regionalScene,
-        usingDataScene,
-        lowStressOneScene,
-        lowStressTwoScene,
-    },
-    connectivity: {
-        connectivityOneScene,
-        connectivityTwoScene,
-        connectivityEquityScene,
-        connectivityPrioritiesScene,
-        connectivityPrioritiesEquityScene
-    },
-    special: {
-        trailsScene,
-        transitScene,
-        schoolsScene
-    }
+    regionalScene,
+    usingDataScene,
+    lowStressOneScene,
+    lowStressTwoScene,
+    bufferOneScene,
+    connectivityOneScene,
+    connectivityTwoScene,
+    connectivityEquityScene,
+    connectivityPrioritiesScene,
+    connectivityPrioritiesEquityScene,
+    bufferTwoScene,
+    trailsScene,
+    transitScene,
+    schoolsScene
 }
 
 const baseLayers = {
