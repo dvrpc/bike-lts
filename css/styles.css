@@ -612,6 +612,9 @@ th, td {
 .lts-table-ul li {
     margin-bottom: 5px;
 }
+.first-map-scene {
+    margin-top: -100vh;
+}
 /* END Individual Scenes */
 
 
