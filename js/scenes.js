@@ -7,7 +7,10 @@ import * as utils from './sceneUtils.js'
 const scenes = document.querySelectorAll('.scene')
 const scrollNav = document.getElementById('scroll-story-nav-ul').children
 const topNav = document.getElementById('top-nav')
-const mapContainer = document.getElementById('map')
+
+// const mapContainer = document.getElementById('map')
+const map = document.getElementById('map')
+
 const mapTwoContainer = document.getElementById('map-2')
 const mapThreeContainer = document.getElementById('map-3')
 
@@ -21,26 +24,31 @@ const mapOffset = topNav.offsetHeight
 const mapDivs = [mapContainer, mapTwoContainer, mapThreeContainer]
 
 // handle maps
-mapDivs.forEach(map => {
+// mapDivs.forEach(map => {
+//     const gap = `calc(100vh - ${mapOffset}px)`
+    
+//     map.style.height = gap
+//     map.style.top = mapOffset + 'px'
+// })
+
     const gap = `calc(100vh - ${mapOffset}px)`
     
     map.style.height = gap
     map.style.top = mapOffset + 'px'
-})
 
 const maps = {
     stress: {
         map: customMap(mapContainer),
         loaded: false
     },
-    connectivity: {
-        map: customMap(mapTwoContainer),
-        loaded: false
-    },
-    special: {
-        map: customMap(mapThreeContainer),
-        loaded: false
-    },
+    // connectivity: {
+    //     map: customMap(mapTwoContainer),
+    //     loaded: false
+    // },
+    // special: {
+    //     map: customMap(mapThreeContainer),
+    //     loaded: false
+    // },
 }
 
 for(const map in maps) {
