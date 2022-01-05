@@ -8,11 +8,12 @@ const scenes = document.querySelectorAll('.scene')
 const scrollNav = document.getElementById('scroll-story-nav-ul').children
 const topNav = document.getElementById('top-nav')
 
-// const mapContainer = document.getElementById('map')
-const map = document.getElementById('map')
+// @update
+const mapContainer = document.getElementById('map')
 
-const mapTwoContainer = document.getElementById('map-2')
-const mapThreeContainer = document.getElementById('map-3')
+// @update
+// const mapTwoContainer = document.getElementById('map-2')
+// const mapThreeContainer = document.getElementById('map-3')
 
 // get navigable nav els
 const scrollNavBtns = Array.from(scrollNav).filter(el => el.nodeName != 'HR')
@@ -21,8 +22,11 @@ const scrollNavBtns = Array.from(scrollNav).filter(el => el.nodeName != 'HR')
 const l = scenes.length
 const sceneObjs = []
 const mapOffset = topNav.offsetHeight
-const mapDivs = [mapContainer, mapTwoContainer, mapThreeContainer]
 
+// @update
+// const mapDivs = [mapContainer, mapTwoContainer, mapThreeContainer]
+
+// @update
 // handle maps
 // mapDivs.forEach(map => {
 //     const gap = `calc(100vh - ${mapOffset}px)`
@@ -31,16 +35,19 @@ const mapDivs = [mapContainer, mapTwoContainer, mapThreeContainer]
 //     map.style.top = mapOffset + 'px'
 // })
 
-    const gap = `calc(100vh - ${mapOffset}px)`
-    
-    map.style.height = gap
-    map.style.top = mapOffset + 'px'
+const gap = `calc(100vh - ${mapOffset}px)`
+mapContainer.style.height = gap
+mapContainer.style.top = mapOffset + 'px'
+const map = customMap(mapContainer)
 
-const maps = {
-    stress: {
-        map: customMap(mapContainer),
-        loaded: false
-    },
+
+// @update
+// const maps = {
+    // stress: {
+    //     map: customMap(mapContainer),
+    //     loaded: false
+    // },
+    // @update
     // connectivity: {
     //     map: customMap(mapTwoContainer),
     //     loaded: false
@@ -49,18 +56,30 @@ const maps = {
     //     map: customMap(mapThreeContainer),
     //     loaded: false
     // },
-}
+// }
 
-for(const map in maps) {
-    const mapInstance = maps[map].map
+// @update
+let mapLoaded = false
 
-    mapInstance.on('load', () => {
-        for(const source in sources) mapInstance.addSource(source, sources[source])
-        for(const layer in baseLayers) mapInstance.addLayer(baseLayers[layer], 'road-label')
-        
-        maps[map].loaded = true
-    })
-}
+// @update
+// for(const map in maps) {
+//     const mapInstance = maps[map].map
+
+//     mapInstance.on('load', () => {
+//         for(const source in sources) mapInstance.addSource(source, sources[source])
+//         for(const layer in baseLayers) mapInstance.addLayer(baseLayers[layer], 'road-label')
+
+//         maps[map].loaded = true
+//     })
+// }
+
+// @update
+map.on('load', () => {
+    for(const source in sources) map.addSource(source, sources[source])
+    for(const layer in baseLayers) map.addLayer(baseLayers[layer], 'road-label')
+    
+    mapLoaded = true
+})
 
 // create scene objects
 for(let i = 0; i < l; i++) {
@@ -78,13 +97,23 @@ for(let i = 0; i < l; i++) {
 
         if(mapId) {
             const mapDiv = utils.getMapCategory(scene)
+
+            // @UPDATE can do away with the whole map-category set
+            // one map just needs to reference toggleMapView() with scene id and done. layers are there
+            // @UPDATE in mapLayers consolidate all layers into one object
             const mapCategory = mapDiv.dataset.mapCategory
             
             let interval = setInterval(() => {
-                if(maps[mapCategory].loaded) {
-                    toggleMapView(mapCategory, mapId)
+                // @update: b/c just one map, all logic _could_ be moved into map.on('load', () => {})
+                if(mapLoaded) {
+                    toggleMapView(map, mapId)
                     clearInterval(interval)
                 }
+                // @update
+                // if(maps[mapCategory].loaded) {
+                //     toggleMapView(mapCategory, mapId)
+                //     clearInterval(interval)
+                // }
             }, 250)
         }
     }))
@@ -102,10 +131,16 @@ scrollNavBtns.forEach(btn => {
     btn.onmouseout = () => utils.removeNavTooltip(tooltip)
 })
 
-const toggleMapView = (mapCat, sceneId) => {
+// @update
+// const toggleMapView = (mapCat, sceneId) => {
+const toggleMapView = (map, sceneId) => {
     const isMobile = window.innerWidth < 750 ? true : false
-    const mapInstance = maps[mapCat].map
-    const mapSceneLayer = sceneLayers[mapCat][sceneId]
+
+    // Wupdate
+    // const mapInstance = maps[mapCat].map
+    // @update
+    // const mapSceneLayer = sceneLayers[mapCat][sceneId]
+    const mapSceneLayer = sceneLayers[sceneId]
 
     const zoom = isMobile ? mapSceneLayer.zoomMobile : mapSceneLayer.zoom
     const center = isMobile ? mapSceneLayer.centerMobile : mapSceneLayer.center
@@ -117,22 +152,22 @@ const toggleMapView = (mapCat, sceneId) => {
         const layerID = layer.id
         const filter = layer.filter || null
         
-        if(!mapInstance.getLayer(layerID)) {
-            mapInstance.addLayer(layer, 'road-label')
+        if(!map.getLayer(layerID)) {
+            map.addLayer(layer, 'road-label')
         }
 
-        mapInstance.setFilter(layerID, filter)
-        mapInstance.setLayoutProperty(layerID, 'visibility', 'visible')
+        map.setFilter(layerID, filter)
+        map.setLayoutProperty(layerID, 'visibility', 'visible')
     })
 
     // hide extra layers
     hideLayers.forEach(layer => {
-        if(mapInstance.getLayer(layer)) {
-            mapInstance.setLayoutProperty(layer, 'visibility', 'none')
+        if(map.getLayer(layer)) {
+            map.setLayoutProperty(layer, 'visibility', 'none')
         }
     })
 
-    mapInstance.flyTo({
+    map.flyTo({
         center: center,
         zoom: zoom,
         speed: 0.4,

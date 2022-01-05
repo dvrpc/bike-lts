@@ -29,6 +29,12 @@ const municipalityOutline = {
 ////
 // Scene objects
 ////
+
+// @UPDATE:
+// Expand list of ignored layers in the hideLayers[] array to include scene sections above and below that 
+// used to belong to map-2 and map-3
+    // possible  
+
 // lts scenes
 const regionalScene = {
     zoom: 8.4,
@@ -338,25 +344,42 @@ const schoolsScene = {
     hideLayers: ['transit', 'trails']
 }
 
+// @UPDATE
+// const sceneLayers = {
+//     stress: {
+//         regionalScene,
+//         usingDataScene,
+//         lowStressOneScene,
+//         lowStressTwoScene,
+//     },
+//     connectivity: {
+//         connectivityOneScene,
+//         connectivityTwoScene,
+//         connectivityEquityScene,
+//         connectivityPrioritiesScene,
+//         connectivityPrioritiesEquityScene
+//     },
+//     special: {
+//         trailsScene,
+//         transitScene,
+//         schoolsScene
+//     }
+// }
+
+// @UPDATE one obj b/c just referencing by ID at this point
 const sceneLayers = {
-    stress: {
-        regionalScene,
-        usingDataScene,
-        lowStressOneScene,
-        lowStressTwoScene,
-    },
-    connectivity: {
-        connectivityOneScene,
-        connectivityTwoScene,
-        connectivityEquityScene,
-        connectivityPrioritiesScene,
-        connectivityPrioritiesEquityScene
-    },
-    special: {
-        trailsScene,
-        transitScene,
-        schoolsScene
-    }
+    regionalScene,
+    usingDataScene,
+    lowStressOneScene,
+    lowStressTwoScene,
+    connectivityOneScene,
+    connectivityTwoScene,
+    connectivityEquityScene,
+    connectivityPrioritiesScene,
+    connectivityPrioritiesEquityScene,
+    trailsScene,
+    transitScene,
+    schoolsScene
 }
 
 const baseLayers = {
