@@ -39,8 +39,9 @@ const TerserPlugin = require("terser-webpack-plugin");
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
-    // only use inject: 'body' if you want to copy over all of the assets into the created template (i.e. <script>, <link>, etc)
-    inject: 'body',
+    inject: 'head',
+    scriptLoading: true,
+    hash: true,
     minify: {
         collapseWhitespace: true,
         removeComments: true,
