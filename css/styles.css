@@ -429,7 +429,7 @@ th, td {
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     font-size: 1.1em;
-    width: 33em;
+    width: 30em;
     margin-right: var(--wrapper-padding);
     opacity: 0;
     z-index: 3;
