@@ -15,7 +15,7 @@ An update to the old ESRI AGO LTS map that improves performance, adds more featu
 - <strong>Scroll Story</strong>
     - Webpack config currently isn't working for the scroll story, copy source code to staging
 - <strong>Analysis Map</strong>
-    - from root, `cd` to /analysis
+    - from root, `cd analysis`
     - `npm install` (first time only)
     - `npm run build`
     - in `/build/`, delete `<script defer type="module" src="./js/index.js"></script>` from `index.html`
