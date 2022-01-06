@@ -149,8 +149,13 @@ const filterLayers = (form, toggle, map) => {
         break
     case 0:                
         baseFilter = ['<', 'lts_score', 0]
+        
+        // @update
+        // remove legend
         break
     default:
+        // @update
+        // add legend if no legend?
         baseFilter = ['any']
 
         allChecked.forEach(input => {
