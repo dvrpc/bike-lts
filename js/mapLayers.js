@@ -120,7 +120,7 @@ const connectivityOneScene = {
             type: 'line',
             source: 'path',
             paint: {
-                'line-width': 4,
+                'line-width': 3.5,
                 'line-color': 'purple',
             }
         },
@@ -129,7 +129,7 @@ const connectivityOneScene = {
             type: 'line',
             source: 'blocks',
             paint: {
-                'line-width': 4,
+                'line-width': 3.5,
                 'line-color': 'orange',
             }
         },
@@ -176,7 +176,7 @@ const connectivityTwoScene = {
             source: 'lts',
             'source-layer': 'priorities_all',
             paint: {
-                'line-width': 6,
+                'line-width': 3.5,
                 'line-color': '#993404',
             },
             filter: ['==', 'main_priority', 10]
@@ -217,7 +217,7 @@ const connectivityEquityScene = {
             source: 'lts',
             'source-layer': 'priorities_all_ipd',
             paint: {
-                'line-width': 4,
+                'line-width': 3.5,
                 'line-color': ['match',
                     ['get', 'main_priority_ipd'],
                     10, '#993404',
@@ -257,7 +257,7 @@ const connectivityPrioritiesEquityScene = {
             source: 'lts',
             'source-layer': 'priorities_all_ipd',
             paint: {
-                'line-width': 4,
+                'line-width': 3.5,
                 'line-color': '#253494',
                 'line-opacity': 0.5
             },
@@ -289,13 +289,7 @@ const trailsScene = {
             source: 'lts',
             'source-layer': 'priorities_trail',
             paint: {
-                'line-width': ['interpolate',
-                    ['linear'], ['zoom'],
-                    8.35, 3,
-                    11, 3.25,
-                    17, 3.5,
-                    20, 4
-                ],
+                'line-width': 3.5,
                 'line-color': '#498434'
             }
         }
@@ -314,13 +308,7 @@ const transitScene = {
             source: 'lts',
             'source-layer': 'priorities_alltransit',
             paint: {
-                'line-width': ['interpolate',
-                    ['linear'], ['zoom'],
-                    8.35, 3,
-                    11, 3.25,
-                    17, 3.5,
-                    20, 4
-                ],
+                'line-width': 3.5,
                 'line-color': '#F49FBC'
             }
         }
@@ -339,13 +327,7 @@ const schoolsScene = {
             source: 'lts',
             'source-layer': 'priorities_school',
             paint: {
-                'line-width': ['interpolate',
-                    ['linear'], ['zoom'],
-                    8.35, 3,
-                    11, 3.25,
-                    17, 3.5,
-                    20, 4
-                ],
+                'line-width': 3.5,
                 'line-color':'#984ea3'
             }
         }
