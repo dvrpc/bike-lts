@@ -148,18 +148,15 @@ const filterLayers = (form, toggle, map) => {
     switch(allChecked.length) {
         case 4:                
         baseFilter = null
+        handleLegend('lts', true, 1)
         break
     case 0:                
         baseFilter = ['<', 'lts_score', 0]
-        
-        // @update
-        // remove legend
         removeLegend(['lts'], legendContainer)
         break
     default:
-        // @update
-        handleLegend('lts', true, 1)
         baseFilter = ['any']
+        handleLegend('lts', true, 1)
 
         allChecked.forEach(input => {
             const layerFilter = ltsFilters[input.value]
