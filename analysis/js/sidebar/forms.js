@@ -140,6 +140,8 @@ const submitLTS = (e, form, map) => {
 
 const filterLayers = (form, toggle, map) => {
     const allChecked = form.querySelectorAll('[data-layer-type="filter"]:checked')
+    const mapContainer = map['_container']
+    const legendContainer = mapContainer.firstElementChild
     const layer = toggle.name
     let baseFilter;
 
@@ -152,10 +154,11 @@ const filterLayers = (form, toggle, map) => {
         
         // @update
         // remove legend
+        removeLegend(['lts'], legendContainer)
         break
     default:
         // @update
-        // add legend if no legend?
+        handleLegend('lts', true, 1)
         baseFilter = ['any']
 
         allChecked.forEach(input => {
