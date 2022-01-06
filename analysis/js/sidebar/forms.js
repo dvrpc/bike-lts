@@ -147,21 +147,21 @@ const filterLayers = (form, toggle, map) => {
 
     switch(allChecked.length) {
         case 4:                
-        baseFilter = null
-        handleLegend('lts', true, 1)
-        break
-    case 0:                
-        baseFilter = ['<', 'lts_score', 0]
-        removeLegend(['lts'], legendContainer)
-        break
-    default:
-        baseFilter = ['any']
-        handleLegend('lts', true, 1)
+            baseFilter = null
+            handleLegend('lts', true, 1)
+            break
+        case 0:                
+            baseFilter = ['<', 'lts_score', 0]
+            removeLegend(['lts'], legendContainer)
+            break
+        default:
+            baseFilter = ['any']
+            handleLegend('lts', true, 1)
 
-        allChecked.forEach(input => {
-            const layerFilter = ltsFilters[input.value]
-            baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
-        })  
+            allChecked.forEach(input => {
+                const layerFilter = ltsFilters[input.value]
+                baseFilter = layerFilter ? baseFilter.concat(layerFilter) : baseFilter
+            })  
     }
 
     map.setFilter(layer, baseFilter)
