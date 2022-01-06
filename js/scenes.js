@@ -40,8 +40,7 @@ for(let i = 0; i < l; i++) {
         duration: 200,
         triggerElement: scene,
         reverse: true
-    })
-    .on('enter', () => {
+    }).on('enter', () => {
         utils.toggleAnimation(scene)
         utils.toggleNavLink(scrollNavBtns, i)
         let interval;
@@ -83,13 +82,13 @@ scrollNavBtns.forEach(btn => {
 })
 
 const toggleMapView = (map, sceneId) => {
-    const isMobile = window.innerWidth < 750 ? true : false
-    const mapSceneLayer = sceneLayers[sceneId]
-
-    const zoom = isMobile ? mapSceneLayer.zoomMobile : mapSceneLayer.zoom
-    const center = isMobile ? mapSceneLayer.centerMobile : mapSceneLayer.center
-    const layers = mapSceneLayer.layers
-    const hideLayers = mapSceneLayer.hideLayers
+    const layerObj = sceneLayers[sceneId]
+    const layers = layerObj.layers
+    const hideLayers = layerObj.hideLayers
+    const place = window.innerWidth < 750 ? 
+        {zoom: layerObj.zoomMobile, center: layerObj.centerMobile} 
+        : {zoom: layerObj.zoom, center: layerObj.center}
+    
     
     // add layers & apply filters
     layers.forEach(layer => {
@@ -112,8 +111,8 @@ const toggleMapView = (map, sceneId) => {
     })
 
     map.flyTo({
-        center: center,
-        zoom: zoom,
+        center: place.center,
+        zoom: place.zoom,
         speed: 0.4,
         curve: 2
     })
@@ -121,8 +120,8 @@ const toggleMapView = (map, sceneId) => {
 
 // buffers only remove linework
 const toggleBufferView = (map, sceneId) => {
-    const mapSceneLayer = sceneLayers[sceneId]
-    const hideLayers = mapSceneLayer.hideLayers
+    const layerObj = sceneLayers[sceneId]
+    const hideLayers = layerObj.hideLayers
 
     hideLayers.forEach(layer => {
         if(map.getLayer(layer)) {
