@@ -37,7 +37,6 @@ body {
 }
 a {
     color: var(--theme-black);
-    font-weight: bold;
 }
 a:hover {
     color: var(--theme-green);
@@ -243,7 +242,7 @@ th, td {
 }
 .header-logo {
     width: 90%;
-    max-width: 475px;
+    max-width: 450px;
 }
 .wheel {
     position: absolute;
@@ -264,21 +263,23 @@ th, td {
 .wheel-green {
     background-color: var(--theme-green-light);
 }
-#story-intro-text-content {
-    width: 62ch;
-    padding-left: var(--wrapper-padding);
+.story-intro-text-wrapper {
+    width: 33em;
+    padding-left: var(--wrapper-padding-double);
+    margin-left: var(--wrapper-padding);
     border-left: 2px solid var(--theme-black);
-}
-.story-intro-p {
-    font-size: 1.25rem;
-    margin: 0;
-    font-weight: 300;
-    max-width: 75ch;
-}
-.story-intro-p-large {
-    font-size: 1.6rem;
     margin-bottom: var(--wrapper-padding);
 }
+.header {
+    font-size: 2.15rem;
+}
+.story-intro-p {
+    font-size: 1.75rem;
+    margin: 0;
+    font-weight: 300;
+}
+/* .story-intro-p-large {
+} */
 .story-intro-btns-wrapper {
     width: 28%;
     padding: var(--wrapper-padding);
