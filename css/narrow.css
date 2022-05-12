@@ -14,13 +14,10 @@ body {
     min-height: 120vh;
 }
 .header-logo {
-    max-width: 225px;
+    max-width: 350px;
 }
-.story-intro-p {
-    font-size: 1.1rem;
-}
-.story-intro-p-large {
-    font-size: 1.45rem;
+.story-intro-text-wrapper {
+    width: 40em;
 }
 .story-intro-btns-wrapper {
     width: 35%;
