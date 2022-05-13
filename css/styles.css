@@ -278,14 +278,12 @@ th, td {
     margin: 0;
     font-weight: 300;
 }
-/* .story-intro-p-large {
-} */
 .story-intro-btns-wrapper {
     width: 28%;
     padding: var(--wrapper-padding);
     margin-top: calc(var(--wrapper-padding-double)* -1);
     position: absolute;
-    bottom: 1.5rem;
+    bottom: 2.5rem;
     z-index: 2;
 }
 .story-intro-icon-btns-link {

@@ -13,20 +13,36 @@ body {
 #story-intro {
     min-height: 120vh;
 }
+#story-intro-text {
+    padding: var(--wrapper-padding);
+}
 .header-logo {
-    max-width: 350px;
+    max-width: 20em;
 }
 .story-intro-text-wrapper {
-    width: 40em;
+    width: 30em;
+}
+.header {
+    font-size: 2rem;
+}
+.story-intro-p {
+    font-size: 1.5rem;
 }
 .story-intro-btns-wrapper {
     width: 35%;
 }
-.story-intro-icon-btns-link {
-    font-size: 1.2rem;
+.story-intro-btns-wrapper {
+    padding-left: 0;
+    bottom: 13.5rem;
 }
-.mini-bike {
-    width: 20%;
+.story-intro-icon-btns-link {
+    width: 20ch;
+}
+.story-intro-icon-figure {
+    font-size: 1rem;
+}
+.story-intro-figcaption {
+    left: var(--wrapper-padding-half);
 }
 /* END Intro */
 
