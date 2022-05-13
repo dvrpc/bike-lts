@@ -236,13 +236,13 @@ th, td {
 }
 #story-intro-text {
     position: relative;
-    padding: var(--wrapper-padding);
+    padding: var(--wrapper-padding) var(--wrapper-padding-quad);
     padding-top: var(--wrapper-padding-double);
     z-index: 2;
 }
 .header-logo {
     width: 90%;
-    max-width: 450px;
+    max-width: 30em;
 }
 .wheel {
     position: absolute;
