@@ -35,20 +35,21 @@ th, td {
 #story-intro:before {
     clip-path: polygon(-10px 0, 100% 0, 100% 100%, 50% 100%);
 }
-#story-intro {
-    padding-bottom: var(--wrapper-padding-quad);
-}
-#story-intro-text-content {
-    width: 55ch;
-    padding-left: var(--wrapper-padding-half);
-}
 #story-intro-text {
     padding-top: var(--wrapper-padding);
-    padding-bottom: 35%;
+}
+.story-intro-text-wrapper {
+    padding-left: var(--wrapper-padding);
 }
 .header-logo {
     width: 95%;
     max-width: 200px;
+}
+.header {
+    font-size: 1.25rem;
+}
+.story-intro-p {
+    font-size: 1.2em;
 }
 .intro-bike-yellow, .intro-bike-green {
     width: 45%;
@@ -56,16 +57,9 @@ th, td {
 .intro-bike-green {
     left: 15%;
 }
-.story-intro-p {
-    font-size: 1.1em;
-}
-.story-intro-p-large {
-    font-size: 1.5em;
-}
 .story-intro-btns-wrapper {
     width: unset;
     padding-left: 0;
-    bottom: 8%;
 }
 .story-intro-icon-btns-link {
     font-size: 1.3em;

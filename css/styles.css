@@ -635,35 +635,41 @@ th, td {
 /**********/
 /* Footer */
 footer {
-    position: relative;
-    height: 145vh;
     width: 100%;
     background-image: url("../img/footer-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
-.footer-text {
-    position: absolute;
+.footer-content {
     width: 70%;
-    top: 40vh;
-    left: calc(15% - var(--wrapper-padding));
+    height: 100%;
+    margin: 0 auto;
     background-color: rgba(255,255,255,0.75);
-    border-radius: var(--border-radius);
-    padding: var(--wrapper-padding-double) var(--wrapper-padding-half);   
+    padding: 90px var(--wrapper-padding-half);
+}
+.footer-main-text, .footer-hr {
+    width: 85%;
 }
 .footer-lts-logo {
-    width: 375px;
+    width: 350px;
+}
+.footer-p {
+    width: 24em;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+.footer-hr {
+    margin: var(--wrapper-padding-double) auto;
+    border: 1px solid;
 }
 .footer-list-main {
-    font-size: 1.25rem;
+    font-size: 1rem;
     width: 50ch;
 }
 .footer-list-h2 {
-    font-size: 1em;
-    font-weight: 400;
-    font-style: italic;
-    margin-top: var(--wrapper-padding-quad);
+    font-size: 1.25rem;
+    margin-top: var(--wrapper-padding-double);
     margin-bottom: var(--wrapper-padding-half);
 }
 .footer-list-h2-first {
@@ -675,8 +681,6 @@ footer {
 }
 .footer-connect {
     padding: var(--wrapper-padding) 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: rgba(57,104,41,0.7);
     color: var(--theme-white);

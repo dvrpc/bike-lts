@@ -93,7 +93,6 @@ footer {
     padding-bottom: var(--wrapper-padding-double);
     margin-top: var(--wrapper-padding);
     margin-bottom: var(--wrapper-padding-double);
-    border-bottom: 1px solid var(--theme-black);
 }
 .footer-list-main {
     width: 90%;
