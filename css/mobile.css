@@ -175,10 +175,9 @@ th, td {
 
 
 /* Footer */
-.footer-text {
-    padding: var(--wrapper-padding) var(--wrapper-padding-half);
+.footer-content {
+    width: 85%;
 }
 .footer-lts-logo {
-    padding-bottom: var(--wrapper-padding);
-    margin-bottom: var(--wrapper-padding);
+    width: 60%;
 }

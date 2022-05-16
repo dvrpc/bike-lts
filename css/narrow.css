@@ -75,30 +75,32 @@ body {
 
 
 /* Footer */
-footer {
-    height: unset;
-}
-.footer-text {
-    width: 90%;
-    flex-direction: column;
-    margin: 0 auto;
-    border-radius: 0;
+.footer-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding-half);
 }
-.footer-text, .footer-connect {
-    position: initial;
+.footer-main-text {
+    flex-direction: column;
 }
 .footer-lts-logo {
-    width: 40%;
-    padding-bottom: var(--wrapper-padding-double);
-    margin-top: var(--wrapper-padding);
-    margin-bottom: var(--wrapper-padding-double);
+    width: 45%;
+    margin-bottom: var(--wrapper-padding-half);
 }
-.footer-list-main {
+.footer-list-main, .footer-main-text, .footer-hr {
     width: 90%;
+    font-size: 1rem;
+}
+.footer-p {
+    width: 100%;
+    margin-bottom: 0;
+}
+.footer-list-h2, .footer-p {
+    font-size: 1rem;
+}
+.footer-hr {
+    margin: var(--wrapper-padding) auto;
 }
 .footer-logo-dvrpc {
-    width: 105px;
+    width: 125px;
 }
 .footer-connect-us {
     font-size: 1.2em;
