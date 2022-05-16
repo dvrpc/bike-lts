@@ -13,23 +13,36 @@ body {
 #story-intro {
     min-height: 120vh;
 }
+#story-intro-text {
+    padding: var(--wrapper-padding);
+}
 .header-logo {
-    max-width: 225px;
+    max-width: 20em;
+}
+.story-intro-text-wrapper {
+    width: 30em;
+}
+.header {
+    font-size: 2rem;
 }
 .story-intro-p {
-    font-size: 1.1rem;
-}
-.story-intro-p-large {
-    font-size: 1.45rem;
+    font-size: 1.5rem;
 }
 .story-intro-btns-wrapper {
     width: 35%;
 }
-.story-intro-icon-btns-link {
-    font-size: 1.2rem;
+.story-intro-btns-wrapper {
+    padding-left: 0;
+    bottom: 13.5rem;
 }
-.mini-bike {
-    width: 20%;
+.story-intro-icon-btns-link {
+    width: 20ch;
+}
+.story-intro-icon-figure {
+    font-size: 1rem;
+}
+.story-intro-figcaption {
+    left: var(--wrapper-padding-half);
 }
 /* END Intro */
 
@@ -62,31 +75,32 @@ body {
 
 
 /* Footer */
-footer {
-    height: unset;
-}
-.footer-text {
-    width: 90%;
-    flex-direction: column;
-    margin: 0 auto;
-    border-radius: 0;
+.footer-content {
     padding: var(--wrapper-padding-double) var(--wrapper-padding-half);
 }
-.footer-text, .footer-connect {
-    position: initial;
+.footer-main-text {
+    flex-direction: column;
 }
 .footer-lts-logo {
-    width: 40%;
-    padding-bottom: var(--wrapper-padding-double);
-    margin-top: var(--wrapper-padding);
-    margin-bottom: var(--wrapper-padding-double);
-    border-bottom: 1px solid var(--theme-black);
+    width: 45%;
+    margin-bottom: var(--wrapper-padding-half);
 }
-.footer-list-main {
+.footer-list-main, .footer-main-text, .footer-hr {
     width: 90%;
+    font-size: 1rem;
+}
+.footer-p {
+    width: 100%;
+    margin-bottom: 0;
+}
+.footer-list-h2, .footer-p {
+    font-size: 1rem;
+}
+.footer-hr {
+    margin: var(--wrapper-padding) auto;
 }
 .footer-logo-dvrpc {
-    width: 105px;
+    width: 125px;
 }
 .footer-connect-us {
     font-size: 1.2em;
