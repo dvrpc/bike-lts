@@ -1,4 +1,4 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
+mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNseHRkcXU4YzF3bnYybG9wMXAyN3R6ZWwifQ.kezQHP6Q07BTMlZvR6PxSw'
 
 const customMap = container => {
     const defaultCenter = window.innerWidth < 750 ? [-75.12, 40.071] : [-74.75, 40.071]
