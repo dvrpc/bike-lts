@@ -734,3 +734,82 @@ footer {
 }
 /* END Animations */
 /******************/
+
+#modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  width: 100vw;
+}
+
+#modal-container {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  text-align: center;
+}
+
+#modal-header {
+  width: 100%;
+  display: flex;
+}
+
+#modal-box {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.375rem;
+  text-align: left;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 50%;
+  background: #eff0f2;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-close-button {
+  all: unset;
+  margin-left: auto;
+  color: rgb(148 163 184);
+  font-size: x-large;
+}
+
+#modal-close-button:hover {
+  cursor: pointer;
+}
+
+#modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  background-color: #000000;
+  opacity: 0.45;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.hidden {
+  display: none;
+}
+
+#modal-content {
+  display: flex;
+  flex: 1 1 auto;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}

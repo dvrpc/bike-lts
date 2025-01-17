@@ -49,3 +49,9 @@ toFirstScene.forEach(toFirst => {
     })
   }
 })
+
+document.getElementById('modal-close-button').addEventListener('click', (event) => {
+  event.preventDefault();
+  document.getElementById("modal-background").classList.toggle("hidden");
+  document.getElementById("modal").classList.toggle("hidden");
+})
