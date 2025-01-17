@@ -40,7 +40,7 @@ let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
     inject: 'head',
-    scriptLoading: true,
+    scriptLoading: 'defer',
     hash: true,
     minify: {
         collapseWhitespace: true,
